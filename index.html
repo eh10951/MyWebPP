@@ -7,8 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Inseguridad y robo en el metro de la cdmx</title>
-
-    <link rel="stylesheet " href="css/styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/apple-style.css">
+    <link rel="stylesheet" href="css/animations.css">
 
     <script>
         // Si llegas con el historial hacia atrás, forza recarga completa
@@ -32,48 +35,79 @@
 
     <header>
 
-        <div class="logo">
-
-            <div class="tren">🚃🚃🚃🚃🚂</div>
-
-            <div class="image-container">
-                <img class="img1" src="imagenes/PicsArt_03-09-04.13.02.png" alt="UNRC">
-                <img class="img2"
-                    src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Logo_del_Metro_de_la_Ciudad_de_M%C3%A9xico.svg"
-                    alt="metro">
-            </div>
-
-
-            <h1>EL ROBO Y LA INSEGURIDAD <br> EN EL METRO DE LA CDMX</h1>
-            <p class="unp">UN PROBLEMA QUE AFECTA A MILES DE USUARIOS</p>
-
-
-
-            <div class="txlogo">
-                <h2 class="unrc">UNRC</h2>
-                <h3 class="universidad">UNIVERSIDAD NACIONAL ROSARIO CASTELLANOS</h3>
-            </div>
-
-            <p class="nombres">Ángel Jesús Segura Díaz - Enrique Hernandez Loredo - Omar Franco Joaquin</p>
-        </div>
-
         <nav class="menu">
             <ul>
-                <li><a href="mapas.html">Mapas</a></li>
-                <li><a href="blog.html">ARTÍCULOS</a></li>
-                <li><a href="MapaI.html">RÚTA INTELIGÉNTE</a></li>
-                <li><a href="foro.html">FORO</a></li>
+                <li class="dropdown">
+                    <a href="mapas.html">MAPAS</a>
+                    <div class="dropdown-content">
+                        <a href="mapas.html">Mapas Interactivos</a>
+                        <a href="mapas.html#zonas-peligrosas">Zonas Peligrosas</a>
+                        <a href="mapas.html#estadisticas">Estadísticas por Zona</a>
+                        <a href="mapas.html#rutas-seguras">Rutas Seguras</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="blog.html">ARTÍCULOS</a>
+                    <div class="dropdown-content">
+                        <a href="blog.html">Últimas Noticias</a>
+                        <a href="blog.html#seguridad">Tips de Seguridad</a>
+                        <a href="blog.html#testimonios">Testimonios</a>
+                        <a href="blog.html#investigaciones">Investigaciones</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="MapaI.html">RÚTA INTELIGÉNTE</a>
+                    <div class="dropdown-content">
+                        <a href="MapaI.html">Planificador de Ruta</a>
+                        <a href="MapaI.html#tiempo-real">Tiempo Real</a>
+                        <a href="MapaI.html#alertas">Alertas de Seguridad</a>
+                        <a href="MapaI.html#recomendaciones">Recomendaciones</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="foro.html">FORO</a>
+                    <div class="dropdown-content">
+                        <a href="foro.html">Discusiones</a>
+                        <a href="foro.html#reportes">Reportar Incidentes</a>
+                        <a href="foro.html#comunidad">Comunidad</a>
+                        <a href="foro.html#ayuda">Centro de Ayuda</a>
+                    </div>
+                </li>
             </ul>
         </nav>
+
+        <div class="logo">
+
+            <div class="apple-hero-section">
+                
+                <div class="hero-text-header">
+                    <h1 class="main-title">LA DESERCIÓN ESCOLAR <br> EN LA UNRC</h1>
+                    <p class="main-subtitle">UN RETO QUE IMPACTA A LA COMUNIDAD UNIVERSITARIA</p>
+                </div>
+
+                <div class="hero-product-container diploma-image">
+                    <div class="product-showcase">
+                        <img 
+                            class="hero-product-image" 
+                            src="imagenes/diploma.png" 
+                            alt="Diploma Universitario"
+                            id="heroImageDiploma"
+                        >
+                        <div class="product-glow-effect diploma-glow"></div>
+                        <div class="product-shadow-overlay diploma-shadow"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </header>
 
 
 
 
 
-    <div class="vozmetro"> <!-- div sirve para agrupar elementos y aplicar estilos -->
-
-        <img src="imagenes/bgqr.png" alt="Código QR" class="qr-code" width="200" height="200">
+    <div class="vozmetro"> <img src="imagenes/bgqr.png" alt="Código QR" class="qr-code" width="200" height="200">
 
         <img src="https://download.logo.wine/logo/Metro_AG/Metro_AG-Logo.wine.png" alt="logo metro cdmx"
             class="logometro" , width="200" , height="200">
@@ -100,13 +134,7 @@
 
 
 
-    <div class="tendencias"> <!-- div sirve para agrupar elementos y aplicar estilos -->
-        <div, class="noticias"> <!-- div sirve para agrupar elementos y aplicar estilos -->
-
-
-
-
-            <h3 class="tlinea">LAS TENDENCIAS DEL MOMENTO. </h3>
+    <div class="tendencias"> <div class="noticias"> <h3 class="tlinea">LAS TENDENCIAS DEL MOMENTO. </h3>
 
 
             <article class="noticia">
@@ -162,10 +190,11 @@
 
 
 
-    <section class="contenido">
-        <article>
+    <div class="main-layout">
+        <section class="contenido">
+            <article>
 
-            <h2>LA REALIDAD DEL ROBO EN EL METRO DE LA CDMX</h2>
+                <h2>LA REALIDAD DEL ROBO EN EL METRO DE LA CDMX</h2>
 
             <img src=https://360grados-ondemand.com/wp-content/uploads/2023/01/6331cbc756fd8210855370.jpeg
                 alt="Robo en el metro" , class="metroimg">
@@ -481,22 +510,12 @@
 
 
 
-        </article>
+            </article>
+        </section>
 
-        <div>
-
-
-
-
-
-            <aside> <!--aside se utiliza para agrupar contenido relacionado, como anuncios, enlaces, etc.-->
-
-
-                <h3>¿Necesitas ayuda?</h3>
+        <aside> <h3>¿Necesitas ayuda?</h3>
 
                 <p>Si eres víctima de un robo en el metro, contacta inmediatamente:</p>
-
-                <!--strong se utiliza para resaltar texto importante-->
 
                 <ul>
                     <li> <b> Policía Bancaria e Industrial (PBI): </b> 5535-1500 </li>
@@ -546,12 +565,9 @@
                     </div>
                 </div>
 
-            </aside>
+        </aside>
+    </div>
 
-    </section>
-
-
-    <!--footer se utiliza para agrupar contenido relacionado con el pie de página-->
 
     <footer>
 
@@ -561,7 +577,8 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const links = document.querySelectorAll('a');
+            // Efecto de transición suave entre páginas
+            const links = document.querySelectorAll('a[href$=".html"]');
 
             links.forEach(link => {
                 link.addEventListener('click', function (event) {
@@ -572,9 +589,66 @@
 
                     setTimeout(() => {
                         window.location.href = href;
-                    }, 500); // Tiempo de la transición en milisegundos
+                    }, 500);
                 });
             });
+
+            // Animación de entrada para elementos
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observar elementos que queremos animar
+            document.querySelectorAll('.noticia, .contenido article, aside, .section, .expli, .contenedor').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+                observer.observe(el);
+            });
+
+            // Smooth scroll para enlaces internos
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Función para cambiar fácilmente la imagen del hero
+            window.changeHeroImage = function(imageUrl, altText = 'Hero Image') {
+                const heroImage = document.getElementById('heroImage');
+                if (heroImage) {
+                    heroImage.src = imageUrl;
+                    heroImage.alt = altText;
+                    
+                    // Reiniciar la animación
+                    heroImage.style.animation = 'none';
+                    setTimeout(() => {
+                        heroImage.style.animation = '';
+                    }, 50);
+                }
+            };
+
+            // Ejemplo de uso (descomenta para probar):
+            // setTimeout(() => {
+            //     changeHeroImage('ruta/a/tu/imagen.png', 'Mi Imagen');
+            // }, 5000);
         });
     </script>
 </body>

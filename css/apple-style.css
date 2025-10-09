@@ -1,0 +1,1085 @@
+/* apple-style.css - ESTILO IPHONE PRO APLICADO AL HEADER */
+/* Apple Store Inspired Design - Elegant Black, White & Green */
+
+/* Reset y configuración base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colores principales */
+    --primary-black: #000000;
+    --secondary-black: #0a0a0a;
+    --deep-black: #050505;
+    --primary-white: #ffffff;
+    --off-white: #f5f5f7; /* Fondo general de la web */
+    --light-gray: #f5f5f7;
+    --medium-gray: #86868b;
+    --dark-gray: #424245;
+    
+    /* PALETA VERDE ACTUALIZADA (Más fuerte y elegante) */
+    --accent-green: #00A36C; 
+    --accent-green-hover: #008E5E; 
+    --accent-green-light: rgba(0, 163, 108, 0.1); 
+    
+    /* Tipografía Apple */
+    --font-primary: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    --font-text: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    /* Espaciado */
+    --section-padding: 80px 0;
+    --container-padding: 0 20px;
+    --border-radius: 12px;
+    --border-radius-large: 24px;
+    
+    /* Sombras */
+    --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.1); 
+    --shadow-strong: 0 15px 45px rgba(0, 0, 0, 0.15); 
+    
+    /* Transiciones */
+    --transition-smooth: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-fast: all 0.2s ease-out;
+}
+
+/* Estilos generales del body */
+body {
+    font-family: var(--font-primary);
+    background-color: var(--off-white); 
+    color: var(--primary-black);
+    line-height: 1.6;
+    font-weight: var(--font-weight-regular);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility; 
+    overflow-x: hidden;
+}
+
+/* Container principal (ya no es tan necesario, pero mantenemos la clase para consistencia) */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--container-padding);
+}
+
+/* APPLE STORE HEADER STYLES */
+header {
+    /* Mantenemos el negro puro para el estilo iPhone Pro */
+    background: var(--primary-black);
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition-smooth);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Apple Store Logo Section */
+.logo {
+    text-align: center;
+    /* Aumentamos el padding superior e inferior para un mayor impacto visual */
+    padding: 100px 20px 80px; 
+    background: transparent;
+    color: var(--primary-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center top, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+/* ---------------------------------------------------------------------- */
+/* AJUSTES CLAVE PARA EL ESTILO IPHONE PRO (TEXTO DOMINANTE) */
+/* ---------------------------------------------------------------------- */
+.apple-hero-section {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    padding: 0 20px 0; /* Eliminamos el padding inferior aquí para que lo controle el .logo */
+}
+
+/* Contenedor de texto del Hero (controla la animación fadeInUp) */
+.hero-text-header {
+    width: fit-content; 
+    margin: 0 auto;
+    padding-bottom: 40px; /* Más espacio entre texto e imagen */
+    
+    /* Mantenemos la animación */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out 0.3s both; 
+}
+
+/* Estilos para el Título (main-title) - CON EFECTO BRILLANTE */
+.logo h1, .main-title {
+    /* CAMBIO CLAVE: Tamaño enorme para el estilo Pro */
+    font-size: clamp(4rem, 12vw, 8rem);
+    font-weight: var(--font-weight-bold); /* Usamos el peso más audaz */
+    
+    /* Efecto brillante con degradado animado */
+    background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #f0f0f0 25%,
+        #ffffff 50%,
+        #e8e8e8 75%,
+        #ffffff 100%
+    );
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    
+    margin: 0 0 10px; /* Menos margen al subtítulo */
+    line-height: 1; /* Líneas pegadas */
+    letter-spacing: -0.05em; /* Letras más apretadas */
+    
+    /* Sombra y animación brillante - REDUCIDA */
+    text-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
+    animation: shimmerText 3s ease-in-out infinite, fadeInUp 1s ease-out 0.3s both;
+    
+    /* Efecto de resplandor adicional - REDUCIDO */
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.25));
+}
+
+/* Estilos para el Subtítulo (main-subtitle) - CON EFECTO BRILLANTE VERDE */
+.unp, .main-subtitle {
+    /* CAMBIO CLAVE: Resaltamos el subtítulo con efecto brillante verde */
+    font-size: clamp(1.2rem, 3vw, 2.5rem); 
+    
+    /* Efecto brillante con degradado verde animado */
+    background: linear-gradient(
+        135deg,
+        var(--accent-green) 0%,
+        #40e068 25%,
+        var(--accent-green) 50%,
+        #28cd4f 75%,
+        var(--accent-green) 100%
+    );
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 30px; /* Espacio antes de la imagen */
+    letter-spacing: 0.005em;
+    line-height: 1.2;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* Sombra y animación brillante verde */
+    text-shadow: 0 4px 20px rgba(48, 209, 88, 0.4);
+    animation: shimmerTextGreen 3.5s ease-in-out infinite, fadeInUp 1s ease-out 0.6s both;
+    
+    /* Efecto de resplandor verde adicional */
+    filter: drop-shadow(0 0 12px rgba(48, 209, 88, 0.6));
+}
+
+/* Contenedor de la imagen */
+.hero-product-container {
+    margin-top: 50px; /* Más espacio para separar la imagen del texto */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative; 
+}
+/* ---------------------------------------------------------------------- */
+
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.img1, .img2 {
+    max-width: 80px;
+    height: auto;
+    filter: drop-shadow(var(--shadow-subtle));
+    transition: var(--transition-smooth);
+}
+
+.img1:hover, .img2:hover {
+    transform: scale(1.1);
+}
+
+.txlogo {
+    margin: 40px 0;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--border-radius-large);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.unrc {
+    font-size: 2rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--accent-green);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.universidad {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.nombres {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: var(--font-weight-light);
+    font-style: normal;
+    margin-top: 20px;
+    letter-spacing: 0.02em;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Apple Store Navigation */
+.menu {
+    /* Mejorado para simular barra de navegación fija al hacer scroll */
+    background: transparent;
+    padding: 6px 0;
+    border-radius: 0;
+    border-bottom: none;
+    position: sticky; 
+    top: 0;
+    z-index: 100;
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: var(--transition-smooth);
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+.menu li {
+    margin: 0;
+    position: relative;
+}
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(29, 29, 31, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    min-width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15), 0 8px 64px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    z-index: 1000;
+    opacity: 0;
+    transform: translateX(-50%) translateY(4px) scale(0.95);
+    transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    pointer-events: none;
+}
+
+.dropdown-content::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid rgba(0, 0, 0, 0.95);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 16px;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: -0.003em;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    font-family: var(--font-text);
+    margin: 0 4px;
+    border-radius: 6px;
+    border-bottom: none;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.dropdown-content a:first-child {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.dropdown-content a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transform: scale(1.02);
+}
+
+.menu a {
+    display: block;
+    padding: 12px 20px;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-weight: var(--font-weight-regular);
+    font-size: 0.85rem;
+    letter-spacing: -0.003em;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    font-family: var(--font-text);
+    border-radius: 6px;
+    margin: 0 2px;
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.menu > ul > li > a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-green);
+    transition: var(--transition-smooth);
+}
+
+.menu > ul > li > a:hover::after,
+.dropdown:hover > a::after {
+    width: 100%;
+}
+
+/* Indicador de dropdown */
+.dropdown > a::before {
+    content: '▼';
+    font-size: 0.7rem;
+    margin-left: 8px;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.dropdown:hover > a::before {
+    opacity: 1;
+    transform: rotate(180deg);
+}
+
+/* Efecto de entrada escalonada para los items del dropdown */
+.dropdown-content a:nth-child(1) { animation-delay: 0.1s; }
+.dropdown-content a:nth-child(2) { animation-delay: 0.15s; }
+.dropdown-content a:nth-child(3) { animation-delay: 0.2s; }
+.dropdown-content a:nth-child(4) { animation-delay: 0.25s; }
+
+.dropdown:hover .dropdown-content a {
+    animation: fadeInSlide 0.3s ease forwards;
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------------------------------------------------- */
+/* SECCIONES DEL CUERPO - MANTENIDAS */
+/* ---------------------------------------------------- */
+
+/* Sección VozMetro - MEJORA: Borde suave en hover, centrado fijo */
+.vozmetro {
+    padding: var(--section-padding);
+    background: var(--primary-white); 
+    text-align: center;
+    margin: 40px auto; 
+    max-width: 1200px;
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow-medium);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.vozmetro:hover {
+    box-shadow: var(--shadow-strong);
+    border: 1px solid rgba(0, 163, 108, 0.3); /* Usa el nuevo color verde */
+}
+
+.vozmetro::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, var(--accent-green-light) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+    z-index: -1;
+}
+
+.qr-code, .logometro {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--border-radius);
+    margin: 15px;
+    box-shadow: var(--shadow-subtle);
+    transition: var(--transition-smooth);
+    object-fit: contain;
+}
+
+.qr-code:hover, .logometro:hover {
+    transform: scale(1.1); 
+    box-shadow: var(--shadow-strong);
+}
+
+.vozmetro h1 {
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-black);
+    margin: 30px 0;
+}
+
+/* Sección de notas - MEJORA: Más espacio para encabezado */
+.notas {
+    padding: var(--section-padding);
+    text-align: center;
+    background: transparent; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.notas h1 {
+    font-size: 2.2rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-black);
+    margin-bottom: 30px; 
+    animation: fadeInUp 1s ease-out both;
+}
+
+.notas p {
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Sección de tendencias */
+.tendencias {
+    padding: var(--section-padding);
+    background: transparent;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.noticias {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* CONTENEDOR PRINCIPAL DEL CUERPO - Alinea el Contenido y el Aside */
+.main-layout {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Sección de contenido - Mantiene el artículo dentro del layout */
+.contenido {
+    padding: 0; 
+    max-width: none; 
+    margin: 0;
+    text-align: left;
+}
+
+/* Tarjeta principal del artículo */
+.contenido article {
+    background: var(--primary-white);
+    padding: 50px;
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow-medium);
+    margin-bottom: 40px;
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(0, 0, 0, 0.05); 
+}
+
+.contenido article:hover {
+    box-shadow: var(--shadow-strong);
+    transform: translateY(-2px);
+}
+
+/* SIDEBAR Y COMPONENTES (MANTENIDOS) */
+
+aside {
+    background: var(--primary-white);
+    padding: 40px;
+    margin: 0; 
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow-medium);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: var(--transition-smooth);
+}
+
+aside:hover {
+    box-shadow: var(--shadow-strong);
+}
+
+.noticia {
+    background: var(--primary-white);
+    border-radius: var(--border-radius-large);
+    padding: 30px; 
+    margin-bottom: 0; 
+    box-shadow: var(--shadow-subtle);
+    transition: var(--transition-smooth);
+    text-align: center;
+    flex: 1 1 300px; 
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.noticia:nth-child(2) { animation-delay: 0.1s; }
+.noticia:nth-child(3) { animation-delay: 0.2s; }
+.noticia:nth-child(4) { animation-delay: 0.3s; }
+
+.noticia:hover {
+    transform: translateY(-5px) scale(1.02); 
+    box-shadow: var(--shadow-strong);
+    border-color: rgba(0, 163, 108, 0.1); /* Usa el nuevo color verde */
+}
+
+.noticia h2 {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--primary-black);
+    margin-bottom: 25px;
+}
+
+.noticia img {
+    width: 100%;
+    max-width: 400px;
+    height: 200px; 
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-subtle);
+    transition: var(--transition-smooth);
+}
+
+.tlinea {
+    font-size: 2rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-black);
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%; 
+}
+
+.leer {
+    display: inline-block;
+    padding: 15px 30px;
+    background: var(--accent-green);
+    color: var(--primary-white);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: var(--font-weight-semibold);
+    margin: 30px 0;
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-medium);
+}
+
+.leer:hover {
+    background: var(--accent-green-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px var(--accent-green-hover), var(--shadow-strong); 
+}
+
+.lineadiv {
+    border: none;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    max-width: 80%;
+}
+
+.contenido h2 {
+    font-size: 2rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-black);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.contenido h3 {
+    font-size: 1.4rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--accent-green); /* Usa el nuevo color verde */
+    margin: 30px 0 15px;
+    transition: all 0.2s ease-out;
+}
+
+.contenido h3:hover {
+    color: var(--accent-green-hover); /* Usa el nuevo color verde de hover */
+}
+
+.contenido p {
+    font-size: 1rem;
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.contenido ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.contenido li {
+    margin-bottom: 10px;
+    color: var(--dark-gray);
+    line-height: 1.6;
+    transition: all 0.2s ease-out;
+}
+
+.contenido li:hover {
+    color: var(--primary-black);
+}
+
+.metroimg {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-medium);
+    margin: 25px auto;
+    display: block;
+}
+
+aside h3 {
+    color: var(--primary-black);
+    font-size: 1.4rem;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+aside p {
+    color: var(--dark-gray);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+aside ul {
+    margin: 20px 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+aside li {
+    background: var(--off-white);
+    padding: 12px 20px;
+    margin-bottom: 8px;
+    border-radius: var(--border-radius);
+    color: var(--dark-gray);
+    transition: var(--transition-smooth);
+}
+
+aside li:hover {
+    background: var(--accent-green-light); /* Usa el nuevo color verde claro */
+    transform: translateX(5px);
+}
+
+.tarjeta {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin: 20px auto;
+    display: block;
+    box-shadow: var(--shadow-subtle);
+}
+
+.appm {
+    background: var(--off-white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    margin: 30px 0;
+    text-align: center;
+}
+
+.imgapp {
+    max-width: 150px;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin: 20px auto;
+    display: block;
+    box-shadow: var(--shadow-subtle);
+}
+
+.leer-mas {
+    display: inline-block;
+    padding: 12px 25px;
+    background: var(--accent-green); /* Usa el nuevo color verde */
+    color: var(--primary-white);
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: var(--font-weight-medium);
+    margin-top: 15px;
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-subtle);
+}
+
+.leer-mas:hover {
+    background: var(--accent-green-hover); /* Usa el nuevo color verde de hover */
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.social-media {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    background: var(--off-white);
+    color: var(--dark-gray);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: var(--transition-smooth);
+    font-weight: var(--font-weight-medium);
+}
+
+.social-icon:hover {
+    background: var(--accent-green); /* Usa el nuevo color verde */
+    color: var(--primary-white);
+    transform: translateX(5px);
+}
+
+/* FOOTER */
+footer {
+    background: var(--primary-black);
+    color: var(--primary-white);
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* ---------------------------------------------------- */
+/* RESPONSIVE Y ANIMACIONES BASE */
+/* ---------------------------------------------------- */
+@media (min-width: 1024px) {
+    .main-layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 40px;
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo {
+        padding: 40px 15px;
+    }
+
+    /* Ajuste para el estilo Pro en móvil */
+    .logo h1, .main-title {
+        font-size: clamp(3rem, 10vw, 5rem);
+    }
+    .unp, .main-subtitle {
+        font-size: clamp(1rem, 4vw, 1.8rem);
+        margin-bottom: 20px;
+    }
+    
+    .apple-hero-section {
+        padding: 0 15px 40px;
+    }
+    
+    .hero-product-image {
+        max-width: 180px; 
+    }
+    
+    .menu ul {
+        flex-direction: column;
+    }
+    
+    .menu a {
+        padding: 15px 20px;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .dropdown-content {
+        position: static;
+        display: none;
+        background: rgba(0, 0, 0, 0.9);
+        box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+        border-radius: 0;
+        border: none;
+        min-width: 100%;
+        transform: none;
+        opacity: 1;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        transform: none;
+    }
+    
+    .contenido article {
+        padding: 30px 20px;
+        margin: 20px 0;
+    }
+
+    .main-layout {
+        padding: 0 15px;
+    }
+    
+    aside {
+        padding: 25px 20px;
+        margin-top: 25px;
+    }
+
+    .noticias {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .noticia {
+        flex: 1 1 100%;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de efecto brillante para el texto - REDUCIDA */
+@keyframes shimmerText {
+    0% {
+        background-position: 0% 50%;
+        filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.2));
+    }
+    25% {
+        background-position: 25% 50%;
+        filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.3));
+    }
+    50% {
+        background-position: 100% 50%;
+        filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
+    }
+    75% {
+        background-position: 75% 50%;
+        filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.3));
+    }
+    100% {
+        background-position: 0% 50%;
+        filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.2));
+    }
+}
+
+/* Animación de efecto brillante verde para el subtítulo */
+@keyframes shimmerTextGreen {
+    0% {
+        background-position: 0% 50%;
+        filter: drop-shadow(0 0 8px rgba(48, 209, 88, 0.4));
+    }
+    25% {
+        background-position: 25% 50%;
+        filter: drop-shadow(0 0 12px rgba(48, 209, 88, 0.7));
+    }
+    50% {
+        background-position: 100% 50%;
+        filter: drop-shadow(0 0 16px rgba(48, 209, 88, 0.9));
+    }
+    75% {
+        background-position: 75% 50%;
+        filter: drop-shadow(0 0 12px rgba(48, 209, 88, 0.7));
+    }
+    100% {
+        background-position: 0% 50%;
+        filter: drop-shadow(0 0 8px rgba(48, 209, 88, 0.4));
+    }
+}
+
+@keyframes reveal-diploma {
+    0% { 
+        filter: drop-shadow(0 0 100px rgba(0, 0, 0, 0.9)) brightness(0.1); 
+        opacity: 0.1; 
+        transform: translateY(20px); 
+    }
+    50% {
+        filter: drop-shadow(0 0 50px rgba(0, 0, 0, 0.7)) brightness(0.5); 
+        opacity: 0.5; 
+        transform: translateY(10px);
+    }
+    100% { 
+        filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5)) brightness(1); 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+header {
+    animation: slideDown 0.8s ease-out;
+}
+
+/* Mejoras responsivas para el header */
+@media (max-width: 768px) {
+    .logo {
+        padding: 40px 20px 35px;
+    }
+    
+    .logo h1, .main-title {
+        font-size: clamp(1.8rem, 7vw, 2.8rem);
+        margin-bottom: 12px;
+    }
+    
+    .unp, .main-subtitle {
+        font-size: clamp(0.85rem, 3.5vw, 1rem);
+        margin-bottom: 24px;
+    }
+    
+    .menu ul {
+        flex-wrap: wrap;
+        gap: 2px;
+    }
+    
+    .menu a {
+        padding: 8px 12px;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        padding: 30px 15px 25px;
+    }
+    
+    .logo h1, .main-title {
+        font-size: clamp(1.5rem, 6vw, 2.2rem);
+        margin-bottom: 8px;
+    }
+    
+    .unp, .main-subtitle {
+        font-size: clamp(0.8rem, 3vw, 0.95rem);
+        margin-bottom: 20px;
+    }
+    
+    .menu ul {
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    .menu a {
+        padding: 8px 14px;
+        font-size: 0.7rem;
+    }
+}
