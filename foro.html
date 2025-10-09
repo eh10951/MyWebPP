@@ -16,6 +16,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Configuración de URLs para desarrollo/producción -->
+    <script src="js/config.js"></script>
+    
+    <!-- Script de prueba de conexión (solo para desarrollo) -->
+    <script src="js/test-connection.js"></script>
+    
     <script>
         // Si llegas con el historial hacia atrás, forza recarga completa
         window.onpageshow = function (event) {
@@ -877,7 +883,7 @@
     <!-- SCRIPTS -->
     <script>
         // Configuración de la API
-        const API_BASE_URL = 'http://localhost:5000';
+        const API_BASE_URL = window.CONFIG ? window.CONFIG.getApiUrl() : 'http://localhost:5000';
 
         // ========== SISTEMA DE VOZ ==========
         let vozGoogleEspaño = null;

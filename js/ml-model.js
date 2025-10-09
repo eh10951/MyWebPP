@@ -1,5 +1,5 @@
-// Configuración de la API
-const API_BASE_URL = 'http://localhost:5000'; // Cambia esto por tu URL de producción
+// Configuración de la API (usar CONFIG si está disponible, sino localhost)
+const API_BASE_URL = window.CONFIG ? window.CONFIG.getApiUrl() : 'http://localhost:5000';
 
 // Función principal para analizar texto
 async function analyzeText() {
