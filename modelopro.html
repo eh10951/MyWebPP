@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asistente Escolar UNRC</title>
+  <!-- Google Fonts - Tipografías profesionales -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+      background: radial-gradient(circle at center, #0a0f1f, #000);
+      color: #00eaff;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      letter-spacing: 0.01em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: clamp(1.5rem, 5vw, 2rem);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      color: #00ff99;
+      text-shadow: 0 0 8px #00ff99, 0 0 15px rgba(0,255,153,0.6);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    /* Contenedor de la mascota estilo Jarvis - Responsive */
+    .jarvis-core {
+      width: min(280px, 80vw);
+      height: min(280px, 80vw);
+      max-width: 280px;
+      max-height: 280px;
+      border-radius: 50%;
+      background: transparent;
+      border: 4px solid #00ff99;
+      box-shadow: 0 0 30px #00ff99, 0 0 15px #00ff99;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      animation: pulse 2s infinite alternate;
+      overflow: hidden;
+    }
+
+    .mascota {
+      width: 95%;
+      height: 95%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    @keyframes pulse {
+      from { transform: scale(1); opacity: 0.8; }
+      to { transform: scale(1.1); opacity: 1; }
+    }
+
+    button {
+      background: #00ff99;
+      color: #000;
+      border: none;
+      padding: 12px 25px;
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(14px, 4vw, 16px);
+      font-weight: 500;
+      border-radius: 30px;
+      cursor: pointer;
+      margin: 10px 5px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      min-width: 120px;
+      touch-action: manipulation;
+      letter-spacing: 0.025em;
+      text-transform: uppercase;
+      font-size: clamp(12px, 3.5vw, 14px);
+    }
+
+    button:hover, button:active {
+      background: #00cc7a;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+
+
+    #texto, #respuesta, #consejo {
+      margin-top: 15px;
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(0.9rem, 3vw, 1.1rem);
+      font-weight: 400;
+      line-height: 1.7;
+      max-width: 90vw;
+      word-wrap: break-word;
+      padding: 0 10px;
+      letter-spacing: 0.01em;
+    }
+
+    /* Estilos específicos para respuestas y consejos profesionales */
+    #respuesta {
+      background: rgba(0, 234, 255, 0.1);
+      border-left: 3px solid #00eaff;
+      padding: 15px 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+      font-weight: 400;
+      backdrop-filter: blur(10px);
+    }
+
+    #consejo {
+      background: rgba(0, 255, 153, 0.1);
+      border-left: 3px solid #00ff99;
+      padding: 15px 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+      font-weight: 400;
+      backdrop-filter: blur(10px);
+    }
+
+    /* Mejorar el estilo del texto reconocido */
+    #texto {
+      font-family: 'JetBrains Mono', monospace;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(0, 234, 255, 0.3);
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-size: clamp(0.85rem, 2.8vw, 1rem);
+      color: #ffffff;
+      letter-spacing: 0.02em;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(0.7rem, 2.5vw, 0.9rem);
+      font-weight: 300;
+      color: #aaa;
+      text-align: center;
+      padding: 10px;
+      letter-spacing: 0.02em;
+      line-height: 1.5;
+    }
+
+    /* Estilos específicos para móviles */
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+        min-height: 100vh;
+      }
+      
+      .jarvis-core {
+        width: min(220px, 70vw);
+        height: min(220px, 70vw);
+        margin-bottom: 15px;
+      }
+      
+      button {
+        padding: 15px 20px;
+        font-size: 16px;
+        margin: 8px 3px;
+        min-width: 140px;
+      }
+      
+      #texto, #respuesta, #consejo {
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-top: 20px;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+    }
+
+    /* Estilos para pantallas muy pequeñas */
+    @media (max-width: 480px) {
+      .jarvis-core {
+        width: min(180px, 60vw);
+        height: min(180px, 60vw);
+      }
+      
+      h1 {
+        font-size: 1.5rem;
+      }
+      
+      #respuesta, #consejo {
+        padding: 0 5px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Asistente Escolar Alba</h1>
+
+  <!-- Mascota UNRC -->
+  <div class="jarvis-core">
+    <img src="mascota.jpeg" alt="Mascota UNRC" class="mascota">
+  </div>
+
+  <p id="texto">Presiona el botón y habla</p>
+
+  <button onclick="escuchar()">🎤 Habla con Alba</button>
+
+  <p id="respuesta"></p>
+  <p id="consejo"></p>
+
+  <footer>Universidad Rosario Castellanos © 2025</footer>
+
+  <script>
+    let vozGoogleEspaño = null;
+
+    function cargarVozGoogle() {
+      const voces = speechSynthesis.getVoices();
+      
+      // PRIORIDAD 1: Buscar específicamente Google Español US femenina
+      vozGoogleEspaño = voces.find(voz => 
+        voz.name.includes('Google') && 
+        voz.lang === 'es-US' &&
+        voz.name.toLowerCase().includes('female')
+      );
+      
+      // PRIORIDAD 2: Google Español US (cualquier género)
+      if (!vozGoogleEspaño) {
+        vozGoogleEspaño = voces.find(voz => 
+          voz.name.includes('Google') && 
+          voz.lang === 'es-US'
+        );
+      }
+      
+      // PRIORIDAD 3: Google Español México femenina
+      if (!vozGoogleEspaño) {
+        vozGoogleEspaño = voces.find(voz => 
+          voz.name.includes('Google') && 
+          voz.lang === 'es-MX' &&
+          voz.name.toLowerCase().includes('female')
+        );
+      }
+      
+      // PRIORIDAD 4: Cualquier Google en español
+      if (!vozGoogleEspaño) {
+        vozGoogleEspaño = voces.find(voz => 
+          voz.name.includes('Google') && 
+          voz.lang.startsWith('es')
+        );
+      }
+      
+      // PRIORIDAD 5: Voces femeninas de calidad en español US
+      if (!vozGoogleEspaño) {
+        vozGoogleEspaño = voces.find(voz => 
+          voz.lang === 'es-US' && 
+          (voz.name.includes('Microsoft') || voz.name.includes('Sabina') || voz.name.includes('Paulina'))
+        );
+      }
+      
+      // FALLBACK: Primera voz en español disponible
+      if (!vozGoogleEspaño) {
+        vozGoogleEspaño = voces.find(voz => voz.lang.startsWith('es'));
+      }
+      
+      console.log('Voz seleccionada:', vozGoogleEspaño ? `${vozGoogleEspaño.name} (${vozGoogleEspaño.lang})` : 'Voz del sistema');
+      
+      // Debug: Mostrar todas las voces disponibles en español
+      console.log('Voces en español disponibles:');
+      voces.filter(voz => voz.lang.startsWith('es')).forEach(voz => {
+        console.log(`- ${voz.name} (${voz.lang}) ${voz.gender || ''}`);
+      });
+    }
+
+    // Función para mostrar información de voces (solo para debug)
+    function mostrarVocesDisponibles() {
+      const voces = speechSynthesis.getVoices();
+      console.log('=== TODAS LAS VOCES DISPONIBLES ===');
+      voces.forEach((voz, index) => {
+        if (voz.lang.startsWith('es')) {
+          console.log(`${index}: ${voz.name} | ${voz.lang} | ${voz.localService ? 'Local' : 'Remoto'}`);
+        }
+      });
+      console.log('=====================================');
+    }
+
+    // Cargar voces cuando estén disponibles
+    speechSynthesis.onvoiceschanged = () => {
+      cargarVozGoogle();
+      mostrarVocesDisponibles(); // Para debug
+    };
+    
+    // Cargar voces inmediatamente si ya están disponibles
+    if (speechSynthesis.getVoices().length > 0) {
+      cargarVozGoogle();
+      mostrarVocesDisponibles(); // Para debug
+    }
+
+    // Verificar voces después de un momento (fallback)
+    setTimeout(() => {
+      if (!vozGoogleEspaño) {
+        console.log('Reintentando cargar voces...');
+        cargarVozGoogle();
+      }
+    }, 1000);
+
+    function speak(text) {
+      // Asegurar que las voces estén cargadas
+      if (!vozGoogleEspaño && speechSynthesis.getVoices().length > 0) {
+        cargarVozGoogle();
+      }
+      
+      let utter = new SpeechSynthesisUtterance(text);
+      
+      // Configurar idioma específico para español de Estados Unidos
+      utter.lang = "es-US";
+      
+      // Usar la voz de Google femenina si está disponible
+      if (vozGoogleEspaño) {
+        utter.voice = vozGoogleEspaño;
+        console.log(`Usando voz: ${vozGoogleEspaño.name} (${vozGoogleEspaño.lang})`);
+      } else {
+        console.log('Usando voz del sistema por defecto');
+      }
+      
+      // Configuración optimizada para voz femenina natural
+      utter.rate = 1.0;    // Velocidad normal (no lenta)
+      utter.pitch = 1.1;   // Tono ligeramente más alto (más femenino)
+      utter.volume = 1.0;  // Volumen máximo
+      
+      // Manejar errores de síntesis
+      utter.onerror = (event) => {
+        console.error('Error en síntesis de voz:', event.error);
+      };
+      
+      utter.onend = () => {
+        console.log('Síntesis de voz completada');
+      };
+      
+      speechSynthesis.speak(utter);
+    }
+
+    function escuchar() {
+      const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+      
+      // Configurar para español de Estados Unidos
+      recognition.lang = "es-US";
+      recognition.continuous = false;
+      recognition.interimResults = false;
+      recognition.maxAlternatives = 1;
+      
+      recognition.start();
+
+      recognition.onresult = function(event) {
+        const comando = event.results[0][0].transcript.toLowerCase();
+        document.getElementById("texto").innerText = "Tú dijiste: " + comando;
+        
+        // Mostrar indicador de carga
+        document.getElementById("respuesta").innerHTML = "<strong>🔄 Analizando tu consulta...</strong>";
+        document.getElementById("consejo").innerHTML = "<em>Preparando recomendaciones profesionales...</em>";
+
+        // Enviar texto al backend Flask para clasificar
+        // URL dinámica que funciona en local y producción
+        const baseUrl = window.location.origin;
+        fetch(`${baseUrl}/clasificar`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ texto: comando })
+        })
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById("respuesta").innerText = data.respuesta;
+          document.getElementById("consejo").innerText = "Consejo: " + data.consejo;
+
+          // Leer con voz profesional
+          speak(data.respuesta + ". " + data.consejo);
+        })
+        .catch(err => {
+          console.error(err);
+          speak("Ocurrió un error al comunicarse con el servidor.");
+        });
+      }
+    }
+  </script>
+</body>
+</html>

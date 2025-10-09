@@ -12,6 +12,11 @@
     
     <link rel="stylesheet" href="css/apple-style.css">
     <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Google Fonts - Tipografías profesionales -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <script>
         // Si llegas con el historial hacia atrás, forza recarga completa
@@ -21,8 +26,803 @@
             }
         };
     </script>
+    
+    <!-- Script para el modelo de ML -->
+    <script src="js/ml-model.js"></script>
+    
+    <style>
+        /* ========== DISEÑO JARVIS CON TODOS LOS COLORES DEL MODELO ========== */
+        
+        /* Variables de color del modelo ML */
+        :root {
+            --primary-cyan: #00eaff;
+            --primary-green: #00ff99;
+            --accent-gold: #ffd700;
+            --accent-blue: #007bff;
+            --accent-red: #ff6b6b;
+            --accent-orange: #ff8c00;
+            --accent-purple: #9d4edd;
+            --accent-pink: #ff69b4;
+            --success-green: #28a745;
+            --warning-orange: #ffc107;
+            --error-red: #dc3545;
+            --dark-bg: #0a0f1f;
+            --darker-bg: #000;
+        }
+        
+        /* Resetear y aplicar fondo Jarvis */
+        body {
+            background: radial-gradient(circle at center, var(--dark-bg), var(--darker-bg)) !important;
+            color: var(--primary-cyan) !important;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Header con efectos Jarvis y gradiente multicolor */
+        header {
+            background: linear-gradient(135deg, 
+                rgba(0, 0, 0, 0.9) 0%, 
+                rgba(10, 15, 31, 0.8) 50%, 
+                rgba(0, 0, 0, 0.9) 100%) !important;
+            backdrop-filter: blur(15px);
+            border-bottom: 2px solid var(--primary-cyan);
+            box-shadow: 0 4px 20px rgba(0, 234, 255, 0.2), 
+                        0 0 40px rgba(0, 255, 153, 0.1);
+        }
+        
+        /* Navegación con efectos neón multicolor */
+        nav.menu ul {
+            background: linear-gradient(135deg, 
+                rgba(0, 0, 0, 0.7) 0%, 
+                rgba(0, 234, 255, 0.05) 50%, 
+                rgba(0, 0, 0, 0.7) 100%);
+            border-radius: 15px;
+            padding: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 234, 255, 0.2);
+        }
+        
+        nav.menu li:nth-child(1) a { color: var(--primary-cyan) !important; }
+        nav.menu li:nth-child(2) a { color: var(--primary-green) !important; }
+        nav.menu li:nth-child(3) a { color: var(--accent-gold) !important; }
+        nav.menu li:nth-child(4) a { color: var(--accent-blue) !important; }
+        
+        nav.menu a {
+            text-shadow: 0 0 5px currentColor;
+            transition: all 0.3s ease;
+        }
+        
+        nav.menu li:nth-child(1) a:hover { 
+            color: var(--accent-gold) !important; 
+            text-shadow: 0 0 15px var(--accent-gold); 
+        }
+        nav.menu li:nth-child(2) a:hover { 
+            color: var(--accent-purple) !important; 
+            text-shadow: 0 0 15px var(--accent-purple); 
+        }
+        nav.menu li:nth-child(3) a:hover { 
+            color: var(--primary-cyan) !important; 
+            text-shadow: 0 0 15px var(--primary-cyan); 
+        }
+        nav.menu li:nth-child(4) a:hover { 
+            color: var(--primary-green) !important; 
+            text-shadow: 0 0 15px var(--primary-green); 
+        }
+        
+        /* Títulos con efectos neón multicolor */
+        h1 {
+            background: linear-gradient(135deg, var(--primary-green), var(--primary-cyan), var(--accent-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: 'Poppins', sans-serif !important;
+            text-shadow: none;
+        }
+        
+        h2 {
+            color: var(--primary-cyan) !important;
+            text-shadow: 0 0 8px var(--primary-cyan), 0 0 15px rgba(0,234,255,0.6);
+            font-family: 'Poppins', sans-serif !important;
+        }
+        
+        h3 {
+            color: var(--accent-gold) !important;
+            text-shadow: 0 0 8px var(--accent-gold), 0 0 15px rgba(255,215,0,0.6);
+            font-family: 'Poppins', sans-serif !important;
+        }
+        
+        .main-title {
+            font-size: clamp(2rem, 5vw, 3rem) !important;
+            background: linear-gradient(135deg, 
+                var(--primary-green) 0%, 
+                var(--primary-cyan) 35%, 
+                var(--accent-gold) 70%, 
+                var(--accent-purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 4s ease-in-out infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { filter: hue-rotate(0deg); }
+            50% { filter: hue-rotate(30deg); }
+            100% { filter: hue-rotate(0deg); }
+        }
+        
+        /* Secciones con glassmorphism multicolor */
+        .vozmetro {
+            background: rgba(0, 234, 255, 0.05) !important;
+            border: 1px solid rgba(0, 234, 255, 0.3) !important;
+            border-radius: 15px !important;
+            backdrop-filter: blur(10px) !important;
+            padding: 30px !important;
+            margin: 20px auto !important;
+            max-width: 1200px !important;
+            box-shadow: 0 8px 32px rgba(0, 234, 255, 0.15) !important;
+        }
+        
+        .notas {
+            background: rgba(255, 215, 0, 0.05) !important;
+            border: 1px solid rgba(255, 215, 0, 0.3) !important;
+            border-radius: 15px !important;
+            backdrop-filter: blur(10px) !important;
+            padding: 30px !important;
+            margin: 20px auto !important;
+            max-width: 1200px !important;
+            box-shadow: 0 8px 32px rgba(255, 215, 0, 0.15) !important;
+        }
+        
+        .tendencias {
+            background: rgba(0, 255, 153, 0.05) !important;
+            border: 1px solid rgba(0, 255, 153, 0.3) !important;
+            border-radius: 15px !important;
+            backdrop-filter: blur(10px) !important;
+            padding: 30px !important;
+            margin: 20px auto !important;
+            max-width: 1200px !important;
+            box-shadow: 0 8px 32px rgba(0, 255, 153, 0.15) !important;
+        }
+        
+        .main-layout {
+            background: rgba(157, 78, 221, 0.05) !important;
+            border: 1px solid rgba(157, 78, 221, 0.3) !important;
+            border-radius: 15px !important;
+            backdrop-filter: blur(10px) !important;
+            padding: 30px !important;
+            margin: 20px auto !important;
+            max-width: 1200px !important;
+            box-shadow: 0 8px 32px rgba(157, 78, 221, 0.15) !important;
+        }
+        
+        /* Cards de noticias estilo Jarvis con colores variados */
+        .noticia:nth-child(1) {
+            background: rgba(255, 107, 107, 0.05) !important;
+            border: 1px solid rgba(255, 107, 107, 0.3) !important;
+            border-radius: 12px !important;
+            padding: 20px !important;
+            margin: 15px !important;
+            backdrop-filter: blur(15px) !important;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .noticia:nth-child(2) {
+            background: rgba(0, 234, 255, 0.05) !important;
+            border: 1px solid rgba(0, 234, 255, 0.3) !important;
+            border-radius: 12px !important;
+            padding: 20px !important;
+            margin: 15px !important;
+            backdrop-filter: blur(15px) !important;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .noticia:nth-child(3) {
+            background: rgba(255, 140, 0, 0.05) !important;
+            border: 1px solid rgba(255, 140, 0, 0.3) !important;
+            border-radius: 12px !important;
+            padding: 20px !important;
+            margin: 15px !important;
+            backdrop-filter: blur(15px) !important;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .noticia::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            transition: left 0.5s ease;
+        }
+        
+        .noticia:nth-child(1)::before {
+            background: linear-gradient(90deg, transparent, var(--accent-red), transparent);
+        }
+        
+        .noticia:nth-child(2)::before {
+            background: linear-gradient(90deg, transparent, var(--primary-cyan), transparent);
+        }
+        
+        .noticia:nth-child(3)::before {
+            background: linear-gradient(90deg, transparent, var(--accent-orange), transparent);
+        }
+        
+        .noticia:nth-child(1):hover {
+            transform: translateY(-5px) !important;
+            box-shadow: 0 15px 35px rgba(255, 107, 107, 0.2) !important;
+            border-color: var(--accent-red) !important;
+        }
+        
+        .noticia:nth-child(2):hover {
+            transform: translateY(-5px) !important;
+            box-shadow: 0 15px 35px rgba(0, 234, 255, 0.2) !important;
+            border-color: var(--primary-cyan) !important;
+        }
+        
+        .noticia:nth-child(3):hover {
+            transform: translateY(-5px) !important;
+            box-shadow: 0 15px 35px rgba(255, 140, 0, 0.2) !important;
+            border-color: var(--accent-orange) !important;
+        }
+        
+        .noticia:hover::before {
+            left: 100%;
+        }
+        
+        /* Imágenes con efectos */
+        img {
+            border-radius: 10px !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        img:hover {
+            transform: scale(1.02) !important;
+            box-shadow: 0 8px 25px rgba(0, 234, 255, 0.2) !important;
+        }
+        
+        /* Botones estilo Jarvis con colores variados */
+        .leer {
+            background: linear-gradient(135deg, var(--primary-green), var(--primary-cyan)) !important;
+            color: #000 !important;
+            border: none !important;
+            padding: 12px 25px !important;
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 600 !important;
+            border-radius: 30px !important;
+            cursor: pointer !important;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            text-decoration: none !important;
+            display: inline-block !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .leer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-purple));
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+        
+        .leer:hover::before {
+            left: 0;
+        }
+        
+        .leer:hover {
+            color: #fff !important;
+            transform: scale(1.05) !important;
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.4), 
+                        0 0 35px rgba(157, 78, 221, 0.3) !important;
+        }
+        
+        button {
+            background: var(--accent-blue) !important;
+            color: #fff !important;
+            border: 2px solid var(--accent-blue) !important;
+            padding: 12px 25px !important;
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 600 !important;
+            border-radius: 30px !important;
+            cursor: pointer !important;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+        }
+        
+        button:hover {
+            background: transparent !important;
+            color: var(--accent-blue) !important;
+            border-color: var(--accent-blue) !important;
+            transform: scale(1.05) !important;
+            box-shadow: 0 0 20px rgba(0, 123, 255, 0.4) !important;
+        }
+        
+        /* Párrafos con mejor legibilidad */
+        p {
+            color: rgba(255, 255, 255, 0.85) !important;
+            line-height: 1.6 !important;
+            font-size: 1rem !important;
+        }
+        
+        /* QR y logos con efectos especiales multicolor */
+        .qr-code {
+            border: 3px solid var(--primary-green) !important;
+            border-radius: 15px !important;
+            box-shadow: 0 0 25px rgba(0, 255, 153, 0.4) !important;
+            animation: pulseGreen 4s ease-in-out infinite !important;
+        }
+        
+        .logometro {
+            border: 3px solid var(--accent-gold) !important;
+            border-radius: 15px !important;
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.4) !important;
+            animation: pulseGold 3s ease-in-out infinite !important;
+        }
+        
+        @keyframes pulse {
+            from { transform: scale(1); opacity: 0.9; }
+            to { transform: scale(1.03); opacity: 1; }
+        }
+        
+        @keyframes pulseGreen {
+            0% { 
+                transform: scale(1); 
+                box-shadow: 0 0 25px rgba(0, 255, 153, 0.4); 
+                border-color: var(--primary-green);
+            }
+            50% { 
+                transform: scale(1.05); 
+                box-shadow: 0 0 35px rgba(0, 255, 153, 0.6); 
+                border-color: var(--primary-cyan);
+            }
+            100% { 
+                transform: scale(1); 
+                box-shadow: 0 0 25px rgba(0, 255, 153, 0.4); 
+                border-color: var(--primary-green);
+            }
+        }
+        
+        @keyframes pulseGold {
+            0% { 
+                transform: scale(1); 
+                box-shadow: 0 0 25px rgba(255, 215, 0, 0.4); 
+                border-color: var(--accent-gold);
+            }
+            50% { 
+                transform: scale(1.03); 
+                box-shadow: 0 0 35px rgba(255, 215, 0, 0.6); 
+                border-color: var(--accent-orange);
+            }
+            100% { 
+                transform: scale(1); 
+                box-shadow: 0 0 25px rgba(255, 215, 0, 0.4); 
+                border-color: var(--accent-gold);
+            }
+        }
+        
+        /* Líneas divisorias con neón multicolor */
+        .lineadiv, hr {
+            border: none !important;
+            height: 3px !important;
+            background: linear-gradient(90deg, 
+                transparent, 
+                var(--primary-cyan) 20%, 
+                var(--primary-green) 40%, 
+                var(--accent-gold) 60%, 
+                var(--accent-purple) 80%, 
+                transparent) !important;
+            margin: 40px 0 !important;
+            border-radius: 2px !important;
+            box-shadow: 0 0 10px rgba(0, 234, 255, 0.3) !important;
+            animation: lineGlow 3s ease-in-out infinite !important;
+        }
+        
+        @keyframes lineGlow {
+            0% { 
+                box-shadow: 0 0 10px rgba(0, 234, 255, 0.3); 
+                filter: hue-rotate(0deg);
+            }
+            50% { 
+                box-shadow: 0 0 20px rgba(0, 255, 153, 0.5); 
+                filter: hue-rotate(60deg);
+            }
+            100% { 
+                box-shadow: 0 0 10px rgba(0, 234, 255, 0.3); 
+                filter: hue-rotate(0deg);
+            }
+        }
+        
+        /* Hero section mejorada */
+        .apple-hero-section {
+            background: rgba(0, 0, 0, 0.4) !important;
+            border-radius: 20px !important;
+            padding: 40px !important;
+            backdrop-filter: blur(20px) !important;
+            border: 1px solid rgba(0, 255, 153, 0.2) !important;
+        }
+        
+        /* Logos hero con efectos */
+        .hero-logo-image {
+            border: 3px solid #00ff99 !important;
+            border-radius: 50% !important;
+            box-shadow: 0 0 25px rgba(0, 255, 153, 0.4) !important;
+            animation: pulse 4s ease-in-out infinite !important;
+        }
+        
+        /* Títulos de tendencias con arcoíris */
+        .tlinea {
+            background: linear-gradient(135deg, 
+                var(--primary-cyan) 0%, 
+                var(--primary-green) 20%, 
+                var(--accent-gold) 40%, 
+                var(--accent-orange) 60%, 
+                var(--accent-purple) 80%, 
+                var(--accent-pink) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.8rem !important;
+            font-weight: 700 !important;
+            text-align: center;
+            margin-bottom: 30px !important;
+            animation: rainbowShift 5s ease-in-out infinite;
+        }
+        
+        @keyframes rainbowShift {
+            0% { filter: hue-rotate(0deg); }
+            25% { filter: hue-rotate(90deg); }
+            50% { filter: hue-rotate(180deg); }
+            75% { filter: hue-rotate(270deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+        
+        /* ========== TENDENCIAS CON DISEÑO DE CARDS ML ========== */
+        
+        /* Contenedor principal de tendencias estilo ML */
+        .tendencias-ml-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        
+        /* Grid de cards como en el modelo ML */
+        .noticias {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+            gap: 25px !important;
+            margin: 30px 0 !important;
+        }
+        
+        /* Cards individuales estilo modelo ML */
+        .noticia-card-ml {
+            background: rgba(0, 255, 153, 0.05) !important;
+            border: 1px solid rgba(0, 255, 153, 0.2) !important;
+            border-radius: 15px !important;
+            padding: 30px 25px !important;
+            text-align: center !important;
+            backdrop-filter: blur(10px) !important;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            position: relative !important;
+            overflow: hidden !important;
+            min-height: 320px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-between !important;
+        }
+        
+        /* Línea animada superior como en ML */
+        .noticia-card-ml::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff99, transparent);
+            transition: left 0.5s ease;
+        }
+        
+        /* Efectos hover como en ML */
+        .noticia-card-ml:hover {
+            transform: translateY(-8px) !important;
+            box-shadow: 0 20px 40px rgba(0, 255, 153, 0.2) !important;
+            border-color: rgba(0, 255, 153, 0.4) !important;
+        }
+        
+        .noticia-card-ml:hover::before {
+            left: 100%;
+        }
+        
+        /* Iconos grandes como en ML */
+        .card-icon-ml {
+            font-size: 3rem !important;
+            margin-bottom: 20px !important;
+            filter: drop-shadow(0 0 10px rgba(0, 255, 153, 0.3)) !important;
+            display: block !important;
+        }
+        
+        /* Títulos de cards como en ML */
+        .noticia-card-ml h3 {
+            color: #00ff99 !important;
+            font-size: 1.3rem !important;
+            margin-bottom: 15px !important;
+            font-weight: 600 !important;
+            font-family: 'Poppins', sans-serif !important;
+            text-shadow: 0 0 8px rgba(0, 255, 153, 0.3) !important;
+        }
+        
+        /* Descripción de cards como en ML */
+        .noticia-card-ml p {
+            color: rgba(255, 255, 255, 0.85) !important;
+            line-height: 1.6 !important;
+            font-size: 0.95rem !important;
+            margin-bottom: 20px !important;
+            flex-grow: 1 !important;
+        }
+        
+        /* Imágenes en cards ML */
+        .noticia-img-ml {
+            width: 100% !important;
+            height: 120px !important;
+            object-fit: cover !important;
+            border-radius: 10px !important;
+            border: 2px solid rgba(0, 255, 153, 0.3) !important;
+            transition: all 0.3s ease !important;
+            margin-top: auto !important;
+        }
+        
+        .noticia-img-ml:hover {
+            border-color: #00ff99 !important;
+            box-shadow: 0 5px 15px rgba(0, 255, 153, 0.3) !important;
+            transform: scale(1.02) !important;
+        }
+        
+        /* Variaciones de color para cada card */
+        .noticia-card-ml:nth-child(1) {
+            background: rgba(255, 107, 107, 0.05) !important;
+            border-color: rgba(255, 107, 107, 0.2) !important;
+        }
+        
+        .noticia-card-ml:nth-child(1)::before {
+            background: linear-gradient(90deg, transparent, var(--accent-red), transparent);
+        }
+        
+        .noticia-card-ml:nth-child(1) .card-icon-ml {
+            color: var(--accent-red) !important;
+            filter: drop-shadow(0 0 10px rgba(255, 107, 107, 0.3)) !important;
+        }
+        
+        .noticia-card-ml:nth-child(1) h3 {
+            color: var(--accent-red) !important;
+            text-shadow: 0 0 8px rgba(255, 107, 107, 0.3) !important;
+        }
+        
+        .noticia-card-ml:nth-child(1):hover {
+            box-shadow: 0 20px 40px rgba(255, 107, 107, 0.2) !important;
+            border-color: rgba(255, 107, 107, 0.4) !important;
+        }
+        
+        .noticia-card-ml:nth-child(2) {
+            background: rgba(0, 234, 255, 0.05) !important;
+            border-color: rgba(0, 234, 255, 0.2) !important;
+        }
+        
+        .noticia-card-ml:nth-child(2)::before {
+            background: linear-gradient(90deg, transparent, var(--primary-cyan), transparent);
+        }
+        
+        .noticia-card-ml:nth-child(2) .card-icon-ml {
+            color: var(--primary-cyan) !important;
+            filter: drop-shadow(0 0 10px rgba(0, 234, 255, 0.3)) !important;
+        }
+        
+        .noticia-card-ml:nth-child(2) h3 {
+            color: var(--primary-cyan) !important;
+            text-shadow: 0 0 8px rgba(0, 234, 255, 0.3) !important;
+        }
+        
+        .noticia-card-ml:nth-child(2):hover {
+            box-shadow: 0 20px 40px rgba(0, 234, 255, 0.2) !important;
+            border-color: rgba(0, 234, 255, 0.4) !important;
+        }
+        
+        .noticia-card-ml:nth-child(3) {
+            background: rgba(255, 215, 0, 0.05) !important;
+            border-color: rgba(255, 215, 0, 0.2) !important;
+        }
+        
+        .noticia-card-ml:nth-child(3)::before {
+            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+        }
+        
+        .noticia-card-ml:nth-child(3) .card-icon-ml {
+            color: var(--accent-gold) !important;
+            filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3)) !important;
+        }
+        
+        .noticia-card-ml:nth-child(3) h3 {
+            color: var(--accent-gold) !important;
+            text-shadow: 0 0 8px rgba(255, 215, 0, 0.3) !important;
+        }
+        
+        .noticia-card-ml:nth-child(3):hover {
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2) !important;
+            border-color: rgba(255, 215, 0, 0.4) !important;
+        }
+        
+        /* Responsive para cards ML */
+        @media (max-width: 768px) {
+            .noticias {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+            
+            .noticia-card-ml {
+                padding: 25px 20px !important;
+                min-height: 280px !important;
+            }
+            
+            .card-icon-ml {
+                font-size: 2.5rem !important;
+            }
+            
+            .noticia-card-ml h3 {
+                font-size: 1.2rem !important;
+            }
+        }
+        
+        /* Efectos especiales para imágenes de noticias */
+        .notpin, .notvio, .notest, .metroimg {
+            border: 2px solid rgba(0, 234, 255, 0.3) !important;
+            filter: brightness(0.9) contrast(1.1) !important;
+        }
+        
+        .notpin:hover, .notvio:hover, .notest:hover, .metroimg:hover {
+            filter: brightness(1.1) contrast(1.2) !important;
+            border-color: #00eaff !important;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .vozmetro, .notas, .tendencias, .main-layout {
+                padding: 20px !important;
+                margin: 15px !important;
+            }
+            
+            .noticia {
+                margin: 10px 0 !important;
+            }
+            
+            .noticias {
+                grid-template-columns: 1fr !important;
+                gap: 15px !important;
+            }
+            
+            .hero-logo-image {
+                width: 80px !important;
+                height: 80px !important;
+            }
+        }
+        
+        /* Animaciones especiales para las cards ML */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 4px 15px rgba(0, 234, 255, 0.3);
+            }
+            50% {
+                box-shadow: 0 8px 25px rgba(0, 234, 255, 0.6);
+            }
+        }
 
+        .tendencias-ml-container .noticia-card-ml {
+            animation: slideInUp 0.8s ease-out;
+        }
+
+        .tendencias-ml-container .noticia-card-ml:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .tendencias-ml-container .noticia-card-ml:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .tendencias-ml-container .noticia-card-ml:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        .card-icon-ml {
+            animation: pulse-glow 3s infinite;
+        }
+
+        /* Scrollbar personalizada con todos los colores */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, 
+                var(--primary-green) 0%, 
+                var(--primary-cyan) 25%, 
+                var(--accent-gold) 50%, 
+                var(--accent-purple) 75%, 
+                var(--accent-pink) 100%);
+            border-radius: 5px;
+            animation: scrollGlow 3s ease-in-out infinite;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, 
+                var(--accent-orange) 0%, 
+                var(--accent-red) 50%, 
+                var(--accent-blue) 100%);
+        }
+        
+        @keyframes scrollGlow {
+            0% { filter: brightness(1) hue-rotate(0deg); }
+            50% { filter: brightness(1.2) hue-rotate(30deg); }
+            100% { filter: brightness(1) hue-rotate(0deg); }
+        }
+        
+        /* Efectos adicionales para párrafos según sección */
+        .vozmetro p { color: rgba(0, 234, 255, 0.9) !important; }
+        .notas p { color: rgba(255, 215, 0, 0.9) !important; }
+        .tendencias p { color: rgba(0, 255, 153, 0.9) !important; }
+        .main-layout p { color: rgba(157, 78, 221, 0.9) !important; }
+        
+        /* Efectos hover para títulos h2 según sección */
+        .vozmetro h2:hover { 
+            color: var(--primary-cyan) !important; 
+            text-shadow: 0 0 15px var(--primary-cyan); 
+        }
+        .notas h2:hover { 
+            color: var(--accent-gold) !important; 
+            text-shadow: 0 0 15px var(--accent-gold); 
+        }
+        .tendencias h2:hover { 
+            color: var(--primary-green) !important; 
+            text-shadow: 0 0 15px var(--primary-green); 
+        }
+        .main-layout h2:hover { 
+            color: var(--accent-purple) !important; 
+            text-shadow: 0 0 15px var(--accent-purple); 
+        }
+    </style>
 
 </head>
 
@@ -38,7 +838,7 @@
         <nav class="menu">
             <ul>
                 <li class="dropdown">
-                    <a href="mapas.html">MAPAS</a>
+                    <a href="mapas.html">TESTIMONIOS</a>
                     <div class="dropdown-content">
                         <a href="mapas.html">Mapas Interactivos</a>
                         <a href="mapas.html#zonas-peligrosas">Zonas Peligrosas</a>
@@ -56,7 +856,7 @@
                     </div>
                 </li>
                 <li class="dropdown">
-                    <a href="MapaI.html">RÚTA INTELIGÉNTE</a>
+                    <a href="MapaI.html">FORO DE ESTUDIO</a>
                     <div class="dropdown-content">
                         <a href="MapaI.html">Planificador de Ruta</a>
                         <a href="MapaI.html#tiempo-real">Tiempo Real</a>
@@ -65,7 +865,7 @@
                     </div>
                 </li>
                 <li class="dropdown">
-                    <a href="foro.html">FORO</a>
+                    <a href="foro.html">MODELO ML</a>
                     <div class="dropdown-content">
                         <a href="foro.html">Discusiones</a>
                         <a href="foro.html#reportes">Reportar Incidentes</a>
@@ -81,21 +881,17 @@
             <div class="apple-hero-section">
                 
                 <div class="hero-text-header">
-                    <h1 class="main-title">LA DESERCIÓN ESCOLAR <br> EN LA UNRC</h1>
-                    <p class="main-subtitle">UN RETO QUE IMPACTA A LA COMUNIDAD UNIVERSITARIA</p>
-                </div>
-
-                <div class="hero-product-container diploma-image">
-                    <div class="product-showcase">
-                        <img 
-                            class="hero-product-image" 
-                            src="imagenes/diploma.png" 
-                            alt="Diploma Universitario"
-                            id="heroImageDiploma"
-                        >
-                        <div class="product-glow-effect diploma-glow"></div>
-                        <div class="product-shadow-overlay diploma-shadow"></div>
+                    <!-- Título con logos a los lados -->
+                    <div class="title-with-logos">
+                        <div class="logo-left-side">
+                            <img src="imagenes/PicsArt_03-09-04.13.02.png" alt="Logo UNRC" class="hero-logo-image">
+                        </div>
+                        <h1 class="main-title">EL ABANDONO ESCOLAR <br> EN LA UNRC</h1>
+                        <div class="logo-right-side">
+                            <img src="imagenes/PicsArt_03-09-04.13.02.png" alt="Logo UNRC" class="hero-logo-image">
+                        </div>
                     </div>
+                    <p class="main-subtitle">UN RETO QUE IMPACTA A LA COMUNIDAD UNIVERSITARIA</p>
                 </div>
             </div>
 
@@ -134,52 +930,42 @@
 
 
 
-    <div class="tendencias"> <div class="noticias"> <h3 class="tlinea">LAS TENDENCIAS DEL MOMENTO. </h3>
+    <div class="tendencias">
+        <div class="tendencias-ml-container">
+            <h3 class="tlinea">🔥 LAS TENDENCIAS DEL MOMENTO</h3>
+            <p style="text-align: center; color: rgba(255,255,255,0.8); margin-bottom: 40px; font-size: 1.1rem;">
+                Descubre las situaciones más relevantes del metro CDMX con análisis en tiempo real y datos actualizados
+            </p>
+            
+            <div class="noticias">
+                <article class="noticia-card-ml">
+                    <div class="card-icon-ml">🚨</div>
+                    <h3>Alertas de Seguridad</h3>
+                    <p>Casos reportados de pinchazos y situaciones peligrosas que afectan la seguridad de los usuarios del metro. Mantente informado sobre las zonas de mayor riesgo.</p>
+                    <img src="imagenes/pinchazo.jpg" alt="Alertas de seguridad" class="noticia-img-ml">
+                </article>
 
+                <article class="noticia-card-ml">
+                    <div class="card-icon-ml">⚔️</div>
+                    <h3>Incidentes de Violencia</h3>
+                    <p>Reportes actualizados sobre actos violentos en el sistema de transporte. Conoce las estadísticas y medidas preventivas implementadas por las autoridades.</p>
+                    <img src="https://images.milenio.com/U6_BJ-QsLkYhn7MpH1LOzTVaSAQ=/345x194/uploads/media/2025/04/30/reportan-casos-pinchazos-metro-cdmx_248_123_951_600.jpg" alt="Incidentes de violencia" class="noticia-img-ml">
+                </article>
 
-            <article class="noticia">
-
-                <h2>¡PINCHAZOS! 😱</h2>
-                <img src="imagenes/pinchazo.jpg" alt="pinchazos" class="notpin">
-
-
-
-
-
-            </article>
-
-
-
-            <article class="noticia">
-
-
-                <h2>VIOLENCIA EN EL METRO CDMX</h2>
-
-                <img src="https://images.milenio.com/U6_BJ-QsLkYhn7MpH1LOzTVaSAQ=/345x194/uploads/media/2025/04/30/reportan-casos-pinchazos-metro-cdmx_248_123_951_600.jpg"
-                    alt="Imagen de la noticia 1" class="notvio">
-
-
-
-
-
-
-            </article>
-
-
-
-            <article class="noticia">
-
-                <h2>¡ESTACIONES SATURADAS!</h2>
-
-                <img src="https://tvazteca.brightspotcdn.com/dims4/default/d2f4986/2147483647/strip/true/crop/1280x720+0+0/resize/928x522!/format/webp/quality/90/?url=http%3A%2F%2Ftv-azteca-brightspot.s3.amazonaws.com%2Fd1%2F4f%2F12033ad34d5db8867cb09d82dd47%2Fmetro-cdmx-que-pasa-11-marzo-2024.jpg"
-                    alt="Imagen de la noticia 3" , class="notest">
-
-
-
-            </article>
-
-    </div>
-    <a href=blog.html class="leer">Leer mas 📑 </a>
+                <article class="noticia-card-ml">
+                    <div class="card-icon-ml">🚇</div>
+                    <h3>Saturación y Flujo</h3>
+                    <p>Análisis de las estaciones con mayor congestionamiento y horarios pico. Obtén información valiosa para planificar mejor tus viajes y evitar multitudes.</p>
+                    <img src="https://tvazteca.brightspotcdn.com/dims4/default/d2f4986/2147483647/strip/true/crop/1280x720+0+0/resize/928x522!/format/webp/quality/90/?url=http%3A%2F%2Ftv-azteca-brightspot.s3.amazonaws.com%2Fd1%2F4f%2F12033ad34d5db8867cb09d82dd47%2Fmetro-cdmx-que-pasa-11-marzo-2024.jpg" alt="Saturación de estaciones" class="noticia-img-ml">
+                </article>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="blog.html" class="leer">
+                    <i class="fas fa-newspaper"></i> Leer Análisis Completo
+                </a>
+            </div>
+        </div>
 
 
     <hr class="lineadiv">
@@ -504,11 +1290,97 @@
                 </ul>
             </div>
 
+            <!-- SECCIÓN DEL MODELO DE MACHINE LEARNING -->
+            <section class="ml-model-section">
+                <h1>🤖 Modelo de Machine Learning - Clasificación de Sentimientos Estudiantiles</h1>
+                
+                <div class="model-description">
+                    <h2>📝 ¿Qué hace este modelo?</h2>
+                    <p>Este modelo utiliza técnicas de procesamiento de lenguaje natural y machine learning para analizar y clasificar comentarios o experiencias estudiantiles en diferentes categorías:</p>
+                    
+                    <div class="categories-grid">
+                        <div class="category-card desercion">
+                            <h3>🚨 Riesgo de Deserción</h3>
+                            <p>Detecta cuando un estudiante expresa intención de abandonar sus estudios</p>
+                        </div>
+                        <div class="category-card motivacion">
+                            <h3>💪 Búsqueda de Motivación</h3>
+                            <p>Identifica cuando se buscan estrategias para mejorar el rendimiento académico</p>
+                        </div>
+                        <div class="category-card positivo">
+                            <h3>✅ Experiencia Positiva</h3>
+                            <p>Reconoce comentarios positivos sobre la experiencia educativa</p>
+                        </div>
+                        <div class="category-card academico">
+                            <h3>📚 Apoyo Académico</h3>
+                            <p>Clasifica consultas sobre materias específicas (Matemáticas, Física, etc.)</p>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="model-interface">
+                    <h2>🔍 Prueba el Modelo</h2>
+                    <p>Escribe un comentario o experiencia estudiantil y el modelo lo clasificará automáticamente:</p>
+                    
+                    <div class="input-container">
+                        <textarea 
+                            id="textInput" 
+                            placeholder="Ejemplo: 'Estoy pensando en dejar la universidad porque no entiendo nada...' o 'Me encanta estudiar aquí, los profesores son excelentes'"
+                            rows="4"
+                        ></textarea>
+                        <button id="analyzeBtn" onclick="analyzeText()">
+                            <span id="btnText">🔍 Analizar Texto</span>
+                            <span id="btnLoader" style="display: none;">⏳ Analizando...</span>
+                        </button>
+                    </div>
 
+                    <div id="results" class="results-container" style="display: none;">
+                        <div class="result-header">
+                            <h3>📊 Resultados del Análisis</h3>
+                        </div>
+                        <div class="result-content">
+                            <div class="result-item">
+                                <strong>Categoría Detectada:</strong>
+                                <span id="category" class="category-badge"></span>
+                            </div>
+                            <div class="result-item">
+                                <strong>Nivel de Confianza:</strong>
+                                <span id="confidence" class="confidence-score"></span>
+                            </div>
+                            <div class="result-item">
+                                <strong>Interpretación:</strong>
+                                <p id="interpretation"></p>
+                            </div>
+                            <div class="result-item">
+                                <strong>Consejo Personalizado:</strong>
+                                <p id="advice"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-
-
+                <div class="model-tech-info">
+                    <h2>⚙️ Información Técnica</h2>
+                    <div class="tech-grid">
+                        <div class="tech-card">
+                            <h3>🧠 Algoritmo</h3>
+                            <p>Regresión Logística con análisis de palabras clave</p>
+                        </div>
+                        <div class="tech-card">
+                            <h3>📊 Vectorización</h3>
+                            <p>CountVectorizer para análisis de frecuencia de palabras</p>
+                        </div>
+                        <div class="tech-card">
+                            <h3>🎯 Precisión</h3>
+                            <p>Sistema híbrido con validación por palabras clave</p>
+                        </div>
+                        <div class="tech-card">
+                            <h3>🔄 Tiempo Real</h3>
+                            <p>Análisis instantáneo mediante API Flask</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             </article>
         </section>
