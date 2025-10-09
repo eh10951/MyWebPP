@@ -1,21 +1,33 @@
-from flask import Flask, request, jsonify, send_from_directory
+from flask import Flask, request, jsonify
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import LogisticRegression
 from flask_cors import CORS
 import os
 import random
+import logging
+import sys
+
+# Configurar logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
 CORS(app)
 
-# Configuración para servir archivos estáticos
-@app.route('/')
-def serve_frontend():
-    return send_from_directory('../frontend', 'index.html')
+# Configurar CORS específicamente para producción
+if os.environ.get('RAILWAY_ENVIRONMENT'):
+    logger.info("Ejecutándose en Railway")
+else:
+    logger.info("Ejecutándose en desarrollo local")
 
-@app.route('/<path:filename>')
-def serve_static(filename):
-    return send_from_directory('../frontend', filename)
+# Configuración básica - Solo API, no servir frontend
+@app.route('/')
+def health_check():
+    return jsonify({
+        "status": "OK", 
+        "message": "API del Modelo ML funcionando correctamente",
+        "version": "1.0"
+    })
 
 # Entrenamiento simple con datos básicos
 vectorizer = CountVectorizer()
@@ -568,8 +580,33 @@ consejos = {
 @app.route("/clasificar", methods=["POST"])
 def clasificar():
     try:
-        data = request.json
-        texto = data.get("texto", "").lower()
+        logger.info("Recibiendo solicitud de clasificación")
+        
+        # Validar que la solicitud tenga datos JSON
+        if not request.is_json:
+            logger.error("Solicitud sin JSON válido")
+            return jsonify({
+                "error": "Content-Type debe ser application/json"
+            }), 400
+            
+        data = request.get_json()
+        if not data:
+            logger.error("Datos JSON vacíos")
+            return jsonify({
+                "error": "No se recibieron datos"
+            }), 400
+            
+        # Obtener texto, validar diferentes nombres de campo
+        texto = data.get("texto") or data.get("comentario") or data.get("message", "")
+        
+        if not texto or not texto.strip():
+            logger.error("Texto vacío recibido")
+            return jsonify({
+                "error": "El campo 'texto' es requerido y no puede estar vacío"
+            }), 400
+            
+        texto = texto.lower().strip()
+        logger.info(f"Procesando texto: {texto[:50]}...")
         
         # Sistema de detección mejorado con palabras clave
         palabras_muy_positivas = [
@@ -672,20 +709,37 @@ def clasificar():
         
         respuesta = respuestas_naturales.get(pred, f"He identificado tu consulta sobre: {pred}")
         
-        return jsonify({
+        result = {
             "respuesta": respuesta,
             "consejo": consejo,
             "categoria": pred,
-            "confianza": f"{confianza:.0%}"
-        })
+            "confianza": f"{confianza:.0%}",
+            "status": "success"
+        }
+        
+        logger.info(f"Clasificación exitosa: {pred}")
+        return jsonify(result)
     
     except Exception as e:
-        print(f"Error: {e}")
+        logger.error(f"Error en clasificación: {str(e)}")
         return jsonify({
+            "error": "Error interno del servidor",
+            "message": "Ocurrió un error al procesar tu solicitud",
             "respuesta": "He recibido tu consulta académica.",
-            "consejo": "Te recomiendo consultar con tu profesor o tutor académico."
-        })
+            "consejo": "Te recomiendo consultar con tu profesor o tutor académico.",
+            "status": "error"
+        }), 500
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port, debug=False)
+    debug_mode = os.environ.get("FLASK_ENV") == "development"
+    
+    logger.info(f"Iniciando servidor en puerto {port}")
+    logger.info(f"Modo debug: {debug_mode}")
+    
+    if os.environ.get('RAILWAY_ENVIRONMENT'):
+        logger.info("Ejecutándose en Railway - Modo producción")
+    else:
+        logger.info("Ejecutándose localmente")
+    
+    app.run(host="0.0.0.0", port=port, debug=debug_mode)
