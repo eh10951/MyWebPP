@@ -1,6 +1,9 @@
-# Dependencias básicas para el backend
+# Dependencias para el backend completo (app.py)
 Flask>=2.3.0
 Flask-Cors>=4.0.0
+scikit-learn>=1.3.0
+pandas>=2.0.0
+numpy>=1.24.0
 
-# Para despliegue en producción (opcional según el servicio)
+# Para despliegue en producción
 gunicorn>=20.0.0
