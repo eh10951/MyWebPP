@@ -9,9 +9,9 @@ const CONFIG = {
     },
     
     production: {
-        // ACTUALIZA ESTA URL DESPUÉS DE DESPLEGAR EN RAILWAY
-        // Formato: https://tu-proyecto-xxxx.up.railway.app
-        apiUrl: 'https://mywebpp-production.up.railway.app'
+        // ACTUALIZA ESTA URL DESPUÉS DE DESPLEGAR EN TU SERVICIO ELEGIDO
+        // Ejemplos: Render, Heroku, Vercel, Netlify, etc.
+        apiUrl: 'https://tu-aplicacion.onrender.com'
     },
     
     // Función para obtener la URL correcta

@@ -14,9 +14,9 @@ logger = logging.getLogger(__name__)
 app = Flask(__name__)
 CORS(app)
 
-# Configurar CORS específicamente para producción
-if os.environ.get('RAILWAY_ENVIRONMENT'):
-    logger.info("Ejecutándose en Railway")
+# Configurar CORS para todos los entornos
+if os.environ.get('FLASK_ENV') == 'production':
+    logger.info("Ejecutándose en modo producción")
 else:
     logger.info("Ejecutándose en desarrollo local")
 
@@ -737,8 +737,8 @@ if __name__ == "__main__":
     logger.info(f"Iniciando servidor en puerto {port}")
     logger.info(f"Modo debug: {debug_mode}")
     
-    if os.environ.get('RAILWAY_ENVIRONMENT'):
-        logger.info("Ejecutándose en Railway - Modo producción")
+    if os.environ.get('FLASK_ENV') == 'production':
+        logger.info("Ejecutándose en producción")
     else:
         logger.info("Ejecutándose localmente")
     
