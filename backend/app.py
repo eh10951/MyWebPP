@@ -1,13 +1,15 @@
-from flask import Flask, request, jsonify
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.linear_model import LogisticRegression
-from flask_cors import CORS
-import os
-import random
-import logging
-import sys
 
-# Configurar logging
+
+from flask import Flask, request, jsonify  # Framework web y utilidades para manejar solicitudes/respuestas JSON
+from sklearn.feature_extraction.text import CountVectorizer  # Vectorizador para convertir texto en datos numéricos
+from sklearn.linear_model import LogisticRegression  # Modelo de regresión logística para clasificación
+from flask_cors import CORS  # Permite solicitudes CORS (de otros dominios) en la API
+import os  # Acceso a variables de entorno y utilidades del sistema operativo
+import random  # Para seleccionar consejos aleatorios
+import logging  # Para registrar información y errores en la aplicación
+
+
+# Configurar logging, es decir configurar el sistema de registro de eventos
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -493,28 +495,44 @@ textos_negativos = [
     'Dejé de estudiar porque el estrés por las entregas era insostenible.'
 ]
 
-# Combinar todos los textos
-todos_los_textos = (textos_matematicas + textos_fisica + textos_quimica + 
-                   textos_programacion + textos_desercion + textos_motivacion + 
-                   textos_positivos_escuela + textos_negativos)
+# Combinar todos los textos de entrenamiento en una sola lista.
+# Esto incluye ejemplos de matemáticas, física, química, programación, deserción, motivación,
+# comentarios positivos sobre la escuela y comentarios negativos generales.
+todos_los_textos = (
+    textos_matematicas +
+    textos_fisica +
+    textos_quimica +
+    textos_programacion +
+    textos_desercion +
+    textos_motivacion +
+    textos_positivos_escuela +
+    textos_negativos
+)
 
-todas_las_etiquetas = (["matematicas"] * len(textos_matematicas) +
-                      ["fisica"] * len(textos_fisica) +
-                      ["quimica"] * len(textos_quimica) +
-                      ["programacion"] * len(textos_programacion) +
-                      ["desercion"] * len(textos_desercion) +
-                      ["motivacion"] * len(textos_motivacion) +
-                      ["positivo"] * len(textos_positivos_escuela) +
-                      ["negativo"] * len(textos_negativos))
+# Crear una lista de etiquetas (categorías) correspondiente a cada texto.
+# Por ejemplo, cada texto de 'textos_matematicas' recibe la etiqueta 'matematicas', etc.
+todas_las_etiquetas = (
+    ["matematicas"] * len(textos_matematicas) +
+    ["fisica"] * len(textos_fisica) +
+    ["quimica"] * len(textos_quimica) +
+    ["programacion"] * len(textos_programacion) +
+    ["desercion"] * len(textos_desercion) +
+    ["motivacion"] * len(textos_motivacion) +
+    ["positivo"] * len(textos_positivos_escuela) +
+    ["negativo"] * len(textos_negativos)
+)
 
-# Entrenar modelo con mejor configuración
+# Convertir los textos en vectores numéricos usando CountVectorizer (bag of words).
 X = vectorizer.fit_transform(todos_los_textos)
 y = todas_las_etiquetas
 
-# Usar configuración más precisa para el modelo
+# Entrenar el modelo de regresión logística con los datos vectorizados y sus etiquetas.
+# Se usa una configuración robusta: hasta 1000 iteraciones, semilla fija para reproducibilidad,
+# y parámetro C=1.0 para regularización estándar.
 model = LogisticRegression(max_iter=1000, random_state=42, C=1.0)
 model.fit(X, y)
 
+# Imprimir en consola cuántos ejemplos y categorías se usaron para entrenar el modelo.
 print(f"Modelo entrenado con {len(todos_los_textos)} ejemplos y {len(set(y))} categorías")
 
 # Consejos profesionales con recursos específicos
