@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Inseguridad y robo en el metro de la cdmx</title>
+    <title>Análisis de la Deserción Escolar</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -26,9 +26,6 @@
             }
         };
     </script>
-    
-    <!-- Script para el modelo de ML -->
-    <script src="js/ml-model.js"></script>
     
     <style>
         /* ========== DISEÑO JARVIS CON TODOS LOS COLORES DEL MODELO ========== */
@@ -75,15 +72,15 @@
         }
         
         /* Navegación con efectos neón multicolor */
-        nav.menu ul {
-            background: linear-gradient(135deg, 
-                rgba(0, 0, 0, 0.7) 0%, 
-                rgba(0, 234, 255, 0.05) 50%, 
-                rgba(0, 0, 0, 0.7) 100%);
-            border-radius: 15px;
-            padding: 10px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 234, 255, 0.2);
+        .menu ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+            gap: 12px; /* aumentado para más separación entre items del menú */
         }
         
         nav.menu li:nth-child(1) a { color: var(--primary-cyan) !important; }
@@ -92,8 +89,13 @@
         nav.menu li:nth-child(4) a { color: var(--accent-blue) !important; }
         
         nav.menu a {
-            text-shadow: 0 0 5px currentColor;
+            text-shadow: 0 0 6px currentColor;
             transition: all 0.3s ease;
+            display: inline-block;
+            padding: 14px 26px; /* mayor área clicable */
+            font-size: 1.05rem; /* tamaño aumentado */
+            font-weight: 600;
+            color: rgba(255,255,255,0.95);
         }
         
         nav.menu li:nth-child(1) a:hover { 
@@ -833,613 +835,122 @@
 
 
 
-    <header>
-
+    <header class="header">
+       
         <nav class="menu">
             <ul>
-                <li class="dropdown">
-                    <a href="mapas.html">TESTIGOS</a>
-                    <div class="dropdown-content">
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="blog.html">ENCUESTA RELIZADA</a>
-                    <div class="dropdown-content">
-                        <a href="blog.html">Últimas Noticias</a>
-  
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="MapaI.html">FORO DE ESTUDIO</a>
-                    <div class="dropdown-content">
-                        <a href="MapaI.html">Planificador de Ruta</a>
-                        <a href="MapaI.html#tiempo-real">Tiempo Real</a>
-                        <a href="MapaI.html#alertas">Alertas de Seguridad</a>
-                        <a href="MapaI.html#recomendaciones">Recomendaciones</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="foro.html">MODELO ML</a>
-                    <div class="dropdown-content">
-                        <a href="foro.html">Discusiones</a>
-                        <a href="foro.html#reportes">Reportar Incidentes</a>
-                        <a href="foro.html#comunidad">Comunidad</a>
-                        <a href="foro.html#ayuda">Centro de Ayuda</a>
-                    </div>
-                </li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="foro.html">Foro</a></li>
+                <li><a href="mapas.html">Datos</a></li>
             </ul>
         </nav>
-
-        <div class="logo">
-
-            <div class="apple-hero-section">
-                
-                <div class="hero-text-header">
-                    <!-- Título con logos a los lados -->
-                    <div class="title-with-logos">
-                        <div class="logo-left-side">
-                            <img src="imagenes/PicsArt_03-09-04.13.02.png" alt="Logo UNRC" class="hero-logo-image">
-                        </div>
-                        <h1 class="main-title">EL ABANDONO ESCOLAR <br> EN LA UNRC</h1>
-                        <div class="logo-right-side">
-                            <img src="imagenes/PicsArt_03-09-04.13.02.png" alt="Logo UNRC" class="hero-logo-image">
-                        </div>
-                    </div>
-                    <p class="main-subtitle">Un desafio que nos involucra a todos en comunidad</p>
-                </div>
-            </div>
-
-        </div>
-
     </header>
 
-
-
-
-
-    <div class="vozmetro"> <img src="imagenes/bgqr.png" alt="Código QR" class="qr-code" width="200" height="200">
-
-        <img src="https://download.logo.wine/logo/Metro_AG/Metro_AG-Logo.wine.png" alt="logo metro cdmx"
-            class="logometro" , width="200" , height="200">
-
-        <h1> Voz del Metro CDMX</h1>
-
-
-
-    </div>
-
-
-
-
-    <div class="notas">
-
-
-
-        <h1>ULTIMAS ENTRADAS DEL BLOG</h1>
-
-        <p>En esta sección encontrarás las últimas entradas de nuestro blog, donde abordamos temas relacionados con la
-            seguridad en el metro de la CDMX y consejos para protegerte.</p>
-
-    </div>
-
-
-
-    <div class="tendencias">
-        <div class="tendencias-ml-container">
-            <h3 class="tlinea">🔥 LAS TENDENCIAS DEL MOMENTO</h3>
-            <p style="text-align: center; color: rgba(255,255,255,0.8); margin-bottom: 40px; font-size: 1.1rem;">
-                Descubre las situaciones más relevantes del metro CDMX con análisis en tiempo real y datos actualizados
-            </p>
-            
-            <div class="noticias">
-                <article class="noticia-card-ml">
-                    <div class="card-icon-ml">🚨</div>
-                    <h3>Alertas de Seguridad</h3>
-                    <p>Casos reportados de pinchazos y situaciones peligrosas que afectan la seguridad de los usuarios del metro. Mantente informado sobre las zonas de mayor riesgo.</p>
-                    <img src="imagenes/pinchazo.jpg" alt="Alertas de seguridad" class="noticia-img-ml">
-                </article>
-
-                <article class="noticia-card-ml">
-                    <div class="card-icon-ml">⚔️</div>
-                    <h3>Incidentes de Violencia</h3>
-                    <p>Reportes actualizados sobre actos violentos en el sistema de transporte. Conoce las estadísticas y medidas preventivas implementadas por las autoridades.</p>
-                    <img src="https://images.milenio.com/U6_BJ-QsLkYhn7MpH1LOzTVaSAQ=/345x194/uploads/media/2025/04/30/reportan-casos-pinchazos-metro-cdmx_248_123_951_600.jpg" alt="Incidentes de violencia" class="noticia-img-ml">
-                </article>
-
-                <article class="noticia-card-ml">
-                    <div class="card-icon-ml">🚇</div>
-                    <h3>Saturación y Flujo</h3>
-                    <p>Análisis de las estaciones con mayor congestionamiento y horarios pico. Obtén información valiosa para planificar mejor tus viajes y evitar multitudes.</p>
-                    <img src="https://tvazteca.brightspotcdn.com/dims4/default/d2f4986/2147483647/strip/true/crop/1280x720+0+0/resize/928x522!/format/webp/quality/90/?url=http%3A%2F%2Ftv-azteca-brightspot.s3.amazonaws.com%2Fd1%2F4f%2F12033ad34d5db8867cb09d82dd47%2Fmetro-cdmx-que-pasa-11-marzo-2024.jpg" alt="Saturación de estaciones" class="noticia-img-ml">
-                </article>
-            </div>
-            
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="blog.html" class="leer">
-                    <i class="fas fa-newspaper"></i> Leer Análisis Completo
-                </a>
-            </div>
-        </div>
-
-
-    <hr class="lineadiv">
-
-
-    </div>
-
-
-
-
-    <div class="main-layout">
-        <section class="contenido">
-            <article>
-
-                <h2>LA REALIDAD DEL ROBO EN EL METRO DE LA CDMX</h2>
-
-            <img src=https://360grados-ondemand.com/wp-content/uploads/2023/01/6331cbc756fd8210855370.jpeg
-                alt="Robo en el metro" , class="metroimg">
-
-            <h2>Metro de la CDMX</h2>
-
-            <p>El metro de la CDMX es uno de los más transitados del mundo y es operado por el Sistema de
-                Transporte
-                Colectivo (STC). Tiene 12 líneas recorriendo la ciudad y la red de metro conecta con otros
-                medios de
-                transporte público de la ciudad como el Metrobús, el Tren Ligero, el Mexibús o el Ferrocarril
-                Suburbano.
-            </p>
-
-            <p>El robo en el metro de la Ciudad de México es un problema persistente que afecta a miles de
-                usuarios
-                a
-                diario. Aunque las autoridades intentan implementar medidas para combatir esta inseguridad, los
-                incidentes continúan ocurriendo con frecuencia, especialmente en horas pico.</p>
-
-            <p>Los ladrones aprovechan la aglomeración de personas, la falta de vigilancia en algunas estaciones
-                y
-                los
-                momentos de distracción de los pasajeros para cometer estos delitos. A menudo, los robos son
-                perpetrados
-                sin que las víctimas se den cuenta hasta después de que el agresor ha desaparecido.</p>
-
-            <h3>¿Cómo protegerte?</h3>
-
-            <ul>
-                <li> Guarda tus pertenencias cerca de ti y siempre en tu campo de visión.</li>
-                <li>Evita mostrar objetos de valor como teléfonos móviles o joyas en público.</li>
-                <li>Si sientes que alguien te está acechando, cambia de posición o aléjate de la multitud.</li>
-                <li>Denuncia cualquier acto sospechoso a los oficiales de seguridad del metro.</li>
-            </ul>
-
-            <h3>Testimonios de usuarios</h3>
-
-            <p>"Me robaron el teléfono en la línea 2, ni me di cuenta hasta que ya había desaparecido. Es
-                horrible,
-                pero
-                no sabía a quién recurrir" - Juan P.</p>
-
-            <p>"Lo peor es que no ves a los ladrones, a veces parecen pasajeros normales. Hay que tener más
-                cuidado." -
-                Laura G.</p>
-
-            <p>"Me querian dar un pinchazo pero me di cuenta a tiempo, gracias a Dios." - Francisco R.</p>
-
-
-            <h3>Consejos de Seguridad</h3>
-
-            <p>Además de estar alertas, es importante recordar que la seguridad depende de la cooperación de
-                todos.
-                Si
-                ves algo sospechoso, no dudes en alertar a la policía o al personal de seguridad del metro. A
-                través
-                de
-                la denuncia se puede mejorar la seguridad y prevenir más incidentes.</p>
-
-            <img src="https://arc-anglerfish-arc2-prod-infobae.s3.amazonaws.com/public/SUK44NNRSBFX5O46XHJ4VXYMFM.jpg">
-
-            <h3> Análisis de Datos </h3>
-
-            <p> Se llevó a cabo un proceso de investigación que comprendió la recopilación, depuración, análisis y
-                visualización de datos, con el propósito de obtener conclusiones fundamentadas a partir de la
-                información obtenida.</p>
-
-            <p>El análisis se fundamentó en un conjunto de datos extraído del portal de datos abiertos de la Ciudad de
-                México, que proporciona información detallada sobre las estaciones con mayor concurrencia del sistema de
-                transporte colectivo Metro. Dicha fuente fue elegida por su accesibilidad, veracidad y pertinencia para
-                los objetivos de la investigación. </p>
-
-            <img src="imagenes/afluencia.png" alt="Analisis de Datos" , class="afluencia">
-
-            <p> En este data set podemos observar los siguietes datos: </p>
-            <img src="imagenes/contenidofoto.png" , alt="contenidofoto" ,class="contenidofoto">
-
-            <h3> Gráfica de afluencia del metro por año 2021 - 2025 </h3>
-
-            <img src="imagenes/graficaaf.png" , alt="grafica" ,class="grafica">
-
-            <p>En la gráfica podemos observar que a medida que van avanzando los años, la afluencia en el metro
-                va
-                incrementando gradualmente , se notan algunas bajas y posteriormente unas altas en la afluencia.
-            </p>
-
-            <p>Podemos notar el incremento que hubo desde 2021 a 2025 en la afluencia de personas que usan el
-                transporte
-                colectivo metro, empezando con un total de "41,033,642" en 2021 y terminando con un total de
-                "104,863,384" en 2025."</p>
-
-            <p>Notamos una alta en la fluencia en "2024-11" con un total de "109,754,838" y una baja en
-                "2025-03"
-                con
-                un total de "104,863,384" personas que usan el metro</p>
-
-
-            <h3> Gráfica de barras de afluencia 2025-01-01 - 2025-03-31 </h3>
-
-            <p> El gráfico presentado corresponde a una gráfica de barras horizontales que representa la afluencia total
-                por línea del Sistema de Transporte Colectivo Metro de la Ciudad de México, durante el periodo
-                comprendido entre el 1 de enero y el 31 de marzo de 2025. La información mostrada se basa en datos
-                proporcionados por la Secretaría de Movilidad (SEMOVI), y permite visualizar de manera comparativa el
-                volumen de usuarios por línea a lo largo del trimestre analizado.</p>
-
-            <img src="imagenes/grafbar.png" , alt="barra" ,class="bar2">
-
-
-            <p><strong>Ejes y variables:</strong></p>
-
-            <ul>
-                <li>
-                    <strong>Eje vertical (Y):</strong> Representa las diferentes líneas del metro, desde Línea 1
-                    hasta
-                    Línea B.
-                </li>
-                <li>
-                    <strong>Eje horizontal (X):</strong> Muestra la afluencia (suma) en números absolutos —es
-                    decir,
-                    cuántas personas
-                    utilizaron cada línea durante el período.
-                </li>
-                <li>
-                    Se seleccionó la <strong>suma de la variable numérica "afluencia"</strong>, lo que significa
-                    que
-                    se
-                    están sumando todos
-                    los registros de entrada a cada línea durante el periodo analizado.
-                </li>
-            </ul>
-
-            <p><strong>Principales hallazgos (de mayor a menor afluencia):</strong> </p>
-
-            <ul>
-                <li>Línea 2: 🥇 53,166,099 personas</li>
-                <li>Línea 3: 43,404,454 personas</li>
-                <li>Línea B: 30,360,308 personas</li>
-                <li>Línea 8: 28,590,621 personas</li>
-                <li>Línea 12: 27,898,557 personas</li>
-                <li>Línea 9: 22,978,183 personas</li>
-                <li>Línea 7: 21,699,091 personas</li>
-                <li>Línea 1: 19,763,429 personas</li>
-                <li>Línea A: 18,430,048 personas</li>
-                <li>Línea 5: 14,003,099 personas</li>
-                <li>Línea 6: 9,543,788 personas</li>
-                <li>Línea 4: 5,853,499 personas</li>
-
-
-            </ul>
-
-            <p> Del análisis del gráfico se observa que las líneas con mayor afluencia —
-                específicamente las líneas 2, 3 y B— concentran el mayor volumen de usuarios. Esta
-                tendencia puede atribuirse a diversos factores, como el hecho de que dichas líneas
-                atraviesan zonas con alta densidad poblacional, o bien, funcionan como ejes de
-                interconexión estratégica dentro de la red del Metro de la Ciudad de México.
-                Por otro lado, las líneas que registran una menor afluencia podrían presentar
-                características como menor longitud, un número reducido de estaciones, ubicación en
-                zonas con menor demanda o estar parcialmente fuera de operación debido a trabajos
-                de mantenimiento o rehabilitación.
-                Cabe destacar que los datos analizados corresponden únicamente al periodo del 1 de
-                enero al 31 de marzo de 2025, lo cual proporciona una perspectiva reciente, aunque
-                limitada temporalmente, sobre los patrones de movilidad en el sistema (Datos Abiertos CDMX, 2025).
-            </p>
-
-            <hr>
-            <h3> Gráfica Regresión polinomial de grado 3 </h3>
-
-            <img src="imagenes/regresion.png" , alt="barra" ,class="bar2">
-
-
-
-            <div class="section">
-                <h2>Matriz de diseño (A):</h2>
-                <pre>
-            [[    1     0     0     0]
-             [    1     1     1     1]
-             [    1     2     4     8]
-             [    1     3     9    27]
-             [    1     4    16    64]
-             [    1     5    25   125]
-             [    1     6    36   216]
-             [    1     7    49   343]
-             [    1     8    64   512]
-             [    1     9    81   729]
-             [    1    10   100  1000]
-             [    1    11   121  1331]
-             [    1    12   144  1728]
-             [    1    13   169  2197]
-             [    1    14   196  2744]
-             [    1    15   225  3375]
-             [    1    16   256  4096]
-             [    1    17   289  4913]
-             [    1    18   324  5832]
-             [    1    19   361  6859]
-             [    1    20   400  8000]
-             [    1    21   441  9261]
-             [    1    22   484 10648]
-             [    1    23   529 12167]
-             [    1    24   576 13824]
-             [    1    25   625 15625]
-             [    1    26   676 17576]
-             [    1    27   729 19683]
-             [    1    28   784 21952]
-             [    1    29   841 24389]]
-                </pre>
-            </div>
-
-            <div class="section">
-                <h2>Vector de salida (y):</h2>
-                <pre>
-            [ 40.053642  50.345212  55.277359  65.482779  69.822009  67.954499
-              78.912     86.754004  70.55607   80.060562  88.752612  93.254624
-              95.90448   92.245621  87.254876  99.393033  86.463757  97.667492
-              98.257495  92.254404  90.754067  88.843064  90.754067  97.667492
-              98.257495 101.6746    99.254064 100.754838 104.064384  94.247723]
-                    </pre>
-            </div>
-
-            <div class="section">
-                <h2>Matriz A<sup>T</sup> * A:</h2>
-                <pre>
-            [[        30        435       8555     189225]
-             [       435       8555     189225    4463999]
-             [      8555     189225    4463999  109687425]
-             [    189225    4463999  109687425 2771931215]]
-                    </pre>
-            </div>
-
-            <div class="section">
-                <h2>Matriz A<sup>T</sup> * y:</h2>
-                <pre>
-            [2.56293832e+03 4.06549714e+04 8.18903464e+05 1.83135916e+07]
-                    </pre>
-            </div>
-
-            <div class="section">
-                <h2>Ecuación del polinomio ajustado:</h2>
-                <pre>
-            y = 42.3217 + 7.6867x^1 + -0.3856x^2 + 0.0066x^3
-                    </pre>
-            </div>
-
-
-
-            <section class="expli">
-                <h2>🔍 ¿Qué hace paso a paso?</h2>
-                <h3>1. Importación de datos</h3>
-                <p>Se cargan datos desde un archivo Excel que contiene fechas y la afluencia mensual de usuarios del metro.</p>
-
-                <h3>2. Preprocesamiento</h3>
-                <ul>
-                    <li>Se convierte la columna de fechas a formato <code>datetime</code>.</li>
-                    <li>Se transforma la afluencia de usuarios en millones para simplificar los números.</li>
-                </ul>
-
-                <h3>3. Modelo matemático</h3>
-                <p>
-                    Se construye una matriz de diseño tipo Vandermonde <strong>A</strong>, con potencias de tiempo (meses transcurridos desde el inicio):<br>
-                    <code>A = [1, x, x², x³]</code>
-                </p>
-                <p>
-                    Se resuelve el sistema normal <code>(AᵀA)c = Aᵀy</code> para obtener los coeficientes del polinomio:<br>
-                    <code>c = [c₀, c₁, c₂, c₃]</code>
-                </p>
-
-                <h3>4. Ecuación ajustada</h3>
-                <p>
-                    El resultado es un polinomio de grado 3 que aproxima la evolución de la afluencia a lo largo del tiempo:<br>
-                    <code>y = c₀ + c₁x + c₂x² + c₃x³</code>
-                </p>
-                <p>Este modelo permite interpolar y predecir la afluencia en otros meses dentro del rango.</p>
-
-                <h3>5. Visualización</h3>
-                <p>Se grafica la serie de datos originales (en azul) y la curva ajustada (en rojo), mostrando qué tan bien se adapta el modelo a la realidad observada.</p>
-            </section>
-
-            <section>
-                <h2>🧠 ¿Para qué sirve este modelo?</h2>
-                <ul>
-                    <li>Estimar tendencias de afluencia en el metro a lo largo del tiempo.</li>
-                    <li>Predecir valores futuros si el patrón sigue comportándose similarmente.</li>
-                    <li>Analizar la forma de crecimiento/caída (por eso es útil un polinomio de grado mayor que 1).</li>
-                    <li>Apoya la toma de decisiones en planificación de transporte o servicios públicos.</li>
-                </ul>
-            </section>
-
-            <div class="contenedor">
-                <h1>📈 Modelo Polinomial de Afluencia</h1>
-
-                <h2>🔢 Ecuación Ajustada</h2>
-                <p class="ecuacion">
-                    y(x) = 42.3217 + 7.6867x − 0.3856x² + 0.0066x³
-                </p>
-
-                <h2>📉 Derivada del Modelo</h2>
-                <p class="ecuacion">
-                    y′(x) = 7.6867 − 0.7712x + 0.0198x²
-                </p>
-
-                <h3>📌 Interpretación</h3>
-                <ul>
-                    <li><strong>y′(x)</strong> indica cómo cambia la afluencia mensual respecto al tiempo.</li>
-                    <li>Cuando y′(x) &gt; 0, la afluencia está creciendo.</li>
-                    <li>Cuando y′(x) &lt; 0, la afluencia está disminuyendo.</li>
-                    <li>Cuando y′(x) = 0, hay un punto de cambio en la tendencia (máximo o mínimo local).</li>
-                </ul>
-            </div>
-
-            <!-- SECCIÓN DEL MODELO DE MACHINE LEARNING -->
-            <section class="ml-model-section">
-                <h1>🤖 Modelo de Machine Learning - Clasificación de Sentimientos Estudiantiles</h1>
-                
-                <div class="model-description">
-                    <h2>📝 ¿Qué hace este modelo?</h2>
-                    <p>Este modelo utiliza técnicas de procesamiento de lenguaje natural y machine learning para analizar y clasificar comentarios o experiencias estudiantiles en diferentes categorías:</p>
-                    
-                    <div class="categories-grid">
-                        <div class="category-card desercion">
-                            <h3>🚨 Riesgo de Deserción</h3>
-                            <p>Detecta cuando un estudiante expresa intención de abandonar sus estudios</p>
-                        </div>
-                        <div class="category-card motivacion">
-                            <h3>💪 Búsqueda de Motivación</h3>
-                            <p>Identifica cuando se buscan estrategias para mejorar el rendimiento académico</p>
-                        </div>
-                        <div class="category-card positivo">
-                            <h3>✅ Experiencia Positiva</h3>
-                            <p>Reconoce comentarios positivos sobre la experiencia educativa</p>
-                        </div>
-                        <div class="category-card academico">
-                            <h3>📚 Apoyo Académico</h3>
-                            <p>Clasifica consultas sobre materias específicas (Matemáticas, Física, etc.)</p>
-                        </div>
-                    </div>
+    <main>
+        <!-- SECCIÓN HERO -->
+        <section class="apple-hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="main-title">Análisis Deserción Escolar UNRC</h1>
+                    <p class="hero-subtitle">
+                        Una plataforma dedicada a visualizar y comprender las causas, consecuencias y soluciones de la deserción escolar a través de datos y análisis.
+                    </p>
                 </div>
-
-                <div class="model-interface">
-                    <h2>🔍 Prueba el Modelo</h2>
-                    <p>Escribe un comentario o experiencia estudiantil y el modelo lo clasificará automáticamente:</p>
-                    
-                    <div class="input-container">
-                        <textarea 
-                            id="textInput" 
-                            placeholder="Ejemplo: 'Estoy pensando en dejar la universidad porque no entiendo nada...' o 'Me encanta estudiar aquí, los profesores son excelentes'"
-                            rows="4"
-                        ></textarea>
-                        <button id="analyzeBtn" onclick="analyzeText()">
-                            <span id="btnText">🔍 Analizar Texto</span>
-                            <span id="btnLoader" style="display: none;">⏳ Analizando...</span>
-                        </button>
-                    </div>
-
-                    <div id="results" class="results-container" style="display: none;">
-                        <div class="result-header">
-                            <h3>📊 Resultados del Análisis</h3>
-                        </div>
-                        <div class="result-content">
-                            <div class="result-item">
-                                <strong>Categoría Detectada:</strong>
-                                <span id="category" class="category-badge"></span>
-                            </div>
-                            <div class="result-item">
-                                <strong>Nivel de Confianza:</strong>
-                                <span id="confidence" class="confidence-score"></span>
-                            </div>
-                            <div class="result-item">
-                                <strong>Interpretación:</strong>
-                                <p id="interpretation"></p>
-                            </div>
-                            <div class="result-item">
-                                <strong>Consejo Personalizado:</strong>
-                                <p id="advice"></p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="hero-logo">
+                    <img src="imagenes/escuela.png" alt="Logo" class="hero-logo-image">
                 </div>
-
-                <div class="model-tech-info">
-                    <h2>⚙️ Información Técnica</h2>
-                    <div class="tech-grid">
-                        <div class="tech-card">
-                            <h3>🧠 Algoritmo</h3>
-                            <p>Regresión Logística con análisis de palabras clave</p>
-                        </div>
-                        <div class="tech-card">
-                            <h3>📊 Vectorización</h3>
-                            <p>CountVectorizer para análisis de frecuencia de palabras</p>
-                        </div>
-                        <div class="tech-card">
-                            <h3>🎯 Precisión</h3>
-                            <p>Sistema híbrido con validación por palabras clave</p>
-                        </div>
-                        <div class="tech-card">
-                            <h3>🔄 Tiempo Real</h3>
-                            <p>Análisis instantáneo mediante API Flask</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            </article>
+            </div>
         </section>
 
-        <aside> <h3>¿Necesitas ayuda?</h3>
+        <div class="lineadiv"></div>
 
-                <p>Si eres víctima de un robo en el metro, contacta inmediatamente:</p>
+        <!-- SECCIÓN INTRODUCCIÓN AL PROBLEMA -->
+        <section class="vozmetro">
+            <h2>¿Qué es la Deserción Escolar?</h2>
+            <p>
+                La deserción escolar es el abandono del sistema educativo por parte de los estudiantes, antes de finalizar el grado o nivel que estaban cursando. Este fenómeno tiene profundas implicaciones tanto para el individuo como para la sociedad, limitando oportunidades de desarrollo y perpetuando ciclos de pobreza.
+            </p>
+            <img src="imagenes/logo4.png" alt="Gráfica sobre deserción escolar" class="metroimg">
+        </section>
 
-                <ul>
-                    <li> <b> Policía Bancaria e Industrial (PBI): </b> 5535-1500 </li>
+        <div class="lineadiv"></div>
 
-                    <li> <strong>Servicio de Emergencias 911:</strong> 911</li>
-
-                    <li><strong>Atención a pasajeros del metro:</strong> 5512-0555</li>
-                </ul>
-
-                <h3>Solicita tu tarjeta del metro</h3>
-
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Movilidad_Integrada.svg/640px-Movilidad_Integrada.svg.png"
-                    , alt="Tarjeta del metro" , class="tarjeta">
-
-                <p>Con la tarjeta del metro podrás acceder a al transporte colectivo metro de la cdmx. ¡Adquierela en
-                    las
-                    estaciones del metro!.</p>
-
-                <br>
-
-
-                <div class="appm">
-
-                    <h3> App de auxilio del metro de la cdmx</h3>
-
-                    <img src="imagenes/logo3.png" alt="App" , class="imgapp" , width="100%">
-
-                    <a href="app.html" , class="leer-mas">"Leer más sobre la app"</a>
-
+        <!-- SECCIÓN DE FACTORES Y CONSECUENCIAS -->
+        <section class="notas">
+            <h2>Factores y Consecuencias</h2>
+            <div class="noticias">
+                <div class="noticia">
+                    <h3>Causas Principales</h3>
+                    <img src="imagenes/logo3.1.png" alt="Factores socioeconómicos" class="notpin">
+                    <p>
+                        Factores socioeconómicos, problemas familiares, falta de interés y bajo rendimiento académico son algunas de las causas más comunes que llevan a los jóvenes a abandonar sus estudios.
+                    </p>
+                    <a href="blog.html" class="leer">Leer más</a>
                 </div>
+                <div class="noticia">
+                    <h3>Impacto a Largo Plazo</h3>
+                    <img src="imagenes/logo6.png" alt="Gráfica de regresión" class="notvio">
+                    <p>
+                        Las consecuencias incluyen menores ingresos, mayores tasas de desempleo, problemas de salud y una participación cívica reducida, afectando la calidad de vida y el desarrollo social.
+                    </p>
+                    <a href="blog.html" class="leer">Leer más</a>
+                </div>
+                <div class="noticia">
+                    <h3>Posibles Soluciones</h3>
+                    <img src="imagenes/logo3.3.png" alt="Programas de apoyo" class="notest">
+                    <p>
+                        Implementar programas de tutoría, becas, apoyo psicológico y mejorar la relevancia de los planes de estudio son estrategias clave para mitigar la deserción escolar.
+                    </p>
+                    <a href="blog.html" class="leer">Leer más</a>
+                </div>
+            </div>
+        </section>
 
-                <div class="social-media">
-                    <h3>Síguenos en redes sociales</h3>
-                    <div class="social-icons">
-                        <a href="#" class="social-icon facebook">
-                            <i class="fab fa-facebook-f"></i>
-                            Facebook
-                        </a>
-                        <a href="#" class="social-icon instagram">
-                            <i class="fab fa-instagram"></i>
-                            Instagram
-                        </a>
-                        <a href="#" class="social-icon whatsapp">
-                            <i class="fab fa-whatsapp"></i>
-                            WhatsApp
-                        </a>
+        <div class="lineadiv"></div>
+
+        <!-- SECCIÓN DE TENDENCIAS Y ESTADÍSTICAS -->
+        <section class="tendencias">
+            <h2 class="tlinea">Estadísticas Destacadas</h2>
+            <div class="tendencias-ml-container">
+                <div class="noticias">
+                    <div class="noticia-card-ml">
+                        <span class="card-icon-ml">📊</span>
+                        <h3>Tasa Nacional</h3>
+                        <p>La tasa de abandono escolar en educación superior ha mostrado una ligera disminución, pero sigue siendo un desafío importante para el sistema educativo del país.</p>
+                    </div>
+                    <div class="noticia-card-ml">
+                        <span class="card-icon-ml">📈</span>
+                        <h3>Factores de Riesgo</h3>
+                        <p>Jóvenes de comunidades rurales y de bajos ingresos tienen hasta tres veces más probabilidades de abandonar la escuela en comparación con sus pares de zonas urbanas.</p>
+                    </div>
+                    <div class="noticia-card-ml">
+                        <span class="card-icon-ml">💡</span>
+                        <h3>Impacto de Programas</h3>
+                        <p>Los programas de becas y apoyo han demostrado reducir la deserción hasta en un 25% en las poblaciones beneficiadas, subrayando su efectividad.</p>
                     </div>
                 </div>
+            </div>
+        </section>
 
-        </aside>
-    </div>
+        <div class="lineadiv"></div>
 
+        <!-- SECCIÓN FINAL Y QR -->
+        <section class="main-layout">
+            <div class="qr-section">
+                <img src="imagenes/qr.png" alt="Código QR" class="qr-code">
+                <p>Escanea para obtener más recursos y datos sobre nuestro análisis.</p>
+            </div>
+            <div class="logo-section">
+                <img src="imagenes/logo3.2.png" alt="Logo" class="logometro">
+                <p>Un proyecto dedicado a la visualización de datos para el cambio social.</p>
+            </div>
+        </section>
+    </main>
 
     <footer>
-
-        <p> &copy; 2025 Inseguridad en el Metro de la CDMX - Todos los derechos reservados</p>
+        <p> &copy; 2025 Análisis de la Deserción Escolar - Todos los derechos reservados</p>
     </footer>
-
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {

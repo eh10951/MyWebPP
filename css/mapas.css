@@ -1,131 +1,113 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    line-height: 1.6;
-    background: #f5f5f5;
-}
-
-header {
-    background: linear-gradient(135deg, #2c3e50, #3498db);
-    color: white;
-    text-align: center;
-    padding: 3rem 1rem;
-    margin-bottom: 2rem;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-main {
+/* Estilos para el contenedor principal de datos */
+.datos-container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(10, 25, 47, 0.8);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 255, 153, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 153, 0.2);
 }
 
-.metro-map {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-top: 1rem;
-    transition: transform 0.3s ease; /* Smooth scaling transition */
-}
-.metro-map:hover {
-    transform: scale(1.05); /* Scale up the image on hover */
+.titulo-datos {
+    text-align: center;
+    color: #00ff99;
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-shadow: 0 0 10px #00ff99, 0 0 20px rgba(0, 255, 153, 0.5);
+    margin-bottom: 10px;
 }
 
-.map-container {
-    background: white;
-    border-radius: 10px;
-    padding: 2rem;
-    margin-bottom: 3rem;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+.subtitulo-datos {
+    text-align: center;
+    color: #00eaff;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
 }
 
-.metro-map {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-top: 1rem;
-}
-
-.info-section {
-    margin-bottom: 3rem;
-}
-
-.stats {
+/* Tarjetas de estadísticas clave */
+.stats-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
 }
 
 .stat-card {
-    background: white;
-    padding: 2rem;
+    background: rgba(0, 234, 255, 0.05);
+    border: 1px solid rgba(0, 234, 255, 0.2);
+    border-radius: 15px;
+    padding: 25px;
     text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 234, 255, 0.1);
 }
 
 .stat-card h3 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 0.5rem;
+    color: #00eaff;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
 }
 
-.lines-info {
-    background: white;
-    border-radius: 10px;
-    padding: 2rem;
-    margin-bottom: 3rem;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #00ff99;
+    text-shadow: 0 0 8px rgba(0, 255, 153, 0.5);
 }
 
-.line-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
+.stat-text {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 500;
 }
 
-.line-item {
-    background: #f8f9fa;
-    padding: 1rem;
-    border-radius: 5px;
-    transition: transform 0.2s;
+.stat-source {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 15px;
+    font-style: italic;
 }
 
-.line-item:hover {
-    transform: translateY(-3px);
+/* Secciones de gráficos */
+.chart-section {
+    margin-bottom: 40px;
 }
 
-h2 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
-}
-
-footer {
-    background: #2c3e50;
-    color: white;
+.chart-section h2 {
+    color: #00ff99;
     text-align: center;
-    padding: 1.5rem;
-    margin-top: 3rem;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
 }
 
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-    
-    .stats {
-        grid-template-columns: 1fr;
-    }
+.chart-container {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chart-description {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+/* Línea divisora */
+.lineadiv {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 153, 0.5), transparent);
+    margin: 50px 0;
+    border: none;
 }

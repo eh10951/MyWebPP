@@ -102,6 +102,14 @@ header {
     pointer-events: none;
 }
 
+.logo-img {
+    max-width: 150px; /* Ajusta este valor según lo necesites */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 20px; /* Añade un poco de espacio debajo */
+}
+
 .logo::after {
     content: '';
     position: absolute;

@@ -4,587 +4,83 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Artículos</title>
+        <title>Blog - Causas y Consecuencias de la Deserción Escolar</title>
     <link rel="stylesheet" href="css/blog.css" />
+    <link rel="stylesheet" href="css/styles.css" /> <!-- Enlace a los estilos generales -->
 </head>
 
 <body>
-    <header class="titulo-blog">
-        <h1>Artículos</h1>
+    <header class="header">
+        <div class="logo">
+            <img src="imagenes/logo3.png" alt="Logo de la página" class="logo-img">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="foro.html">Foro</a></li>
+                <li><a href="mapas.html">Datos</a></li>
+            </ul>
+        </nav>
     </header>
 
+    <main class="blog-container">
+        <h1 class="titulo-blog">Blog sobre la Deserción Escolar</h1>
 
-    <section class="blog-container">
-        <div class="articulo">
-            <h2>¿PINCHAZOS EN EL METRO?</h2>
-            <p class="autor-articulo">Por: Ángel Segura, Omar Franco, Enrique Hernandez.</p>
+        <article class="articulo">
+            <h2>Factores Socioeconómicos: El Principal Obstáculo</h2>
+            <p class="autor-articulo">Por: Equipo de Análisis Educativo</p>
+            <img src="imagenes/afluencia.png" alt="Factores socioeconómicos" class="img-articulo">
             <p>
-                Desde mediados de marzo de 2025, la Ciudad de México ha enfrentado una preocupante ola de incidentes
-                conocidos como “pinchazos” en el transporte público, particularmente en el Metro y Metrobús. Hasta la
-                fecha, se han registrado 68 denuncias formales: 50 en el Metro, 8 en el Metrobús, 6 en la vía pública y
-                4 en otros medios de transporte, HENRRY ES GAY OOOOSTIA TIO QUE FLIPAAAAA.
-            </p>
-
-            <h3>¿Qué son los “pinchazos”?</h3>
-            <p>
-                Los “pinchazos” consisten en agresiones donde las víctimas sienten una punción con objetos
-                punzocortantes, presuntamente jeringas, mientras utilizan el transporte público. De los 68 casos
-                reportados, 36 han sido confirmados médicamente como lesiones compatibles con punciones, mientras que el
-                resto fueron escoriaciones o rasguños.
-
-            </p>
-
-
-            <h3>Sustancias involucradas</h3>
-            <p>
-                En algunos casos, se ha detectado la presencia de sustancias como escopolamina (también conocida como
-                burundanga) y ketamina en las víctimas. Estas sustancias pueden causar efectos como somnolencia, pérdida
-                de equilibrio y letargo, lo que podría facilitar la comisión de delitos como robos.
-            </p>
-
-            <h3>Respuesta de las autoridades</h3>
-            <p>
-                Ante el aumento de estos incidentes, el Gobierno de la Ciudad de México ha implementado un protocolo de
-                seguridad que incluye:
-
-                Incremento de personal de seguridad: Se han desplegado más de 5,800 elementos policiales en las
-                instalaciones del Metro.
-
-                Policías encubiertos y observadores civiles: Para detectar conductas sospechosas y prevenir agresiones.
-
-                Revisiones aleatorias: Se han realizado más de 14,000 revisiones en busca de objetos peligrosos.
-
-                Pruebas toxicológicas: A las víctimas para identificar posibles sustancias inyectadas.
-
-
-                Además, se han activado campañas informativas para que los usuarios conozcan cómo actuar en caso de ser
-                víctimas de un pinchazo. El conductor del Metro, Mauricio Nares, conocido como “Wolverine”, ha difundido
-                recomendaciones a través de redes sociales, instando a los pasajeros a no abandonar el tren y buscar
-                ayuda inmediata.
-
-            </p>
-
-            <h3>Recomendaciones para los usuarios</h3>
-            <p>
-                Las autoridades y expertos sugieren a los usuarios del transporte público:
-
-                Mantenerse alerta: Especialmente en estaciones concurridas y durante horas pico.
-
-                Evitar distracciones: Como el uso excesivo del teléfono móvil, que pueda disminuir la atención al
-                entorno.
-
-                Reportar incidentes: Si se siente una punción o se observa un comportamiento sospechoso, informar de
-                inmediato al personal del Metro o a la policía.
-
-                Buscar atención médica: En caso de presentar síntomas como somnolencia, mareo o pérdida de equilibrio
-                después de un posible pinchazo.
+                La situación económica de las familias es uno de los factores más determinantes en la deserción escolar. La falta de recursos para cubrir costos de transporte, materiales, uniformes e incluso alimentación, obliga a muchos jóvenes a abandonar sus estudios para incorporarse al mercado laboral, a menudo en condiciones precarias.
             </p>
             <p>
-                Este fenómeno ha generado preocupación entre los usuarios del transporte público en la Ciudad de México.
-                Las autoridades continúan investigando y tomando medidas para garantizar la seguridad de los pasajeros.
+                Esta presión económica no solo afecta la capacidad de la familia para sostener la educación, sino que también genera un alto nivel de estrés en los estudiantes, quienes pueden sentirse responsables de contribuir al ingreso familiar. La necesidad de trabajar reduce el tiempo disponible para el estudio y el descanso, lo que impacta negativamente en su rendimiento académico y motivación.
             </p>
-
-             <h1>Estaciones con Reportes de Pinchazos en el Metro CDMX</h1>
-
-              <p>Hasta mayo de 2025, se han registrado al menos 33 denuncias por presuntos pinchazos en el Metro de la Ciudad de México. Las siguientes estaciones han sido mencionadas en diversos reportes:</p>
-
-
-               <div class="grafica-container">
-                 <h1 class="grafica-titulo">📊 Pinchazos en el Metro CDMX</h2>
-
-                 <div class="grafica-box">
-                   <canvas id="graficaInteractiva" height="120"></canvas>
-                 </div>
-
-                 <p class="grafica-descripcion">
-                   Casos de Pinchazos en el Metro CDMX
-                 </p>
-               </div>
-
-               <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-               <script>
-                 const datosPinchazos = [
-                   { estacion: "Pantitlán", casos: 12 },
-                   { estacion: "Centro Médico", casos: 9 },
-                   { estacion: "Tacuba", casos: 7 },
-                   { estacion: "Indios Verdes", casos: 14 },
-                   { estacion: "Pino Suárez", casos: 11 },
-                   { estacion: "Chabacano", casos: 6 },
-                   { estacion: "Mixcoac", casos: 5 },
-                   { estacion: "La Raza", casos: 8 }
-                 ];
-
-                 const ctx = document.getElementById("graficaInteractiva").getContext("2d");
-                 new Chart(ctx, {
-                   type: "bar",
-                   data: {
-                     labels: datosPinchazos.map(d => d.estacion),
-                     datasets: [{
-                       label: "Casos reportados",
-                       data: datosPinchazos.map(d => d.casos),
-                       backgroundColor: datosPinchazos.map(() => 'rgba(236, 72, 153, 0.7)'),
-                       borderColor: 'rgba(236, 72, 153, 1)',
-                       borderWidth: 1,
-                       borderRadius: 8,
-                       hoverBackgroundColor: 'rgba(255, 99, 132, 1)'
-                     }]
-                   },
-                   options: {
-                     responsive: true,
-                     animation: {
-                       duration: 1000,
-                       easing: 'easeOutBounce'
-                     },
-                     plugins: {
-                       tooltip: {
-                         enabled: true,
-                         backgroundColor: 'rgba(0,0,0,0.8)',
-                         titleColor: '#fff',
-                         bodyColor: '#fff',
-                         padding: 10
-                       },
-                       legend: { display: false },
-                       title: {
-                         display: true,
-                         text: 'Casos de Pinchazos por Estación',
-                         color: '#fff',
-                         font: { size: 18 }
-                       }
-                     },
-                     scales: {
-                       x: {
-                         ticks: { color: '#fff' },
-                         grid: { display: false }
-                       },
-                       y: {
-                         beginAtZero: true,
-                         ticks: { color: '#fff' },
-                         grid: { color: 'rgba(255,255,255,0.1)' }
-                       }
-                     }
-                   }
-                 });
-               </script>
-
-
-              <h2>Recomendaciones de seguridad:</h2>
-              <ul>
-                <li>Permanece alerta en estaciones con alta afluencia y durante horas pico.</li>
-                <li>Si sientes un pinchazo o anomalía, informa inmediatamente al personal del Metro o utiliza la palanca de emergencia.</li>
-                <li>Evita el uso de dispositivos electrónicos visibles en estaciones y vagones.</li>
-                <li>En caso de ser víctima de un incidente, acude a las autoridades correspondientes para presentar una denuncia.</li>
-              </ul>
-
-
-
-              <p class="note">
-                Fuentes:
-               
-                 <a href="https://www.eluniversal.com.mx" class="btn-eluniversal" target="_blank">El Universal</a>
-                 <a href="https://www.infobae.com" class="btn-infobae" target="_blank">Infobae</a>
-                 <a href="https://elpais.com" class="btn-elpais" target="_blank">El País</a>
-                <a href="https://www.freepik.es/" class="btn-freepik" target="_blank">Freepik</a>
-                
-                
-              </p>
-
-            <img src="https://cdmxpress.mx/wp-content/uploads/2025/04/pinchazos-metro-metrobus-cdmx1-134738-1024x576-1-750x536.jpg"
-                alt="PNCH" class="PINCHM" />
-        </div>
-
-
-    </section>
-
-   
-
-    <section class="blog-container">
-        <div class="articulo">
-            <h2>Violencia en el Metro de la CDMX: Una problemática urgente</h2>
-            <p class="autor-articulo">Por: Ángel Segura, Omar Franco, Enrique Hernandez.</p>
+            <h3>El círculo vicioso de la pobreza</h3>
             <p>
-                El Metro de la Ciudad de México, conocido por ser uno de los sistemas de transporte más grandes y
-                concurridos del mundo, también enfrenta una creciente preocupación: la violencia en sus instalaciones. A
-                pesar de ser un servicio esencial para millones de personas, los actos de violencia y acoso se han
-                convertido en un problema cotidiano que afecta gravemente la seguridad y la tranquilidad de los
-                usuarios.
+                La deserción escolar por motivos económicos perpetúa un ciclo de pobreza. Sin una educación completa, las oportunidades de acceder a empleos bien remunerados y con mejores condiciones se reducen drásticamente. Esto limita el desarrollo personal y profesional del individuo y, a su vez, restringe las posibilidades de que sus futuros hijos tengan un mejor acceso a la educación. Romper este ciclo requiere políticas públicas integrales que ofrezcan becas, apoyos económicos directos y programas de alimentación escolar.
             </p>
+        </article>
 
-            <h3>Tipos de violencia presentes</h3>
+        <div class="lineadiv"></div>
+
+        <article class="articulo">
+            <h2>El Impacto del Entorno Familiar y Social</h2>
+            <p class="autor-articulo">Por: Equipo de Análisis Educativo</p>
+            <img src="imagenes/regresion.png" alt="Entorno familiar" class="img-articulo">
             <p>
-                La violencia en el Metro adopta diversas formas. Una de las más comunes es el acoso sexual,
-                especialmente hacia mujeres. A diario, se reportan casos de tocamientos, miradas lascivas, y otras
-                formas de hostigamiento. Esto ha obligado a las autoridades a implementar medidas como vagones
-                exclusivos para mujeres y menores de edad, así como operativos de vigilancia y campañas de
-                concientización.
-
-                También se registran robos, asaltos y peleas entre usuarios, que en muchos casos ocurren en andenes
-                saturados o en pasillos mal iluminados. La sobrepoblación en horas pico crea un entorno donde es más
-                fácil que ocurran delitos sin que los responsables sean identificados o detenidos.
-
-            </p>
-
-            <h3>Factores que contribuyen al problema</h3>
-            <p>
-                Entre los factores que agravan la violencia se encuentran la falta de vigilancia constante, la escasa
-                presencia de elementos de seguridad y la insuficiente cultura de denuncia entre los usuarios. Muchas
-                víctimas no reportan los hechos por miedo, desconfianza en las autoridades o por pensar que no se hará
-                justicia.
-
-                Además, la falta de mantenimiento en algunas estaciones y la mala iluminación en ciertas áreas crean
-                condiciones propicias para que ocurran actos delictivos sin ser detectados.
-            </p>
-            <h3>Respuestas institucionales</h3>
-            <p>
-                El Gobierno de la Ciudad de México ha intentado combatir esta situación a través de programas como
-                “Viaja Segura” y la instalación de cámaras de vigilancia en trenes y estaciones. También se han
-                desplegado policías auxiliares y elementos de la Guardia Nacional en ciertas líneas, especialmente en
-                aquellas con mayores reportes de violencia.
-
-                Sin embargo, usuarios y especialistas coinciden en que estas medidas, aunque necesarias, no han sido
-                suficientes para erradicar el problema de raíz. La prevención, la educación social y el fortalecimiento
-                del sistema judicial son piezas clave que aún requieren mayor atención.
-
-                Una cuestión de derechos humanos
-
-                La violencia en el Metro no es solo un problema de seguridad, sino una violación a los derechos humanos.
-                Cada usuario tiene derecho a trasladarse de forma segura, sin miedo a ser acosado o agredido. Crear un
-                entorno seguro y digno en este espacio público es una responsabilidad compartida entre gobierno,
-                sociedad civil y ciudadanía.
-
-
-                La violencia en el Metro de la CDMX representa una grave amenaza para la seguridad de millones de
-                personas. Si bien existen esfuerzos por mejorar la situación, es imprescindible fortalecer la
-                vigilancia, fomentar la cultura de denuncia y educar en el respeto y la convivencia. Solo así el Metro
-                podrá ser verdaderamente un espacio seguro para todos.
-            </p>
-
-            <h2>Estaciones más inseguras del Metro de la CDMX</h2>
-
-              <p>Las estaciones más inseguras del Metro de la Ciudad de México, según datos recientes de la Fiscalía General de Justicia y diversos medios, presentan altos índices de delitos como robos, agresiones sexuales y otros incidentes.</p>
-
-             <div class="grafica-container">
-               <h1 class="grafica-titulo">🚨 Estaciones más Inseguras del Metro CDMX</h1>
-
-               <div class="grafica-box">
-                 <canvas id="graficaInseguridad" height="120"></canvas>
-               </div>
-
-               <p class="grafica-descripcion">
-                 
-                 Numero de incidentes reportados en estaciones clave del Metro CDMX
-               </p>
-             </div>
-
-             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-             <script>
-               const datosInseguridad = [
-                 { estacion: "Pantitlán", casos: 18 },
-                 { estacion: "Indios Verdes", casos: 15 },
-                 { estacion: "Pino Suárez", casos: 12 },
-                 { estacion: "Chabacano", casos: 11 },
-                 { estacion: "Tasqueña", casos: 10 }
-               ];
-
-               const ctxInseguridad = document.getElementById("graficaInseguridad").getContext("2d");
-               new Chart(ctxInseguridad, {
-                 type: "bar",
-                 data: {
-                   labels: datosInseguridad.map(d => d.estacion),
-                   datasets: [{
-                     label: "Incidentes de inseguridad",
-                     data: datosInseguridad.map(d => d.casos),
-                     backgroundColor: "rgba(220, 38, 38, 0.7)",
-                     borderColor: "rgba(220, 38, 38, 1)",
-                     borderWidth: 1,
-                     borderRadius: 6,
-                     hoverBackgroundColor: "rgba(239, 68, 68, 1)",
-                     hoverBorderColor: "white",
-                     hoverBorderWidth: 4
-                   }]
-                 },
-                 options: {
-                   responsive: true,
-                   animation: {
-                     duration: 800,
-                     easing: 'easeOutBounce'
-                   },
-                   plugins: {
-                     tooltip: {
-                       backgroundColor: 'rgba(0,0,0,0.8)',
-                       titleColor: '#fff',
-                       bodyColor: '#fff'
-                     },
-                     legend: { display: false },
-                     title: {
-                       display: true,
-                       text: 'Ranking de Inseguridad por Estación',
-                       color: '#fff',
-                       font: { size: 16 }
-                     }
-                   },
-                   scales: {
-                     x: {
-                       ticks: { color: '#fff' },
-                       grid: { display: false }
-                     },
-                     y: {
-                       beginAtZero: true,
-                       ticks: { color: '#fff' },
-                       grid: { color: 'rgba(255,255,255,0.1)' }
-                     }
-                   }
-                 }
-               });
-             </script>
-
-
-              <h2>Recomendaciones de seguridad:</h2>
-              <ul>
-                <li>Evita el uso de dispositivos electrónicos visibles en estaciones y vagones.</li>
-                <li>Mantente alerta en horas pico y en estaciones con alta afluencia.</li>
-                <li>Si percibes alguna situación sospechosa, informa al personal del Metro o utiliza la palanca de emergencia.</li>
-                <li>En caso de ser víctima de un delito, acude a las Agencias del Ministerio Público Especializadas en Atención a los Usuarios del STC.</li>
-              </ul>
-          <p class="note">
-            Fuentes:
-
-             <a href="https://www.eluniversal.com.mx" class="btn-eluniversal" target="_blank">El Universal</a>
-             <a href="https://www.freepik.es/" class="btn-freepik" target="_blank">Freepik</a>
-            
-
-      
-              </p>
-
-            </body>
-            </html>
-            <img src="https://www.nmas.com.mx/_next/image/?url=https%3A%2F%2Fstatic-live.nmas.com.mx%2Fnmas-news%2Fstyles%2Fcorte_16_9%2Fcloud-storage%2F2023-02%2Fvideo-muestra-la-lucha-por-un-lugar-en-el-metro-de-cdmx.jpg%3Fitok%3DGVhmL-a9&w=1920&q=80"
-                alt="pel" class="pelmetro" />
-        </div>
-    </section>
-
-    <section class="blog-container">
-        <div class="articulo">
-            <h2>Sobrecarga y congestión en el Metro de la CDMX: El costo de la alta demanda</h2>
-            <p class="autor-articulo">Por: Ángel Segura, Omar Franco, Enrique Hernandez.</p>
-            <p>
-                El Metro de la Ciudad de México es indispensable para la movilidad urbana, pero enfrenta una de sus
-                problemáticas más persistentes: la sobrecarga y la congestión. Con más de 4 millones de pasajeros
-                diarios en condiciones normales, y picos que pueden superar los 5 millones, el sistema opera muchas
-                veces por encima de su capacidad.
-            </p>
-
-            <h3>Un sistema saturado</h3>
-            <p>
-                Desde las primeras horas del día, miles de personas se aglomeran en las estaciones más concurridas como
-                Pantitlán, Indios Verdes, Hidalgo o Pino Suárez. En muchas ocasiones, los trenes pasan repletos y es
-                necesario dejar pasar varios antes de poder abordar. Esta situación genera estrés, retrasos y un
-                ambiente propicio para accidentes o actos delictivos.
-
-                Las líneas más afectadas suelen ser la 1, 2, 3, 9 y B, que conectan zonas densamente pobladas con el
-                centro de la ciudad. A pesar de los esfuerzos por aumentar la frecuencia de los trenes, la demanda
-                supera con frecuencia la capacidad instalada.
-
-            </p>
-
-            <h3>Causas estructurales</h3>
-            <p>
-                La congestión en el Metro no es nueva, pero se ha intensificado con el crecimiento urbano, la falta de
-                opciones de transporte público eficaces en otras zonas, y la lentitud en la expansión del sistema. La
-                inversión en mantenimiento, modernización de trenes y construcción de nuevas líneas ha sido intermitente
-                y, muchas veces, insuficiente.
-
-                Además, las fallas técnicas, como cortes de energía, averías o inundaciones, suelen empeorar la
-                congestión, generando acumulación de pasajeros en estaciones y retrasos en cadena.
-            </p>
-            <h3>Impactos negativos</h3>
-            <p>
-                La sobrecarga no solo afecta la comodidad de los usuarios, sino también su salud física y mental. Viajar
-                en condiciones de hacinamiento puede provocar ansiedad, fatiga, y aumentar el riesgo de transmisión de
-                enfermedades, especialmente en tiempos post-pandemia.
-
-                Además, reduce la eficiencia del transporte, ya que los trenes no pueden circular con fluidez y los
-                tiempos de espera aumentan. Esto, a su vez, impacta en la puntualidad de los trabajadores y estudiantes
-                que dependen del Metro.
-            </p>
-            <h3>Alternativas y soluciones</h3>
-            <p>
-                Las soluciones no son simples ni inmediatas, pero sí posibles. Se requiere una inversión sostenida en la
-                ampliación de líneas, adquisición de trenes modernos, y mejora de la infraestructura actual. El fomento
-                de transporte alternativo como la bicicleta, y la integración con otros sistemas como el Metrobús y
-                trolebús, también son clave para reducir la carga en el Metro.
+                El entorno en el que crece un estudiante juega un papel crucial en su trayectoria educativa. Un ambiente familiar conflictivo, la falta de apoyo de los padres o la ausencia de modelos a seguir con formación académica pueden desmotivar a los jóvenes y hacerles sentir que la educación no es una prioridad.
             </p>
             <p>
-                La sobrecarga del Metro de la CDMX es una señal clara de su importancia, pero también de la necesidad
-                urgente de modernizar y expandir el sistema. Hacerlo no solo mejorará la experiencia de millones de
-                usuarios, sino que contribuirá a una ciudad más eficiente, humana y sostenible.
+                Asimismo, la presión de grupos sociales, el acoso escolar (bullying) o la exposición a la violencia en su comunidad son factores que generan un ambiente hostil para el aprendizaje. Cuando la escuela deja de ser un espacio seguro, los estudiantes pueden optar por abandonarla como un mecanismo de autoprotección.
             </p>
+            <h3>La importancia del apoyo emocional</h3>
+            <p>
+                Es fundamental que las instituciones educativas cuenten con programas de apoyo psicológico y orientación vocacional. Detectar a tiempo a los estudiantes que enfrentan problemas familiares o sociales y ofrecerles un espacio de escucha y acompañamiento puede marcar la diferencia entre continuar estudiando o abandonar la escuela. La colaboración entre la escuela, la familia y la comunidad es esencial para crear una red de apoyo sólida que proteja a los jóvenes.
+            </p>
+        </article>
 
-             <h2>Estaciones con Mayor Afluencia del Metro CDMX en 2024</h2>
+        <div class="lineadiv"></div>
 
-              <p>Las siguientes estaciones del Metro de la Ciudad de México registraron la mayor afluencia promedio diaria durante el año 2024, según datos oficiales del Sistema de Transporte Colectivo (STC).</p>
+        <article class="articulo">
+            <h2>Bajo Rendimiento y Falta de Interés: Síntomas de un Problema Mayor</h2>
+            <p class="autor-articulo">Por: Equipo de Análisis Educativo</p>
+            <img src="imagenes/graficaaf.png" alt="Bajo rendimiento académico" class="img-articulo">
+            <p>
+                El bajo rendimiento académico y la falta de interés no suelen ser las causas raíz de la deserción, sino más bien síntomas de problemas más profundos. Un estudiante puede perder el interés porque los contenidos no le parecen relevantes para su vida, porque tiene dificultades de aprendizaje no diagnosticadas o porque los métodos de enseñanza no se adaptan a sus necesidades.
+            </p>
+            <p>
+                Cuando un estudiante acumula fracasos académicos, su autoestima se ve afectada y puede empezar a creer que "no es bueno para el estudio". Esta percepción, combinada con otros factores de riesgo, puede llevarlo a tomar la decisión de abandonar la escuela.
+            </p>
+            <h3>Hacia una educación más relevante y flexible</h3>
+            <p>
+                Para combatir la falta de interés, es crucial que los sistemas educativos se modernicen. Esto implica actualizar los planes de estudio para que sean más prácticos y conectados con la realidad de los jóvenes, incorporar el uso de tecnología y ofrecer modalidades de estudio más flexibles. Los programas de tutorías entre pares, el aprendizaje basado en proyectos y las actividades extracurriculares también son herramientas efectivas para reavivar la motivación y el compromiso de los estudiantes con su educación.
+            </p>
+        </article>
+    </main>
 
-             <div class="grafica-container">
-               <h1 class="grafica-titulo">🚇 Estaciones con Mayor Sobrecarga de Gente</h1>
-
-               <div class="grafica-box">
-                 <canvas id="graficaSobrecarga" height="120"></canvas>
-               </div>
-
-               <p class="grafica-descripcion">
-                Grafico de barras para ver el número de usuarios promedio en las estaciones más concurridas del Metro CDMX
-               </p>
-             </div>
-
-             <script>
-               const datosSobrecarga = [
-                 { estacion: "Indios Verdes", usuarios: 80000 },
-                 { estacion: "Pantitlán", usuarios: 75000 },
-                 { estacion: "Centro Médico", usuarios: 62000 },
-                 { estacion: "Pino Suárez", usuarios: 59000 },
-                 { estacion: "Tacuba", usuarios: 56000 }
-               ];
-
-               const ctxSobrecarga = document.getElementById("graficaSobrecarga").getContext("2d");
-               new Chart(ctxSobrecarga, {
-                 type: "bar",
-                 data: {
-                   labels: datosSobrecarga.map(d => d.estacion),
-                   datasets: [{
-                     label: "Usuarios promedio por hora",
-                     data: datosSobrecarga.map(d => d.usuarios),
-                     backgroundColor: "rgba(251, 191, 36, 0.7)",
-                     borderColor: "rgba(202, 138, 4, 1)",
-                     borderWidth: 1,
-                     borderRadius: 6,
-                     hoverBackgroundColor: "rgba(251, 191, 36, 1)",
-                     hoverBorderColor: "white",
-                     hoverBorderWidth: 4
-                   }]
-                 },
-                 options: {
-                   responsive: true,
-                   animation: {
-                     duration: 800,
-                     easing: 'easeOutElastic'
-                   },
-                   plugins: {
-                     tooltip: {
-                       backgroundColor: 'rgba(0,0,0,0.8)',
-                       titleColor: '#fff',
-                       bodyColor: '#fff'
-                     },
-                     legend: { display: false },
-                     title: {
-                       display: true,
-                       text: 'Estaciones con Mayor Afluencia de Personas',
-                       color: '#fff',
-                       font: { size: 16 }
-                     }
-                   },
-                   scales: {
-                     x: {
-                       ticks: { color: '#fff' },
-                       grid: { display: false }
-                     },
-                     y: {
-                       beginAtZero: true,
-                       ticks: { color: '#fff' },
-                       grid: { color: 'rgba(255,255,255,0.1)' }
-                     }
-                   }
-                 }
-               });
-             </script>
-
-
-              <h2>Recomendaciones para los Usuarios:</h2>
-              <ul>
-                <li>Planifica tus viajes considerando las horas pico para evitar aglomeraciones.</li>
-                <li>Utiliza rutas alternativas si es posible, especialmente en estaciones con alta afluencia.</li>
-                <li>Permanece atento a los avisos del STC sobre cambios en el servicio o mantenimiento.</li>
-              </ul>
-
-              <p class="note">
-                Fuentes:
-
-                 <a href="https://metro.cdmx.gob.mx/" class="btn-stc" target="_blank">STC Metro</a>
-                 <a href="https://www.freepik.es/" class="btn-freepik" target="_blank">Freepik</a>
-
-              </p>
-            <img src="https://i0.wp.com/mayacomunicacion.com.mx/wp-content/uploads/2023/12/metro-cdmx.jpeg?fit=1140%2C712&ssl=1"
-                alt="sob" class="sobmetro" />
-        </div>
-    </section>
-
-
-  <section class="blog-container">
-      <div class="articulo">
-          <h2>Inclusión y equidad en el Metro de la CDMX: desafíos y avances</h2>
-          <p class="autor-articulo">Por: Ángel Segura, Omar Franco, Enrique Hernandez.</p>
-          <p>
-             El Metro de la Ciudad de México, uno de los sistemas de transporte más grandes y transitados de América Latina, transporta diariamente a millones de personas de distintos contextos sociales, económicos y culturales. En este vasto entramado subterráneo, la inclusión y la equidad son temas fundamentales para garantizar el derecho a la movilidad de toda la población, sin distinción alguna.
-          </p>
-
-          <h3>¿Qué entendemos por inclusión y equidad en el transporte?</h3>
-          <p>
-              La inclusión en el transporte se refiere a que todas las personas, independientemente de sus capacidades físicas, género, edad, nivel socioeconómico o identidad, puedan utilizar el sistema de forma segura, accesible y digna. La equidad, por su parte, implica que las condiciones del servicio no beneficien solamente a ciertos grupos, sino que se distribuyan con justicia, atendiendo las necesidades específicas de los sectores más vulnerables.
-          </p>
-
-          <h3>Avances en materia de inclusión</h3>
-          <ul>
-            <li><strong>Estaciones accesibles:</strong> Algunas estaciones han sido equipadas con elevadores, rampas, guías táctiles y señalización en braille para personas con discapacidad visual o movilidad reducida.</li>
-            <li><strong>Vagones exclusivos para mujeres y niños:</strong> Una medida que busca combatir el acoso sexual en horas pico y ofrecer mayor seguridad a mujeres en el transporte público.</li>
-            <li><strong>Campañas contra la discriminación:</strong> El STC ha impulsado campañas visuales y actividades que promueven el respeto hacia las personas con discapacidad, personas mayores y la comunidad LGBT+.</li>
-            <li><strong>Capacitación al personal:</strong> Se han ofrecido cursos y talleres para sensibilizar a trabajadores del Metro sobre temas de diversidad, derechos humanos y atención inclusiva.</li>
-          </ul>
-
-          <h3>Retos pendientes</h3>
-          <ul>
-            <li><strong>Falta de accesibilidad universal:</strong> Solo un porcentaje limitado de estaciones cuenta con elevadores funcionales o infraestructura adaptada. Muchas personas con discapacidad aún enfrentan grandes obstáculos para movilizarse.</li>
-            <li><strong>Sobrepoblación y desigualdad territorial:</strong> Las líneas más saturadas suelen estar en zonas con alta densidad poblacional y bajos recursos, lo que genera condiciones de viaje más precarias para quienes menos tienen.</li>
-            <li><strong>Violencia de género y acoso:</strong> A pesar de los vagones exclusivos, muchas mujeres siguen enfrentando situaciones de riesgo, sobre todo en estaciones o pasillos poco vigilados.</li>
-            <li><strong>Estigmas y exclusión social:</strong> Personas en situación de calle, migrantes y grupos indígenas a menudo son discriminados por otros usuarios o incluso por el personal del sistema.</li>
-          </ul>
-<h2>El camino hacia un Metro verdaderamente equitativo</h2>
-        <p>
-          Lograr un Metro plenamente incluyente y equitativo implica comprometerse con una visión de movilidad como derecho humano. Esto requiere:
-        </p>
-
-        <ul>
-          <li><strong>Inversión sostenida en accesibilidad e infraestructura.</strong></li>
-          <li><strong>Mayor vigilancia y protocolos claros ante casos de discriminación o violencia.</strong></li>
-          <li><strong>Participación ciudadana en la toma de decisiones sobre mejoras del sistema.</strong></li>
-          <li><strong>Un enfoque interseccional que reconozca la diversidad de experiencias y necesidades de quienes utilizan el Metro.</strong></li>
-        </ul>
-<h2>Conclusión</h2>
-        <p>
-          El Metro de la CDMX refleja, en muchos sentidos, las tensiones y contradicciones de la ciudad misma. Es un espacio compartido donde convergen realidades distintas, y por eso mismo, debe ser un terreno donde se promueva activamente la inclusión y la equidad. Solo así podremos construir un sistema de transporte verdaderamente público, justo y digno para todas las personas.
-          </p>
-
-        <p class="note">
-          Fuentes:
-
-           <a href="https://www.eluniversal.com.mx" class="btn-eluniversal" target="_blank">El Universal</a>
-           <a href="https://www.infobae.com" class="btn-infobae" target="_blank">Infobae</a>
-           <a href="https://elpais.com" class="btn-elpais" target="_blank">El País</a>
-           <a href="https://metro.cdmx.gob.mx/" class="btn-stc" target="_blank">STC Metro</a>
-           <a href="https://www.freepik.es/" class="btn-freepik" target="_blank">Freepik</a>
-
-        </p>
-        
-          <img src="https://imagedelivery.net/nv-bJhgmsJrHH2_eM9JJ0w/48288/public"
-              alt="equ" class="equim" />
-      </div>
-  </section>
-
-
-
-
-
-
-
+    <footer>
+        <p> &copy; 2025 Análisis de la Deserción Escolar - Todos los derechos reservados</p>
+    </footer>
 </body>
-
-</html>
