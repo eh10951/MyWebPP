@@ -176,3 +176,208 @@
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* Mensaje cuando no hay posts */
+.mensaje-vacio {
+    text-align: center;
+    padding: 60px 30px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.1rem;
+}
+
+.mensaje-vacio i {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 15px;
+    color: rgba(0, 234, 255, 0.4);
+}
+
+/* Respuestas */
+.respuestas-container {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 255, 153, 0.1);
+}
+
+.respuesta {
+    background: rgba(0, 150, 200, 0.05);
+    border-left: 3px solid rgba(0, 234, 255, 0.3);
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+}
+
+.respuesta-meta {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 0 8px 0;
+}
+
+.respuesta-autor {
+    color: #00eaff;
+    font-weight: 600;
+}
+
+.respuesta-fecha {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.respuesta-contenido {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Formulario de respuesta */
+.respuesta-form {
+    background: rgba(0, 234, 255, 0.05);
+    border: 1px solid rgba(0, 234, 255, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.respuesta-form input,
+.respuesta-form textarea {
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 234, 255, 0.3);
+    border-radius: 6px;
+    color: #ffffff;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    resize: vertical;
+}
+
+.respuesta-form input::placeholder,
+.respuesta-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.respuesta-form input:focus,
+.respuesta-form textarea:focus {
+    outline: none;
+    border-color: #00ff99;
+    box-shadow: 0 0 8px rgba(0, 255, 153, 0.2);
+}
+
+.respuesta-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.btn-enviar-respuesta,
+.btn-cancelar-respuesta {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-enviar-respuesta {
+    background: #00ff99;
+    color: #000;
+}
+
+.btn-enviar-respuesta:hover {
+    background: #00cc7a;
+    transform: scale(1.05);
+}
+
+.btn-cancelar-respuesta {
+    background: rgba(0, 234, 255, 0.2);
+    color: #00eaff;
+}
+
+.btn-cancelar-respuesta:hover {
+    background: rgba(0, 234, 255, 0.3);
+}
+
+/* Botón eliminar */
+.eliminar-btn {
+    background: rgba(255, 107, 107, 0.2);
+    color: #ff6b6b;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+    margin-left: 10px;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.eliminar-btn:hover {
+    background: rgba(255, 107, 107, 0.3);
+    transform: scale(1.05);
+}
+
+/* Notificación */
+.notificacion {
+    position: fixed;
+    bottom: -100px;
+    right: 20px;
+    background: #00ff99;
+    color: #000;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 5px 20px rgba(0, 255, 153, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.notificacion.mostrar {
+    bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .foro-container {
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .titulo-foro {
+        font-size: 2rem;
+    }
+
+    .subtitulo-foro {
+        font-size: 1rem;
+    }
+
+    .nuevo-post-container,
+    .post {
+        padding: 20px;
+    }
+
+    .respuesta-buttons {
+        flex-direction: column;
+    }
+
+    .btn-enviar-respuesta,
+    .btn-cancelar-respuesta,
+    .eliminar-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .eliminar-btn {
+        margin-left: 0;
+        margin-top: 8px;
+    }
+}

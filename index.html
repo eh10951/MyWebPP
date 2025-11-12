@@ -767,6 +767,111 @@
             animation: pulse-glow 3s infinite;
         }
 
+        /* ====== ESTADÍSTICAS - GALERÍA DE GRÁFICAS ====== */
+        .estadisticas-section {
+            background: rgba(0, 255, 153, 0.03) !important;
+            border: 1px solid rgba(0, 255, 153, 0.2) !important;
+            border-radius: 20px !important;
+            padding: 40px 20px !important;
+            margin: 40px auto !important;
+            max-width: 1200px !important;
+            box-shadow: 0 8px 32px rgba(0, 255, 153, 0.1) !important;
+        }
+
+        .container-stats {
+            width: 100% !important;
+            max-width: 1100px !important;
+            margin: 0 auto !important;
+        }
+
+        .estadisticas-grid {
+            display: grid !important;
+            grid-template-columns: 1fr !important;
+            gap: 2.5rem !important;
+            margin-top: 2rem !important;
+            align-items: center !important;
+        }
+
+        .grafica-item {
+            text-align: center !important;
+            transition: transform 0.3s ease, filter 0.3s ease !important;
+            padding: 20px !important;
+            background: rgba(0, 234, 255, 0.02) !important;
+            border: 1px solid rgba(0, 234, 255, 0.1) !important;
+            border-radius: 15px !important;
+        }
+
+        .grafica-item:hover {
+            transform: translateY(-8px) !important;
+            filter: brightness(1.1) !important;
+            background: rgba(0, 234, 255, 0.05) !important;
+            border-color: rgba(0, 234, 255, 0.2) !important;
+        }
+
+        .grafica-item img {
+            width: 100% !important;
+            max-width: 800px !important;
+            height: auto !important;
+            border-radius: 12px !important;
+            box-shadow: 0 8px 24px rgba(0, 234, 255, 0.15) !important;
+            display: block !important;
+            margin: 0 auto !important;
+            transition: box-shadow 0.3s ease, transform 0.3s ease !important;
+        }
+
+        .grafica-item img:hover {
+            box-shadow: 0 12px 35px rgba(0, 234, 255, 0.3) !important;
+            transform: scale(1.02) !important;
+        }
+
+        .grafica-label {
+            display: block !important;
+            text-align: center !important;
+            padding: 16px 8px 8px 8px !important;
+            color: var(--primary-cyan) !important;
+            font-weight: 700 !important;
+            font-size: 1.2rem !important;
+            margin-top: 16px !important;
+            text-shadow: 0 0 8px rgba(0, 234, 255, 0.3) !important;
+        }
+
+        .grafica-descripcion {
+            display: block !important;
+            text-align: justify !important;
+            padding: 12px 16px !important;
+            color: rgba(255, 255, 255, 0.85) !important;
+            font-size: 0.95rem !important;
+            line-height: 1.7 !important;
+            margin-top: 12px !important;
+            background: rgba(0, 234, 255, 0.03) !important;
+            border-left: 3px solid var(--primary-cyan) !important;
+            border-radius: 6px !important;
+        }
+
+        @media (max-width: 768px) {
+            .estadisticas-grid {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+            
+            .grafica-item {
+                padding: 15px !important;
+            }
+            
+            .grafica-item img {
+                max-width: 100% !important;
+            }
+            
+            .grafica-label {
+                font-size: 1.1rem !important;
+            }
+            
+            .grafica-descripcion {
+                font-size: 0.9rem !important;
+                padding: 12px 14px !important;
+            }
+        }
+
         /* Scrollbar personalizada con todos los colores */
         ::-webkit-scrollbar {
             width: 10px;
@@ -919,8 +1024,10 @@
                         <h3>Tasa Nacional</h3>
                         <p>La tasa de abandono escolar en educación superior ha mostrado una ligera disminución, pero sigue siendo un desafío importante para el sistema educativo del país.</p>
                         
-                        <img src="imagenes/graficas_des.jpeg" alt="Error de imagen" class="graficas_desesercion">
+                        
                     </div>
+
+                  
                     <div class="noticia-card-ml">
                         <span class="card-icon-ml">📈</span>
                         <h3>Factores de Riesgo</h3>
@@ -930,6 +1037,47 @@
                         <span class="card-icon-ml">💡</span>
                         <h3>Impacto de Programas</h3>
                         <p>Los programas de becas y apoyo han demostrado reducir la deserción hasta en un 25% en las poblaciones beneficiadas, subrayando su efectividad.</p>
+                    </div>
+
+            
+                </div>
+            </div>
+        </section>
+
+        <!-- GALERÍA DE GRÁFICAS: graf_1 .. graf_5 -->
+        <section class="estadisticas-section">
+            <div class="container-stats">
+                <h2 class="tlinea">Gráficas y Visualizaciones de Datos</h2>
+                <div class="estadisticas-grid">
+                    <div class="grafica-item">
+                        <img src="imagenes/graf_1.jpeg" alt="Gráfica 1 - Tendencia de deserción por genero" loading="lazy">
+                        <span class="grafica-label">Indica tu genero</span>
+                        <p class="grafica-descripcion">La gráfica muestra la distribución del género de los participantes. El 60% de los encuestados se identifican como masculinos (15 personas), mientras que el 40% se identifican como femeninos (10 personas). Esto indica una ligera mayoría de participantes masculinos en el estudio.</p>
+                    </div>
+                    <div class="grafica-item">
+                        <img src="imagenes/graf_2.jpeg" alt="Gráfica 2 - Rango de edad" loading="lazy">
+                        <span class="grafica-label">Rango de edad</span>
+                        <p class="grafica-descripcion">En esta gráfica se observa que la mayoría de los participantes tienen más de 30 años, representando el grupo más numeroso. El segundo grupo más frecuente es el de 23 a 25 años, seguido por los de 20 a 22 años. Los rangos de edad menos representados son los de 25 a 29 años y 17 a 19 años. Esto muestra una tendencia hacia una población adulta dentro de los encuestados.</p>
+                    </div>
+                    <div class="grafica-item">
+                        <img src="imagenes/graf_6.jpeg" alt="Gráfica 3 - Apoyo economico" loading="lazy">
+                        <span class="grafica-label">Apoyo economico</span>
+                        <p class="grafica-descripcion">La mayoría de los encuestados respondió que nunca ha pensado en abandonar la universidad, aunque un grupo considerable mencionó que lo ha pensado pocas veces o algunas veces. Muy pocos indicaron haberlo pensado con frecuencia. Esto sugiere que, aunque existe una presencia de pensamientos de abandono, no es una tendencia generalizada.</p>
+                    </div>
+                    <div class="grafica-item">
+                        <img src="imagenes/graf_3.jpeg" alt="Gráfica 3 - Abandono de universidad" loading="lazy">
+                        <span class="grafica-label">Abandono de universidad</span>
+                        <p class="grafica-descripcion">El 64% de los encuestados respondió que sí conoce a alguien que ha abandonado la universidad, mientras que el 28% indicó que no, y un 8% no está seguro. Esto evidencia que el abandono universitario es una situación conocida por la mayoría de los participantes, lo que puede reflejar un fenómeno recurrente en su entorno académico.</p>
+                    </div>
+                    <div class="grafica-item">
+                        <img src="imagenes/graf_4.jpeg" alt="Gráfica 4 - Conoces a alguien?" loading="lazy">
+                        <span class="grafica-label">Conoces a alguien?</span>
+                        <p class="grafica-descripcion">Según los resultados, la mayoría de los participantes (más de la mitad) indicaron que no reciben ningún tipo de apoyo académico. Un grupo menor afirmó recibir apoyo de manera ocasional, y una minoría lo recibe de manera constante. Esto sugiere la necesidad de fortalecer los programas de acompañamiento y tutorías para los estudiantes.</p>
+                    </div>
+                    <div class="grafica-item">
+                        <img src="imagenes/graf_5.jpeg" alt="Gráfica 5 - Horas de estudio vs deserción" loading="lazy">
+                        <span class="grafica-label">Causas de abandono</span>
+                        <p class="grafica-descripcion">La principal razón identificada por los encuestados fue de tipo económico, seguida por la falta de motivación e interés en la materia. En menor medida, se mencionaron causas familiares, académicas y problemas con la universidad. Otros factores como cuestiones laborales, horarios y situaciones personales como paternidad o matrimonio fueron menos frecuentes. Esto indica que los factores económicos y motivacionales son las principales causas de abandono escolar.</p>
                     </div>
                 </div>
             </div>
@@ -988,7 +1136,7 @@
             }, observerOptions);
 
             // Observar elementos que queremos animar
-            document.querySelectorAll('.noticia, .contenido article, aside, .section, .expli, .contenedor').forEach(el => {
+            document.querySelectorAll('.noticia, .noticia-card-ml, .grafica-item, .contenido article, aside, .section, .expli, .contenedor').forEach(el => {
                 el.style.opacity = '0';
                 el.style.transform = 'translateY(30px)';
                 el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
