@@ -4,15 +4,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Foro - Debate sobre la Deserción Escolar</title>
-    <link rel="stylesheet" href="css/foro.css" />
-    <link rel="stylesheet" href="css/styles.css" /> <!-- Enlace a los estilos generales -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/foro.css" />
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ========== DISEÑO JARVIS CON TODOS LOS COLORES ========== */
+        
+        :root {
+            --primary-cyan: #00eaff;
+            --primary-green: #00ff99;
+            --accent-gold: #ffd700;
+            --accent-blue: #007bff;
+            --accent-red: #ff6b6b;
+            --accent-orange: #ff8c00;
+            --accent-purple: #9d4edd;
+            --accent-pink: #ff69b4;
+            --success-green: #28a745;
+            --warning-orange: #ffc107;
+            --error-red: #dc3545;
+            --dark-bg: #0a0f1f;
+            --darker-bg: #000;
+        }
+        
+        /* Fondo y tipografía */
+        body {
+            background: radial-gradient(circle at center, var(--dark-bg), var(--darker-bg)) !important;
+            color: rgba(255, 255, 255, 0.95) !important;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Header mejorado */
+        header {
+            background: linear-gradient(135deg, 
+                rgba(0, 0, 0, 0.9) 0%, 
+                rgba(10, 15, 31, 0.8) 50%, 
+                rgba(0, 0, 0, 0.9) 100%) !important;
+            backdrop-filter: blur(15px);
+            border-bottom: 2px solid var(--primary-cyan);
+            box-shadow: 0 4px 20px rgba(0, 234, 255, 0.2), 
+                        0 0 40px rgba(0, 255, 153, 0.1);
+        }
+        
+        /* Navegación */
+        .menu ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        nav.menu li:nth-child(1) a { color: var(--primary-cyan) !important; }
+        nav.menu li:nth-child(2) a { color: var(--primary-green) !important; }
+        nav.menu li:nth-child(3) a { color: var(--accent-gold) !important; }
+        nav.menu li:nth-child(4) a { color: var(--accent-blue) !important; }
+        
+        nav.menu a {
+            text-shadow: 0 0 6px currentColor;
+            transition: all 0.3s ease;
+            display: inline-block;
+            padding: 14px 26px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.95);
+        }
+        
+        nav.menu li:nth-child(1) a:hover { 
+            color: var(--accent-gold) !important; 
+            text-shadow: 0 0 15px var(--accent-gold); 
+        }
+        nav.menu li:nth-child(2) a:hover { 
+            color: var(--accent-purple) !important; 
+            text-shadow: 0 0 15px var(--accent-purple); 
+        }
+        nav.menu li:nth-child(3) a:hover { 
+            color: var(--primary-cyan) !important; 
+            text-shadow: 0 0 15px var(--primary-cyan); 
+        }
+        nav.menu li:nth-child(4) a:hover { 
+            color: var(--primary-green) !important; 
+            text-shadow: 0 0 15px var(--primary-green); 
+        }
+        
+        /* Footer mejorado */
+        footer {
+            background: linear-gradient(135deg,
+                rgba(0, 0, 0, 0.95) 0%,
+                rgba(10, 15, 31, 0.9) 50%,
+                rgba(0, 0, 0, 0.95) 100%);
+            border-top: 2px solid var(--primary-cyan);
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 80px;
+            box-shadow: 0 -4px 20px rgba(0, 234, 255, 0.1);
+        }
+        
+        footer p {
+            margin: 0;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+    </style>
 </head>
 
 <body>
     <header class="header">
-        
+        <div class="logo">
+            <img src="imagenes/logo3.1.png" alt="Logo de la página" class="logo-img">
+        </div>
         <nav class="menu">
             <ul>
                 <li><a href="index.html"> Inicio </a></li>
@@ -24,36 +141,87 @@
     </header>
 
     <main class="foro-container">
-        <h1 class="titulo-foro">Foro de Discusión</h1>
-        <p class="subtitulo-foro">Un espacio para compartir ideas, experiencias y soluciones sobre la deserción escolar.</p>
+        <!-- Título principal con gradiente Jarvis -->
+        <div class="foro-header">
+            <h1 class="titulo-foro">
+                <i class="fas fa-comments-dollar"></i> Foro de Discusión
+            </h1>
+            <p class="subtitulo-foro">
+                <i class="fas fa-sparkles"></i> Un espacio para compartir ideas, experiencias y soluciones sobre la deserción escolar
+            </p>
+        </div>
 
+        <!-- Contenedor de nuevo post con diseño mejorado -->
         <div class="nuevo-post-container">
-            <h2><i class="fas fa-plus-circle"></i> Iniciar una nueva discusión</h2>
-            <form id="nuevo-post-form">
+            <div class="nuevo-post-header">
+                <h2><i class="fas fa-plus-circle"></i> Iniciar una Nueva Discusión</h2>
+                <p class="helper-text">Comparte tu perspectiva y ayuda a la comunidad</p>
+            </div>
+            
+            <form id="nuevo-post-form" class="nuevo-post-form">
                 <div class="form-group">
-                    <label for="post-titulo">Título del Tema</label>
-                    <input type="text" id="post-titulo" name="post-titulo" placeholder="Ej: ¿Cómo podemos apoyar a los estudiantes en riesgo?" required>
+                    <label for="post-titulo">
+                        <i class="fas fa-heading"></i> Título del Tema
+                    </label>
+                    <input 
+                        type="text" 
+                        id="post-titulo" 
+                        name="post-titulo" 
+                        placeholder="Ej: ¿Cómo podemos apoyar a los estudiantes en riesgo?" 
+                        required
+                    >
                 </div>
+
                 <div class="form-group">
-                    <label for="post-contenido">Tu Mensaje</label>
-                    <textarea id="post-contenido" name="post-contenido" rows="6" placeholder="Comparte tu opinión, pregunta o experiencia aquí..." required></textarea>
+                    <label for="post-contenido">
+                        <i class="fas fa-pen-fancy"></i> Tu Mensaje
+                    </label>
+                    <textarea 
+                        id="post-contenido" 
+                        name="post-contenido" 
+                        rows="6" 
+                        placeholder="Comparte tu opinión, pregunta o experiencia aquí..."
+                        required
+                    ></textarea>
                 </div>
+
                 <div class="form-group">
-                    <label for="post-autor">Tu Nombre (Opcional)</label>
-                    <input type="text" id="post-autor" name="post-autor" placeholder="Anónimo">
+                    <label for="post-autor">
+                        <i class="fas fa-user"></i> Tu Nombre (Opcional)
+                    </label>
+                    <input 
+                        type="text" 
+                        id="post-autor" 
+                        name="post-autor" 
+                        placeholder="Escribe tu nombre o déjalo en blanco para aparecer como Anónimo"
+                    >
                 </div>
+
                 <button type="submit" class="btn-publicar">
-                    <i class="fas fa-paper-plane"></i> Publicar Tema
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Publicar Tema</span>
                 </button>
             </form>
         </div>
 
+        <!-- Divisor con efecto neón -->
         <div class="lineadiv"></div>
 
+        <!-- Sección de posts con diseño mejorado -->
         <div class="lista-posts-container">
-            <h2><i class="fas fa-comments"></i> Discusiones Recientes</h2>
-            <div id="lista-posts">
+            <div class="posts-header">
+                <h2><i class="fas fa-comments"></i> Discusiones Recientes</h2>
+                <p class="posts-count">
+                    <span id="total-posts">0</span> temas activos en la comunidad
+                </p>
+            </div>
+            
+            <div id="lista-posts" class="posts-grid">
                 <!-- Las publicaciones del foro se cargarán aquí dinámicamente -->
+                <div class="loading-message">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Cargando discusiones...</p>
+                </div>
             </div>
         </div>
     </main>
