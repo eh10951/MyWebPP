@@ -4,9 +4,94 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Blog - Causas y Consecuencias de la Deserción Escolar</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog - Causas y Consecuencias de la Deserción Escolar</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/blog.css" />
-    <link rel="stylesheet" href="css/styles.css" /> <!-- Enlace a los estilos generales -->
+    <link rel="stylesheet" href="css/styles.css" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ========== DISEÑO JARVIS ========== */
+        
+        :root {
+            --primary-cyan: #00eaff;
+            --primary-green: #00ff99;
+            --accent-gold: #ffd700;
+            --accent-blue: #007bff;
+            --accent-red: #ff6b6b;
+            --accent-orange: #ff8c00;
+            --accent-purple: #9d4edd;
+            --dark-bg: #0a0f1f;
+            --darker-bg: #000;
+        }
+        
+        body {
+            background: radial-gradient(circle at center, var(--dark-bg), var(--darker-bg)) !important;
+            color: rgba(255, 255, 255, 0.95) !important;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        header {
+            background: linear-gradient(135deg, 
+                rgba(0, 0, 0, 0.9) 0%, 
+                rgba(10, 15, 31, 0.8) 50%, 
+                rgba(0, 0, 0, 0.9) 100%) !important;
+            backdrop-filter: blur(15px);
+            border-bottom: 2px solid var(--primary-cyan);
+            box-shadow: 0 4px 20px rgba(0, 234, 255, 0.2), 
+                        0 0 40px rgba(0, 255, 153, 0.1);
+        }
+        
+        footer {
+            background: linear-gradient(135deg,
+                rgba(0, 0, 0, 0.95) 0%,
+                rgba(10, 15, 31, 0.9) 50%,
+                rgba(0, 0, 0, 0.95) 100%);
+            border-top: 2px solid var(--primary-cyan);
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 80px;
+            box-shadow: 0 -4px 20px rgba(0, 234, 255, 0.1);
+        }
+        
+        .menu ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        nav.menu li:nth-child(1) a { color: var(--primary-cyan) !important; }
+        nav.menu li:nth-child(2) a { color: var(--primary-green) !important; }
+        nav.menu li:nth-child(3) a { color: var(--accent-gold) !important; }
+        nav.menu li:nth-child(4) a { color: var(--accent-blue) !important; }
+        
+        nav.menu a {
+            text-shadow: 0 0 6px currentColor;
+            transition: all 0.3s ease;
+            display: inline-block;
+            padding: 14px 26px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.95);
+        }
+    </style>
 </head>
 
 <body>
@@ -25,59 +110,202 @@
     </header>
 
     <main class="blog-container">
-        <h1 class="titulo-blog">Blog sobre la Deserción Escolar</h1>
+        <!-- HERO SECTION -->
+        <div class="blog-hero">
+            <h1 class="blog-titulo">
+                <i class="fas fa-book-reader"></i> Blog de Educación
+            </h1>
+            <p class="blog-subtitulo">
+                <i class="fas fa-graduation-cap"></i> Análisis profundo sobre las causas y consecuencias de la deserción escolar
+            </p>
+        </div>
 
-        <article class="articulo">
-            <h2>Factores Socioeconómicos: El Principal Obstáculo</h2>
-            <p class="autor-articulo">Por: Equipo de Análisis Educativo</p>
-            <img src="imagenes/afluencia.png" alt="Factores socioeconómicos" class="img-articulo">
-            <p>
-                La situación económica de las familias es uno de los factores más determinantes en la deserción escolar. La falta de recursos para cubrir costos de transporte, materiales, uniformes e incluso alimentación, obliga a muchos jóvenes a abandonar sus estudios para incorporarse al mercado laboral, a menudo en condiciones precarias.
-            </p>
-            <p>
-                Esta presión económica no solo afecta la capacidad de la familia para sostener la educación, sino que también genera un alto nivel de estrés en los estudiantes, quienes pueden sentirse responsables de contribuir al ingreso familiar. La necesidad de trabajar reduce el tiempo disponible para el estudio y el descanso, lo que impacta negativamente en su rendimiento académico y motivación.
-            </p>
-            <h3>El círculo vicioso de la pobreza</h3>
-            <p>
-                La deserción escolar por motivos económicos perpetúa un ciclo de pobreza. Sin una educación completa, las oportunidades de acceder a empleos bien remunerados y con mejores condiciones se reducen drásticamente. Esto limita el desarrollo personal y profesional del individuo y, a su vez, restringe las posibilidades de que sus futuros hijos tengan un mejor acceso a la educación. Romper este ciclo requiere políticas públicas integrales que ofrezcan becas, apoyos económicos directos y programas de alimentación escolar.
-            </p>
-        </article>
+        <!-- PRESENTACIÓN CANVA EMBEBIDA -->
+        <section class="presentacion-section">
+            <div class="presentacion-header">
+                <h2><i class="fas fa-presentation"></i> Presentación Multimedia</h2>
+                <p>Visualiza una presentación interactiva sobre los factores de la deserción escolar</p>
+            </div>
+            
+            <div class="presentacion-container">
+                <iframe src="https://www.canva.com/design/DAG5fFF-Bs0/N_yNKdb6gX3_2yglSwPaGQ/view" 
+                        allow="fullscreen" 
+                        class="presentacion-iframe">
+                </iframe>
+            </div>
+
+            <div class="presentacion-info">
+                <div class="info-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Información Actualizada</h3>
+                    <p>Datos y estadísticas recientes sobre la situación educativa</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-search"></i>
+                    <h3>Análisis Profundo</h3>
+                    <p>Explicación detallada de cada factor de riesgo y sus consecuencias</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Visuales Efectivos</h3>
+                    <p>Gráficos y representaciones visuales para mejor comprensión</p>
+                </div>
+            </div>
+        </section>
 
         <div class="lineadiv"></div>
 
-        <article class="articulo">
-            <h2>El Impacto del Entorno Familiar y Social</h2>
-            <p class="autor-articulo">Por: Equipo de Análisis Educativo</p>
-            <img src="imagenes/regresion.png" alt="Entorno familiar" class="img-articulo">
-            <p>
-                El entorno en el que crece un estudiante juega un papel crucial en su trayectoria educativa. Un ambiente familiar conflictivo, la falta de apoyo de los padres o la ausencia de modelos a seguir con formación académica pueden desmotivar a los jóvenes y hacerles sentir que la educación no es una prioridad.
-            </p>
-            <p>
-                Asimismo, la presión de grupos sociales, el acoso escolar (bullying) o la exposición a la violencia en su comunidad son factores que generan un ambiente hostil para el aprendizaje. Cuando la escuela deja de ser un espacio seguro, los estudiantes pueden optar por abandonarla como un mecanismo de autoprotección.
-            </p>
-            <h3>La importancia del apoyo emocional</h3>
-            <p>
-                Es fundamental que las instituciones educativas cuenten con programas de apoyo psicológico y orientación vocacional. Detectar a tiempo a los estudiantes que enfrentan problemas familiares o sociales y ofrecerles un espacio de escucha y acompañamiento puede marcar la diferencia entre continuar estudiando o abandonar la escuela. La colaboración entre la escuela, la familia y la comunidad es esencial para crear una red de apoyo sólida que proteja a los jóvenes.
-            </p>
-        </article>
+        <!-- ARTÍCULOS EN TARJETAS -->
+        <section class="articulos-section">
+            <div class="articulos-header">
+                <h2><i class="fas fa-newspaper"></i> Artículos Destacados</h2>
+                <p>Sumérgate en artículos detallados sobre la deserción escolar</p>
+            </div>
+
+            <div class="articulos-grid">
+                <!-- ARTÍCULO 1 -->
+                <article class="articulo-card">
+                    <div class="articulo-imagen">
+                        <img src="imagenes/afluencia.png" alt="Factores socioeconómicos">
+                        <span class="articulo-categoria">Economía</span>
+                    </div>
+                    
+                    <div class="articulo-contenido">
+                        <h3>Factores Socioeconómicos: El Principal Obstáculo</h3>
+                        <p class="autor-articulo">
+                            <i class="fas fa-user"></i> Equipo de Análisis Educativo
+                        </p>
+                        
+                        <div class="articulo-body">
+                            <p>
+                                La situación económica de las familias es uno de los factores más determinantes en la deserción escolar. La falta de recursos para cubrir costos de transporte, materiales, uniformes e incluso alimentación, obliga a muchos jóvenes a abandonar sus estudios.
+                            </p>
+                            
+                            <h4><i class="fas fa-circle-notch"></i> El círculo vicioso de la pobreza</h4>
+                            <p>
+                                La deserción escolar por motivos económicos perpetúa un ciclo de pobreza. Sin una educación completa, las oportunidades de acceder a empleos bien remunerados se reducen drásticamente. Romper este ciclo requiere políticas públicas integrales.
+                            </p>
+                        </div>
+
+                        <div class="articulo-footer">
+                            <span class="tiempo-lectura">
+                                <i class="fas fa-clock"></i> 5 min de lectura
+                            </span>
+                            <button class="btn-leer-mas">Leer más</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ARTÍCULO 2 -->
+                <article class="articulo-card">
+                    <div class="articulo-imagen">
+                        <img src="imagenes/regresion.png" alt="Entorno familiar">
+                        <span class="articulo-categoria">Social</span>
+                    </div>
+                    
+                    <div class="articulo-contenido">
+                        <h3>El Impacto del Entorno Familiar y Social</h3>
+                        <p class="autor-articulo">
+                            <i class="fas fa-user"></i> Equipo de Análisis Educativo
+                        </p>
+                        
+                        <div class="articulo-body">
+                            <p>
+                                El entorno en el que crece un estudiante juega un papel crucial en su trayectoria educativa. Un ambiente familiar conflictivo o la falta de apoyo de los padres pueden desmotivar a los jóvenes.
+                            </p>
+                            
+                            <h4><i class="fas fa-circle-notch"></i> La importancia del apoyo emocional</h4>
+                            <p>
+                                Es fundamental que las instituciones educativas cuenten con programas de apoyo psicológico. La colaboración entre escuela, familia y comunidad es esencial para crear una red de apoyo sólida.
+                            </p>
+                        </div>
+
+                        <div class="articulo-footer">
+                            <span class="tiempo-lectura">
+                                <i class="fas fa-clock"></i> 6 min de lectura
+                            </span>
+                            <button class="btn-leer-mas">Leer más</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ARTÍCULO 3 -->
+                <article class="articulo-card">
+                    <div class="articulo-imagen">
+                        <img src="imagenes/graficaaf.png" alt="Bajo rendimiento académico">
+                        <span class="articulo-categoria">Académico</span>
+                    </div>
+                    
+                    <div class="articulo-contenido">
+                        <h3>Bajo Rendimiento y Falta de Interés: Síntomas de un Problema Mayor</h3>
+                        <p class="autor-articulo">
+                            <i class="fas fa-user"></i> Equipo de Análisis Educativo
+                        </p>
+                        
+                        <div class="articulo-body">
+                            <p>
+                                El bajo rendimiento académico y la falta de interés no suelen ser las causas raíz de la deserción, sino síntomas de problemas más profundos. Un estudiante puede perder interés por razones variadas.
+                            </p>
+                            
+                            <h4><i class="fas fa-circle-notch"></i> Hacia una educación más relevante</h4>
+                            <p>
+                                Es crucial que los sistemas educativos se modernizen. Esto implica actualizar planes de estudio y ofrecer modalidades más flexibles de educación.
+                            </p>
+                        </div>
+
+                        <div class="articulo-footer">
+                            <span class="tiempo-lectura">
+                                <i class="fas fa-clock"></i> 7 min de lectura
+                            </span>
+                            <button class="btn-leer-mas">Leer más</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
 
         <div class="lineadiv"></div>
 
-        <article class="articulo">
-            <h2>Bajo Rendimiento y Falta de Interés: Síntomas de un Problema Mayor</h2>
-            <p class="autor-articulo">Por: Equipo de Análisis Educativo</p>
-            <img src="imagenes/graficaaf.png" alt="Bajo rendimiento académico" class="img-articulo">
-            <p>
-                El bajo rendimiento académico y la falta de interés no suelen ser las causas raíz de la deserción, sino más bien síntomas de problemas más profundos. Un estudiante puede perder el interés porque los contenidos no le parecen relevantes para su vida, porque tiene dificultades de aprendizaje no diagnosticadas o porque los métodos de enseñanza no se adaptan a sus necesidades.
-            </p>
-            <p>
-                Cuando un estudiante acumula fracasos académicos, su autoestima se ve afectada y puede empezar a creer que "no es bueno para el estudio". Esta percepción, combinada con otros factores de riesgo, puede llevarlo a tomar la decisión de abandonar la escuela.
-            </p>
-            <h3>Hacia una educación más relevante y flexible</h3>
-            <p>
-                Para combatir la falta de interés, es crucial que los sistemas educativos se modernicen. Esto implica actualizar los planes de estudio para que sean más prácticos y conectados con la realidad de los jóvenes, incorporar el uso de tecnología y ofrecer modalidades de estudio más flexibles. Los programas de tutorías entre pares, el aprendizaje basado en proyectos y las actividades extracurriculares también son herramientas efectivas para reavivar la motivación y el compromiso de los estudiantes con su educación.
-            </p>
-        </article>
+        <!-- SECCIÓN DE ESTADÍSTICAS -->
+        <section class="estadisticas-blog">
+            <h2><i class="fas fa-chart-pie"></i> Estadísticas Clave</h2>
+            
+            <div class="estadisticas-grid">
+                <div class="estadistica-item">
+                    <div class="numero">75%</div>
+                    <p>De deserción escolar se debe a factores económicos</p>
+                </div>
+                <div class="estadistica-item">
+                    <div class="numero">60%</div>
+                    <p>Estudiantes afectados por problemas familiares</p>
+                </div>
+                <div class="estadistica-item">
+                    <div class="numero">45%</div>
+                    <p>Con bajo rendimiento antes de abandonar</p>
+                </div>
+                <div class="estadistica-item">
+                    <div class="numero">82%</div>
+                    <p>Necesitan apoyo emocional y académico</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="lineadiv"></div>
+
+        <!-- CALL TO ACTION -->
+        <section class="cta-blog">
+            <h2>¿Quieres aprender más?</h2>
+            <p>Explora nuestro análisis completo y únete a la comunidad de educadores comprometidos</p>
+            
+            <div class="cta-buttons">
+                <a href="index.html" class="btn-cta btn-primary">
+                    <i class="fas fa-chart-bar"></i> Ver Estadísticas Principales
+                </a>
+                <a href="foro.html" class="btn-cta btn-secondary">
+                    <i class="fas fa-comments"></i> Participa en el Foro
+                </a>
+            </div>
+        </section>
     </main>
 
     <footer>
