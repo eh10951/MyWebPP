@@ -314,22 +314,123 @@
         
         /* Responsive para cards ML */
         @media (max-width: 768px) {
+            :root {
+                font-size: 14px;
+            }
+            
+            body {
+                padding: 0;
+            }
+            
+            header {
+                padding: 15px 10px !important;
+                margin: 0 !important;
+                border-radius: 0 !important;
+            }
+            
+            .logo {
+                padding: 0 !important;
+            }
+            
+            .menu ul {
+                flex-direction: column;
+                gap: 8px !important;
+                padding: 10px 0 !important;
+            }
+            
+            nav.menu a {
+                padding: 10px 16px !important;
+                font-size: 0.9rem !important;
+                border-radius: 6px !important;
+            }
+            
+            h1 {
+                font-size: 1.8rem !important;
+            }
+            
+            h2 {
+                font-size: 1.4rem !important;
+            }
+            
+            .apple-hero-section {
+                padding: 25px 15px !important;
+                margin: 20px 10px !important;
+                border-radius: 12px !important;
+            }
+            
+            .vozmetro, .notas, .tendencias, .main-layout {
+                padding: 20px 15px !important;
+                margin: 15px 10px !important;
+                border-radius: 10px !important;
+            }
+            
             .noticias {
                 grid-template-columns: 1fr !important;
-                gap: 20px !important;
+                gap: 15px !important;
+                padding: 0 !important;
+            }
+            
+            .noticia {
+                padding: 15px !important;
+                margin: 0 !important;
+            }
+            
+            .lineadiv {
+                margin: 25px 0 !important;
             }
             
             .noticia-card-ml {
-                padding: 25px 20px !important;
+                padding: 20px 15px !important;
                 min-height: 280px !important;
             }
             
             .card-icon-ml {
-                font-size: 2.5rem !important;
+                font-size: 2.2rem !important;
             }
             
             .noticia-card-ml h3 {
-                font-size: 1.2rem !important;
+                font-size: 1.1rem !important;
+            }
+            
+            .noticia-card-ml p {
+                font-size: 0.9rem !important;
+            }
+            
+            .leer {
+                padding: 10px 20px !important;
+                font-size: 0.9rem !important;
+            }
+            
+            .qr-code, .logometro {
+                max-width: 100% !important;
+                height: auto !important;
+            }
+            
+            footer {
+                padding: 20px 15px !important;
+                font-size: 0.9rem !important;
+            }
+            
+            img {
+                max-width: 100% !important;
+                height: auto !important;
+            }
+            
+            .tendencias-ml-container {
+                padding: 0 10px !important;
+                margin: 20px auto !important;
+            }
+            
+            .estadisticas-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .grafica-item {
+                padding: 12px !important;
+            }
+            
+            .grafica-item img {
+                max-width: 100% !important;
             }
         }
         
@@ -345,24 +446,139 @@
         }
         
         /* Responsive design */
-        @media (max-width: 768px) {
+        @media (max-width: 480px) {
+            :root {
+                font-size: 12px;
+            }
+            
+            header {
+                padding: 10px 8px !important;
+                border-bottom: 3px solid var(--accent-gold) !important;
+            }
+            
+            .logo img {
+                width: 60px !important;
+            }
+            
+            .menu {
+                padding: 8px 0 !important;
+            }
+            
+            .menu ul {
+                gap: 4px !important;
+            }
+            
+            nav.menu a {
+                padding: 8px 12px !important;
+                font-size: 0.8rem !important;
+            }
+            
+            h1 {
+                font-size: 1.4rem !important;
+            }
+            
+            h2 {
+                font-size: 1.1rem !important;
+            }
+            
+            h3 {
+                font-size: 0.95rem !important;
+            }
+            
+            .apple-hero-section {
+                padding: 15px 10px !important;
+                margin: 10px 5px !important;
+            }
+            
             .vozmetro, .notas, .tendencias, .main-layout {
-                padding: 20px !important;
-                margin: 15px !important;
+                padding: 15px 10px !important;
+                margin: 10px 5px !important;
+                border-radius: 8px !important;
             }
             
             .noticia {
-                margin: 10px 0 !important;
+                padding: 12px !important;
+                border-radius: 8px !important;
             }
             
-            .noticias {
-                grid-template-columns: 1fr !important;
+            .noticia h2 {
+                font-size: 1rem !important;
+            }
+            
+            .noticia h3 {
+                font-size: 0.9rem !important;
+            }
+            
+            .noticia p {
+                font-size: 0.85rem !important;
+            }
+            
+            .noticia-card-ml {
+                padding: 15px 10px !important;
+                min-height: 250px !important;
+                border-radius: 8px !important;
+            }
+            
+            .card-icon-ml {
+                font-size: 1.8rem !important;
+                margin-bottom: 10px !important;
+            }
+            
+            .noticia-card-ml h3 {
+                font-size: 0.95rem !important;
+            }
+            
+            .noticia-card-ml p {
+                font-size: 0.8rem !important;
+            }
+            
+            .leer {
+                padding: 8px 16px !important;
+                font-size: 0.8rem !important;
+                border-radius: 6px !important;
+            }
+            
+            .lineadiv {
+                margin: 15px 0 !important;
+                height: 1px !important;
+            }
+            
+            footer {
+                padding: 15px 10px !important;
+                font-size: 0.8rem !important;
+            }
+            
+            footer p {
+                padding: 8px !important;
+            }
+            
+            .tlinea {
+                font-size: 1.3rem !important;
+            }
+            
+            .qr-code, .logometro {
+                max-width: 80% !important;
+                border-radius: 8px !important;
+            }
+            
+            .tendencias-ml-container {
+                padding: 0 5px !important;
+            }
+            
+            .estadisticas-grid {
                 gap: 15px !important;
             }
             
-            .hero-logo-image {
-                width: 80px !important;
-                height: 80px !important;
+            .grafica-item {
+                padding: 8px !important;
+            }
+            
+            .grafica-label {
+                font-size: 0.9rem !important;
+            }
+            
+            .grafica-descripcion {
+                font-size: 0.75rem !important;
             }
         }
         
