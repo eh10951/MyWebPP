@@ -1,14 +1,14 @@
-/* ========== BLOG A.L.M.A - ESTILO ROJO Y BLANCO ELEGANTE ========== */
+/* ========== BLOG A.L.M.A - ESTILO ROJO Y NEGRO ELEGANTE ========== */
 
 :root {
     --primary-red: #dc2626;
     --dark-red: #991b1b;
     --light-red: #fee2e2;
-    --white: #f5f5f5;
-    --light-gray: #eeeeee;
-    --dark-gray: #333333;
-    --soft-white: #fafafa;
-    --accent-gold: #f59e0b;
+    --white: #1a1a1a;
+    --light-gray: #2a2a2a;
+    --dark-gray: #f5f5f5;
+    --soft-white: #333333;
+    --accent-gold: #d4af37;
 }
 
 .blog-container { 
