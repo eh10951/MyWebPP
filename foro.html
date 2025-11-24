@@ -982,6 +982,8 @@
                 this.isMobile = window.innerWidth <= 768;
                 this.accelX = 0;
                 this.accelY = 0;
+                this.isScrolling = false;
+                this.scrollTimeout = null;
                 
                 this.setup();
                 this.initParticles();
@@ -990,6 +992,8 @@
                 window.addEventListener('resize', () => this.handleResize());
                 document.addEventListener('mousemove', (e) => this.handleMouseMove(e));
                 document.addEventListener('touchmove', (e) => this.handleTouchMove(e));
+                window.addEventListener('scroll', () => this.handleScroll());
+                window.addEventListener('wheel', () => this.handleScroll(), { passive: true });
                 
                 // Agregar soporte para acelerómetro en móviles
                 if (window.DeviceOrientationEvent && this.isMobile) {
@@ -1048,6 +1052,23 @@
                 }
             }
             
+            handleScroll() {
+                // Desabilitar aceleración durante el scroll
+                this.isScrolling = true;
+                this.accelX = 0;
+                this.accelY = 0;
+                
+                // Limpiar timeout anterior
+                if (this.scrollTimeout) {
+                    clearTimeout(this.scrollTimeout);
+                }
+                
+                // Re-habilitar aceleración después de que pare el scroll
+                this.scrollTimeout = setTimeout(() => {
+                    this.isScrolling = false;
+                }, 500);
+            }
+            
             initParticles() {
                 const particleCount = this.isMobile ? 60 : 200;
                 
@@ -1084,8 +1105,8 @@
                         particle.vy -= Math.sin(angle) * repulsionForce * 5;
                     }
                     
-                    // Aplicar aceleración del dispositivo en móviles
-                    if (this.isMobile) {
+                    // Aplicar aceleración del dispositivo en móviles (solo si no está scrolleando)
+                    if (this.isMobile && !this.isScrolling) {
                         particle.vx += this.accelX * 2;
                         particle.vy += this.accelY * 2;
                     }
