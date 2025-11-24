@@ -1286,6 +1286,8 @@
                 this.mouseSpeed = 0;
                 this.mouseStillTime = 0;
                 this.isMobile = window.innerWidth <= 768;
+                this.accelX = 0;
+                this.accelY = 0;
                 
                 this.setup();
                 this.initParticles();
@@ -1294,6 +1296,12 @@
                 window.addEventListener('resize', () => this.handleResize());
                 document.addEventListener('mousemove', (e) => this.handleMouseMove(e));
                 document.addEventListener('touchmove', (e) => this.handleTouchMove(e));
+                
+                // Agregar soporte para acelerómetro en móviles
+                if (window.DeviceOrientationEvent && this.isMobile) {
+                    window.addEventListener('deviceorientation', (e) => this.handleDeviceOrientation(e));
+                    window.addEventListener('devicemotion', (e) => this.handleDeviceMotion(e));
+                }
             }
             
             setup() {
@@ -1324,6 +1332,25 @@
                 if (e.touches.length > 0) {
                     this.mouseX = e.touches[0].clientX;
                     this.mouseY = e.touches[0].clientY;
+                }
+            }
+            
+            handleDeviceOrientation(e) {
+                // Usar el ángulo del dispositivo para mover las partículas
+                const alpha = e.alpha || 0;
+                const beta = e.beta || 0;
+                const gamma = e.gamma || 0;
+                
+                // Convertir los ángulos a velocidades de gravedad
+                this.accelX = gamma / 90; // Rango: -1 a 1
+                this.accelY = beta / 90;
+            }
+            
+            handleDeviceMotion(e) {
+                // Usar aceleración del dispositivo
+                if (e.acceleration) {
+                    this.accelX = (e.acceleration.x || 0) / 10;
+                    this.accelY = (e.acceleration.y || 0) / 10;
                 }
             }
             
@@ -1361,6 +1388,12 @@
                         const repulsionForce = Math.max(0, (repulsionZone - distance) / repulsionZone);
                         particle.vx -= Math.cos(angle) * repulsionForce * 5;
                         particle.vy -= Math.sin(angle) * repulsionForce * 5;
+                    }
+                    
+                    // Aplicar aceleración del dispositivo en móviles
+                    if (this.isMobile) {
+                        particle.vx += this.accelX * 2;
+                        particle.vy += this.accelY * 2;
                     }
                     
                     // Aplicar velocidad
