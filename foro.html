@@ -5,232 +5,1155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Foro - Debate sobre la Deserción Escolar</title>
+    <title>A.L.M.A - Administración Logística y Modular Académica</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/foro.css" />
-    <link rel="stylesheet" href="css/styles.css">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <style>
-        /* ========== DISEÑO JARVIS CON TODOS LOS COLORES ========== */
+        /* ========== GOOGLE ANTIGRAVITY STYLE CON A.L.M.A ========== */
         
         :root {
-            --primary-cyan: #00eaff;
-            --primary-green: #00ff99;
-            --accent-gold: #ffd700;
-            --accent-blue: #007bff;
-            --accent-red: #ff6b6b;
-            --accent-orange: #ff8c00;
-            --accent-purple: #9d4edd;
-            --accent-pink: #ff69b4;
-            --success-green: #28a745;
-            --warning-orange: #ffc107;
-            --error-red: #dc3545;
-            --dark-bg: #0a0f1f;
-            --darker-bg: #000;
+            --white: #FFFFFF;
+            --light-gray-1: #F8F9FC;
+            --light-gray-2: #EFF2F7;
+            --light-gray-3: #E6EAF0;
+            --gray-border: #CDD4DC;
+            --text-primary: #202124;
+            --text-secondary: #5F6368;
+            --accent-blue: #1F2937;
+            --accent-red: #DC2626;
+            --accent-gold: #D4AF37;
+            --particle-blue: #4F46E5;
+            --particle-blue-light: #6366F1;
+        }
+
+        /* Modo Oscuro */
+        :root.dark-mode {
+            --white: #1A1A1A;
+            --light-gray-1: #2D2D2D;
+            --light-gray-2: #3A3A3A;
+            --light-gray-3: #474747;
+            --gray-border: #555555;
+            --text-primary: #E8E8E8;
+            --text-secondary: #A0A0A0;
+            --accent-blue: #E0E0E0;
+            --particle-blue: #6366F1;
+            --particle-blue-light: #818CF8;
         }
         
-        /* Fondo y tipografía */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
         body {
-            background: radial-gradient(circle at center, var(--dark-bg), var(--darker-bg)) !important;
-            color: rgba(255, 255, 255, 0.95) !important;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-            margin: 0;
-            padding: 0;
+            background: linear-gradient(180deg, var(--white) 0%, var(--light-gray-1) 100%);
+            color: var(--text-primary);
+            font-family: 'Google Sans', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 400;
+            overflow-x: hidden;
             min-height: 100vh;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
         
-        /* Header mejorado */
+        /* Header con navegación limpia */
         header {
-            background: linear-gradient(135deg, 
-                rgba(0, 0, 0, 0.9) 0%, 
-                rgba(10, 15, 31, 0.8) 50%, 
-                rgba(0, 0, 0, 0.9) 100%) !important;
-            backdrop-filter: blur(15px);
-            border-bottom: 2px solid var(--primary-cyan);
-            box-shadow: 0 4px 20px rgba(0, 234, 255, 0.2), 
-                        0 0 40px rgba(0, 255, 153, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--gray-border);
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
         }
         
-        /* Navegación */
-        .menu ul {
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            flex-wrap: wrap;
-            gap: 12px;
         }
         
-        nav.menu li:nth-child(1) a { color: var(--primary-cyan) !important; }
-        nav.menu li:nth-child(2) a { color: var(--primary-green) !important; }
-        nav.menu li:nth-child(3) a { color: var(--accent-gold) !important; }
-        nav.menu li:nth-child(4) a { color: var(--accent-blue) !important; }
+        .logo {
+            font-size: 24px;
+            font-weight: 500;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+        }
+        
+        .logo span {
+            color: var(--accent-red);
+            font-weight: 700;
+        }
+        
+        nav.menu ul {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+        }
         
         nav.menu a {
-            text-shadow: 0 0 6px currentColor;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            letter-spacing: 0.25px;
+        }
+        
+        nav.menu a:hover {
+            color: var(--text-primary);
+        }
+
+        .dark-mode-btn {
+            background: none;
+            border: 1px solid var(--gray-border);
+            color: var(--text-secondary);
+            font-size: 18px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             transition: all 0.3s ease;
-            display: inline-block;
-            padding: 14px 26px;
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .dark-mode-btn:hover {
+            background: var(--light-gray-1);
+            color: var(--text-primary);
+            border-color: var(--accent-red);
+        }
+
+        .dark-mode-btn i {
+            transition: transform 0.3s ease;
+        }
+
+        .dark-mode-btn:active i {
+            transform: rotate(20deg);
         }
         
-        nav.menu li:nth-child(1) a:hover { 
-            color: var(--accent-gold) !important; 
-            text-shadow: 0 0 15px var(--accent-gold); 
-        }
-        nav.menu li:nth-child(2) a:hover { 
-            color: var(--accent-purple) !important; 
-            text-shadow: 0 0 15px var(--accent-purple); 
-        }
-        nav.menu li:nth-child(3) a:hover { 
-            color: var(--primary-cyan) !important; 
-            text-shadow: 0 0 15px var(--primary-cyan); 
-        }
-        nav.menu li:nth-child(4) a:hover { 
-            color: var(--primary-green) !important; 
-            text-shadow: 0 0 15px var(--primary-green); 
+        /* Main content con padding para header fixed */
+        main {
+            margin-top: 64px;
         }
         
-        /* Footer mejorado */
-        footer {
-            background: linear-gradient(135deg,
-                rgba(0, 0, 0, 0.95) 0%,
-                rgba(10, 15, 31, 0.9) 50%,
-                rgba(0, 0, 0, 0.95) 100%);
-            border-top: 2px solid var(--primary-cyan);
-            color: rgba(255, 255, 255, 0.7);
+        /* Welcome Section - Antigravity Hero */
+        .welcome-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 30px 20px;
-            margin-top: 80px;
-            box-shadow: 0 -4px 20px rgba(0, 234, 255, 0.1);
+            padding: 120px 24px;
+            min-height: calc(100vh - 64px);
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(180deg, var(--white) 0%, var(--light-gray-1) 100%);
+        }
+        
+        /* Canvas para partículas */
+        #particle-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: transparent;
+        }
+        
+        .welcome-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            animation: slideUpFade 1s ease-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .welcome-title {
+            font-size: clamp(48px, 8vw, 128px);
+            font-weight: 500;
+            letter-spacing: -2px;
+            line-height: 1.1;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+            text-rendering: optimizeLegibility;
+            position: relative;
+            z-index: 2;
+            white-space: nowrap;
+            text-align: center;
+        }
+        
+        .welcome-title span {
+            background: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .welcome-subtitle {
+            font-size: clamp(16px, 2vw, 24px);
+            color: var(--text-secondary);
+            margin-bottom: 48px;
+            font-weight: 300;
+            line-height: 1.8;
+            max-width: 1000px;
+            position: relative;
+            z-index: 2;
+            word-spacing: 0.15em;
+            letter-spacing: 0.3px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.3em;
+        }
+
+        .welcome-subtitle strong {
+            color: #FFFFFF;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-gold) 100%);
+            padding: 4px 12px;
+            border-radius: 6px;
+            white-space: nowrap;
+        }
+        
+        .welcome-cta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 80px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .btn-primary {
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-gold) 100%);
+            color: white;
+            border: none;
+            border-radius: 24px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+            letter-spacing: 0.5px;
+            animation: floatUp 3s ease-in-out infinite;
+            outline: none;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            box-shadow: 0 8px 24px rgba(220, 38, 38, 0.25);
+            transform: translateY(-4px);
+        }
+        
+        .btn-secondary {
+            padding: 14px 32px;
+            background: var(--light-gray-2);
+            color: var(--text-primary);
+            border: 1px solid var(--gray-border);
+            border-radius: 24px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--light-gray-3);
+            border-color: var(--text-primary);
+        }
+        
+        /* Features Section */
+        .features-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 120px 24px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-card {
+            padding: 40px 32px;
+            background: var(--white);
+            border: 1px solid var(--gray-border);
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.4s ease;
+            animation: slideUpFade 0.8s ease-out;
+        }
+        
+        .feature-card:hover {
+            border-color: var(--accent-red);
+            box-shadow: 0 12px 32px rgba(220, 38, 38, 0.1);
+            transform: translateY(-8px);
+        }
+        
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            color: var(--accent-red);
+        }
+        
+        .feature-title {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+        
+        .feature-description {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        /* Secciones de contenido */
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        
+        .section-title {
+            font-size: 32px;
+            font-weight: 500;
+            margin-bottom: 40px;
+            color: var(--text-primary);
+            text-align: center;
+        }
+        
+        .section-title span {
+            background: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        
+        .stat-card {
+            padding: 32px 24px;
+            background: var(--white);
+            border: 1px solid var(--gray-border);
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            border-color: var(--accent-red);
+            box-shadow: 0 8px 24px rgba(220, 38, 38, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--accent-red);
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--light-gray-1);
+            border-top: 1px solid var(--gray-border);
+            padding: 40px 24px;
+            text-align: center;
         }
         
         footer p {
+            color: var(--text-secondary);
+            font-size: 13px;
+            letter-spacing: 0.3px;
+        }
+        
+        /* Animaciones */
+        @keyframes floatUp {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+        
+        @keyframes slideUpFade {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 12px 16px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 16px;
+            }
+            
+            nav.menu ul {
+                gap: 16px;
+                font-size: 12px;
+            }
+            
+            .welcome-section {
+                padding: 80px 16px;
+                min-height: calc(100vh - 100px);
+            }
+            
+            .welcome-title {
+                font-size: clamp(32px, 7vw, 64px);
+            }
+            
+            .welcome-subtitle {
+                font-size: 16px;
+            }
+            
+            .welcome-cta {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .btn-primary, .btn-secondary {
+                width: 100%;
+            }
+            
+            .features-section {
+                grid-template-columns: 1fr;
+                padding: 60px 16px;
+                gap: 24px;
+            }
+            
+            .feature-card {
+                padding: 32px 24px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .content-section {
+                padding: 40px 16px;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header {
+                padding: 10px 12px;
+            }
+            
+            .logo {
+                font-size: 18px;
+            }
+            
+            nav.menu ul {
+                gap: 8px;
+                font-size: 11px;
+            }
+            
+            .welcome-section {
+                padding: 60px 12px;
+                min-height: calc(100vh - 80px);
+            }
+            
+            .welcome-title {
+                font-size: clamp(28px, 6vw, 48px);
+                margin-bottom: 16px;
+            }
+            
+            .welcome-subtitle {
+                font-size: 14px;
+                margin-bottom: 32px;
+            }
+            
+            .btn-primary, .btn-secondary {
+                padding: 12px 24px;
+                font-size: 14px;
+                width: 100%;
+            }
+            
+            .features-section {
+                padding: 40px 12px;
+            }
+            
+            .feature-card {
+                padding: 24px 16px;
+            }
+            
+            .feature-icon {
+                font-size: 32px;
+            }
+            
+            .feature-title {
+                font-size: 16px;
+            }
+            
+            .feature-description {
+                font-size: 12px;
+            }
+            
+            .section-title {
+                font-size: 20px;
+            }
+            
+            .stat-number {
+                font-size: 24px;
+            }
+        }
+
+        /* ========== BLOG SECTION STYLING ========== */
+        
+        .blog-section {
+            background: var(--light-gray-1);
+            padding: 100px 24px;
+        }
+
+        .blog-hero {
+            text-align: center;
+            margin-bottom: 80px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .blog-titulo {
+            font-size: clamp(48px, 8vw, 120px);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0 0 16px 0;
+            letter-spacing: -2px;
+        }
+
+        .blog-titulo i {
+            margin-right: 16px;
+            background: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .blog-subtitulo {
+            font-size: clamp(18px, 3vw, 28px);
+            color: var(--text-secondary);
             margin: 0;
-            font-size: 0.95rem;
-            letter-spacing: 0.5px;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+
+        .blog-subtitulo i {
+            margin-right: 8px;
+            background: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .presentacion-section {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .presentacion-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .presentacion-header h2 {
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 0 0 12px 0;
+            letter-spacing: -0.5px;
+        }
+
+        .presentacion-header h2 i {
+            margin-right: 12px;
+            background: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .presentacion-header p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .presentacion-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            margin-bottom: 60px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+        }
+
+        .presentacion-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .presentacion-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .info-card {
+            padding: 40px 32px;
+            background: var(--white);
+            border: 1px solid var(--gray-border);
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .info-card:hover {
+            border-color: var(--accent-red);
+            box-shadow: 0 12px 32px rgba(220, 38, 38, 0.1);
+            transform: translateY(-8px);
+        }
+
+        .info-card i {
+            font-size: 48px;
+            color: var(--accent-red);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .info-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 0 0 12px 0;
+            letter-spacing: -0.5px;
+        }
+
+        .info-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .blog-section {
+                padding: 60px 16px;
+            }
+
+            .blog-titulo {
+                font-size: clamp(36px, 7vw, 80px);
+                margin-bottom: 12px;
+            }
+
+            .blog-subtitulo {
+                font-size: clamp(16px, 2.5vw, 20px);
+            }
+
+            .presentacion-header h2 {
+                font-size: 28px;
+            }
+
+            .presentacion-header p {
+                font-size: 14px;
+            }
+
+            .presentacion-info {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .info-card {
+                padding: 32px 24px;
+            }
+
+            .info-card i {
+                font-size: 40px;
+            }
+
+            .info-card h3 {
+                font-size: 16px;
+            }
+
+            .info-card p {
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-section {
+                padding: 40px 12px;
+            }
+
+            .blog-titulo {
+                font-size: clamp(28px, 6vw, 48px);
+                margin-bottom: 8px;
+            }
+
+            .blog-subtitulo {
+                font-size: clamp(14px, 2.5vw, 18px);
+            }
+
+            .presentacion-header h2 {
+                font-size: 22px;
+            }
+
+            .presentacion-header p {
+                font-size: 12px;
+            }
+
+            .presentacion-container {
+                margin-bottom: 40px;
+            }
+
+            .info-card {
+                padding: 24px 16px;
+            }
+
+            .info-card i {
+                font-size: 32px;
+            }
+
+            .info-card h3 {
+                font-size: 14px;
+            }
+
+            .info-card p {
+                font-size: 12px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <header class="header">
-        <div class="logo">
-            <img src="imagenes/logo3.1.png" alt="Logo de la página" class="logo-img">
+    <header>
+        <div class="header-content">
+            <div class="logo"><span>A.L.M.A Antigravity</span></div>
+            <nav class="menu">
+                <ul>
+                     <li><a href="index.html">Principal</a></li>
+                     <li><a href="foro.html" class="active">A.L.M.A</a></li>
+                    <li><a href="antigravity.html">Mentor App</a></li>
+                    
+                </ul>
+            </nav>
+            <button id="dark-mode-toggle" class="dark-mode-btn" title="Alternar modo oscuro">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
-        <nav class="menu">
-            <ul>
-                <li><a href="index.html"> Inicio </a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="foro.html">Foro</a></li>
-                <li><a href="app.html">App</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main class="foro-container">
-        <!-- Título principal con gradiente Jarvis -->
-        <div class="foro-header">
-            <h1 class="titulo-foro">
-                <i class="fas fa-comments-dollar"></i> Foro de Discusión
-            </h1>
-            <p class="subtitulo-foro">
-                <i class="fas fa-sparkles"></i> Un espacio para compartir ideas, experiencias y soluciones sobre la deserción escolar
-            </p>
-        </div>
-
-        <!-- Contenedor de nuevo post con diseño mejorado -->
-        <div class="nuevo-post-container">
-            <div class="nuevo-post-header">
-                <h2><i class="fas fa-plus-circle"></i> Iniciar una Nueva Discusión</h2>
-                <p class="helper-text">Comparte tu perspectiva y ayuda a la comunidad</p>
-            </div>
+    <main>
+        <!-- Welcome Section con Antigravity -->
+        <section class="welcome-section">
+            <canvas id="particle-canvas"></canvas>
             
-            <form id="nuevo-post-form" class="nuevo-post-form">
-                <div class="form-group">
-                    <label for="post-titulo">
-                        <i class="fas fa-heading"></i> Título del Tema
-                    </label>
-                    <input 
-                        type="text" 
-                        id="post-titulo" 
-                        name="post-titulo" 
-                        placeholder="Ej: ¿Cómo podemos apoyar a los estudiantes en riesgo?" 
-                        required
-                    >
+            <div class="welcome-content">
+                <h1 class="welcome-title">
+                    Sis. Inteligente <span>A.L.M.A</span>
+                </h1>
+                <div class="welcome-subtitle">
+                    Administración Logística y Modular Académica. Sistema completo de administración escolar con interfaz moderna y minimalista.
                 </div>
-
-                <div class="form-group">
-                    <label for="post-contenido">
-                        <i class="fas fa-pen-fancy"></i> Tu Mensaje
-                    </label>
-                    <textarea 
-                        id="post-contenido" 
-                        name="post-contenido" 
-                        rows="6" 
-                        placeholder="Comparte tu opinión, pregunta o experiencia aquí..."
-                        required
-                    ></textarea>
+                <div class="welcome-cta">
+                    <a href="#presentacion" class="btn-primary">Comenzar Ahora</a>
+                    <button class="btn-secondary">Explorar Demo</button>
                 </div>
+            </div>
+        </section>
 
-                <div class="form-group">
-                    <label for="post-autor">
-                        <i class="fas fa-user"></i> Tu Nombre (Opcional)
-                    </label>
-                    <input 
-                        type="text" 
-                        id="post-autor" 
-                        name="post-autor" 
-                        placeholder="Escribe tu nombre o déjalo en blanco para aparecer como Anónimo"
-                    >
-                </div>
+        
 
-                <button type="submit" class="btn-publicar">
-                    <i class="fas fa-paper-plane"></i>
-                    <span>Publicar Tema</span>
-                </button>
-            </form>
-        </div>
-
-        <!-- Divisor con efecto neón -->
-        <div class="lineadiv"></div>
-
-        <!-- Sección de posts con diseño mejorado -->
-        <div class="lista-posts-container">
-            <div class="posts-header">
-                <h2><i class="fas fa-comments"></i> Discusiones Recientes</h2>
-                <p class="posts-count">
-                    <span id="total-posts">0</span> temas activos en la comunidad
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3 class="feature-title">Análisis Avanzado</h3>
+                <p class="feature-description">
+                    Visualiza datos complejos de forma intuitiva. Gráficos interactivos y reportes en tiempo real.
                 </p>
             </div>
             
-            <div id="lista-posts" class="posts-grid">
-                <!-- Las publicaciones del foro se cargarán aquí dinámicamente -->
-                <div class="loading-message">
-                    <i class="fas fa-spinner fa-spin"></i>
-                    <p>Cargando discusiones...</p>
+            <div class="feature-card">
+                <div class="feature-icon">🎓</div>
+                <h3 class="feature-title">Gestión Académica</h3>
+                <p class="feature-description">
+                    Administra estudiantes, calificaciones y asistencia de manera eficiente y organizada.
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3 class="feature-title">Seguridad Total</h3>
+                <p class="feature-description">
+                    Datos protegidos con encriptación de nivel empresarial y acceso controlado.
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3 class="feature-title">Multiplataforma</h3>
+                <p class="feature-description">
+                    Accede desde cualquier dispositivo. Desktop, tablet y móvil con la misma experiencia.
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3 class="feature-title">Rendimiento Rápido</h3>
+                <p class="feature-description">
+                    Interfaz optimizada que responde al instante. Carga rápida y navegación fluida.
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🌟</div>
+                <h3 class="feature-title">Soporte 24/7</h3>
+                <p class="feature-description">
+                    Equipo dedicado siempre disponible para ayudarte con cualquier pregunta.
+                </p>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="content-section">
+            <h2 class="section-title">Por qué elegir <span>A.L.M.A</span></h2>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Satisfacción de Usuarios</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Facil de usar</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Descargas rapidas </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Eficiencia en trámites escolares</div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
+    <!-- BLOG SECTION -->
+    <section class="blog-section">
+        <div class="blog-hero">
+            <h1 class="blog-titulo">
+                <i class="fas fa-graduation-cap"></i> A.L.M.A
+            </h1>
+            <p class="blog-subtitulo">
+                <i class="fas fa-cog"></i> Administración Logística y Modular Académica
+            </p>
+        </div>
+
+        <!-- PRESENTACIÓN CANVA EMBEBIDA -->
+        <section class="presentacion-section" id="presentacion">
+            <div class="presentacion-header">
+                <h2><i class="fas fa-chart-bar"></i> Presentación del Sistema A.L.M.A</h2>
+                <p>Visualiza una presentación interactiva sobre la administración escolar</p>
+            </div>
+            
+            <div class="presentacion-container">
+                <iframe src="https://www.canva.com/design/DAG5fFF-Bs0/N_yNKdb6gX3_2yglSwPaGQ/view?embed" 
+                        allow="fullscreen"
+                        allowfullscreen="true"
+                        frameborder="0"
+                        class="presentacion-iframe">
+                </iframe>
+            </div>
+
+           
+        </section>
+    </section>
+
     <footer>
-        <p> &copy; 2025 Análisis de la Deserción Escolar - Todos los derechos reservados</p>
+        <p>&copy; 2025 A.L.M.A - Administración Logística y Modular Académica. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="js/foro.js"></script>
+    <script>
+        // ========== DARK MODE SYSTEM ==========
+        
+        class DarkModeManager {
+            constructor() {
+                this.toggleBtn = document.getElementById('dark-mode-toggle');
+                this.isDarkMode = localStorage.getItem('darkMode') === 'true';
+                
+                // Aplicar modo guardado al cargar
+                if (this.isDarkMode) {
+                    this.enableDarkMode();
+                }
+                
+                // Event listener para el botón
+                this.toggleBtn.addEventListener('click', () => this.toggle());
+            }
+            
+            toggle() {
+                this.isDarkMode ? this.disableDarkMode() : this.enableDarkMode();
+            }
+            
+            enableDarkMode() {
+                document.documentElement.classList.add('dark-mode');
+                this.toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+                localStorage.setItem('darkMode', 'true');
+                this.isDarkMode = true;
+            }
+            
+            disableDarkMode() {
+                document.documentElement.classList.remove('dark-mode');
+                this.toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+                localStorage.setItem('darkMode', 'false');
+                this.isDarkMode = false;
+            }
+        }
+        
+        // Inicializar modo oscuro
+        const darkModeManager = new DarkModeManager();
+        
+        // ========== PARTICLE ANIMATION SYSTEM ==========
+        
+        class ParticleSystem {
+            constructor() {
+                this.canvas = document.getElementById('particle-canvas');
+                this.ctx = this.canvas.getContext('2d');
+                this.particles = [];
+                this.mouseX = this.canvas.width / 2;
+                this.mouseY = this.canvas.height / 2;
+                this.lastMouseX = this.mouseX;
+                this.lastMouseY = this.mouseY;
+                this.mouseSpeed = 0;
+                this.mouseStillTime = 0;
+                this.isMobile = window.innerWidth <= 768;
+                
+                this.setup();
+                this.initParticles();
+                this.animate();
+                
+                window.addEventListener('resize', () => this.handleResize());
+                document.addEventListener('mousemove', (e) => this.handleMouseMove(e));
+                document.addEventListener('touchmove', (e) => this.handleTouchMove(e));
+            }
+            
+            setup() {
+                this.canvas.width = window.innerWidth;
+                this.canvas.height = window.innerHeight;
+            }
+            
+            handleResize() {
+                this.setup();
+                this.isMobile = window.innerWidth <= 768;
+                this.particles = [];
+                this.initParticles();
+            }
+            
+            handleMouseMove(e) {
+                const dx = e.clientX - this.mouseX;
+                const dy = e.clientY - this.mouseY;
+                this.mouseSpeed = Math.sqrt(dx * dx + dy * dy);
+                this.mouseStillTime = 0;
+                
+                this.lastMouseX = this.mouseX;
+                this.lastMouseY = this.mouseY;
+                this.mouseX = e.clientX;
+                this.mouseY = e.clientY;
+            }
+            
+            handleTouchMove(e) {
+                if (e.touches.length > 0) {
+                    this.mouseX = e.touches[0].clientX;
+                    this.mouseY = e.touches[0].clientY;
+                }
+            }
+            
+            initParticles() {
+                const particleCount = this.isMobile ? 60 : 200;
+                
+                for (let i = 0; i < particleCount; i++) {
+                    this.particles.push({
+                        x: Math.random() * this.canvas.width,
+                        y: Math.random() * this.canvas.height,
+                        vx: (Math.random() - 0.5) * 0.25,
+                        vy: (Math.random() - 0.5) * 0.25,
+                        size: Math.random() * 3 + 1,
+                        opacity: Math.random() * 0.6 + 0.4,
+                        color: Math.random() > 0.7 ? '#6366F1' : '#4F46E5',
+                    });
+                }
+            }
+            
+            updateParticles() {
+                const repulsionZone = 100; // Zona de repulsión cuando el mouse las toca
+                const minDistance = 40; // Distancia mínima de contacto
+                
+                this.particles.forEach((particle, index) => {
+                    // Calcular distancia al mouse
+                    const dx = this.mouseX - particle.x;
+                    const dy = this.mouseY - particle.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    // Si está dentro de la zona de repulsión (el mouse las toca), dispersarlas
+                    if (distance < repulsionZone && distance > 0) {
+                        const angle = Math.atan2(dy, dx);
+                        
+                        // Repulsión fuerte cuando el mouse está cerca
+                        const repulsionForce = Math.max(0, (repulsionZone - distance) / repulsionZone);
+                        particle.vx -= Math.cos(angle) * repulsionForce * 5;
+                        particle.vy -= Math.sin(angle) * repulsionForce * 5;
+                    }
+                    
+                    // Aplicar velocidad
+                    particle.x += particle.vx;
+                    particle.y += particle.vy;
+                    
+                    // Fricción
+                    particle.vx *= 0.97;
+                    particle.vy *= 0.97;
+                    
+                    // Movimiento suave flotante - oscilación suave pero sin subir mucho
+                    particle.vy += Math.sin(Date.now() * 0.001 + particle.x * 0.01) * 0.08;
+                    
+                    // Revertir bouncing en bordes
+                    if (particle.x < 0 || particle.x > this.canvas.width) {
+                        particle.vx *= -0.8;
+                        particle.x = Math.max(0, Math.min(this.canvas.width, particle.x));
+                    }
+                    if (particle.y < 0 || particle.y > this.canvas.height) {
+                        particle.vy *= -0.8;
+                        particle.y = Math.max(0, Math.min(this.canvas.height, particle.y));
+                    }
+                });
+                
+                // Disminuir velocidad del mouse gradualmente
+                this.mouseSpeed *= 0.95;
+            }
+            
+            draw() {
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                // Colores púrpura y rosa elegantes
+                const elegantColors = [
+                    { r: 168, g: 85, b: 247 },     // Púrpura
+                    { r: 236, g: 72, b: 153 }      // Rosa
+                ];
+                
+                // Dibujar partículas
+                this.particles.forEach((particle, index) => {
+                    const color = elegantColors[index % elegantColors.length];
+                    this.ctx.fillStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${particle.opacity})`;
+                    
+                    // Sombra sutil
+                    this.ctx.shadowColor = `rgba(168, 85, 247, 0.3)`;
+                    this.ctx.shadowBlur = 4;
+                    
+                    this.ctx.beginPath();
+                    this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+                    this.ctx.fill();
+                });
+                
+                this.ctx.shadowColor = 'transparent';
+            }
+            
+            drawConnections() {
+                const connectionDistance = 150;
+                
+                for (let i = 0; i < this.particles.length; i++) {
+                    for (let j = i + 1; j < this.particles.length; j++) {
+                        const dx = this.particles[i].x - this.particles[j].x;
+                        const dy = this.particles[i].y - this.particles[j].y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+                        
+                        if (distance < connectionDistance) {
+                            const opacity = (1 - distance / connectionDistance) * 0.2;
+                            this.ctx.strokeStyle = `rgba(168, 85, 247, ${opacity})`;
+                            this.ctx.lineWidth = 0.5;
+                            this.ctx.beginPath();
+                            this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
+                            this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
+                            this.ctx.stroke();
+                        }
+                    }
+                }
+            }
+            
+            animate() {
+                this.updateParticles();
+                this.draw();
+                this.drawConnections();
+                requestAnimationFrame(() => this.animate());
+            }
+        }
+        
+        // Iniciar sistema de partículas cuando se carga la página
+        window.addEventListener('DOMContentLoaded', () => {
+            new ParticleSystem();
+        });
+        
+        // Button interactions
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+    </script>
 </body>
 
 </html>
