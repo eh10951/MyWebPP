@@ -17,7 +17,7 @@
         rel="stylesheet">
 
     <style>
-        /* ========== GOOGLE ANTIGRAVITY STYLE CON A.L.M.A ========== */
+        /* ========== DISEÑO MODERNO Y VIBRANTE UNRC ========== */
 
         :root {
             --white: #FFFFFF;
@@ -25,38 +25,49 @@
             --light-gray-2: #EFF2F7;
             --light-gray-3: #E6EAF0;
             --gray-border: #CDD4DC;
-            --text-primary: #202124;
-            --text-secondary: #5F6368;
+            --text-primary: #1a1a2e;
+            --text-secondary: #4a4a6a;
             --accent-blue: #1F2937;
             --accent-red: #DC2626;
             --accent-gold: #D4AF37;
+            --accent-coral: #FF6B6B;
+            --accent-purple: #6C5CE7;
             --particle-blue: #4F46E5;
             --particle-blue-light: #6366F1;
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --glass-border: rgba(255, 255, 255, 0.3);
         }
 
         /* Modo Oscuro */
         :root.dark-mode {
-            --white: #1A1A1A;
-            --light-gray-1: #2D2D2D;
-            --light-gray-2: #3A3A3A;
-            --light-gray-3: #474747;
-            --gray-border: #555555;
-            --text-primary: #E8E8E8;
-            --text-secondary: #A0A0A0;
+            --white: #0f0f1a;
+            --light-gray-1: #1a1a2e;
+            --light-gray-2: #252542;
+            --light-gray-3: #2d2d4a;
+            --gray-border: rgba(212, 175, 55, 0.3);
+            --text-primary: #f0f0f5;
+            --text-secondary: #b0b0c5;
             --accent-blue: #E0E0E0;
             --particle-blue: #6366F1;
             --particle-blue-light: #818CF8;
+            --glass-bg: rgba(15, 15, 26, 0.9);
+            --glass-border: rgba(212, 175, 55, 0.2);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            transition: background-color 0.4s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.4s ease, transform 0.3s ease;
         }
 
         body {
-            background: linear-gradient(180deg, var(--white) 0%, var(--light-gray-1) 100%);
+            background: 
+                radial-gradient(ellipse 80% 50% at 50% -20%, rgba(220, 38, 38, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 40% at 80% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 40%),
+                radial-gradient(ellipse 50% 30% at 20% 80%, rgba(108, 92, 231, 0.08) 0%, transparent 40%),
+                linear-gradient(180deg, var(--white) 0%, var(--light-gray-1) 50%, var(--light-gray-2) 100%);
+            background-attachment: fixed;
             color: var(--text-primary);
             font-family: 'Google Sans', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             font-weight: 400;
@@ -64,20 +75,31 @@
             min-height: 100vh;
         }
 
-        /* Header con navegación limpia */
+        :root.dark-mode body {
+            background: 
+                radial-gradient(ellipse 80% 50% at 50% -20%, rgba(220, 38, 38, 0.2) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 40% at 80% 50%, rgba(212, 175, 55, 0.15) 0%, transparent 40%),
+                radial-gradient(ellipse 50% 30% at 20% 80%, rgba(108, 92, 231, 0.12) 0%, transparent 40%),
+                linear-gradient(180deg, #0a0a12 0%, #0f0f1a 50%, #1a1a2e 100%);
+            background-attachment: fixed;
+        }
+
+        /* Header con navegación limpia y glassmorphism */
         header {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 16px 24px;
-            border-bottom: 1px solid var(--gray-border);
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            padding: 18px 32px;
+            border-bottom: 1px solid var(--glass-border);
             z-index: 1000;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
+            box-shadow: 
+                0 4px 30px rgba(0, 0, 0, 0.1),
+                0 1px 0 rgba(255, 255, 255, 0.5) inset;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             overflow: hidden;
-            position: relative;
         }
 
         /* Partículas en el header */
@@ -165,8 +187,12 @@
         }
 
         :root.dark-mode header {
-            background: rgba(26, 26, 26, 0.95);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+            background: rgba(15, 15, 26, 0.92);
+            box-shadow: 
+                0 4px 30px rgba(0, 0, 0, 0.4),
+                0 0 40px rgba(212, 175, 55, 0.05),
+                0 1px 0 rgba(212, 175, 55, 0.1) inset;
+            border-bottom-color: rgba(212, 175, 55, 0.15);
         }
 
         .header-content {
@@ -242,21 +268,45 @@
         /* Main content */
         main {
             margin-top: 64px;
+            position: relative;
+            z-index: 1;
         }
 
-        /* Forum Header Section */
+        /* Forum Header Section - Diseño Hero Vibrante */
         .forum-header {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 100px 24px 60px;
+            padding: 140px 24px 100px;
             min-height: auto;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(135deg, var(--white) 0%, var(--light-gray-1) 50%, var(--light-gray-2) 100%);
-            border-bottom: 2px solid var(--accent-red);
+            background: 
+                radial-gradient(ellipse 100% 80% at 50% 20%, rgba(220, 38, 38, 0.08) 0%, transparent 60%),
+                radial-gradient(ellipse 80% 60% at 70% 80%, rgba(212, 175, 55, 0.06) 0%, transparent 50%),
+                linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.5) 100%);
+            border-bottom: none;
+        }
+
+        .forum-header::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent-red), var(--accent-gold), var(--accent-red), transparent);
+            border-radius: 2px;
+        }
+
+        :root.dark-mode .forum-header {
+            background: 
+                radial-gradient(ellipse 100% 80% at 50% 20%, rgba(220, 38, 38, 0.12) 0%, transparent 60%),
+                radial-gradient(ellipse 80% 60% at 70% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                linear-gradient(180deg, transparent 0%, rgba(15, 15, 26, 0.3) 100%);
         }
 
         .forum-title {
@@ -286,10 +336,9 @@
             margin: 0;
         }
 
-        /* SECCIÓN MODELO 3D RIZOMA */
+        /* SECCIÓN MODELO 3D RIZOMA - Diseño Vibrante */
         .rizoma-3d-section {
-            padding: 80px 24px;
-            background: linear-gradient(180deg, var(--light-gray-1) 0%, var(--white) 100%);
+            padding: 100px 24px;
             position: relative;
             overflow: hidden;
         }
@@ -297,11 +346,14 @@
         .rizoma-3d-section::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120%;
+            height: 120%;
+            background: 
+                radial-gradient(ellipse 40% 40% at 30% 30%, rgba(220, 38, 38, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse 50% 50% at 70% 70%, rgba(212, 175, 55, 0.06) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
@@ -311,17 +363,41 @@
             margin: 0 auto;
             position: relative;
             z-index: 1;
-            border-radius: 20px;
+            border-radius: 28px;
             overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            background: var(--white);
-            border: 2px solid var(--gray-border);
-            transition: all 0.3s ease;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid var(--glass-border);
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.15),
+                0 1px 0 rgba(255, 255, 255, 0.5) inset;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        :root.dark-mode .rizoma-container {
+            background: rgba(26, 31, 46, 0.8);
+            border-color: rgba(212, 175, 55, 0.2);
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.4),
+                0 0 50px rgba(212, 175, 55, 0.08),
+                0 1px 0 rgba(212, 175, 55, 0.1) inset;
         }
 
         .rizoma-container:hover {
-            box-shadow: 0 15px 50px rgba(212, 175, 55, 0.15);
-            border-color: var(--accent-gold);
+            transform: translateY(-8px);
+            box-shadow: 
+                0 30px 80px rgba(220, 38, 38, 0.2),
+                0 1px 0 rgba(255, 255, 255, 0.6) inset;
+            border-color: rgba(220, 38, 38, 0.3);
+        }
+
+        :root.dark-mode .rizoma-container:hover {
+            box-shadow: 
+                0 30px 80px rgba(212, 175, 55, 0.25),
+                0 0 70px rgba(212, 175, 55, 0.12),
+                0 1px 0 rgba(212, 175, 55, 0.2) inset;
+            border-color: rgba(212, 175, 55, 0.5);
         }
 
         .rizoma-iframe {
@@ -329,12 +405,12 @@
             height: 800px;
             border: none;
             display: block;
-            background: var(--white);
+            background: transparent;
         }
 
         @media (max-width: 1024px) {
             .rizoma-3d-section {
-                padding: 60px 20px;
+                padding: 70px 20px;
             }
 
             .rizoma-container {
@@ -342,22 +418,22 @@
             }
 
             .rizoma-iframe {
-                height: 700px;
+                height: 650px;
             }
         }
 
         @media (max-width: 768px) {
             .rizoma-3d-section {
-                padding: 50px 16px;
+                padding: 60px 16px;
             }
 
             .rizoma-container {
                 max-width: 100%;
-                border-radius: 16px;
+                border-radius: 20px;
             }
 
             .rizoma-iframe {
-                height: 600px;
+                height: 550px;
             }
         }
 
@@ -368,13 +444,11 @@
 
             .rizoma-container {
                 max-width: 100%;
-                border-radius: 12px;
-                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-                border: 1px solid var(--gray-border);
+                border-radius: 16px;
             }
 
             .rizoma-iframe {
-                height: 450px;
+                height: 400px;
             }
         }
 
@@ -384,15 +458,15 @@
             }
 
             .rizoma-iframe {
-                height: 350px;
+                height: 320px;
             }
         }
 
         .forum-subtitle {
-            font-size: 18px;
+            font-size: clamp(16px, 2.5vw, 20px);
             color: var(--text-secondary);
             max-width: 700px;
-            line-height: 1.6;
+            line-height: 1.7;
             font-weight: 400;
         }
 
@@ -672,19 +746,43 @@
             margin-bottom: 8px;
         }
 
-        /* Footer */
+        /* Footer con Glassmorphism */
         footer {
-            background: var(--light-gray-1);
-            border-top: 1px solid var(--gray-border);
-            padding: 40px 24px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-top: 1px solid var(--glass-border);
+            padding: 50px 24px;
             text-align: center;
-            margin-top: 60px;
+            margin-top: 80px;
+            position: relative;
+            box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-gold), var(--accent-red), var(--accent-gold), transparent);
+        }
+
+        :root.dark-mode footer {
+            background: rgba(15, 15, 26, 0.9);
+            border-top-color: rgba(212, 175, 55, 0.1);
+            box-shadow: 
+                0 -10px 40px rgba(0, 0, 0, 0.3),
+                0 0 30px rgba(212, 175, 55, 0.03);
         }
 
         footer p {
             color: var(--text-secondary);
-            font-size: 13px;
-            letter-spacing: 0.3px;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            font-weight: 500;
         }
 
         /* Animaciones */
@@ -735,23 +833,37 @@
 
         /* ========== ESTILOS MEJORADOS PROFESIONALES ========== */
 
-        /* Mejorar Grid de Stats/Cards */
+        /* Grid de Cards con Glassmorphism Vibrante */
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 28px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-bottom: 50px;
         }
 
         .stats-grid .stat-card {
-            padding: 40px 32px;
-            background: var(--white);
-            border: 2px solid var(--gray-border);
-            border-radius: 16px;
+            padding: 36px 28px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
             text-align: center;
             transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
             position: relative;
             overflow: hidden;
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.08),
+                0 1px 0 rgba(255, 255, 255, 0.6) inset;
+        }
+
+        :root.dark-mode .stats-grid .stat-card {
+            background: rgba(26, 26, 46, 0.7);
+            border-color: rgba(212, 175, 55, 0.15);
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.3),
+                0 0 30px rgba(212, 175, 55, 0.05),
+                0 1px 0 rgba(212, 175, 55, 0.1) inset;
         }
 
         .stats-grid .stat-card::before {
@@ -761,15 +873,32 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--accent-red) 0%, var(--accent-gold) 100%);
+            background: linear-gradient(90deg, var(--accent-red), var(--accent-gold), var(--accent-red));
+            background-size: 200% 100%;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.4s ease;
+            animation: gradientFlow 3s ease infinite;
+        }
+
+        @keyframes gradientFlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
 
         .stats-grid .stat-card:hover {
-            border-color: var(--accent-red);
-            box-shadow: 0 20px 50px rgba(220, 38, 38, 0.15);
-            transform: translateY(-10px);
+            border-color: rgba(220, 38, 38, 0.3);
+            box-shadow: 
+                0 20px 60px rgba(220, 38, 38, 0.15),
+                0 1px 0 rgba(255, 255, 255, 0.8) inset;
+            transform: translateY(-12px) scale(1.02);
+        }
+
+        :root.dark-mode .stats-grid .stat-card:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: 
+                0 20px 60px rgba(212, 175, 55, 0.2),
+                0 0 50px rgba(212, 175, 55, 0.1),
+                0 1px 0 rgba(212, 175, 55, 0.2) inset;
         }
 
         .stats-grid .stat-card:hover::before {
@@ -777,9 +906,12 @@
         }
 
         .stats-grid .stat-number {
-            font-size: 40px;
+            font-size: 44px;
             font-weight: 800;
-            color: var(--accent-red);
+            background: linear-gradient(135deg, var(--accent-red), var(--accent-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 12px;
             letter-spacing: -1px;
         }
@@ -788,19 +920,24 @@
             font-size: 15px;
             color: var(--text-secondary);
             font-weight: 600;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
-        /* Mejorar Post Cards */
+        /* Post Cards con Glassmorphism Vibrante */
         .post {
-            background: var(--white);
-            border: 2px solid var(--gray-border);
-            border-radius: 14px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
             padding: 28px;
             transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
             animation: slideUpFade 0.5s ease-out;
             position: relative;
             overflow: hidden;
+            box-shadow: 
+                0 6px 24px rgba(0, 0, 0, 0.06),
+                0 1px 0 rgba(255, 255, 255, 0.5) inset;
         }
 
         .post::before {
@@ -810,15 +947,36 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: linear-gradient(90deg, var(--accent-red) 0%, var(--accent-gold) 100%);
+            background: linear-gradient(90deg, var(--accent-red), var(--accent-gold), var(--accent-red));
+            background-size: 200% 100%;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.4s ease;
+            animation: gradientFlow 3s ease infinite;
+        }
+
+        :root.dark-mode .post {
+            background: rgba(26, 26, 46, 0.7);
+            border-color: rgba(212, 175, 55, 0.15);
+            box-shadow: 
+                0 6px 24px rgba(0, 0, 0, 0.25),
+                0 0 20px rgba(212, 175, 55, 0.03),
+                0 1px 0 rgba(212, 175, 55, 0.08) inset;
         }
 
         .post:hover {
-            border-color: var(--accent-red);
-            box-shadow: 0 16px 40px rgba(220, 38, 38, 0.12);
-            transform: translateY(-6px);
+            border-color: rgba(220, 38, 38, 0.4);
+            box-shadow: 
+                0 20px 50px rgba(220, 38, 38, 0.12),
+                0 1px 0 rgba(255, 255, 255, 0.6) inset;
+            transform: translateY(-8px);
+        }
+
+        :root.dark-mode .post:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: 
+                0 20px 50px rgba(212, 175, 55, 0.15),
+                0 0 40px rgba(212, 175, 55, 0.08),
+                0 1px 0 rgba(212, 175, 55, 0.15) inset;
         }
 
         .post:hover::before {
@@ -845,14 +1003,40 @@
             font-size: 15px;
         }
 
-        /* Mejorar New Post Section */
+        /* New Post Section con Glassmorphism */
         .new-post-section {
-            background: linear-gradient(135deg, var(--white) 0%, var(--light-gray-1) 100%);
-            border: 2px solid var(--gray-border);
-            border-radius: 16px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
             padding: 40px;
             margin-bottom: 40px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+            box-shadow: 
+                0 10px 40px rgba(0, 0, 0, 0.08),
+                0 1px 0 rgba(255, 255, 255, 0.6) inset;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .new-post-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-red), var(--accent-gold), var(--accent-purple));
+            opacity: 0.8;
+        }
+
+        :root.dark-mode .new-post-section {
+            background: rgba(26, 26, 46, 0.7);
+            border-color: rgba(212, 175, 55, 0.15);
+            box-shadow: 
+                0 10px 40px rgba(0, 0, 0, 0.3),
+                0 0 30px rgba(212, 175, 55, 0.05),
+                0 1px 0 rgba(212, 175, 55, 0.1) inset;
         }
 
         .new-post-section h3 {
@@ -927,12 +1111,44 @@
             padding: 60px 24px;
         }
 
-        /* Mejorar Content Section */
+        /* Content Section con diseño vibrante */
         .content-section {
             max-width: 1200px;
             margin: 0 auto;
             padding: 80px 24px;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(220, 38, 38, 0.02) 100%);
+            position: relative;
+        }
+
+        .content-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 1400px;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse 50% 30% at 50% 0%, rgba(220, 38, 38, 0.04) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 40% at 80% 50%, rgba(212, 175, 55, 0.03) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+        }
+
+        .section-title span {
+            background: linear-gradient(135deg, var(--accent-red), var(--accent-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .content-section p {
@@ -1042,6 +1258,9 @@
 </head>
 
 <body>
+    <!-- Canvas para partículas UNRC -->
+    <canvas id="particleCanvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;"></canvas>
+    
     <header>
         <div class="header-particles">
             <div class="particle"></div>
@@ -1079,9 +1298,9 @@
         <!-- SECCIÓN INTRODUCCIÓN AL PROBLEMA -->
         <section class="content-section">
             <h2 class="section-title">¿Qué es la Deserción <span>Escolar?</span></h2>
-            <div
-                style="max-width: 900px; margin: 0 auto; background: var(--white); padding: 40px; border-radius: 12px; border: 1px solid var(--gray-border); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);">
-                <p style="font-size: 17px; line-height: 1.8; color: var(--text-primary); font-weight: 500; margin: 0;">
+            <div class="intro-card">
+                <div class="intro-icon">📚</div>
+                <p>
                     La deserción escolar es el abandono del sistema educativo por parte de los estudiantes, antes de
                     finalizar el grado o nivel que estaban cursando. Este fenómeno tiene profundas implicaciones tanto
                     para el individuo como para la sociedad, limitando oportunidades de desarrollo y perpetuando ciclos
@@ -1090,36 +1309,103 @@
             </div>
         </section>
 
+        <style>
+            .intro-card {
+                max-width: 900px;
+                margin: 0 auto;
+                background: var(--glass-bg);
+                backdrop-filter: blur(20px) saturate(180%);
+                -webkit-backdrop-filter: blur(20px) saturate(180%);
+                padding: 50px;
+                border-radius: 24px;
+                border: 1px solid var(--glass-border);
+                box-shadow: 
+                    0 15px 50px rgba(0, 0, 0, 0.08),
+                    0 1px 0 rgba(255, 255, 255, 0.6) inset;
+                position: relative;
+                overflow: hidden;
+                transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            }
+
+            .intro-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 4px;
+                background: linear-gradient(90deg, var(--accent-red), var(--accent-gold), var(--accent-purple), var(--accent-gold), var(--accent-red));
+                background-size: 300% 100%;
+                animation: gradientFlow 4s ease infinite;
+            }
+
+            :root.dark-mode .intro-card {
+                background: rgba(26, 31, 46, 0.75);
+                border-color: rgba(212, 175, 55, 0.2);
+                box-shadow: 
+                    0 15px 50px rgba(0, 0, 0, 0.35),
+                    0 0 40px rgba(212, 175, 55, 0.08),
+                    0 1px 0 rgba(212, 175, 55, 0.12) inset;
+            }
+
+            .intro-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 
+                    0 25px 70px rgba(220, 38, 38, 0.12),
+                    0 1px 0 rgba(255, 255, 255, 0.7) inset;
+            }
+
+            :root.dark-mode .intro-card:hover {
+                box-shadow: 
+                    0 25px 70px rgba(212, 175, 55, 0.18),
+                    0 0 60px rgba(212, 175, 55, 0.12),
+                    0 1px 0 rgba(212, 175, 55, 0.2) inset;
+            }
+
+            .intro-icon {
+                font-size: 56px;
+                margin-bottom: 24px;
+                text-align: center;
+                filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+            }
+
+            .intro-card p {
+                font-size: 18px;
+                line-height: 1.9;
+                color: var(--text-secondary);
+                font-weight: 500;
+                margin: 0;
+                text-align: center;
+            }
+        </style>
+
         <!-- SECCIÓN DE FACTORES Y CONSECUENCIAS -->
         <section class="content-section">
-            <h2
-                style="text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 50px; color: var(--text-primary); letter-spacing: -0.5px;">
-                Factores y <span style="color: var(--accent-red); font-weight: 800;">Consecuencias</span></h2>
+            <h2 class="section-title">
+                Factores y <span>Consecuencias</span>
+            </h2>
 
             <div class="stats-grid">
-                <div class="stat-card">
-                    <div style="font-size: 48px; margin-bottom: 16px;">📊</div>
-                    <h3 style="font-size: 20px; margin-bottom: 12px; font-weight: 700; color: var(--text-primary);">
-                        Causas Principales</h3>
-                    <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin: 0;">
+                <div class="stat-card factor-card">
+                    <div class="factor-icon">📊</div>
+                    <h3 class="factor-title">Causas Principales</h3>
+                    <p class="factor-description">
                         Factores socioeconómicos, problemas familiares, falta de interés y bajo rendimiento académico
                         son algunas de las causas más comunes que llevan a los jóvenes a abandonar sus estudios.
                     </p>
                 </div>
-                <div class="stat-card">
-                    <div style="font-size: 48px; margin-bottom: 16px;">📈</div>
-                    <h3 style="font-size: 20px; margin-bottom: 12px; font-weight: 700; color: var(--text-primary);">
-                        Impacto a Largo Plazo</h3>
-                    <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin: 0;">
+                <div class="stat-card factor-card">
+                    <div class="factor-icon">📈</div>
+                    <h3 class="factor-title">Impacto a Largo Plazo</h3>
+                    <p class="factor-description">
                         Las consecuencias incluyen menores ingresos, mayores tasas de desempleo, problemas de salud y
                         una participación cívica reducida, afectando la calidad de vida y el desarrollo social.
                     </p>
                 </div>
-                <div class="stat-card">
-                    <div style="font-size: 48px; margin-bottom: 16px;">💡</div>
-                    <h3 style="font-size: 20px; margin-bottom: 12px; font-weight: 700; color: var(--text-primary);">
-                        Posibles Soluciones</h3>
-                    <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin: 0;">
+                <div class="stat-card factor-card">
+                    <div class="factor-icon">💡</div>
+                    <h3 class="factor-title">Posibles Soluciones</h3>
+                    <p class="factor-description">
                         Implementar programas de tutoría, becas, apoyo psicológico y mejorar la relevancia de los planes
                         de estudio son estrategias clave para mitigar la deserción escolar.
                     </p>
@@ -1127,105 +1413,417 @@
             </div>
         </section>
 
+        <style>
+            .factor-card {
+                text-align: center;
+                padding: 40px 32px !important;
+            }
+
+            .factor-icon {
+                font-size: 52px;
+                margin-bottom: 20px;
+                display: inline-block;
+                filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
+                transition: transform 0.4s ease;
+            }
+
+            .factor-card:hover .factor-icon {
+                transform: scale(1.15) rotate(-5deg);
+            }
+
+            .factor-title {
+                font-size: 22px;
+                margin-bottom: 16px;
+                font-weight: 700;
+                background: linear-gradient(135deg, var(--accent-gold), var(--accent-red));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                letter-spacing: -0.3px;
+            }
+
+            :root.dark-mode .factor-title {
+                background: linear-gradient(135deg, #D4AF37, #FFD700);
+                -webkit-background-clip: text;
+                background-clip: text;
+            }
+
+            .factor-description {
+                font-size: 15px;
+                color: var(--text-secondary);
+                line-height: 1.8;
+                margin: 0;
+                font-weight: 500;
+            }
+        </style>
+
         <!-- SECCIÓN MODELO 3D |RIZOMA -->
         <section class="rizoma-3d-section">
             <div class="rizoma-container">
-                <h3 style="text-align: center; color: var(--text-primary); font-size: 20px; margin-bottom: 20px; font-weight: 600;">Análisis de Factores</h3>
+                <div class="rizoma-header">
+                    <h3>Análisis de Factores</h3>
+                    <p>Explora el modelo interactivo 3D</p>
+                </div>
                 <iframe src="rizoma_https_corregido.html" class="rizoma-iframe" title="Modelo 3D Rizoma"></iframe>
             </div>
         </section>
 
+        <style>
+            .rizoma-header {
+                text-align: center;
+                padding: 28px 24px 20px;
+                border-bottom: 1px solid var(--glass-border);
+                background: rgba(0, 0, 0, 0.02);
+            }
+
+            :root.dark-mode .rizoma-header {
+                background: rgba(0, 0, 0, 0.15);
+                border-bottom-color: rgba(212, 175, 55, 0.1);
+            }
+
+            .rizoma-header h3 {
+                font-size: 24px;
+                font-weight: 700;
+                margin: 0 0 8px 0;
+                background: linear-gradient(135deg, var(--accent-gold), var(--accent-red));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            .rizoma-header p {
+                font-size: 14px;
+                color: var(--text-secondary);
+                margin: 0;
+                font-weight: 500;
+            }
+
+            .rizoma-iframe {
+                width: 100%;
+                height: 750px;
+                border: none;
+                display: block;
+                background: transparent;
+            }
+        </style>
+
         <!-- GALERÍA DE GRÁFICAS -->
         <section class="content-section">
-            <h2
-                style="text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 50px; color: var(--text-primary); letter-spacing: -0.5px;">
-                Gráficas y <span style="color: var(--accent-red); font-weight: 800;">Visualizaciones</span></h2>
+            <h2 class="section-title">
+                Gráficas y <span>Visualizaciones</span>
+            </h2>
 
             <!-- GRÁFICAS INTERACTIVAS CON CHART.JS -->
             <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; margin-bottom: 40px;">
+            <div class="charts-grid">
                 <!-- Gráfica 1: Género -->
-                <div class="stat-card" style="padding: 0; overflow: hidden; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); cursor: pointer;" onclick="expandChart('genero')">
-                    <div style="width: 100%; height: 280px; padding: 20px; background: var(--white); border-radius: 18px;">
+                <div class="chart-card" onclick="expandChart('genero')">
+                    <div class="chart-container">
                         <canvas id="generoChart"></canvas>
                     </div>
-                    <div style="padding: 24px; background: var(--white); border-top: 1px solid var(--gray-border);">
-                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">Distribución de Género</h4>
-                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic para expandir</p>
+                    <div class="chart-info">
+                        <h4>Distribución de Género</h4>
+                        <p><i class="fas fa-expand-alt"></i> Haz clic para expandir</p>
                     </div>
                 </div>
 
                 <!-- Gráfica 2: Edad -->
-                <div class="stat-card" style="padding: 0; overflow: hidden; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); cursor: pointer;" onclick="expandChart('edad')">
-                    <div style="width: 100%; height: 280px; padding: 20px; background: var(--white); border-radius: 18px;">
+                <div class="chart-card" onclick="expandChart('edad')">
+                    <div class="chart-container">
                         <canvas id="edadChart"></canvas>
                     </div>
-                    <div style="padding: 24px; background: var(--white); border-top: 1px solid var(--gray-border);">
-                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">Rango de Edad</h4>
-                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic para expandir</p>
+                    <div class="chart-info">
+                        <h4>Rango de Edad</h4>
+                        <p><i class="fas fa-expand-alt"></i> Haz clic para expandir</p>
                     </div>
                 </div>
 
                 <!-- Gráfica 3: Pensado en Abandonar -->
-                <div class="stat-card" style="padding: 0; overflow: hidden; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); cursor: pointer;" onclick="expandChart('abandonar')">
-                    <div style="width: 100%; height: 280px; padding: 20px; background: var(--white); border-radius: 18px;">
+                <div class="chart-card" onclick="expandChart('abandonar')">
+                    <div class="chart-container">
                         <canvas id="abandonarChart"></canvas>
                     </div>
-                    <div style="padding: 24px; background: var(--white); border-top: 1px solid var(--gray-border);">
-                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">Pensado en Abandonar</h4>
-                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic para expandir</p>
+                    <div class="chart-info">
+                        <h4>Pensado en Abandonar</h4>
+                        <p><i class="fas fa-expand-alt"></i> Haz clic para expandir</p>
                     </div>
                 </div>
 
                 <!-- Gráfica 4: Conoce Abandono -->
-                <div class="stat-card" style="padding: 0; overflow: hidden; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); cursor: pointer;" onclick="expandChart('conoce')">
-                    <div style="width: 100%; height: 280px; padding: 20px; background: var(--white); border-radius: 18px;">
+                <div class="chart-card" onclick="expandChart('conoce')">
+                    <div class="chart-container">
                         <canvas id="conoceAbandonoChart"></canvas>
                     </div>
-                    <div style="padding: 24px; background: var(--white); border-top: 1px solid var(--gray-border);">
-                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">Compañero que Abandonó</h4>
-                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic para expandir</p>
+                    <div class="chart-info">
+                        <h4>Compañero que Abandonó</h4>
+                        <p><i class="fas fa-expand-alt"></i> Haz clic para expandir</p>
                     </div>
                 </div>
 
                 <!-- Gráfica 5: Razón Abandono -->
-                <div class="stat-card" style="padding: 0; overflow: hidden; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); cursor: pointer;" onclick="expandChart('razon')">
-                    <div style="width: 100%; height: 280px; padding: 20px; background: var(--white); border-radius: 18px;">
+                <div class="chart-card" onclick="expandChart('razon')">
+                    <div class="chart-container">
                         <canvas id="razonAbandonoChart"></canvas>
                     </div>
-                    <div style="padding: 24px; background: var(--white); border-top: 1px solid var(--gray-border);">
-                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">Razón de Abandono</h4>
-                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic para expandir</p>
+                    <div class="chart-info">
+                        <h4>Razón de Abandono</h4>
+                        <p><i class="fas fa-expand-alt"></i> Haz clic para expandir</p>
                     </div>
                 </div>
 
                 <!-- Gráfica 6: Apoyo Académico -->
-                <div class="stat-card" style="padding: 0; overflow: hidden; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); cursor: pointer;" onclick="expandChart('apoyo')">
-                    <div style="width: 100%; height: 280px; padding: 20px; background: var(--white); border-radius: 18px;">
+                <div class="chart-card" onclick="expandChart('apoyo')">
+                    <div class="chart-container">
                         <canvas id="apoyoAcademicoChart"></canvas>
                     </div>
-                    <div style="padding: 24px; background: var(--white); border-top: 1px solid var(--gray-border);">
-                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">Apoyo Académico</h4>
-                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic para expandir</p>
+                    <div class="chart-info">
+                        <h4>Apoyo Académico</h4>
+                        <p><i class="fas fa-expand-alt"></i> Haz clic para expandir</p>
                     </div>
                 </div>
             </div>
 
+            <style>
+                .charts-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                    gap: 32px;
+                    margin-bottom: 50px;
+                }
+
+                .chart-card {
+                    background: var(--glass-bg);
+                    backdrop-filter: blur(20px) saturate(180%);
+                    -webkit-backdrop-filter: blur(20px) saturate(180%);
+                    border: 1px solid var(--glass-border);
+                    border-radius: 24px;
+                    overflow: hidden;
+                    cursor: pointer;
+                    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+                    box-shadow: 
+                        0 8px 32px rgba(0, 0, 0, 0.08),
+                        0 1px 0 rgba(255, 255, 255, 0.6) inset;
+                    position: relative;
+                }
+
+                :root.dark-mode .chart-card {
+                    background: rgba(26, 31, 46, 0.75);
+                    border-color: rgba(212, 175, 55, 0.15);
+                    box-shadow: 
+                        0 8px 32px rgba(0, 0, 0, 0.3),
+                        0 0 30px rgba(212, 175, 55, 0.05),
+                        0 1px 0 rgba(212, 175, 55, 0.1) inset;
+                }
+
+                .chart-card::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    height: 3px;
+                    background: linear-gradient(90deg, var(--accent-red), var(--accent-gold), var(--accent-red));
+                    background-size: 200% 100%;
+                    opacity: 0;
+                    transition: opacity 0.4s ease;
+                    animation: gradientFlow 3s ease infinite;
+                }
+
+                .chart-card:hover {
+                    transform: translateY(-10px) scale(1.02);
+                    box-shadow: 
+                        0 20px 60px rgba(220, 38, 38, 0.15),
+                        0 1px 0 rgba(255, 255, 255, 0.7) inset;
+                    border-color: rgba(220, 38, 38, 0.3);
+                }
+
+                :root.dark-mode .chart-card:hover {
+                    box-shadow: 
+                        0 20px 60px rgba(212, 175, 55, 0.2),
+                        0 0 50px rgba(212, 175, 55, 0.1),
+                        0 1px 0 rgba(212, 175, 55, 0.2) inset;
+                    border-color: rgba(212, 175, 55, 0.4);
+                }
+
+                .chart-card:hover::before {
+                    opacity: 1;
+                }
+
+                .chart-container {
+                    width: 100%;
+                    height: 280px;
+                    padding: 24px;
+                    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.02) 100%);
+                }
+
+                :root.dark-mode .chart-container {
+                    background: linear-gradient(180deg, rgba(15, 15, 26, 0.3) 0%, rgba(15, 15, 26, 0.5) 100%);
+                }
+
+                .chart-info {
+                    padding: 20px 24px;
+                    border-top: 1px solid var(--glass-border);
+                    background: rgba(0, 0, 0, 0.02);
+                }
+
+                :root.dark-mode .chart-info {
+                    background: rgba(0, 0, 0, 0.15);
+                    border-top-color: rgba(212, 175, 55, 0.1);
+                }
+
+                .chart-info h4 {
+                    font-size: 17px;
+                    margin: 0 0 6px 0;
+                    font-weight: 700;
+                    background: linear-gradient(135deg, var(--accent-gold), var(--accent-red));
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                }
+
+                .chart-info p {
+                    font-size: 13px;
+                    color: var(--text-secondary);
+                    line-height: 1.5;
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                }
+
+                .chart-info p i {
+                    font-size: 11px;
+                    opacity: 0.7;
+                }
+            </style>
+
             <!-- Modal para gráficas expandidas -->
-            <div id="chartModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); z-index: 1000; justify-content: center; align-items: center; padding: 20px;">
-                <div style="position: relative; background: #1a1a1a; border-radius: 20px; width: 95%; max-width: 1000px; height: 85vh; padding: 30px; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 60px rgba(220, 38, 38, 0.2); display: flex; flex-direction: column;">
-                    <button onclick="closeChartModal()" style="position: absolute; top: 15px; right: 15px; background: var(--accent-red); color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 28px; z-index: 1001; box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4); transition: all 0.3s ease;" onmouseover="this.style.background='#991B1B'; this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 20px rgba(220, 38, 38, 0.6)'" onmouseout="this.style.background='var(--accent-red)'; this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(220, 38, 38, 0.4)'">✕</button>
-                    <div id="expandedChartContainer" style="width: 100%; height: 100%; flex: 1;"></div>
+            <div id="chartModal" class="chart-modal">
+                <div class="chart-modal-content">
+                    <button class="chart-modal-close" onclick="closeChartModal()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div id="expandedChartContainer"></div>
                 </div>
             </div>
 
+            <style>
+                .chart-modal {
+                    display: none;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.85);
+                    backdrop-filter: blur(10px);
+                    -webkit-backdrop-filter: blur(10px);
+                    z-index: 2000;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 20px;
+                    animation: fadeIn 0.3s ease;
+                }
+
+                @keyframes fadeIn {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+
+                .chart-modal-content {
+                    position: relative;
+                    background: var(--glass-bg);
+                    backdrop-filter: blur(30px) saturate(200%);
+                    -webkit-backdrop-filter: blur(30px) saturate(200%);
+                    border: 1px solid var(--glass-border);
+                    border-radius: 28px;
+                    width: 95%;
+                    max-width: 1000px;
+                    height: 80vh;
+                    padding: 40px;
+                    box-shadow: 
+                        0 30px 80px rgba(0, 0, 0, 0.4),
+                        0 0 80px rgba(220, 38, 38, 0.15),
+                        0 1px 0 rgba(255, 255, 255, 0.5) inset;
+                    display: flex;
+                    flex-direction: column;
+                    animation: scaleIn 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+                }
+
+                :root.dark-mode .chart-modal-content {
+                    background: rgba(20, 20, 35, 0.95);
+                    border-color: rgba(212, 175, 55, 0.2);
+                    box-shadow: 
+                        0 30px 80px rgba(0, 0, 0, 0.6),
+                        0 0 80px rgba(212, 175, 55, 0.15),
+                        0 1px 0 rgba(212, 175, 55, 0.15) inset;
+                }
+
+                @keyframes scaleIn {
+                    from { 
+                        opacity: 0;
+                        transform: scale(0.9);
+                    }
+                    to { 
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                }
+
+                .chart-modal-close {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    background: linear-gradient(135deg, var(--accent-red), #991B1B);
+                    color: white;
+                    border: none;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    font-size: 20px;
+                    z-index: 2001;
+                    box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+                    transition: all 0.3s ease;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .chart-modal-close:hover {
+                    background: linear-gradient(135deg, #991B1B, var(--accent-red));
+                    transform: scale(1.1) rotate(90deg);
+                    box-shadow: 0 10px 30px rgba(220, 38, 38, 0.5);
+                }
+
+                #expandedChartContainer {
+                    width: 100%;
+                    height: 100%;
+                    flex: 1;
+                }
+            </style>
+
             <script>
-                // Configuración de Chart.js
-                Chart.defaults.font.family = "'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'";
+                // Configuración de Chart.js mejorada
+                Chart.defaults.font.family = "'Google Sans', 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'";
+                
+                // Detectar modo oscuro
+                const isDarkMode = () => document.documentElement.classList.contains('dark-mode');
+                const getTextColor = () => isDarkMode() ? '#f0f0f5' : '#1a1a2e';
+                const getSecondaryColor = () => isDarkMode() ? '#b0b0c5' : '#4a4a6a';
 
                 // Almacenar instancias de gráficos
                 const chartsInstances = {};
+
+                // Colores vibrantes para gráficas
+                const chartColors = {
+                    primary: '#DC2626',
+                    secondary: '#D4AF37',
+                    tertiary: '#6C5CE7',
+                    gradient1: ['#DC2626', '#FF6B6B'],
+                    gradient2: ['#D4AF37', '#FFD700']
+                };
 
                 // --- GRÁFICA 1: GÉNERO (Gráfico de Pastel) ---
                 const generoData = {
@@ -1233,16 +1831,39 @@
                     datasets: [{
                         data: [10, 15],
                         backgroundColor: ['#DC2626', '#D4AF37'],
-                        hoverOffset: 4,
-                        borderColor: '#fff',
-                        borderWidth: 2
+                        hoverBackgroundColor: ['#FF6B6B', '#FFD700'],
+                        hoverOffset: 8,
+                        borderColor: isDarkMode() ? '#1a1a2e' : '#fff',
+                        borderWidth: 3
                     }]
                 };
 
                 chartsInstances.genero = new Chart(document.getElementById('generoChart'), {
                     type: 'pie',
                     data: generoData,
-                    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { color: '#fff' } }, tooltip: { titleColor: '#fff', bodyColor: '#fff', backgroundColor: 'rgba(0,0,0,0.8)' } } }
+                    options: { 
+                        responsive: true, 
+                        maintainAspectRatio: false, 
+                        plugins: { 
+                            legend: { 
+                                position: 'bottom', 
+                                labels: { 
+                                    color: getTextColor(),
+                                    font: { weight: '600', size: 12 },
+                                    padding: 16
+                                } 
+                            }, 
+                            tooltip: { 
+                                titleColor: '#fff', 
+                                bodyColor: '#fff', 
+                                backgroundColor: 'rgba(26, 26, 46, 0.95)',
+                                borderColor: 'rgba(212, 175, 55, 0.3)',
+                                borderWidth: 1,
+                                padding: 12,
+                                cornerRadius: 8
+                            } 
+                        } 
+                    }
                 });
 
                 // --- GRÁFICA 2: RANGO DE EDAD (Gráfico de Barras Horizontal) ---
@@ -1252,87 +1873,217 @@
                         label: 'Estudiantes',
                         data: [2, 4, 5, 6, 8],
                         backgroundColor: '#DC2626',
+                        hoverBackgroundColor: '#FF6B6B',
                         borderColor: '#991B1B',
-                        borderWidth: 1
+                        borderWidth: 0,
+                        borderRadius: 8
                     }]
                 };
 
                 chartsInstances.edad = new Chart(document.getElementById('edadChart'), {
                     type: 'bar',
                     data: edadData,
-                    options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, scales: { x: { beginAtZero: true, ticks: { color: '#fff' }, title: { color: '#fff' } }, y: { ticks: { color: '#fff' }, title: { color: '#fff' } } }, plugins: { legend: { display: false }, tooltip: { titleColor: '#fff', bodyColor: '#fff', backgroundColor: 'rgba(0,0,0,0.8)' } } }
+                    options: { 
+                        indexAxis: 'y', 
+                        responsive: true, 
+                        maintainAspectRatio: false, 
+                        scales: { 
+                            x: { 
+                                beginAtZero: true, 
+                                ticks: { color: getSecondaryColor(), font: { weight: '500' } },
+                                grid: { color: isDarkMode() ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)' }
+                            }, 
+                            y: { 
+                                ticks: { color: getTextColor(), font: { weight: '600' } },
+                                grid: { display: false }
+                            } 
+                        }, 
+                        plugins: { 
+                            legend: { display: false }, 
+                            tooltip: { 
+                                titleColor: '#fff', 
+                                bodyColor: '#fff', 
+                                backgroundColor: 'rgba(26, 26, 46, 0.95)',
+                                padding: 12,
+                                cornerRadius: 8
+                            } 
+                        } 
+                    }
                 });
 
-                // --- GRÁFICA 3: PENSADO EN ABANDONAR (Gráfico de Barras Horizontal) ---
+                // --- GRÁFICA 3: PENSADO EN ABANDONAR ---
                 const abandonarData = {
                     labels: ['Muy frecuentemente', 'Algunas veces', 'Nunca', 'Pocas veces'],
                     datasets: [{
                         label: 'Respuestas',
                         data: [3, 4, 8, 10],
-                        backgroundColor: '#DC2626',
-                        borderColor: '#991B1B',
-                        borderWidth: 1
+                        backgroundColor: '#D4AF37',
+                        hoverBackgroundColor: '#FFD700',
+                        borderWidth: 0,
+                        borderRadius: 8
                     }]
                 };
 
                 chartsInstances.abandonar = new Chart(document.getElementById('abandonarChart'), {
                     type: 'bar',
                     data: abandonarData,
-                    options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, scales: { x: { beginAtZero: true, ticks: { color: '#fff' }, title: { color: '#fff' } }, y: { ticks: { color: '#fff' }, title: { color: '#fff' } } }, plugins: { legend: { display: false }, tooltip: { titleColor: '#fff', bodyColor: '#fff', backgroundColor: 'rgba(0,0,0,0.8)' } } }
+                    options: { 
+                        indexAxis: 'y', 
+                        responsive: true, 
+                        maintainAspectRatio: false, 
+                        scales: { 
+                            x: { 
+                                beginAtZero: true, 
+                                ticks: { color: getSecondaryColor(), font: { weight: '500' } },
+                                grid: { color: isDarkMode() ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)' }
+                            }, 
+                            y: { 
+                                ticks: { color: getTextColor(), font: { weight: '600' } },
+                                grid: { display: false }
+                            } 
+                        }, 
+                        plugins: { 
+                            legend: { display: false }, 
+                            tooltip: { 
+                                titleColor: '#fff', 
+                                bodyColor: '#fff', 
+                                backgroundColor: 'rgba(26, 26, 46, 0.95)',
+                                padding: 12,
+                                cornerRadius: 8
+                            } 
+                        } 
+                    }
                 });
 
-                // --- GRÁFICA 4: CONOCE A COMPAÑERO QUE ABANDONÓ (Gráfico de Pastel) ---
+                // --- GRÁFICA 4: CONOCE A COMPAÑERO QUE ABANDONÓ ---
                 const conoceData = {
                     labels: ['Sí (64%)', 'No (28%)', 'No estoy seguro (8%)'],
                     datasets: [{
                         data: [16, 7, 2],
-                        backgroundColor: ['#DC2626', '#D4AF37', '#6B7280'],
-                        hoverOffset: 4,
-                        borderColor: '#fff',
-                        borderWidth: 2
+                        backgroundColor: ['#DC2626', '#D4AF37', '#6C5CE7'],
+                        hoverBackgroundColor: ['#FF6B6B', '#FFD700', '#818CF8'],
+                        hoverOffset: 8,
+                        borderColor: isDarkMode() ? '#1a1a2e' : '#fff',
+                        borderWidth: 3
                     }]
                 };
 
                 chartsInstances.conoce = new Chart(document.getElementById('conoceAbandonoChart'), {
                     type: 'pie',
                     data: conoceData,
-                    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { color: '#fff' } }, tooltip: { titleColor: '#fff', bodyColor: '#fff', backgroundColor: 'rgba(0,0,0,0.8)' } } }
+                    options: { 
+                        responsive: true, 
+                        maintainAspectRatio: false, 
+                        plugins: { 
+                            legend: { 
+                                position: 'bottom', 
+                                labels: { 
+                                    color: getTextColor(),
+                                    font: { weight: '600', size: 11 },
+                                    padding: 12
+                                } 
+                            }, 
+                            tooltip: { 
+                                titleColor: '#fff', 
+                                bodyColor: '#fff', 
+                                backgroundColor: 'rgba(26, 26, 46, 0.95)',
+                                padding: 12,
+                                cornerRadius: 8
+                            } 
+                        } 
+                    }
                 });
 
-                // --- GRÁFICA 5: RAZÓN DE ABANDONO (Gráfico de Barras Vertical) ---
+                // --- GRÁFICA 5: RAZÓN DE ABANDONO ---
                 const razonData = {
-                    labels: ['Económica', 'Falta de motivación', 'Familiar', 'Académica', 'Problemas univ.', 'Laborales', 'Transporte', 'Paternidad'],
+                    labels: ['Económica', 'Falta motivación', 'Familiar', 'Académica', 'Problemas univ.', 'Laborales', 'Transporte', 'Paternidad'],
                     datasets: [{
                         label: 'Cantidad',
                         data: [9, 6, 3, 2, 2, 1, 1, 1],
-                        backgroundColor: '#D4AF37',
-                        borderColor: '#991B1B',
-                        borderWidth: 1
+                        backgroundColor: '#6C5CE7',
+                        hoverBackgroundColor: '#818CF8',
+                        borderWidth: 0,
+                        borderRadius: 8
                     }]
                 };
 
                 chartsInstances.razon = new Chart(document.getElementById('razonAbandonoChart'), {
                     type: 'bar',
                     data: razonData,
-                    options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true, ticks: { color: '#fff' }, title: { color: '#fff' } }, x: { ticks: { color: '#fff' }, title: { color: '#fff' } } }, plugins: { legend: { display: false }, tooltip: { titleColor: '#fff', bodyColor: '#fff', backgroundColor: 'rgba(0,0,0,0.8)' } } }
+                    options: { 
+                        responsive: true, 
+                        maintainAspectRatio: false, 
+                        scales: { 
+                            y: { 
+                                beginAtZero: true, 
+                                ticks: { color: getSecondaryColor(), font: { weight: '500' } },
+                                grid: { color: isDarkMode() ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)' }
+                            }, 
+                            x: { 
+                                ticks: { 
+                                    color: getTextColor(), 
+                                    font: { weight: '600', size: 10 },
+                                    maxRotation: 45,
+                                    minRotation: 45
+                                },
+                                grid: { display: false }
+                            } 
+                        }, 
+                        plugins: { 
+                            legend: { display: false }, 
+                            tooltip: { 
+                                titleColor: '#fff', 
+                                bodyColor: '#fff', 
+                                backgroundColor: 'rgba(26, 26, 46, 0.95)',
+                                padding: 12,
+                                cornerRadius: 8
+                            } 
+                        } 
+                    }
                 });
 
-                // --- GRÁFICA 6: RECIBE APOYO ACADÉMICO (Gráfico de Barras Vertical) ---
+                // --- GRÁFICA 6: RECIBE APOYO ACADÉMICO ---
                 const apoyoData = {
                     labels: ['No recibo', 'Ocasional', 'Constante'],
                     datasets: [{
                         label: 'Estudiantes',
                         data: [17, 7, 1],
-                        backgroundColor: '#DC2626',
-                        borderColor: '#991B1B',
-                        borderWidth: 1
+                        backgroundColor: ['#DC2626', '#D4AF37', '#6C5CE7'],
+                        hoverBackgroundColor: ['#FF6B6B', '#FFD700', '#818CF8'],
+                        borderWidth: 0,
+                        borderRadius: 8
                     }]
                 };
 
                 chartsInstances.apoyo = new Chart(document.getElementById('apoyoAcademicoChart'), {
                     type: 'bar',
                     data: apoyoData,
-                    options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true, max: 20, ticks: { color: '#fff' }, title: { color: '#fff' } }, x: { ticks: { color: '#fff' }, title: { color: '#fff' } } }, plugins: { legend: { display: false }, tooltip: { titleColor: '#fff', bodyColor: '#fff', backgroundColor: 'rgba(0,0,0,0.8)' } } }
+                    options: { 
+                        responsive: true, 
+                        maintainAspectRatio: false, 
+                        scales: { 
+                            y: { 
+                                beginAtZero: true, 
+                                max: 20, 
+                                ticks: { color: getSecondaryColor(), font: { weight: '500' } },
+                                grid: { color: isDarkMode() ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)' }
+                            }, 
+                            x: { 
+                                ticks: { color: getTextColor(), font: { weight: '600' } },
+                                grid: { display: false }
+                            } 
+                        }, 
+                        plugins: { 
+                            legend: { display: false }, 
+                            tooltip: { 
+                                titleColor: '#fff', 
+                                bodyColor: '#fff', 
+                                backgroundColor: 'rgba(26, 26, 46, 0.95)',
+                                padding: 12,
+                                cornerRadius: 8
+                            } 
+                        } 
+                    }
                 });
 
                 // Funciones para expandir gráficas
@@ -1380,18 +2131,6 @@
 
                 document.getElementById('chartModal').addEventListener('click', (e) => {
                     if (e.target.id === 'chartModal') closeChartModal();
-                });
-
-                // Hover effects
-                document.querySelectorAll('.stat-card').forEach(card => {
-                    card.addEventListener('mouseover', function() {
-                        this.style.transform = 'translateY(-10px) scale(1.02)';
-                        this.style.boxShadow = '0 16px 40px rgba(220, 38, 38, 0.2)';
-                    });
-                    card.addEventListener('mouseout', function() {
-                        this.style.transform = 'translateY(0) scale(1)';
-                        this.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.12)';
-                    });
                 });
             </script>
         </section>
@@ -1655,6 +2394,251 @@
         // Inicializar forum cuando carga la página
         window.addEventListener('DOMContentLoaded', () => {
             window.forum = new ForumSystem();
+        });
+    </script>
+
+    <!-- Script para partículas UNRC flotantes -->
+    <script>
+        // Sistema de partículas UNRC mejorado con limpieza perfecta
+        class UnrcParticleSystem {
+            constructor() {
+                this.canvas = document.getElementById('particleCanvas');
+                this.ctx = this.canvas.getContext('2d');
+                this.particles = [];
+                this.particleCount = 700;
+                this.centerX = window.innerWidth / 2;
+                this.centerY = window.innerHeight / 2;
+                this.time = 0;
+                this.letterPixels = [];
+                
+                this.resize();
+                this.generateLetterPixels();
+                this.init();
+                this.animate();
+                
+                window.addEventListener('resize', () => this.resize());
+            }
+
+            resize() {
+                this.canvas.width = window.innerWidth;
+                this.canvas.height = window.innerHeight;
+                this.centerX = window.innerWidth / 2;
+                this.centerY = window.innerHeight / 2;
+            }
+
+            generateLetterPixels() {
+                const tempCanvas = document.createElement('canvas');
+                tempCanvas.width = 1000;
+                tempCanvas.height = 350;
+                const tempCtx = tempCanvas.getContext('2d');
+                
+                tempCtx.fillStyle = 'white';
+                tempCtx.font = 'bold 240px Arial, sans-serif';
+                tempCtx.textAlign = 'center';
+                tempCtx.textBaseline = 'middle';
+                tempCtx.fillText('UNRC', 500, 175);
+                
+                const imageData = tempCtx.getImageData(0, 0, tempCanvas.width, tempCanvas.height);
+                const data = imageData.data;
+                this.letterPixels = [];
+                
+                // Extraer píxeles con mejor densidad
+                for (let i = 0; i < data.length; i += 16) {
+                    if (data[i + 3] > 128) {
+                        const pixelIndex = i / 4;
+                        this.letterPixels.push({
+                            x: pixelIndex % tempCanvas.width,
+                            y: Math.floor(pixelIndex / tempCanvas.width)
+                        });
+                    }
+                }
+            }
+
+            init() {
+                this.particles = [];
+                for (let i = 0; i < this.particleCount; i++) {
+                    this.particles.push({
+                        x: Math.random() * this.canvas.width,
+                        y: Math.random() * this.canvas.height,
+                        vx: 0,
+                        vy: 0,
+                        size: Math.random() * 2.2 + 0.6,
+                        opacity: Math.random() * 0.55 + 0.45,
+                        targetX: 0,
+                        targetY: 0,
+                        attraction: 0.035 + Math.random() * 0.015,
+                        repulsion: 0.9 + Math.random() * 0.1,
+                        mass: 1,
+                        baseOpacity: 0
+                    });
+                }
+            }
+
+            update() {
+                this.time += 0.01;
+                
+                if (this.letterPixels.length === 0) return;
+                
+                // Aplicar atracción hacia las letras
+                for (let i = 0; i < this.particles.length; i++) {
+                    const particle = this.particles[i];
+                    const pixel = this.letterPixels[i % this.letterPixels.length];
+                    
+                    const scale = Math.min(this.canvas.width, this.canvas.height) / 1100;
+                    const offsetX = this.centerX - (1000 * scale) / 2;
+                    const offsetY = this.centerY - (350 * scale) / 2;
+                    
+                    particle.targetX = offsetX + pixel.x * scale;
+                    particle.targetY = offsetY + pixel.y * scale;
+                    
+                    const dx = particle.targetX - particle.x;
+                    const dy = particle.targetY - particle.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance > 1) {
+                        particle.vx += (dx / distance) * particle.attraction * 0.8;
+                        particle.vy += (dy / distance) * particle.attraction * 0.8;
+                    }
+                }
+                
+                // Repulsión entre partículas
+                const repulsionRange = 55;
+                for (let i = 0; i < this.particles.length; i++) {
+                    for (let j = i + 1; j < this.particles.length; j++) {
+                        const p1 = this.particles[i];
+                        const p2 = this.particles[j];
+                        const dx = p1.x - p2.x;
+                        const dy = p1.y - p2.y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+                        
+                        if (distance < repulsionRange && distance > 2) {
+                            const force = (1 - distance / repulsionRange) * 0.25;
+                            const angle = Math.atan2(dy, dx);
+                            
+                            p1.vx += Math.cos(angle) * force * p2.repulsion * 0.5;
+                            p1.vy += Math.sin(angle) * force * p2.repulsion * 0.5;
+                            p2.vx -= Math.cos(angle) * force * p1.repulsion * 0.5;
+                            p2.vy -= Math.sin(angle) * force * p1.repulsion * 0.5;
+                        }
+                    }
+                }
+                
+                // Actualizar posiciones con damping fuerte
+                for (let i = 0; i < this.particles.length; i++) {
+                    const particle = this.particles[i];
+                    
+                    particle.vx *= 0.91;
+                    particle.vy *= 0.91;
+                    
+                    particle.x += particle.vx;
+                    particle.y += particle.vy;
+                    
+                    // Ruido Perlin simple para oscilación natural
+                    const noise = 0.15;
+                    particle.x += Math.sin(this.time * 0.5 + i * 0.02) * noise;
+                    particle.y += Math.cos(this.time * 0.5 + i * 0.025) * noise;
+                    
+                    // Limites suaves
+                    const margin = 15;
+                    if (particle.x < margin) {
+                        particle.x = margin;
+                        particle.vx = 0;
+                    }
+                    if (particle.x > this.canvas.width - margin) {
+                        particle.x = this.canvas.width - margin;
+                        particle.vx = 0;
+                    }
+                    if (particle.y < margin) {
+                        particle.y = margin;
+                        particle.vy = 0;
+                    }
+                    if (particle.y > this.canvas.height - margin) {
+                        particle.y = this.canvas.height - margin;
+                        particle.vy = 0;
+                    }
+                }
+            }
+
+            draw() {
+                // Limpiar completamente el canvas sin rastros
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                // Fondo suave oscuro (opcional, muy sutil)
+                this.ctx.fillStyle = 'rgba(15, 20, 25, 0.02)';
+                this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                // Dibujar partículas con diseño mejorado
+                for (let particle of this.particles) {
+                    // Halo exterior suave con colores mejorados
+                    const haloGradient = this.ctx.createRadialGradient(
+                        particle.x, particle.y, 0,
+                        particle.x, particle.y, particle.size * 2.5
+                    );
+                    haloGradient.addColorStop(0, `rgba(255, 100, 100, ${particle.opacity * 0.25})`);
+                    haloGradient.addColorStop(0.5, `rgba(255, 200, 100, ${particle.opacity * 0.1})`);
+                    haloGradient.addColorStop(1, `rgba(255, 200, 100, 0)`);
+                    
+                    this.ctx.fillStyle = haloGradient;
+                    this.ctx.beginPath();
+                    this.ctx.arc(particle.x, particle.y, particle.size * 2.5, 0, Math.PI * 2);
+                    this.ctx.fill();
+                    
+                    // Centro brillante con gradiente radial mejorado
+                    const coreGradient = this.ctx.createRadialGradient(
+                        particle.x - particle.size * 0.2, particle.y - particle.size * 0.2, 0,
+                        particle.x, particle.y, particle.size
+                    );
+                    coreGradient.addColorStop(0, `rgba(255, 255, 255, ${particle.opacity})`);
+                    coreGradient.addColorStop(0.3, `rgba(255, 150, 100, ${particle.opacity * 0.95})`);
+                    coreGradient.addColorStop(0.6, `rgba(220, 38, 38, ${particle.opacity * 0.8})`);
+                    coreGradient.addColorStop(1, `rgba(255, 200, 100, ${particle.opacity * 0.4})`);
+                    
+                    this.ctx.fillStyle = coreGradient;
+                    this.ctx.beginPath();
+                    this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+                    this.ctx.fill();
+                    
+                    // Pequeño destello en el centro más brillante
+                    this.ctx.fillStyle = `rgba(255, 255, 200, ${particle.opacity * 0.8})`;
+                    this.ctx.beginPath();
+                    this.ctx.arc(particle.x - particle.size * 0.3, particle.y - particle.size * 0.3, particle.size * 0.4, 0, Math.PI * 2);
+                    this.ctx.fill();
+                }
+                
+                // Conexiones entre partículas cercanas (líneas mejoradas)
+                for (let i = 0; i < this.particles.length; i++) {
+                    const p1 = this.particles[i];
+                    for (let j = i + 1; j < Math.min(i + 15, this.particles.length); j++) {
+                        const p2 = this.particles[j];
+                        const dx = p1.x - p2.x;
+                        const dy = p1.y - p2.y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        
+                        if (dist < 45) {
+                            const opacity = (1 - dist / 45) * 0.2;
+                            this.ctx.strokeStyle = `rgba(255, 200, 100, ${opacity})`;
+                            this.ctx.lineWidth = 0.6;
+                            this.ctx.beginPath();
+                            this.ctx.moveTo(p1.x, p1.y);
+                            this.ctx.lineTo(p2.x, p2.y);
+                            this.ctx.stroke();
+                        }
+                    }
+                }
+            }
+
+            animate = () => {
+                this.update();
+                this.draw();
+                requestAnimationFrame(this.animate);
+            }
+        }
+
+        // Inicializar sistema de partículas UNRC
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                new UnrcParticleSystem();
+            }, 100);
         });
     </script>
 </body>
