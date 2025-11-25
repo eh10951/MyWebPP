@@ -86,6 +86,7 @@ a:hover {
 
 .hero-content {
     animation: fadeInDown 1s ease-out;
+    will-change: opacity, transform;
 }
 
 .hero p {
@@ -104,6 +105,7 @@ a:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    will-change: transform;
 }
 
 .qr:hover {
@@ -120,6 +122,7 @@ a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
     cursor: pointer;
+    will-change: transform, box-shadow;
 }
 
 .btn-primary {
@@ -186,6 +189,7 @@ a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
+    will-change: transform, box-shadow;
 }
 
 .card:hover {

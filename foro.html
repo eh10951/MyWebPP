@@ -1109,6 +1109,49 @@
                 font-size: 12px;
             }
         }
+
+        /* ========== MEJORAS DE ACCESIBILIDAD TÁCTIL ========== */
+        @media (hover: none) and (pointer: coarse) {
+            /* Dispositivos táctiles */
+            .btn-primary, .btn-secondary {
+                min-height: 48px;
+                padding: 14px 24px;
+                font-size: 16px;
+            }
+
+            .feature-card {
+                padding: 24px;
+            }
+
+            .feature-card:hover {
+                transform: none;
+            }
+
+            .btn {
+                min-height: 44px;
+                padding: 12px 20px;
+            }
+
+            .canva-embed {
+                min-height: 500px;
+            }
+        }
+
+        /* ========== MEDIA QUERIES ADICIONALES PARA TABLETS ========== */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .features-section {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+        }
     </style>
 </head>
 
@@ -1249,11 +1292,11 @@
             </div>
             
             <div class="presentacion-container">
-                <iframe src="https://www.canva.com/design/DAG5fFF-Bs0/N_yNKdb6gX3_2yglSwPaGQ/view?embed" 
+                <iframe data-src="https://www.canva.com/design/DAG5fFF-Bs0/N_yNKdb6gX3_2yglSwPaGQ/view?embed" 
                         allow="fullscreen"
                         allowfullscreen="true"
                         frameborder="0"
-                        class="presentacion-iframe">
+                        class="presentacion-iframe presentacion-iframe-lazy">
                 </iframe>
             </div>
 
@@ -1408,7 +1451,7 @@
             }
             
             initParticles() {
-                const particleCount = this.isMobile ? 60 : 200;
+                const particleCount = this.isMobile ? 35 : 100;
                 
                 for (let i = 0; i < particleCount; i++) {
                     this.particles.push({
@@ -1545,6 +1588,33 @@
                 }, 150);
             });
         });
+
+        // Lazy load iframes
+        if ('IntersectionObserver' in window) {
+            const iframeObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const iframe = entry.target;
+                        if (iframe.dataset.src) {
+                            iframe.src = iframe.dataset.src;
+                            iframe.classList.remove('presentacion-iframe-lazy');
+                            observer.unobserve(iframe);
+                        }
+                    }
+                });
+            }, { rootMargin: '50px' });
+
+            document.querySelectorAll('.presentacion-iframe-lazy').forEach(iframe => {
+                iframeObserver.observe(iframe);
+            });
+        } else {
+            // Fallback para navegadores sin IntersectionObserver
+            document.querySelectorAll('.presentacion-iframe-lazy').forEach(iframe => {
+                if (iframe.dataset.src) {
+                    iframe.src = iframe.dataset.src;
+                }
+            });
+        }
     </script>
 </body>
 

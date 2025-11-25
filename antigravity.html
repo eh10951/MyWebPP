@@ -1329,6 +1329,59 @@
                 font-size: 12px;
             }
         }
+
+        /* ========== MEJORAS DE ACCESIBILIDAD TÁCTIL ========== */
+        @media (hover: none) and (pointer: coarse) {
+            /* Dispositivos táctiles */
+            .app-download .btn {
+                min-height: 48px;
+                padding: 14px 28px;
+                font-size: 16px;
+                width: 100%;
+            }
+
+            .app-feature-card {
+                padding: 28px 20px;
+            }
+
+            .app-feature-card:hover {
+                transform: none;
+            }
+
+            .tool-item {
+                min-height: 120px;
+                padding: 20px;
+            }
+
+            .canva-embed {
+                min-height: 500px;
+            }
+
+            .support-card {
+                padding: 28px 20px;
+                min-height: auto;
+            }
+        }
+
+        /* ========== MEDIA QUERIES ADICIONALES PARA TABLETS ========== */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .app-features-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+
+            .tools-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .app-titulo {
+                font-size: 48px;
+            }
+
+            .app-subtitulo {
+                font-size: 22px;
+            }
+        }
     </style>
 </head>
 
@@ -1439,8 +1492,8 @@
                 <h3>¿Qué es Mentor U.N.R.C?</h3>
                 <p>Una plataforma innovadora que transforma la experiencia estudiantil conectando a alumnos con tutores de manera eficiente.</p>
                 <div class="canva-embed-container">
-                    <iframe loading="lazy" class="canva-iframe"
-                        src="https://www.canva.com/design/DAG4a4I5COc/UUyZbDS3Sg5ZYY51yLg1wQ/view?embed"
+                    <iframe class="canva-iframe canva-iframe-lazy"
+                        data-src="https://www.canva.com/design/DAG4a4I5COc/UUyZbDS3Sg5ZYY51yLg1wQ/view?embed"
                         allowfullscreen="allowfullscreen" allow="fullscreen">
                     </iframe>
                 </div>
@@ -1689,7 +1742,7 @@
             }
             
             initParticles() {
-                const particleCount = this.isMobile ? 60 : 200;
+                const particleCount = this.isMobile ? 35 : 100;
                 
                 for (let i = 0; i < particleCount; i++) {
                     this.particles.push({
@@ -1840,6 +1893,33 @@
                 }, 150);
             });
         });
+
+        // Lazy load iframes
+        if ('IntersectionObserver' in window) {
+            const iframeObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const iframe = entry.target;
+                        if (iframe.dataset.src) {
+                            iframe.src = iframe.dataset.src;
+                            iframe.classList.remove('canva-iframe-lazy');
+                            observer.unobserve(iframe);
+                        }
+                    }
+                });
+            }, { rootMargin: '50px' });
+
+            document.querySelectorAll('.canva-iframe-lazy').forEach(iframe => {
+                iframeObserver.observe(iframe);
+            });
+        } else {
+            // Fallback para navegadores sin IntersectionObserver
+            document.querySelectorAll('.canva-iframe-lazy').forEach(iframe => {
+                if (iframe.dataset.src) {
+                    iframe.src = iframe.dataset.src;
+                }
+            });
+        }
     </script>
 </body>
 

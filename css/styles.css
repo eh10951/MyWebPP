@@ -1,7 +1,6 @@
     * {
       margin: 0;
       padding: 0;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     /* Estilos generales */
@@ -55,9 +54,10 @@
       overflow: hidden;
       animation: fadeInHeader 1.5s ease-out both;
       z-index: 1;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
+      will-change: transform, box-shadow;
     }
 
     header:hover {
@@ -1333,4 +1333,411 @@
       padding: 0.5rem;
       border-left: 5px solid #3498db;
       margin: 1rem 0;
+  }
+
+  /* ========== MEDIA QUERIES RESPONSIVOS MÓVILES ========== */
+  
+  /* Smartphones pequeños (max 375px) */
+  @media (max-width: 375px) {
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    header {
+      padding: 20px 16px;
+      margin: 12px auto;
+      max-width: 95vw;
+    }
+
+    header h1 {
+      font-size: 1.4em;
+      padding: 8px 12px;
+    }
+
+    .unp {
+      font-size: 0.9em;
+      padding: 6px 12px;
+    }
+
+    .txlogo .unrc {
+      font-size: 1.4em;
+    }
+
+    .txlogo .universidad {
+      font-size: 0.9em;
+    }
+
+    .menu ul {
+      flex-direction: column;
+      gap: 6px;
+      padding: 0 8px;
+    }
+
+    .menu li {
+      font-size: 0.85em;
+      padding: 6px 8px;
+    }
+
+    .grid-container {
+      grid-template-columns: 1fr !important;
+      gap: 12px;
+      padding: 8px;
+    }
+
+    .card, .feature-card, .support-card {
+      padding: 12px;
+      margin: 6px auto;
+      width: 95%;
+    }
+
+    .card h3, .feature-card h3 {
+      font-size: 1.1em;
+    }
+
+    .card p, .feature-card p {
+      font-size: 0.85em;
+      line-height: 1.4;
+    }
+
+    .chart-container {
+      height: 250px;
+      margin: 8px 0;
+      padding: 8px;
+    }
+
+    canvas {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+
+    .modal-content {
+      width: 95%;
+      padding: 12px;
+      max-height: 80vh;
+    }
+
+    .btn {
+      padding: 8px 12px;
+      font-size: 0.9em;
+      min-height: 40px;
+    }
+
+    section {
+      padding: 16px 8px;
+    }
+
+    .stats-grid, .icons-grid {
+      grid-template-columns: 1fr;
+      gap: 12px;
+      padding: 8px;
+    }
+
+    iframe {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  /* Tablets y smartphones medianos (376px - 767px) */
+  @media (max-width: 767px) {
+    body {
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 24px 16px;
+      margin: 16px auto;
+      max-width: 96vw;
+      border-radius: 16px;
+    }
+
+    header h1 {
+      font-size: 1.6em;
+      padding: 10px 16px;
+    }
+
+    .unp {
+      font-size: 1em;
+      padding: 8px 16px;
+    }
+
+    .txlogo .unrc {
+      font-size: 1.6em;
+    }
+
+    .txlogo .universidad {
+      font-size: 1em;
+    }
+
+    .menu {
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .menu ul {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .menu li {
+      font-size: 0.9em;
+      padding: 8px 12px;
+    }
+
+    .welcome-section {
+      padding: 20px 12px;
+      min-height: 300px;
+    }
+
+    .welcome-section h1 {
+      font-size: 1.8em;
+      margin-bottom: 12px;
+    }
+
+    .welcome-section p {
+      font-size: 0.95em;
+    }
+
+    .grid-container {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 12px;
+    }
+
+    .two-column {
+      grid-template-columns: 1fr;
+    }
+
+    .three-column {
+      grid-template-columns: 1fr;
+    }
+
+    .card, .feature-card, .support-card, .stats-item {
+      padding: 16px;
+      margin: 8px 0;
+      width: 100%;
+    }
+
+    .card h3, .feature-card h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .card p, .feature-card p {
+      font-size: 0.9em;
+      line-height: 1.5;
+    }
+
+    .chart-gallery {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 12px;
+    }
+
+    .chart-container {
+      height: 300px;
+      padding: 12px;
+      margin: 12px 0;
+    }
+
+    .expandable-chart {
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .expandable-chart:hover {
+      transform: scale(1.02);
+    }
+
+    .modal {
+      padding: 12px;
+    }
+
+    .modal-content {
+      width: 95%;
+      padding: 16px;
+      border-radius: 12px;
+      max-height: 85vh;
+      overflow-y: auto;
+    }
+
+    .close-btn {
+      top: 12px;
+      right: 12px;
+      font-size: 1.8em;
+    }
+
+    .btn {
+      padding: 10px 16px;
+      font-size: 0.95em;
+      border-radius: 8px;
+      min-height: 44px;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .btn-group {
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+    }
+
+    section {
+      padding: 20px 12px;
+    }
+
+    .stats-grid, .icons-grid, .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      padding: 12px;
+    }
+
+    .stats-grid.mobile-single {
+      grid-template-columns: 1fr;
+    }
+
+    .section-title {
+      font-size: 1.5em;
+      margin-bottom: 16px;
+    }
+
+    .subsection-title {
+      font-size: 1.2em;
+      margin: 16px 0 12px 0;
+    }
+
+    iframe {
+      width: 100% !important;
+      height: auto;
+      min-height: 300px;
+      border-radius: 8px;
+    }
+
+    .canva-embed {
+      width: 100% !important;
+    }
+
+    .download-section {
+      padding: 16px 12px;
+    }
+
+    .download-links {
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .download-links a {
+      width: 100%;
+      max-width: 280px;
+      padding: 12px;
+    }
+
+    /* Forum responsive */
+    .forum-post {
+      padding: 12px;
+      margin: 12px 0;
+      border-radius: 8px;
+    }
+
+    .forum-post-header {
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .forum-post-author {
+      font-size: 0.85em;
+    }
+
+    .forum-post-date {
+      font-size: 0.8em;
+    }
+
+    .forum-actions {
+      gap: 8px;
+    }
+
+    .forum-actions button {
+      padding: 6px 10px;
+      font-size: 0.8em;
+    }
+
+    /* Tabla responsive */
+    table {
+      font-size: 0.85em;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 8px 6px;
+    }
+
+    /* Animaciones más suaves en móvil */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  }
+
+  /* Tablets medianos (768px - 1023px) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 16px;
+    }
+
+    .three-column {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .chart-gallery {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      padding: 20px;
+    }
+
+    section {
+      padding: 24px 16px;
+    }
+
+    .modal-content {
+      max-width: 90%;
+    }
+  }
+
+  /* Desktop grande (1024px+) */
+  @media (min-width: 1024px) {
+    .grid-container {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .chart-gallery {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
   }
