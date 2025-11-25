@@ -1127,7 +1127,7 @@
             </div>
         </section>
 
-        <!-- SECCIÓN MODELO 3D RIZOMA -->
+        <!-- SECCIÓN MODELO 3D |RIZOMA -->
         <section class="rizoma-3d-section">
             <div class="rizoma-container">
                 <h3 style="text-align: center; color: var(--text-primary); font-size: 20px; margin-bottom: 20px; font-weight: 600;">Análisis de Factores</h3>
@@ -1141,97 +1141,259 @@
                 style="text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 50px; color: var(--text-primary); letter-spacing: -0.5px;">
                 Gráficas y <span style="color: var(--accent-red); font-weight: 800;">Visualizaciones</span></h2>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px;">
-                <div class="stat-card"
-                    style="padding: 0; overflow: hidden; cursor: pointer; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);"
-                    onclick="openModal('imagenes/graf_1.jpeg', 'Indica tu género')"
-                    onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 16px 40px rgba(220, 38, 38, 0.2)'"
-                    onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 24px rgba(0, 0, 0, 0.12)'">
-                    <img src="imagenes/graf_1.jpeg" alt="Gráfica 1"
-                        style="width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.4s ease;">
-                    <div style="padding: 24px; background: var(--white);">
-                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">
-                            Indica tu género</h4>
-                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic
-                            para ver más detalles</p>
+            <!-- GRÁFICAS INTERACTIVAS CON CHART.JS -->
+            <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; margin-bottom: 40px;">
+                <!-- Gráfica 1: Género -->
+                <div class="stat-card" style="padding: 0; overflow: hidden; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); cursor: pointer;" onclick="expandChart('genero')">
+                    <div style="width: 100%; height: 280px; padding: 20px; background: var(--white); border-radius: 18px;">
+                        <canvas id="generoChart"></canvas>
+                    </div>
+                    <div style="padding: 24px; background: var(--white); border-top: 1px solid var(--gray-border);">
+                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">Distribución de Género</h4>
+                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic para expandir</p>
                     </div>
                 </div>
 
-                <div class="stat-card"
-                    style="padding: 0; overflow: hidden; cursor: pointer; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);"
-                    onclick="openModal('imagenes/graf_2.jpeg', 'Rango de edad')"
-                    onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 16px 40px rgba(220, 38, 38, 0.2)'"
-                    onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 24px rgba(0, 0, 0, 0.12)'">
-                    <img src="imagenes/graf_2.jpeg" alt="Gráfica 2"
-                        style="width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.4s ease;">
-                    <div style="padding: 24px; background: var(--white);">
-                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">
-                            Rango de edad</h4>
-                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic
-                            para ver más detalles</p>
+                <!-- Gráfica 2: Edad -->
+                <div class="stat-card" style="padding: 0; overflow: hidden; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); cursor: pointer;" onclick="expandChart('edad')">
+                    <div style="width: 100%; height: 280px; padding: 20px; background: var(--white); border-radius: 18px;">
+                        <canvas id="edadChart"></canvas>
+                    </div>
+                    <div style="padding: 24px; background: var(--white); border-top: 1px solid var(--gray-border);">
+                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">Rango de Edad</h4>
+                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic para expandir</p>
                     </div>
                 </div>
 
-                <div class="stat-card"
-                    style="padding: 0; overflow: hidden; cursor: pointer; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);"
-                    onclick="openModal('imagenes/graf_6.jpeg', 'Apoyo económico')"
-                    onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 16px 40px rgba(220, 38, 38, 0.2)'"
-                    onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 24px rgba(0, 0, 0, 0.12)'">
-                    <img src="imagenes/graf_6.jpeg" alt="Gráfica 3"
-                        style="width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.4s ease;">
-                    <div style="padding: 24px; background: var(--white);">
-                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">
-                            Apoyo económico</h4>
-                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic
-                            para ver más detalles</p>
+                <!-- Gráfica 3: Pensado en Abandonar -->
+                <div class="stat-card" style="padding: 0; overflow: hidden; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); cursor: pointer;" onclick="expandChart('abandonar')">
+                    <div style="width: 100%; height: 280px; padding: 20px; background: var(--white); border-radius: 18px;">
+                        <canvas id="abandonarChart"></canvas>
+                    </div>
+                    <div style="padding: 24px; background: var(--white); border-top: 1px solid var(--gray-border);">
+                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">Pensado en Abandonar</h4>
+                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic para expandir</p>
                     </div>
                 </div>
 
-                <div class="stat-card"
-                    style="padding: 0; overflow: hidden; cursor: pointer; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);"
-                    onclick="openModal('imagenes/graf_3.jpeg', 'Abandono de universidad')"
-                    onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 16px 40px rgba(220, 38, 38, 0.2)'"
-                    onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 24px rgba(0, 0, 0, 0.12)'">
-                    <img src="imagenes/graf_3.jpeg" alt="Gráfica 4"
-                        style="width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.4s ease;">
-                    <div style="padding: 24px; background: var(--white);">
-                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">
-                            Abandono de universidad</h4>
-                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic
-                            para ver más detalles</p>
+                <!-- Gráfica 4: Conoce Abandono -->
+                <div class="stat-card" style="padding: 0; overflow: hidden; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); cursor: pointer;" onclick="expandChart('conoce')">
+                    <div style="width: 100%; height: 280px; padding: 20px; background: var(--white); border-radius: 18px;">
+                        <canvas id="conoceAbandonoChart"></canvas>
+                    </div>
+                    <div style="padding: 24px; background: var(--white); border-top: 1px solid var(--gray-border);">
+                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">Compañero que Abandonó</h4>
+                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic para expandir</p>
                     </div>
                 </div>
 
-                <div class="stat-card"
-                    style="padding: 0; overflow: hidden; cursor: pointer; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);"
-                    onclick="openModal('imagenes/graf_4.jpeg', 'Apoyo académico')"
-                    onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 16px 40px rgba(220, 38, 38, 0.2)'"
-                    onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 24px rgba(0, 0, 0, 0.12)'">
-                    <img src="imagenes/graf_4.jpeg" alt="Gráfica 5"
-                        style="width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.4s ease;">
-                    <div style="padding: 24px; background: var(--white);">
-                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">
-                            Apoyo académico</h4>
-                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic
-                            para ver más detalles</p>
+                <!-- Gráfica 5: Razón Abandono -->
+                <div class="stat-card" style="padding: 0; overflow: hidden; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); cursor: pointer;" onclick="expandChart('razon')">
+                    <div style="width: 100%; height: 280px; padding: 20px; background: var(--white); border-radius: 18px;">
+                        <canvas id="razonAbandonoChart"></canvas>
+                    </div>
+                    <div style="padding: 24px; background: var(--white); border-top: 1px solid var(--gray-border);">
+                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">Razón de Abandono</h4>
+                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic para expandir</p>
                     </div>
                 </div>
 
-                <div class="stat-card"
-                    style="padding: 0; overflow: hidden; cursor: pointer; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);"
-                    onclick="openModal('imagenes/graf_5.jpeg', 'Causas de abandono')"
-                    onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 16px 40px rgba(220, 38, 38, 0.2)'"
-                    onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 24px rgba(0, 0, 0, 0.12)'">
-                    <img src="imagenes/graf_5.jpeg" alt="Gráfica 6"
-                        style="width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.4s ease;">
-                    <div style="padding: 24px; background: var(--white);">
-                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">
-                            Causas de abandono</h4>
-                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic
-                            para ver más detalles</p>
+                <!-- Gráfica 6: Apoyo Académico -->
+                <div class="stat-card" style="padding: 0; overflow: hidden; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); cursor: pointer;" onclick="expandChart('apoyo')">
+                    <div style="width: 100%; height: 280px; padding: 20px; background: var(--white); border-radius: 18px;">
+                        <canvas id="apoyoAcademicoChart"></canvas>
+                    </div>
+                    <div style="padding: 24px; background: var(--white); border-top: 1px solid var(--gray-border);">
+                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">Apoyo Académico</h4>
+                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic para expandir</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Modal para gráficas expandidas -->
+            <div id="chartModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); z-index: 1000; justify-content: center; align-items: center; padding: 20px;">
+                <div style="position: relative; background: #1a1a1a; border-radius: 20px; width: 95%; max-width: 1000px; height: 85vh; padding: 30px; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 60px rgba(220, 38, 38, 0.2); display: flex; flex-direction: column;">
+                    <button onclick="closeChartModal()" style="position: absolute; top: 15px; right: 15px; background: var(--accent-red); color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 28px; z-index: 1001; box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4); transition: all 0.3s ease;" onmouseover="this.style.background='#991B1B'; this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 20px rgba(220, 38, 38, 0.6)'" onmouseout="this.style.background='var(--accent-red)'; this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(220, 38, 38, 0.4)'">✕</button>
+                    <div id="expandedChartContainer" style="width: 100%; height: 100%; flex: 1;"></div>
+                </div>
+            </div>
+
+            <script>
+                // Configuración de Chart.js
+                Chart.defaults.font.family = "'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'";
+
+                // Almacenar instancias de gráficos
+                const chartsInstances = {};
+
+                // --- GRÁFICA 1: GÉNERO (Gráfico de Pastel) ---
+                const generoData = {
+                    labels: ['Femenino', 'Masculino'],
+                    datasets: [{
+                        data: [10, 15],
+                        backgroundColor: ['#DC2626', '#D4AF37'],
+                        hoverOffset: 4,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                    }]
+                };
+
+                chartsInstances.genero = new Chart(document.getElementById('generoChart'), {
+                    type: 'pie',
+                    data: generoData,
+                    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { color: '#fff' } }, tooltip: { titleColor: '#fff', bodyColor: '#fff', backgroundColor: 'rgba(0,0,0,0.8)' } } }
+                });
+
+                // --- GRÁFICA 2: RANGO DE EDAD (Gráfico de Barras Horizontal) ---
+                const edadData = {
+                    labels: ['17–19 años', '25–29 años', '20–22 años', '23–25 años', 'Más de 30'],
+                    datasets: [{
+                        label: 'Estudiantes',
+                        data: [2, 4, 5, 6, 8],
+                        backgroundColor: '#DC2626',
+                        borderColor: '#991B1B',
+                        borderWidth: 1
+                    }]
+                };
+
+                chartsInstances.edad = new Chart(document.getElementById('edadChart'), {
+                    type: 'bar',
+                    data: edadData,
+                    options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, scales: { x: { beginAtZero: true, ticks: { color: '#fff' }, title: { color: '#fff' } }, y: { ticks: { color: '#fff' }, title: { color: '#fff' } } }, plugins: { legend: { display: false }, tooltip: { titleColor: '#fff', bodyColor: '#fff', backgroundColor: 'rgba(0,0,0,0.8)' } } }
+                });
+
+                // --- GRÁFICA 3: PENSADO EN ABANDONAR (Gráfico de Barras Horizontal) ---
+                const abandonarData = {
+                    labels: ['Muy frecuentemente', 'Algunas veces', 'Nunca', 'Pocas veces'],
+                    datasets: [{
+                        label: 'Respuestas',
+                        data: [3, 4, 8, 10],
+                        backgroundColor: '#DC2626',
+                        borderColor: '#991B1B',
+                        borderWidth: 1
+                    }]
+                };
+
+                chartsInstances.abandonar = new Chart(document.getElementById('abandonarChart'), {
+                    type: 'bar',
+                    data: abandonarData,
+                    options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, scales: { x: { beginAtZero: true, ticks: { color: '#fff' }, title: { color: '#fff' } }, y: { ticks: { color: '#fff' }, title: { color: '#fff' } } }, plugins: { legend: { display: false }, tooltip: { titleColor: '#fff', bodyColor: '#fff', backgroundColor: 'rgba(0,0,0,0.8)' } } }
+                });
+
+                // --- GRÁFICA 4: CONOCE A COMPAÑERO QUE ABANDONÓ (Gráfico de Pastel) ---
+                const conoceData = {
+                    labels: ['Sí (64%)', 'No (28%)', 'No estoy seguro (8%)'],
+                    datasets: [{
+                        data: [16, 7, 2],
+                        backgroundColor: ['#DC2626', '#D4AF37', '#6B7280'],
+                        hoverOffset: 4,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                    }]
+                };
+
+                chartsInstances.conoce = new Chart(document.getElementById('conoceAbandonoChart'), {
+                    type: 'pie',
+                    data: conoceData,
+                    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { color: '#fff' } }, tooltip: { titleColor: '#fff', bodyColor: '#fff', backgroundColor: 'rgba(0,0,0,0.8)' } } }
+                });
+
+                // --- GRÁFICA 5: RAZÓN DE ABANDONO (Gráfico de Barras Vertical) ---
+                const razonData = {
+                    labels: ['Económica', 'Falta de motivación', 'Familiar', 'Académica', 'Problemas univ.', 'Laborales', 'Transporte', 'Paternidad'],
+                    datasets: [{
+                        label: 'Cantidad',
+                        data: [9, 6, 3, 2, 2, 1, 1, 1],
+                        backgroundColor: '#D4AF37',
+                        borderColor: '#991B1B',
+                        borderWidth: 1
+                    }]
+                };
+
+                chartsInstances.razon = new Chart(document.getElementById('razonAbandonoChart'), {
+                    type: 'bar',
+                    data: razonData,
+                    options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true, ticks: { color: '#fff' }, title: { color: '#fff' } }, x: { ticks: { color: '#fff' }, title: { color: '#fff' } } }, plugins: { legend: { display: false }, tooltip: { titleColor: '#fff', bodyColor: '#fff', backgroundColor: 'rgba(0,0,0,0.8)' } } }
+                });
+
+                // --- GRÁFICA 6: RECIBE APOYO ACADÉMICO (Gráfico de Barras Vertical) ---
+                const apoyoData = {
+                    labels: ['No recibo', 'Ocasional', 'Constante'],
+                    datasets: [{
+                        label: 'Estudiantes',
+                        data: [17, 7, 1],
+                        backgroundColor: '#DC2626',
+                        borderColor: '#991B1B',
+                        borderWidth: 1
+                    }]
+                };
+
+                chartsInstances.apoyo = new Chart(document.getElementById('apoyoAcademicoChart'), {
+                    type: 'bar',
+                    data: apoyoData,
+                    options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true, max: 20, ticks: { color: '#fff' }, title: { color: '#fff' } }, x: { ticks: { color: '#fff' }, title: { color: '#fff' } } }, plugins: { legend: { display: false }, tooltip: { titleColor: '#fff', bodyColor: '#fff', backgroundColor: 'rgba(0,0,0,0.8)' } } }
+                });
+
+                // Funciones para expandir gráficas
+                let currentExpandedChart = null;
+
+                function expandChart(chartKey) {
+                    const modal = document.getElementById('chartModal');
+                    const container = document.getElementById('expandedChartContainer');
+                    
+                    if (!chartsInstances[chartKey]) return;
+                    
+                    const originalChart = chartsInstances[chartKey];
+                    
+                    // Limpiar container
+                    container.innerHTML = '<canvas id="tempChart" style="width: 100% !important; height: 100% !important;"></canvas>';
+                    
+                    // Copiar la configuración del gráfico original
+                    const chartConfig = {
+                        type: originalChart.config.type,
+                        data: JSON.parse(JSON.stringify(originalChart.config.data)),
+                        options: JSON.parse(JSON.stringify(originalChart.config.options))
+                    };
+                    
+                    chartConfig.options.maintainAspectRatio = false;
+                    
+                    // Crear el gráfico expandido
+                    currentExpandedChart = new Chart(document.getElementById('tempChart'), chartConfig);
+                    modal.style.display = 'flex';
+                    
+                    document.addEventListener('keydown', handleEscapeChart);
+                }
+
+                function closeChartModal() {
+                    document.getElementById('chartModal').style.display = 'none';
+                    if (currentExpandedChart) {
+                        currentExpandedChart.destroy();
+                        currentExpandedChart = null;
+                    }
+                    document.removeEventListener('keydown', handleEscapeChart);
+                }
+
+                function handleEscapeChart(e) {
+                    if (e.key === 'Escape') closeChartModal();
+                }
+
+                document.getElementById('chartModal').addEventListener('click', (e) => {
+                    if (e.target.id === 'chartModal') closeChartModal();
+                });
+
+                // Hover effects
+                document.querySelectorAll('.stat-card').forEach(card => {
+                    card.addEventListener('mouseover', function() {
+                        this.style.transform = 'translateY(-10px) scale(1.02)';
+                        this.style.boxShadow = '0 16px 40px rgba(220, 38, 38, 0.2)';
+                    });
+                    card.addEventListener('mouseout', function() {
+                        this.style.transform = 'translateY(0) scale(1)';
+                        this.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.12)';
+                    });
+                });
+            </script>
         </section>
 
         <!-- Forum Container -->
@@ -1268,31 +1430,6 @@
             </section>
         </div>
     </main>
-
-    <!-- MODAL PARA VER GRÁFICAS GRANDES -->
-    <div id="imageModal"
-        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.85); z-index: 1000; justify-content: center; align-items: center; animation: fadeInModal 0.3s ease-out;">
-        <div
-            style="position: relative; background: white; border-radius: 24px; max-width: 90%; max-height: 90vh; padding: 0; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(220, 38, 38, 0.15); display: flex; flex-direction: column; animation: scaleInModal 0.4s cubic-bezier(0.23, 1, 0.32, 1);">
-            <button onclick="closeModal()"
-                style="position: absolute; top: 20px; right: 20px; background: var(--accent-red); color: white; border: none; width: 48px; height: 48px; border-radius: 50%; cursor: pointer; font-size: 26px; display: flex; align-items: center; justify-content: center; z-index: 1001; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);"
-                onmouseover="this.style.background='#b91c1c'; this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 20px rgba(220, 38, 38, 0.5)'"
-                onmouseout="this.style.background='var(--accent-red)'; this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(220, 38, 38, 0.3)'">✕</button>
-
-            <img id="modalImage" src="" alt="Gráfica ampliada"
-                style="max-width: 100%; max-height: 70vh; object-fit: contain; border-radius: 24px 24px 0 0; animation: fadeInImage 0.5s ease-out;">
-
-            <div
-                style="padding: 32px; background: linear-gradient(135deg, #ffffff 0%, #f8f9fc 100%); border-radius: 0 0 24px 24px; border-top: 2px solid rgba(220, 38, 38, 0.1);">
-                <h3 id="modalTitle"
-                    style="font-size: 24px; font-weight: 700; color: var(--text-primary); margin: 0; text-align: center; letter-spacing: -0.5px;">
-                </h3>
-                <p
-                    style="font-size: 14px; color: var(--text-secondary); text-align: center; margin: 16px 0 0 0; line-height: 1.6; font-weight: 500;">
-                    Haz clic fuera o presiona ESC para cerrar</p>
-            </div>
-        </div>
-    </div>
 
     <footer>
         <p>&copy; 2025 A.L.M.A - Administración Logística y Modular Académica. Todos los derechos reservados.</p>
@@ -1518,42 +1655,6 @@
         // Inicializar forum cuando carga la página
         window.addEventListener('DOMContentLoaded', () => {
             window.forum = new ForumSystem();
-        });
-
-        // Funciones para el modal de gráficas
-        function openModal(imageSrc, imageTitle) {
-            const modal = document.getElementById('imageModal');
-            const modalImage = document.getElementById('modalImage');
-            const modalTitle = document.getElementById('modalTitle');
-
-            modalImage.src = imageSrc;
-            modalTitle.textContent = imageTitle;
-            modal.style.display = 'flex';
-
-            // Agregar listener para cerrar con ESC
-            document.addEventListener('keydown', handleEscapeKey);
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('imageModal');
-            modal.style.display = 'none';
-            document.removeEventListener('keydown', handleEscapeKey);
-        }
-
-        function handleEscapeKey(e) {
-            if (e.key === 'Escape') {
-                closeModal();
-            }
-        }
-
-        // Cerrar modal al hacer clic fuera de él
-        document.addEventListener('DOMContentLoaded', () => {
-            const modal = document.getElementById('imageModal');
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    closeModal();
-                }
-            });
         });
     </script>
 </body>
