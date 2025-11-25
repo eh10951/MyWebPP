@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Rizoma 3D - Abandono Escolar</title>
+  <style> body { margin: 0; background-color: #000011; overflow: hidden; } </style>
+  
+  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/3d-force-graph@1.73.1/dist/3d-force-graph.min.js"></script>
+</head>
+<body>
+  <div id="3d-graph"></div>
+
+  <script>
+    const gData = {
+      nodes: [{"id": "Oferta de educaci\u00f3n media superior / t\u00e9cnica insuficiente"}, {"id": "Pol\u00edticas p\u00fablicas"}, {"id": "Criminalizaci\u00f3n de j\u00f3venes / pandillas"}, {"id": "Cultura escolar y clima institucional"}, {"id": "Transporte inaccesible"}, {"id": "Corrupci\u00f3n y manejo de recursos educativos"}, {"id": "Violencia comunitaria / escolar"}, {"id": "Salud mental / adicciones"}, {"id": "Innovaci\u00f3n educativa y tecnolog\u00eda"}, {"id": "Incentivos escolares"}, {"id": "Infraestructura sanitaria (ba\u00f1os, agua)"}, {"id": "Tiempo dom\u00e9stico (ni\u00f1as con responsabilidades familiares)"}, {"id": "Normatividad laboral"}, {"id": "Formaci\u00f3n t\u00e9cnica y dual (escuela-empresa)"}, {"id": "Falta de materiales y libros"}, {"id": "Infraestructura insuficiente"}, {"id": "Desigualdad ind\u00edgena / ling\u00fc\u00edstica"}, {"id": "Transici\u00f3n entre niveles educativos"}, {"id": "Tutor\u00eda y acompa\u00f1amiento escolar"}, {"id": "Empleo informal y mercado local"}, {"id": "Enfermedad / salud"}, {"id": "Normas culturales / expectativas de g\u00e9nero"}, {"id": "Acceso a servicios de cuidado infantil"}, {"id": "Expectativas y aspiraciones juveniles"}, {"id": "Brecha digital / acceso a internet"}, {"id": "Trabajo infantil"}, {"id": "Familias con baja escolaridad"}, {"id": "Bullying / acoso escolar"}, {"id": "Programas de apoyo (becas, transferencias)"}, {"id": "Migraci\u00f3n familiar"}, {"id": "Educaci\u00f3n comunitaria / CONAFE"}, {"id": "Evaluaciones y rendici\u00f3n de cuentas"}, {"id": "Remesas y decisiones econ\u00f3micas familiares"}, {"id": "Movilidad urbana / suburbanizaci\u00f3n"}, {"id": "Redes comunitarias / ONG / iglesia"}, {"id": "Sistema de registro y monitoreo"}, {"id": "Discapacidad y atenci\u00f3n especial insuficiente"}, {"id": "Pol\u00edticas municipales y estatales"}, {"id": "Costos indirectos"}, {"id": "Ciclos de pobreza intergeneracional"}, {"id": "Calidad educativa baja"}, {"id": "Mercado de capacitaci\u00f3n laboral / oficios"}, {"id": "Actividades extracurriculares o de aprendizaje no formal"}, {"id": "Medios de comunicaci\u00f3n y estereotipos"}, {"id": "Percepci\u00f3n de utilidad de la educaci\u00f3n"}, {"id": "Curr\u00edculo irrelevante"}, {"id": "Abandono escolar"}, {"id": "Embarazo adolescente"}, {"id": "Acceso a transporte p\u00fablico seguro para mujeres"}, {"id": "Docentes poco formados / desmotivaci\u00f3n docente"}, {"id": "Pobreza"}],
+      links: [{"source": "Abandono escolar", "target": "Pobreza"}, {"source": "Abandono escolar", "target": "Trabajo infantil"}, {"source": "Abandono escolar", "target": "Embarazo adolescente"}, {"source": "Abandono escolar", "target": "Migraci\u00f3n familiar"}, {"source": "Abandono escolar", "target": "Violencia comunitaria / escolar"}, {"source": "Abandono escolar", "target": "Calidad educativa baja"}, {"source": "Abandono escolar", "target": "Infraestructura insuficiente"}, {"source": "Abandono escolar", "target": "Transporte inaccesible"}, {"source": "Abandono escolar", "target": "Falta de materiales y libros"}, {"source": "Abandono escolar", "target": "Brecha digital / acceso a internet"}, {"source": "Abandono escolar", "target": "Enfermedad / salud"}, {"source": "Abandono escolar", "target": "Normas culturales / expectativas de g\u00e9nero"}, {"source": "Abandono escolar", "target": "Desigualdad ind\u00edgena / ling\u00fc\u00edstica"}, {"source": "Abandono escolar", "target": "Discapacidad y atenci\u00f3n especial insuficiente"}, {"source": "Abandono escolar", "target": "Bullying / acoso escolar"}, {"source": "Abandono escolar", "target": "Docentes poco formados / desmotivaci\u00f3n docente"}, {"source": "Abandono escolar", "target": "Curr\u00edculo irrelevante"}, {"source": "Abandono escolar", "target": "Costos indirectos"}, {"source": "Abandono escolar", "target": "Programas de apoyo (becas, transferencias)"}, {"source": "Abandono escolar", "target": "Pol\u00edticas p\u00fablicas"}, {"source": "Abandono escolar", "target": "Evaluaciones y rendici\u00f3n de cuentas"}, {"source": "Abandono escolar", "target": "Oferta de educaci\u00f3n media superior / t\u00e9cnica insuficiente"}, {"source": "Abandono escolar", "target": "Educaci\u00f3n comunitaria / CONAFE"}, {"source": "Abandono escolar", "target": "Familias con baja escolaridad"}, {"source": "Abandono escolar", "target": "Empleo informal y mercado local"}, {"source": "Abandono escolar", "target": "Percepci\u00f3n de utilidad de la educaci\u00f3n"}, {"source": "Abandono escolar", "target": "Redes comunitarias / ONG / iglesia"}, {"source": "Abandono escolar", "target": "Salud mental / adicciones"}, {"source": "Abandono escolar", "target": "Ciclos de pobreza intergeneracional"}, {"source": "Abandono escolar", "target": "Normatividad laboral"}, {"source": "Abandono escolar", "target": "Remesas y decisiones econ\u00f3micas familiares"}, {"source": "Abandono escolar", "target": "Tiempo dom\u00e9stico (ni\u00f1as con responsabilidades familiares)"}, {"source": "Abandono escolar", "target": "Tutor\u00eda y acompa\u00f1amiento escolar"}, {"source": "Abandono escolar", "target": "Actividades extracurriculares o de aprendizaje no formal"}, {"source": "Abandono escolar", "target": "Medios de comunicaci\u00f3n y estereotipos"}, {"source": "Abandono escolar", "target": "Acceso a servicios de cuidado infantil"}, {"source": "Abandono escolar", "target": "Incentivos escolares"}, {"source": "Abandono escolar", "target": "Sistema de registro y monitoreo"}, {"source": "Abandono escolar", "target": "Cultura escolar y clima institucional"}, {"source": "Abandono escolar", "target": "Transici\u00f3n entre niveles educativos"}, {"source": "Pobreza", "target": "Familias con baja escolaridad"}, {"source": "Pobreza", "target": "Costos indirectos"}, {"source": "Trabajo infantil", "target": "Empleo informal y mercado local"}, {"source": "Embarazo adolescente", "target": "Acceso a servicios de cuidado infantil"}, {"source": "Migraci\u00f3n familiar", "target": "Remesas y decisiones econ\u00f3micas familiares"}, {"source": "Violencia comunitaria / escolar", "target": "Criminalizaci\u00f3n de j\u00f3venes / pandillas"}, {"source": "Calidad educativa baja", "target": "Docentes poco formados / desmotivaci\u00f3n docente"}, {"source": "Infraestructura insuficiente", "target": "Infraestructura sanitaria (ba\u00f1os, agua)"}, {"source": "Transporte inaccesible", "target": "Movilidad urbana / suburbanizaci\u00f3n"}, {"source": "Brecha digital / acceso a internet", "target": "Innovaci\u00f3n educativa y tecnolog\u00eda"}, {"source": "Enfermedad / salud", "target": "Salud mental / adicciones"}, {"source": "Normas culturales / expectativas de g\u00e9nero", "target": "Tiempo dom\u00e9stico (ni\u00f1as con responsabilidades familiares)"}, {"source": "Desigualdad ind\u00edgena / ling\u00fc\u00edstica", "target": "Discapacidad y atenci\u00f3n especial insuficiente"}, {"source": "Bullying / acoso escolar", "target": "Cultura escolar y clima institucional"}, {"source": "Docentes poco formados / desmotivaci\u00f3n docente", "target": "Tutor\u00eda y acompa\u00f1amiento escolar"}, {"source": "Curr\u00edculo irrelevante", "target": "Percepci\u00f3n de utilidad de la educaci\u00f3n"}, {"source": "Programas de apoyo (becas, transferencias)", "target": "Remesas y decisiones econ\u00f3micas familiares"}, {"source": "Pol\u00edticas p\u00fablicas", "target": "Pol\u00edticas municipales y estatales"}, {"source": "Evaluaciones y rendici\u00f3n de cuentas", "target": "Sistema de registro y monitoreo"}, {"source": "Oferta de educaci\u00f3n media superior / t\u00e9cnica insuficiente", "target": "Mercado de capacitaci\u00f3n laboral / oficios"}, {"source": "Educaci\u00f3n comunitaria / CONAFE", "target": "Redes comunitarias / ONG / iglesia"}, {"source": "Familias con baja escolaridad", "target": "Medios de comunicaci\u00f3n y estereotipos"}, {"source": "Empleo informal y mercado local", "target": "Mercado de capacitaci\u00f3n laboral / oficios"}, {"source": "Salud mental / adicciones", "target": "Bullying / acoso escolar"}, {"source": "Ciclos de pobreza intergeneracional", "target": "Pobreza"}, {"source": "Normatividad laboral", "target": "Trabajo infantil"}, {"source": "Actividades extracurriculares o de aprendizaje no formal", "target": "Innovaci\u00f3n educativa y tecnolog\u00eda"}, {"source": "Medios de comunicaci\u00f3n y estereotipos", "target": "Expectativas y aspiraciones juveniles"}, {"source": "Incentivos escolares", "target": "Programas de apoyo (becas, transferencias)"}, {"source": "Sistema de registro y monitoreo", "target": "Pol\u00edticas p\u00fablicas"}, {"source": "Cultura escolar y clima institucional", "target": "Docentes poco formados / desmotivaci\u00f3n docente"}, {"source": "Transici\u00f3n entre niveles educativos", "target": "Oferta de educaci\u00f3n media superior / t\u00e9cnica insuficiente"}, {"source": "Pol\u00edticas municipales y estatales", "target": "Corrupci\u00f3n y manejo de recursos educativos"}, {"source": "Infraestructura sanitaria (ba\u00f1os, agua)", "target": "Enfermedad / salud"}, {"source": "Expectativas y aspiraciones juveniles", "target": "Percepci\u00f3n de utilidad de la educaci\u00f3n"}, {"source": "Acceso a transporte p\u00fablico seguro para mujeres", "target": "Normas culturales / expectativas de g\u00e9nero"}, {"source": "Criminalizaci\u00f3n de j\u00f3venes / pandillas", "target": "Violencia comunitaria / escolar"}, {"source": "Innovaci\u00f3n educativa y tecnolog\u00eda", "target": "Brecha digital / acceso a internet"}, {"source": "Formaci\u00f3n t\u00e9cnica y dual (escuela-empresa)", "target": "Programas de apoyo (becas, transferencias)"}]
+    };
+
+    // Función para crear etiquetas de texto nativas (sin plugins extra)
+    function createTextSprite(text, color, fontSize) {
+      const canvas = document.createElement('canvas');
+      const context = canvas.getContext('2d');
+      const font = `bold ${fontSize}px Arial, sans-serif`;
+      context.font = font;
+      
+      const metrics = context.measureText(text);
+      const textWidth = metrics.width;
+      const textHeight = fontSize * 1.4;
+      
+      // Aumentamos resolución del canvas para nitidez
+      canvas.width = textWidth;
+      canvas.height = textHeight;
+      
+      context.font = font;
+      context.fillStyle = color;
+      context.textAlign = 'center';
+      context.textBaseline = 'middle';
+      context.fillText(text, textWidth / 2, textHeight / 2);
+
+      const texture = new THREE.CanvasTexture(canvas);
+      texture.minFilter = THREE.LinearFilter;
+      
+      const material = new THREE.SpriteMaterial({ map: texture, transparent: true });
+      const sprite = new THREE.Sprite(material);
+      
+      // Escalar sprite para mantener proporciones
+      sprite.scale.set(textWidth / 10, textHeight / 10, 1);
+      return sprite;
+    }
+
+    // Inicializar Grafo
+    const Graph = ForceGraph3D()
+      (document.getElementById('3d-graph'))
+        .graphData(gData)
+        .backgroundColor('#000011')
+        .showNavInfo(true)
+        
+        // Nodos como Texto
+        .nodeThreeObject(node => {
+            let color, size;
+            if (node.id === 'Abandono escolar') {
+                color = '#ff4444'; // Rojo
+                size = 100;        // Grande
+            } else {
+                color = 'rgba(200, 220, 255, 0.9)'; // Azul claro
+                size = 35;         // Normal
+            }
+            return createTextSprite(node.id, color, size);
+        })
+        .nodeThreeObjectExtend(false) // 'false' oculta la esfera y deja solo el texto
+        
+        // Enlaces
+        .linkColor(() => '#ffffff')
+        .linkOpacity(0.2)
+        .linkWidth(0.5);
+
+    Graph.cameraPosition({ z: 1000 });
+  </script>
+</body>
+</html>
