@@ -28,10 +28,10 @@
             --text-primary: #1a1a2e;
             --text-secondary: #4a4a6a;
             --accent-blue: #1F2937;
-            --accent-red: #DC2626;
-            --accent-gold: #D4AF37;
-            --accent-coral: #FF6B6B;
-            --accent-purple: #6C5CE7;
+            --accent-red: #B74545;
+            --accent-gold: #B89D4E;
+            --accent-coral: #D17A7A;
+            --accent-purple: #8B7BA8;
             --particle-blue: #4F46E5;
             --particle-blue-light: #6366F1;
             --glass-bg: rgba(255, 255, 255, 0.85);
@@ -104,24 +104,11 @@
 
         /* Partículas en el header */
         .header-particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            overflow: hidden;
+            display: none;
         }
 
         .particle {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #DC2626, #D4AF37);
-            opacity: 0.4;
-            animation: float 6s infinite ease-in-out;
-            box-shadow: 0 0 12px rgba(220, 38, 38, 0.6), 0 0 24px rgba(212, 175, 55, 0.3);
+            display: none;
         }
 
         .particle:nth-child(1) {
@@ -338,7 +325,7 @@
 
         /* SECCIÓN MODELO 3D RIZOMA - Diseño Vibrante */
         .rizoma-3d-section {
-            padding: 100px 24px;
+            padding: 80px 24px 100px;
             position: relative;
             overflow: hidden;
         }
@@ -402,7 +389,7 @@
 
         .rizoma-iframe {
             width: 100%;
-            height: 800px;
+            height: 700px;
             border: none;
             display: block;
             background: transparent;
@@ -439,7 +426,7 @@
 
         @media (max-width: 480px) {
             .rizoma-3d-section {
-                padding: 40px 12px;
+                padding: 40px 12px 60px;
             }
 
             .rizoma-container {
@@ -448,7 +435,7 @@
             }
 
             .rizoma-iframe {
-                height: 400px;
+                height: 350px;
             }
         }
 
@@ -1347,19 +1334,9 @@
 
 <body>
     <!-- Canvas para partículas UNRC -->
-    <canvas id="particleCanvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;"></canvas>
+    <canvas id="particleCanvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 60vh; pointer-events: none; z-index: 0; background: transparent;"></canvas>
     
     <header>
-        <div class="header-particles">
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-        </div>
         <div class="header-content">
             <div class="logo"><span>U N R C</span></div>
             <nav class="menu">
@@ -2499,7 +2476,7 @@
                 this.canvas = document.getElementById('particleCanvas');
                 this.ctx = this.canvas.getContext('2d');
                 this.particles = [];
-                this.particleCount = 300;
+                this.particleCount = 80;
                 this.centerX = window.innerWidth / 2;
                 this.centerY = window.innerHeight / 2;
                 this.time = 0;
@@ -2595,10 +2572,11 @@
                     }
                 }
                 
-                // Repulsión entre partículas
-                const repulsionRange = 55;
-                for (let i = 0; i < this.particles.length; i++) {
-                    for (let j = i + 1; j < this.particles.length; j++) {
+                // Repulsión entre partículas (optimizada cada 2 frames)
+                if (this.time % 2 === 0) {
+                    const repulsionRange = 40;
+                    for (let i = 0; i < this.particles.length; i++) {
+                        for (let j = i + 1; j < Math.min(i + 10, this.particles.length); j++) {
                         const p1 = this.particles[i];
                         const p2 = this.particles[j];
                         const dx = p1.x - p2.x;
@@ -2616,6 +2594,7 @@
                         }
                     }
                 }
+                }
                 
                 // Actualizar posiciones con damping fuerte
                 for (let i = 0; i < this.particles.length; i++) {
@@ -2627,10 +2606,10 @@
                     particle.x += particle.vx;
                     particle.y += particle.vy;
                     
-                    // Ruido Perlin simple para oscilación natural
-                    const noise = 0.15;
-                    particle.x += Math.sin(this.time * 0.5 + i * 0.02) * noise;
-                    particle.y += Math.cos(this.time * 0.5 + i * 0.025) * noise;
+                    // Ruido Perlin simple para oscilación natural (optimizado)
+                    const noise = 0.1;
+                    particle.x += Math.sin(this.time * 0.3 + i * 0.02) * noise;
+                    particle.y += Math.cos(this.time * 0.3 + i * 0.025) * noise;
                     
                     // Limites suaves
                     const margin = 15;
@@ -2656,10 +2635,6 @@
             draw() {
                 // Limpiar completamente el canvas sin rastros
                 this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-                
-                // Fondo suave oscuro (opcional, muy sutil)
-                this.ctx.fillStyle = 'rgba(15, 20, 25, 0.02)';
-                this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
                 
                 // Dibujar partículas con diseño mejorado
                 for (let particle of this.particles) {
@@ -2699,23 +2674,25 @@
                     this.ctx.fill();
                 }
                 
-                // Conexiones entre partículas cercanas (líneas mejoradas)
-                for (let i = 0; i < this.particles.length; i++) {
-                    const p1 = this.particles[i];
-                    for (let j = i + 1; j < Math.min(i + 15, this.particles.length); j++) {
-                        const p2 = this.particles[j];
-                        const dx = p1.x - p2.x;
-                        const dy = p1.y - p2.y;
-                        const dist = Math.sqrt(dx * dx + dy * dy);
-                        
-                        if (dist < 45) {
-                            const opacity = (1 - dist / 45) * 0.2;
-                            this.ctx.strokeStyle = `rgba(255, 200, 100, ${opacity})`;
-                            this.ctx.lineWidth = 0.6;
-                            this.ctx.beginPath();
-                            this.ctx.moveTo(p1.x, p1.y);
-                            this.ctx.lineTo(p2.x, p2.y);
-                            this.ctx.stroke();
+                // Conexiones entre partículas cercanas (optimizadas)
+                if (this.time % 2 === 0) {
+                    for (let i = 0; i < this.particles.length; i++) {
+                        const p1 = this.particles[i];
+                        for (let j = i + 1; j < Math.min(i + 8, this.particles.length); j++) {
+                            const p2 = this.particles[j];
+                            const dx = p1.x - p2.x;
+                            const dy = p1.y - p2.y;
+                            const dist = Math.sqrt(dx * dx + dy * dy);
+                            
+                            if (dist < 35) {
+                                const opacity = (1 - dist / 35) * 0.15;
+                                this.ctx.strokeStyle = `rgba(255, 200, 100, ${opacity})`;
+                                this.ctx.lineWidth = 0.5;
+                                this.ctx.beginPath();
+                                this.ctx.moveTo(p1.x, p1.y);
+                                this.ctx.lineTo(p2.x, p2.y);
+                                this.ctx.stroke();
+                            }
                         }
                     }
                 }

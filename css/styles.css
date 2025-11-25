@@ -79,7 +79,7 @@
       width: 160%;
       height: 160%;
       background: radial-gradient(circle at center, rgba(0, 0, 0, 0.03), transparent 80%);
-      animation: ambientGlow 20s linear infinite;
+      animation: ambientGlow 40s linear infinite;
       z-index: -1;
       filter: blur(60px);
     }
@@ -297,7 +297,7 @@
       z-index: 1;
       filter: brightness(1.05) contrast(1.05);
       transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
-      animation: float 5s ease-in-out infinite;
+      animation: float 8s ease-in-out infinite;
     }
 
     header img:first-of-type {
@@ -366,7 +366,7 @@
       width: 200%;
       height: 200%;
       background: radial-gradient(circle, rgba(255, 255, 255, 0.07), transparent 70%);
-      animation: rotateBackground 30s linear infinite;
+      animation: rotateBackground 60s linear infinite;
       z-index: 0;
       pointer-events: none;
       filter: blur(80px);
@@ -700,7 +700,7 @@
         inset 0 1px 0 rgba(212, 175, 55, 0.15),
         inset 0 -1px 0 rgba(0, 0, 0, 0.2);
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      animation: glowingBackground 8s infinite alternate;
+      animation: glowingBackground 12s infinite alternate;
     }
 
     .tendencias:hover {
