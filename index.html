@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>U N R C</title>
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
 
     <style>
         /* ========== GOOGLE ANTIGRAVITY STYLE CON A.L.M.A ========== */
-        
+
         :root {
             --white: #FFFFFF;
             --light-gray-1: #F8F9FC;
@@ -45,14 +47,14 @@
             --particle-blue: #6366F1;
             --particle-blue-light: #818CF8;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         body {
             background: linear-gradient(180deg, var(--white) 0%, var(--light-gray-1) 100%);
             color: var(--text-primary);
@@ -61,7 +63,7 @@
             overflow-x: hidden;
             min-height: 100vh;
         }
-        
+
         /* Header con navegación limpia */
         header {
             position: fixed;
@@ -100,20 +102,62 @@
             box-shadow: 0 0 12px rgba(220, 38, 38, 0.6), 0 0 24px rgba(212, 175, 55, 0.3);
         }
 
-        .particle:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
-        .particle:nth-child(2) { left: 20%; top: 50%; animation-delay: 1s; }
-        .particle:nth-child(3) { left: 30%; top: 30%; animation-delay: 2s; }
-        .particle:nth-child(4) { left: 60%; top: 60%; animation-delay: 1.5s; }
-        .particle:nth-child(5) { left: 70%; top: 20%; animation-delay: 2.5s; }
-        .particle:nth-child(6) { left: 85%; top: 50%; animation-delay: 0.5s; }
-        .particle:nth-child(7) { left: 15%; top: 70%; animation-delay: 3s; }
-        .particle:nth-child(8) { left: 50%; top: 70%; animation-delay: 1.8s; }
+        .particle:nth-child(1) {
+            left: 10%;
+            top: 20%;
+            animation-delay: 0s;
+        }
+
+        .particle:nth-child(2) {
+            left: 20%;
+            top: 50%;
+            animation-delay: 1s;
+        }
+
+        .particle:nth-child(3) {
+            left: 30%;
+            top: 30%;
+            animation-delay: 2s;
+        }
+
+        .particle:nth-child(4) {
+            left: 60%;
+            top: 60%;
+            animation-delay: 1.5s;
+        }
+
+        .particle:nth-child(5) {
+            left: 70%;
+            top: 20%;
+            animation-delay: 2.5s;
+        }
+
+        .particle:nth-child(6) {
+            left: 85%;
+            top: 50%;
+            animation-delay: 0.5s;
+        }
+
+        .particle:nth-child(7) {
+            left: 15%;
+            top: 70%;
+            animation-delay: 3s;
+        }
+
+        .particle:nth-child(8) {
+            left: 50%;
+            top: 70%;
+            animation-delay: 1.8s;
+        }
 
         @keyframes float {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0px);
                 opacity: 0.15;
             }
+
             50% {
                 transform: translateY(-20px);
                 opacity: 0.3;
@@ -124,7 +168,7 @@
             background: rgba(26, 26, 26, 0.95);
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
         }
-        
+
         .header-content {
             max-width: 1400px;
             margin: 0 auto;
@@ -134,25 +178,25 @@
             position: relative;
             z-index: 2;
         }
-        
+
         .logo {
             font-size: 24px;
             font-weight: 500;
             color: var(--text-primary);
             letter-spacing: -0.5px;
         }
-        
+
         .logo span {
             color: var(--accent-red);
             font-weight: 700;
         }
-        
+
         nav.menu ul {
             display: flex;
             list-style: none;
             gap: 32px;
         }
-        
+
         nav.menu a {
             color: var(--text-secondary);
             text-decoration: none;
@@ -161,7 +205,7 @@
             transition: color 0.3s ease;
             letter-spacing: 0.25px;
         }
-        
+
         nav.menu a:hover {
             color: var(--text-primary);
         }
@@ -194,12 +238,12 @@
         .dark-mode-btn:active i {
             transform: rotate(20deg);
         }
-        
+
         /* Main content */
         main {
             margin-top: 64px;
         }
-        
+
         /* Forum Header Section */
         .forum-header {
             display: flex;
@@ -214,7 +258,7 @@
             background: linear-gradient(135deg, var(--white) 0%, var(--light-gray-1) 50%, var(--light-gray-2) 100%);
             border-bottom: 2px solid var(--accent-red);
         }
-        
+
         .forum-title {
             font-size: clamp(32px, 5vw, 64px);
             font-weight: 600;
@@ -224,7 +268,7 @@
             margin-bottom: 16px;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
-        
+
         .forum-title span {
             background: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-gold) 100%);
             -webkit-background-clip: text;
@@ -232,7 +276,72 @@
             background-clip: text;
             font-weight: 700;
         }
-        
+
+        .forum-subtitle {
+            font-size: clamp(16px, 2.5vw, 20px);
+            color: var(--text-secondary);
+            max-width: 700px;
+            font-weight: 300;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* SECCIÓN MODELO 3D RIZOMA */
+        .rizoma-3d-section {
+            padding: 80px 24px;
+            background: linear-gradient(180deg, var(--light-gray-1) 0%, var(--white) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .rizoma-3d-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .rizoma-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            background: var(--white);
+            border: 2px solid var(--gray-border);
+            transition: all 0.3s ease;
+        }
+
+        .rizoma-container:hover {
+            box-shadow: 0 15px 50px rgba(212, 175, 55, 0.15);
+            border-color: var(--accent-gold);
+        }
+
+        .rizoma-iframe {
+            width: 100%;
+            height: 800px;
+            border: none;
+            display: block;
+            background: var(--white);
+        }
+
+        @media (max-width: 768px) {
+            .rizoma-3d-section {
+                padding: 60px 16px;
+            }
+
+            .rizoma-iframe {
+                height: 500px;
+            }
+        }
+
         .forum-subtitle {
             font-size: 18px;
             color: var(--text-secondary);
@@ -240,14 +349,14 @@
             line-height: 1.6;
             font-weight: 400;
         }
-        
+
         /* Forum Container */
         .forum-container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 40px 24px;
         }
-        
+
         /* New Post Section */
         .new-post-section {
             background: var(--white);
@@ -257,17 +366,17 @@
             margin-bottom: 40px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
         }
-        
+
         .new-post-section h3 {
             font-size: 18px;
             margin-bottom: 20px;
             color: var(--text-primary);
         }
-        
+
         .form-group {
             margin-bottom: 16px;
         }
-        
+
         .form-group label {
             display: block;
             margin-bottom: 8px;
@@ -275,7 +384,7 @@
             color: var(--text-primary);
             font-size: 14px;
         }
-        
+
         .form-group input,
         .form-group textarea {
             width: 100%;
@@ -287,19 +396,19 @@
             color: var(--text-primary);
             transition: all 0.3s ease;
         }
-        
+
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
             border-color: var(--accent-red);
             box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
         }
-        
+
         .form-group textarea {
             resize: vertical;
             min-height: 100px;
         }
-        
+
         .btn-submit {
             padding: 12px 28px;
             background: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-gold) 100%);
@@ -312,23 +421,23 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
         }
-        
+
         .btn-submit:hover {
             box-shadow: 0 8px 24px rgba(220, 38, 38, 0.25);
             transform: translateY(-2px);
         }
-        
+
         .btn-submit:active {
             transform: translateY(0);
         }
-        
+
         /* Posts List */
         .posts-list {
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
-        
+
         .post {
             background: var(--white);
             border: 1px solid var(--gray-border);
@@ -337,44 +446,44 @@
             transition: all 0.3s ease;
             animation: slideUpFade 0.5s ease-out;
         }
-        
+
         .post:hover {
             border-color: var(--accent-red);
             box-shadow: 0 8px 24px rgba(220, 38, 38, 0.1);
         }
-        
+
         .post-header {
             display: flex;
             justify-content: space-between;
             align-items: start;
             margin-bottom: 12px;
         }
-        
+
         .post-author {
             font-weight: 600;
             color: var(--accent-red);
             font-size: 15px;
         }
-        
+
         .post-time {
             font-size: 13px;
             color: var(--text-secondary);
         }
-        
+
         .post-content {
             color: var(--text-primary);
             line-height: 1.6;
             margin-bottom: 16px;
             font-size: 15px;
         }
-        
+
         .post-actions {
             display: flex;
             gap: 16px;
             border-top: 1px solid var(--gray-border);
             padding-top: 12px;
         }
-        
+
         .post-action-btn {
             background: none;
             border: none;
@@ -388,18 +497,18 @@
             gap: 6px;
             padding: 0;
         }
-        
+
         .post-action-btn:hover {
             color: var(--accent-red);
         }
-        
+
         /* Responses/Comments */
         .responses {
             margin-top: 16px;
             padding-top: 16px;
             border-top: 1px solid var(--light-gray-2);
         }
-        
+
         .response {
             background: var(--light-gray-1);
             border-left: 3px solid var(--accent-red);
@@ -408,26 +517,26 @@
             border-radius: 6px;
             font-size: 14px;
         }
-        
+
         .response-author {
             font-weight: 600;
             color: var(--accent-red);
             font-size: 13px;
             margin-bottom: 6px;
         }
-        
+
         .response-content {
             color: var(--text-primary);
             line-height: 1.5;
         }
-        
+
         .response-actions {
             display: flex;
             gap: 12px;
             margin-top: 8px;
             font-size: 12px;
         }
-        
+
         .response-action {
             background: none;
             border: none;
@@ -436,11 +545,11 @@
             transition: color 0.3s ease;
             padding: 0;
         }
-        
+
         .response-action:hover {
             color: var(--accent-red);
         }
-        
+
         /* Reply Form */
         .reply-form {
             margin-top: 16px;
@@ -449,11 +558,11 @@
             border-radius: 8px;
             display: none;
         }
-        
+
         .reply-form.active {
             display: block;
         }
-        
+
         .reply-form textarea {
             width: 100%;
             padding: 10px 12px;
@@ -466,12 +575,12 @@
             min-height: 60px;
             margin-bottom: 8px;
         }
-        
+
         .reply-form-actions {
             display: flex;
             gap: 8px;
         }
-        
+
         .reply-form-btn {
             padding: 8px 16px;
             background: var(--accent-red);
@@ -483,40 +592,40 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-        
+
         .reply-form-btn:hover {
             background: #b91c1c;
         }
-        
+
         .reply-form-btn.cancel {
             background: var(--gray-border);
             color: var(--text-primary);
         }
-        
+
         .reply-form-btn.cancel:hover {
             background: var(--light-gray-3);
         }
-        
+
         /* Empty State */
         .empty-state {
             text-align: center;
             padding: 60px 24px;
             color: var(--text-secondary);
         }
-        
+
         .empty-state-icon {
             font-size: 48px;
             margin-bottom: 16px;
             color: var(--accent-red);
         }
-        
+
         .empty-state-title {
             font-size: 18px;
             font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 8px;
         }
-        
+
         /* Footer */
         footer {
             background: var(--light-gray-1);
@@ -525,19 +634,20 @@
             text-align: center;
             margin-top: 60px;
         }
-        
+
         footer p {
             color: var(--text-secondary);
             font-size: 13px;
             letter-spacing: 0.3px;
         }
-        
+
         /* Animaciones */
         @keyframes slideUpFade {
             from {
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -549,6 +659,7 @@
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
@@ -559,6 +670,7 @@
                 opacity: 0;
                 transform: scale(0.95);
             }
+
             to {
                 opacity: 1;
                 transform: scale(1);
@@ -569,13 +681,14 @@
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
         }
 
         /* ========== ESTILOS MEJORADOS PROFESIONALES ========== */
-        
+
         /* Mejorar Grid de Stats/Cards */
         .stats-grid {
             display: grid;
@@ -583,7 +696,7 @@
             gap: 28px;
             margin-bottom: 40px;
         }
-        
+
         .stats-grid .stat-card {
             padding: 40px 32px;
             background: var(--white);
@@ -594,7 +707,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .stats-grid .stat-card::before {
             content: '';
             position: absolute;
@@ -606,17 +719,17 @@
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-        
+
         .stats-grid .stat-card:hover {
             border-color: var(--accent-red);
             box-shadow: 0 20px 50px rgba(220, 38, 38, 0.15);
             transform: translateY(-10px);
         }
-        
+
         .stats-grid .stat-card:hover::before {
             opacity: 1;
         }
-        
+
         .stats-grid .stat-number {
             font-size: 40px;
             font-weight: 800;
@@ -624,14 +737,14 @@
             margin-bottom: 12px;
             letter-spacing: -1px;
         }
-        
+
         .stats-grid .stat-label {
             font-size: 15px;
             color: var(--text-secondary);
             font-weight: 600;
             line-height: 1.5;
         }
-        
+
         /* Mejorar Post Cards */
         .post {
             background: var(--white);
@@ -643,7 +756,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .post::before {
             content: '';
             position: absolute;
@@ -655,37 +768,37 @@
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-        
+
         .post:hover {
             border-color: var(--accent-red);
             box-shadow: 0 16px 40px rgba(220, 38, 38, 0.12);
             transform: translateY(-6px);
         }
-        
+
         .post:hover::before {
             opacity: 1;
         }
-        
+
         .post-author {
             font-weight: 700;
             color: var(--accent-red);
             font-size: 16px;
             letter-spacing: -0.3px;
         }
-        
+
         .post-time {
             font-size: 13px;
             color: var(--text-secondary);
             font-weight: 500;
         }
-        
+
         .post-content {
             color: var(--text-primary);
             line-height: 1.7;
             margin-bottom: 16px;
             font-size: 15px;
         }
-        
+
         /* Mejorar New Post Section */
         .new-post-section {
             background: linear-gradient(135deg, var(--white) 0%, var(--light-gray-1) 100%);
@@ -695,7 +808,7 @@
             margin-bottom: 40px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
         }
-        
+
         .new-post-section h3 {
             font-size: 20px;
             font-weight: 700;
@@ -703,7 +816,7 @@
             color: var(--text-primary);
             letter-spacing: -0.5px;
         }
-        
+
         .form-group input,
         .form-group textarea {
             border: 2px solid var(--gray-border);
@@ -711,26 +824,26 @@
             background: var(--white);
             font-weight: 500;
         }
-        
+
         .form-group input:focus,
         .form-group textarea:focus {
             border-color: var(--accent-red);
             box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.1);
             background: var(--white);
         }
-        
+
         .btn-submit {
             font-weight: 700;
             letter-spacing: 0.5px;
             transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
             box-shadow: 0 6px 20px rgba(220, 38, 38, 0.2);
         }
-        
+
         .btn-submit:hover {
             box-shadow: 0 12px 32px rgba(220, 38, 38, 0.3);
             transform: translateY(-3px);
         }
-        
+
         /* Mejorar Response Cards */
         .response {
             background: linear-gradient(135deg, var(--light-gray-1) 0%, var(--light-gray-2) 100%);
@@ -741,12 +854,12 @@
             font-size: 14px;
             transition: all 0.3s ease;
         }
-        
+
         .response:hover {
             box-shadow: 0 4px 12px rgba(220, 38, 38, 0.08);
             transform: translateX(4px);
         }
-        
+
         .response-author {
             font-weight: 700;
             color: var(--accent-red);
@@ -754,132 +867,131 @@
             margin-bottom: 6px;
             letter-spacing: -0.3px;
         }
-        
+
         .response-content {
             color: var(--text-primary);
             line-height: 1.6;
             font-weight: 500;
         }
-        
+
         /* Mejorar Forum Container */
         .forum-container {
             max-width: 900px;
             margin: 0 auto;
             padding: 60px 24px;
         }
-        
+
         /* Mejorar Content Section */
         .content-section {
             max-width: 1200px;
             margin: 0 auto;
             padding: 80px 24px;
-            background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(220,38,38,0.02) 100%);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(220, 38, 38, 0.02) 100%);
         }
-        
+
         .content-section p {
             font-weight: 500;
             color: var(--text-primary);
         }
-        
+
         /* Mejorar títulos en contenido */
         .content-section h2 {
             font-weight: 700;
             letter-spacing: -0.5px;
         }
-        
+
         /* Estilos para imágenes en cards */
         .stat-card img {
             transition: all 0.4s ease;
             filter: brightness(1);
         }
-        
+
         .stat-card:hover img {
             filter: brightness(1.05) saturate(1.1);
             transform: scale(1.02);
         }
-        
+
         /* Responsive */
         @media (max-width: 768px) {
             header {
                 padding: 12px 16px;
             }
-            
+
             .header-content {
                 flex-direction: column;
                 gap: 16px;
             }
-            
+
             nav.menu ul {
                 gap: 16px;
                 font-size: 12px;
             }
-            
+
             .forum-header {
                 padding: 60px 16px 30px;
             }
-            
+
             .forum-container {
                 padding: 20px 16px;
             }
-            
+
             .new-post-section {
                 padding: 24px 16px;
             }
-            
+
             .post {
                 padding: 16px;
             }
         }
-        
+
         @media (max-width: 480px) {
             header {
                 padding: 10px 12px;
             }
-            
+
             .logo {
                 font-size: 18px;
             }
-            
+
             nav.menu ul {
                 gap: 8px;
                 font-size: 11px;
             }
-            
+
             .forum-header {
                 padding: 40px 12px 20px;
             }
-            
+
             .forum-title {
                 font-size: clamp(24px, 5vw, 40px);
             }
-            
+
             .forum-container {
                 padding: 16px 12px;
             }
-            
+
             .new-post-section {
                 padding: 16px 12px;
             }
-            
+
             .post {
                 padding: 12px;
             }
-            
+
             .post-header {
                 flex-direction: column;
                 gap: 8px;
             }
-            
+
             .post-actions {
                 flex-wrap: wrap;
             }
-            
+
             .response {
                 padding: 12px;
                 font-size: 13px;
             }
         }
-
     </style>
 </head>
 
@@ -901,7 +1013,7 @@
                 <ul>
                     <li><a href="index.html" class="active">Principal</a></li>
                     <li><a href="foro.html">A.L.M.A</a></li>
-                     <li><a href="antigravity.html">Mentor App</a></li>
+                    <li><a href="antigravity.html">Mentor App</a></li>
                 </ul>
             </nav>
             <button id="dark-mode-toggle" class="dark-mode-btn" title="Alternar modo oscuro">
@@ -914,125 +1026,162 @@
         <!-- Forum Header -->
         <section class="forum-header">
             <h1 class="forum-title">Análisis Deserción Escolar <span>UNRC</span></h1>
-            <p class="forum-subtitle">Una plataforma dedicada a visualizar y comprender las causas, consecuencias y soluciones de la deserción escolar a través de datos y análisis.</p>
+            <p class="forum-subtitle">Una plataforma dedicada a visualizar y comprender las causas, consecuencias y
+                soluciones de la deserción escolar a través de datos y análisis.</p>
         </section>
 
         <!-- SECCIÓN INTRODUCCIÓN AL PROBLEMA -->
         <section class="content-section">
             <h2 class="section-title">¿Qué es la Deserción <span>Escolar?</span></h2>
-            <div style="max-width: 900px; margin: 0 auto; background: var(--white); padding: 40px; border-radius: 12px; border: 1px solid var(--gray-border); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);">
+            <div
+                style="max-width: 900px; margin: 0 auto; background: var(--white); padding: 40px; border-radius: 12px; border: 1px solid var(--gray-border); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);">
                 <p style="font-size: 17px; line-height: 1.8; color: var(--text-primary); font-weight: 500; margin: 0;">
-                    La deserción escolar es el abandono del sistema educativo por parte de los estudiantes, antes de finalizar el grado o nivel que estaban cursando. Este fenómeno tiene profundas implicaciones tanto para el individuo como para la sociedad, limitando oportunidades de desarrollo y perpetuando ciclos de pobreza.
+                    La deserción escolar es el abandono del sistema educativo por parte de los estudiantes, antes de
+                    finalizar el grado o nivel que estaban cursando. Este fenómeno tiene profundas implicaciones tanto
+                    para el individuo como para la sociedad, limitando oportunidades de desarrollo y perpetuando ciclos
+                    de pobreza.
                 </p>
             </div>
         </section>
 
         <!-- SECCIÓN DE FACTORES Y CONSECUENCIAS -->
         <section class="content-section">
-            <h2 style="text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 50px; color: var(--text-primary); letter-spacing: -0.5px;">Factores y <span style="color: var(--accent-red); font-weight: 800;">Consecuencias</span></h2>
-            
+            <h2
+                style="text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 50px; color: var(--text-primary); letter-spacing: -0.5px;">
+                Factores y <span style="color: var(--accent-red); font-weight: 800;">Consecuencias</span></h2>
+
             <div class="stats-grid">
                 <div class="stat-card">
                     <div style="font-size: 48px; margin-bottom: 16px;">📊</div>
-                    <h3 style="font-size: 20px; margin-bottom: 12px; font-weight: 700; color: var(--text-primary);">Causas Principales</h3>
+                    <h3 style="font-size: 20px; margin-bottom: 12px; font-weight: 700; color: var(--text-primary);">
+                        Causas Principales</h3>
                     <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin: 0;">
-                        Factores socioeconómicos, problemas familiares, falta de interés y bajo rendimiento académico son algunas de las causas más comunes que llevan a los jóvenes a abandonar sus estudios.
+                        Factores socioeconómicos, problemas familiares, falta de interés y bajo rendimiento académico
+                        son algunas de las causas más comunes que llevan a los jóvenes a abandonar sus estudios.
                     </p>
                 </div>
                 <div class="stat-card">
                     <div style="font-size: 48px; margin-bottom: 16px;">📈</div>
-                    <h3 style="font-size: 20px; margin-bottom: 12px; font-weight: 700; color: var(--text-primary);">Impacto a Largo Plazo</h3>
+                    <h3 style="font-size: 20px; margin-bottom: 12px; font-weight: 700; color: var(--text-primary);">
+                        Impacto a Largo Plazo</h3>
                     <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin: 0;">
-                        Las consecuencias incluyen menores ingresos, mayores tasas de desempleo, problemas de salud y una participación cívica reducida, afectando la calidad de vida y el desarrollo social.
+                        Las consecuencias incluyen menores ingresos, mayores tasas de desempleo, problemas de salud y
+                        una participación cívica reducida, afectando la calidad de vida y el desarrollo social.
                     </p>
                 </div>
                 <div class="stat-card">
                     <div style="font-size: 48px; margin-bottom: 16px;">💡</div>
-                    <h3 style="font-size: 20px; margin-bottom: 12px; font-weight: 700; color: var(--text-primary);">Posibles Soluciones</h3>
+                    <h3 style="font-size: 20px; margin-bottom: 12px; font-weight: 700; color: var(--text-primary);">
+                        Posibles Soluciones</h3>
                     <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin: 0;">
-                        Implementar programas de tutoría, becas, apoyo psicológico y mejorar la relevancia de los planes de estudio son estrategias clave para mitigar la deserción escolar.
+                        Implementar programas de tutoría, becas, apoyo psicológico y mejorar la relevancia de los planes
+                        de estudio son estrategias clave para mitigar la deserción escolar.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN DE ESTADÍSTICAS DESTACADAS -->
-        <section class="content-section">
-            <h2 class="section-title">Estadísticas <span>Destacadas</span></h2>
-            
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">60%</div>
-                    <div class="stat-label">Tasa Nacional de Abandono</div>
-                </div>
-                
-                <div class="stat-card">
-                    <div class="stat-number">3x</div>
-                    <div class="stat-label">Mayor Riesgo Rural vs Urbano</div>
-                </div>
-                
-                <div class="stat-card">
-                    <div class="stat-number">25%</div>
-                    <div class="stat-label">Reducción con Becas</div>
-                </div>
-                
-                <div class="stat-card">
-                    <div class="stat-number">64%</div>
-                    <div class="stat-label">Conoce Casos de Abandono</div>
-                </div>
+        <!-- SECCIÓN MODELO 3D RIZOMA (MOVIDA AQUÍ) -->
+        <section class="rizoma-3d-section">
+            <div class="rizoma-container">
+                <iframe src="rizoma_3d_modo_noche.html" class="rizoma-iframe" title="Modelo 3D Rizoma"></iframe>
             </div>
         </section>
 
         <!-- GALERÍA DE GRÁFICAS -->
         <section class="content-section">
-            <h2 style="text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 50px; color: var(--text-primary); letter-spacing: -0.5px;">Gráficas y <span style="color: var(--accent-red); font-weight: 800;">Visualizaciones</span></h2>
-            
+            <h2
+                style="text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 50px; color: var(--text-primary); letter-spacing: -0.5px;">
+                Gráficas y <span style="color: var(--accent-red); font-weight: 800;">Visualizaciones</span></h2>
+
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px;">
-                <div class="stat-card" style="padding: 0; overflow: hidden; cursor: pointer; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);" onclick="openModal('imagenes/graf_1.jpeg', 'Indica tu género')" onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 16px 40px rgba(220, 38, 38, 0.2)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 24px rgba(0, 0, 0, 0.12)'">
-                    <img src="imagenes/graf_1.jpeg" alt="Gráfica 1" style="width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.4s ease;">
+                <div class="stat-card"
+                    style="padding: 0; overflow: hidden; cursor: pointer; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);"
+                    onclick="openModal('imagenes/graf_1.jpeg', 'Indica tu género')"
+                    onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 16px 40px rgba(220, 38, 38, 0.2)'"
+                    onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 24px rgba(0, 0, 0, 0.12)'">
+                    <img src="imagenes/graf_1.jpeg" alt="Gráfica 1"
+                        style="width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.4s ease;">
                     <div style="padding: 24px; background: var(--white);">
-                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">Indica tu género</h4>
-                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic para ver más detalles</p>
+                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">
+                            Indica tu género</h4>
+                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic
+                            para ver más detalles</p>
                     </div>
                 </div>
-                
-                <div class="stat-card" style="padding: 0; overflow: hidden; cursor: pointer; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);" onclick="openModal('imagenes/graf_2.jpeg', 'Rango de edad')" onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 16px 40px rgba(220, 38, 38, 0.2)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 24px rgba(0, 0, 0, 0.12)'">
-                    <img src="imagenes/graf_2.jpeg" alt="Gráfica 2" style="width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.4s ease;">
+
+                <div class="stat-card"
+                    style="padding: 0; overflow: hidden; cursor: pointer; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);"
+                    onclick="openModal('imagenes/graf_2.jpeg', 'Rango de edad')"
+                    onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 16px 40px rgba(220, 38, 38, 0.2)'"
+                    onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 24px rgba(0, 0, 0, 0.12)'">
+                    <img src="imagenes/graf_2.jpeg" alt="Gráfica 2"
+                        style="width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.4s ease;">
                     <div style="padding: 24px; background: var(--white);">
-                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">Rango de edad</h4>
-                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic para ver más detalles</p>
+                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">
+                            Rango de edad</h4>
+                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic
+                            para ver más detalles</p>
                     </div>
                 </div>
-                
-                <div class="stat-card" style="padding: 0; overflow: hidden; cursor: pointer; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);" onclick="openModal('imagenes/graf_6.jpeg', 'Apoyo económico')" onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 16px 40px rgba(220, 38, 38, 0.2)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 24px rgba(0, 0, 0, 0.12)'">
-                    <img src="imagenes/graf_6.jpeg" alt="Gráfica 3" style="width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.4s ease;">
+
+                <div class="stat-card"
+                    style="padding: 0; overflow: hidden; cursor: pointer; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);"
+                    onclick="openModal('imagenes/graf_6.jpeg', 'Apoyo económico')"
+                    onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 16px 40px rgba(220, 38, 38, 0.2)'"
+                    onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 24px rgba(0, 0, 0, 0.12)'">
+                    <img src="imagenes/graf_6.jpeg" alt="Gráfica 3"
+                        style="width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.4s ease;">
                     <div style="padding: 24px; background: var(--white);">
-                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">Apoyo económico</h4>
-                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic para ver más detalles</p>
+                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">
+                            Apoyo económico</h4>
+                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic
+                            para ver más detalles</p>
                     </div>
                 </div>
-                
-                <div class="stat-card" style="padding: 0; overflow: hidden; cursor: pointer; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);" onclick="openModal('imagenes/graf_3.jpeg', 'Abandono de universidad')" onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 16px 40px rgba(220, 38, 38, 0.2)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 24px rgba(0, 0, 0, 0.12)'">
-                    <img src="imagenes/graf_3.jpeg" alt="Gráfica 4" style="width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.4s ease;">
+
+                <div class="stat-card"
+                    style="padding: 0; overflow: hidden; cursor: pointer; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);"
+                    onclick="openModal('imagenes/graf_3.jpeg', 'Abandono de universidad')"
+                    onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 16px 40px rgba(220, 38, 38, 0.2)'"
+                    onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 24px rgba(0, 0, 0, 0.12)'">
+                    <img src="imagenes/graf_3.jpeg" alt="Gráfica 4"
+                        style="width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.4s ease;">
                     <div style="padding: 24px; background: var(--white);">
-                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">Abandono de universidad</h4>
-                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic para ver más detalles</p>
+                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">
+                            Abandono de universidad</h4>
+                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic
+                            para ver más detalles</p>
                     </div>
                 </div>
-                
-                <div class="stat-card" style="padding: 0; overflow: hidden; cursor: pointer; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);" onclick="openModal('imagenes/graf_4.jpeg', 'Apoyo académico')" onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 16px 40px rgba(220, 38, 38, 0.2)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 24px rgba(0, 0, 0, 0.12)'">
-                    <img src="imagenes/graf_4.jpeg" alt="Gráfica 5" style="width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.4s ease;">
+
+                <div class="stat-card"
+                    style="padding: 0; overflow: hidden; cursor: pointer; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);"
+                    onclick="openModal('imagenes/graf_4.jpeg', 'Apoyo académico')"
+                    onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 16px 40px rgba(220, 38, 38, 0.2)'"
+                    onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 24px rgba(0, 0, 0, 0.12)'">
+                    <img src="imagenes/graf_4.jpeg" alt="Gráfica 5"
+                        style="width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.4s ease;">
                     <div style="padding: 24px; background: var(--white);">
-                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">Apoyo académico</h4>
-                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic para ver más detalles</p>
+                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">
+                            Apoyo académico</h4>
+                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic
+                            para ver más detalles</p>
                     </div>
                 </div>
-                
-                <div class="stat-card" style="padding: 0; overflow: hidden; cursor: pointer; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);" onclick="openModal('imagenes/graf_5.jpeg', 'Causas de abandono')" onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 16px 40px rgba(220, 38, 38, 0.2)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 24px rgba(0, 0, 0, 0.12)'">
-                    <img src="imagenes/graf_5.jpeg" alt="Gráfica 6" style="width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.4s ease;">
+
+                <div class="stat-card"
+                    style="padding: 0; overflow: hidden; cursor: pointer; border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);"
+                    onclick="openModal('imagenes/graf_5.jpeg', 'Causas de abandono')"
+                    onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 16px 40px rgba(220, 38, 38, 0.2)'"
+                    onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 24px rgba(0, 0, 0, 0.12)'">
+                    <img src="imagenes/graf_5.jpeg" alt="Gráfica 6"
+                        style="width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.4s ease;">
                     <div style="padding: 24px; background: var(--white);">
-                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">Causas de abandono</h4>
-                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic para ver más detalles</p>
+                        <h4 style="font-size: 16px; margin: 0 0 8px 0; font-weight: 700; color: var(--text-primary);">
+                            Causas de abandono</h4>
+                        <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Haz clic
+                            para ver más detalles</p>
                     </div>
                 </div>
             </div>
@@ -1050,11 +1199,13 @@
                     </div>
                     <div class="form-group">
                         <label for="post-title">Asunto</label>
-                        <input type="text" id="post-title" name="title" placeholder="¿Cuál es tu pregunta o comentario?" required>
+                        <input type="text" id="post-title" name="title" placeholder="¿Cuál es tu pregunta o comentario?"
+                            required>
                     </div>
                     <div class="form-group">
                         <label for="post-content">Mensaje</label>
-                        <textarea id="post-content" name="content" placeholder="Cuéntanos más detalles..." required></textarea>
+                        <textarea id="post-content" name="content" placeholder="Cuéntanos más detalles..."
+                            required></textarea>
                     </div>
                     <button type="submit" class="btn-submit">Publicar</button>
                 </form>
@@ -1072,15 +1223,26 @@
     </main>
 
     <!-- MODAL PARA VER GRÁFICAS GRANDES -->
-    <div id="imageModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.85); z-index: 1000; justify-content: center; align-items: center; animation: fadeInModal 0.3s ease-out;">
-        <div style="position: relative; background: white; border-radius: 24px; max-width: 90%; max-height: 90vh; padding: 0; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(220, 38, 38, 0.15); display: flex; flex-direction: column; animation: scaleInModal 0.4s cubic-bezier(0.23, 1, 0.32, 1);">
-            <button onclick="closeModal()" style="position: absolute; top: 20px; right: 20px; background: var(--accent-red); color: white; border: none; width: 48px; height: 48px; border-radius: 50%; cursor: pointer; font-size: 26px; display: flex; align-items: center; justify-content: center; z-index: 1001; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);" onmouseover="this.style.background='#b91c1c'; this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 20px rgba(220, 38, 38, 0.5)'" onmouseout="this.style.background='var(--accent-red)'; this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(220, 38, 38, 0.3)'">✕</button>
-            
-            <img id="modalImage" src="" alt="Gráfica ampliada" style="max-width: 100%; max-height: 70vh; object-fit: contain; border-radius: 24px 24px 0 0; animation: fadeInImage 0.5s ease-out;">
-            
-            <div style="padding: 32px; background: linear-gradient(135deg, #ffffff 0%, #f8f9fc 100%); border-radius: 0 0 24px 24px; border-top: 2px solid rgba(220, 38, 38, 0.1);">
-                <h3 id="modalTitle" style="font-size: 24px; font-weight: 700; color: var(--text-primary); margin: 0; text-align: center; letter-spacing: -0.5px;"></h3>
-                <p style="font-size: 14px; color: var(--text-secondary); text-align: center; margin: 16px 0 0 0; line-height: 1.6; font-weight: 500;">Haz clic fuera o presiona ESC para cerrar</p>
+    <div id="imageModal"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.85); z-index: 1000; justify-content: center; align-items: center; animation: fadeInModal 0.3s ease-out;">
+        <div
+            style="position: relative; background: white; border-radius: 24px; max-width: 90%; max-height: 90vh; padding: 0; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(220, 38, 38, 0.15); display: flex; flex-direction: column; animation: scaleInModal 0.4s cubic-bezier(0.23, 1, 0.32, 1);">
+            <button onclick="closeModal()"
+                style="position: absolute; top: 20px; right: 20px; background: var(--accent-red); color: white; border: none; width: 48px; height: 48px; border-radius: 50%; cursor: pointer; font-size: 26px; display: flex; align-items: center; justify-content: center; z-index: 1001; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);"
+                onmouseover="this.style.background='#b91c1c'; this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 20px rgba(220, 38, 38, 0.5)'"
+                onmouseout="this.style.background='var(--accent-red)'; this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(220, 38, 38, 0.3)'">✕</button>
+
+            <img id="modalImage" src="" alt="Gráfica ampliada"
+                style="max-width: 100%; max-height: 70vh; object-fit: contain; border-radius: 24px 24px 0 0; animation: fadeInImage 0.5s ease-out;">
+
+            <div
+                style="padding: 32px; background: linear-gradient(135deg, #ffffff 0%, #f8f9fc 100%); border-radius: 0 0 24px 24px; border-top: 2px solid rgba(220, 38, 38, 0.1);">
+                <h3 id="modalTitle"
+                    style="font-size: 24px; font-weight: 700; color: var(--text-primary); margin: 0; text-align: center; letter-spacing: -0.5px;">
+                </h3>
+                <p
+                    style="font-size: 14px; color: var(--text-secondary); text-align: center; margin: 16px 0 0 0; line-height: 1.6; font-weight: 500;">
+                    Haz clic fuera o presiona ESC para cerrar</p>
             </div>
         </div>
     </div>
@@ -1091,32 +1253,32 @@
 
     <script>
         // ========== DARK MODE SYSTEM ==========
-        
+
         class DarkModeManager {
             constructor() {
                 this.toggleBtn = document.getElementById('dark-mode-toggle');
                 this.isDarkMode = localStorage.getItem('darkMode') === 'true';
-                
+
                 // Aplicar modo guardado al cargar
                 if (this.isDarkMode) {
                     this.enableDarkMode();
                 }
-                
+
                 // Event listener para el botón
                 this.toggleBtn.addEventListener('click', () => this.toggle());
             }
-            
+
             toggle() {
                 this.isDarkMode ? this.disableDarkMode() : this.enableDarkMode();
             }
-            
+
             enableDarkMode() {
                 document.documentElement.classList.add('dark-mode');
                 this.toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
                 localStorage.setItem('darkMode', 'true');
                 this.isDarkMode = true;
             }
-            
+
             disableDarkMode() {
                 document.documentElement.classList.remove('dark-mode');
                 this.toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
@@ -1124,38 +1286,38 @@
                 this.isDarkMode = false;
             }
         }
-        
+
         // Inicializar modo oscuro
         const darkModeManager = new DarkModeManager();
-        
+
         // ========== FORUM SYSTEM ==========
-        
+
         class ForumSystem {
             constructor() {
                 this.postForm = document.getElementById('post-form');
                 this.postsList = document.getElementById('posts-list');
                 this.posts = this.loadPosts();
-                
+
                 this.postForm.addEventListener('submit', (e) => this.handleNewPost(e));
                 this.renderPosts();
             }
-            
+
             loadPosts() {
                 const stored = localStorage.getItem('alma_forum_posts');
                 return stored ? JSON.parse(stored) : [];
             }
-            
+
             savePosts() {
                 localStorage.setItem('alma_forum_posts', JSON.stringify(this.posts));
             }
-            
+
             handleNewPost(e) {
                 e.preventDefault();
-                
+
                 const author = document.getElementById('post-author').value;
                 const title = document.getElementById('post-title').value;
                 const content = document.getElementById('post-content').value;
-                
+
                 const post = {
                     id: Date.now(),
                     author,
@@ -1164,13 +1326,13 @@
                     timestamp: new Date(),
                     responses: []
                 };
-                
+
                 this.posts.unshift(post);
                 this.savePosts();
                 this.postForm.reset();
                 this.renderPosts();
             }
-            
+
             deletePost(postId) {
                 if (confirm('¿Estás seguro de que deseas eliminar este post?')) {
                     this.posts = this.posts.filter(p => p.id !== postId);
@@ -1178,7 +1340,7 @@
                     this.renderPosts();
                 }
             }
-            
+
             addResponse(postId, content) {
                 const post = this.posts.find(p => p.id === postId);
                 if (post) {
@@ -1191,7 +1353,7 @@
                     this.renderPosts();
                 }
             }
-            
+
             deleteResponse(postId, responseId) {
                 if (confirm('¿Estás seguro de que deseas eliminar esta respuesta?')) {
                     const post = this.posts.find(p => p.id === postId);
@@ -1202,19 +1364,19 @@
                     }
                 }
             }
-            
+
             formatDate(date) {
                 const d = new Date(date);
                 const now = new Date();
                 const diff = now - d;
-                
+
                 if (diff < 60000) return 'Hace unos segundos';
                 if (diff < 3600000) return `Hace ${Math.floor(diff / 60000)} minutos`;
                 if (diff < 86400000) return `Hace ${Math.floor(diff / 3600000)} horas`;
-                
+
                 return d.toLocaleDateString('es-ES');
             }
-            
+
             renderPosts() {
                 if (this.posts.length === 0) {
                     this.postsList.innerHTML = `
@@ -1226,7 +1388,7 @@
                     `;
                     return;
                 }
-                
+
                 this.postsList.innerHTML = this.posts.map(post => `
                     <div class="post" data-post-id="${post.id}">
                         <div class="post-header">
@@ -1283,29 +1445,29 @@
                     </div>
                 `).join('');
             }
-            
+
             toggleReplyForm(postId) {
                 const form = document.getElementById(`reply-form-${postId}`);
                 form?.classList.toggle('active');
             }
-            
+
             submitResponse(postId) {
                 const textarea = document.getElementById(`response-text-${postId}`);
                 const content = textarea.value.trim();
-                
+
                 if (content) {
                     this.addResponse(postId, content);
                     this.toggleReplyForm(postId);
                 }
             }
-            
+
             escapeHtml(text) {
                 const div = document.createElement('div');
                 div.textContent = text;
                 return div.innerHTML;
             }
         }
-        
+
         // Inicializar forum cuando carga la página
         window.addEventListener('DOMContentLoaded', () => {
             window.forum = new ForumSystem();
@@ -1316,11 +1478,11 @@
             const modal = document.getElementById('imageModal');
             const modalImage = document.getElementById('modalImage');
             const modalTitle = document.getElementById('modalTitle');
-            
+
             modalImage.src = imageSrc;
             modalTitle.textContent = imageTitle;
             modal.style.display = 'flex';
-            
+
             // Agregar listener para cerrar con ESC
             document.addEventListener('keydown', handleEscapeKey);
         }
