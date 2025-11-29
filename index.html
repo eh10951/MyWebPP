@@ -1649,6 +1649,14 @@
                 </div>
             </div>
 
+            <!-- Gráfica Expandida: Regresión Logística Interactiva -->
+            <div class="logistic-section">
+                <h3 class="subsection-title">Análisis de <span>Regresión Logística</span></h3>
+                <div class="logistic-chart-wrapper">
+                    <div id="logisticChart"></div>
+                </div>
+            </div>
+
             <style>
                 .charts-grid {
                     display: grid;
@@ -1761,7 +1769,556 @@
                     font-size: 11px;
                     opacity: 0.7;
                 }
+
+                /* Estilos para Regresión Logística */
+                .chart-card-logistic {
+                    grid-column: span 1;
+                }
+
+                .logistic-container {
+                    width: 100%;
+                    height: 300px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                /* Sección expandida de Regresión Logística */
+                .logistic-section {
+                    margin: 60px 0;
+                    padding: 40px;
+                    background: var(--glass-bg);
+                    backdrop-filter: blur(20px) saturate(180%);
+                    -webkit-backdrop-filter: blur(20px) saturate(180%);
+                    border: 1px solid var(--glass-border);
+                    border-radius: 24px;
+                    box-shadow: 
+                        0 8px 32px rgba(0, 0, 0, 0.08),
+                        0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+                }
+
+                .subsection-title {
+                    font-size: 26px;
+                    font-weight: 600;
+                    margin-bottom: 30px;
+                    color: var(--text-primary);
+                }
+
+                .subsection-title span {
+                    background: linear-gradient(135deg, var(--accent-gold), var(--accent-red));
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                }
+
+                .logistic-chart-wrapper {
+                    width: 100%;
+                    height: 600px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 16px;
+                    background: var(--white);
+                    padding: 20px;
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+                }
+
+                #logisticChart {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                /* Ajustes para Plotly en modo responsivo */
+                .plotly-graph-div {
+                    width: 100% !important;
+                    height: 100% !important;
+                }
             </style>
+
+            <!-- Script de Plotly para Regresión Logística -->
+            <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+            <script>
+                // Función para renderizar la gráfica de Regresión Logística
+                function renderLogisticChart() {
+                    // --- DATOS ---
+                    const x_historico = [2, 3, 4, 6, 7];
+                    const y_historico = [1, 1, 1, 0, 0];
+                    
+                    // Curva Sigmoide
+                    const x_sigmoide = [];
+                    const y_sigmoide = [];
+                    for (let x = 2.0; x <= 7.0; x += 0.05) {
+                        x_sigmoide.push(x);
+                        const prob = 1 / (1 + Math.exp(3 * x - 15)); 
+                        y_sigmoide.push(prob);
+                    }
+
+                    // Predicción específica (Semestre 5)
+                    const x_prediccion = [5];
+                    const y_prediccion = [0.52];
+                    const clase_prediccion = 'SÍ';
+
+                    // Trazos (Traces) de Plotly
+                    const trace_historico = {
+                        x: x_historico,
+                        y: y_historico,
+                        mode: 'markers',
+                        type: 'scatter',
+                        name: 'Datos Históricos',
+                        marker: {
+                            color: '#00FF00',
+                            size: 10,
+                            opacity: 1,
+                            line: { color: 'white', width: 2 }
+                        }
+                    };
+
+                    const trace_sigmoide = {
+                        x: x_sigmoide,
+                        y: y_sigmoide,
+                        mode: 'lines',
+                        type: 'scatter',
+                        name: 'Curva Sigmoide',
+                        line: {
+                            color: '#DC2626',
+                            width: 3
+                        }
+                    };
+
+                    const trace_prediccion = {
+                        x: x_prediccion,
+                        y: y_prediccion,
+                        mode: 'markers',
+                        type: 'scatter',
+                        name: 'Predicción S5',
+                        marker: {
+                            color: '#FF00FF',
+                            size: 10,
+                            symbol: 'circle',
+                            line: {
+                                color: 'rgba(0,0,0,0.3)',
+                                width: 1
+                            }
+                        }
+                    };
+
+                    const data = [trace_sigmoide, trace_historico, trace_prediccion];
+
+                    // --- LAYOUT ---
+                    const layout = {
+                        title: {
+                            text: '<b>Regresión Logística: Predicción del Semestre 5</b>',
+                            font: { size: 22, color: 'white' }
+                        },
+                        paper_bgcolor: 'transparent',
+                        plot_bgcolor: 'transparent',
+                        xaxis: {
+                            title: {
+                                text: 'Semestre (X)',
+                                font: { size: 14, color: 'white' }
+                            },
+                            range: [1.8, 7.2],
+                            tickmode: 'linear',
+                            tick0: 2,
+                            dtick: 1,
+                            gridcolor: 'rgba(255, 255, 255, 0.2)',
+                            zeroline: false,
+                            showgrid: true,
+                            tickfont: { color: 'white' },
+                            linecolor: 'transparent'
+                        },
+                        yaxis: {
+                            title: {
+                                text: 'Probabilidad P(Y=1)',
+                                font: { size: 14, color: 'white' }
+                            },
+                            range: [-0.05, 1.05],
+                            tickvals: [0, 0.5, 1],
+                            ticktext: ['0 (NO)', '0.5', '1 (SÍ)'],
+                            gridcolor: 'rgba(255, 255, 255, 0.2)',
+                            zeroline: false,
+                            showgrid: true,
+                            tickfont: { color: 'white' },
+                            linecolor: 'transparent'
+                        },
+                        showlegend: true,
+                        legend: {
+                            x: 0.98,
+                            y: 0.98,
+                            bgcolor: 'transparent',
+                            bordercolor: 'transparent',
+                            borderwidth: 0,
+                            font: { size: 12, color: 'white' },
+                            xanchor: 'right',
+                            yanchor: 'top'
+                        },
+                        shapes: [
+                            {
+                                type: 'line',
+                                xref: 'paper',
+                                yref: 'y',
+                                x0: 0,
+                                y0: 0.5,
+                                x1: 1,
+                                y1: 0.5,
+                                line: {
+                                    color: '#10B981',
+                                    width: 2,
+                                    dash: 'dot'
+                                }
+                            }
+                        ],
+                        hovermode: 'closest',
+                        margin: { l: 70, r: 50, t: 80, b: 70 }
+                    };
+
+                    // --- CONFIGURACIÓN ---
+                    const config = {
+                        displayModeBar: false,
+                        responsive: true,
+                        displaylogo: false,
+                        staticPlot: true
+                    };
+
+                    // Renderizar la gráfica
+                    Plotly.newPlot('logisticChart', data, layout, config);
+                }
+
+                // Renderizar la gráfica cuando el DOM esté listo
+                document.addEventListener('DOMContentLoaded', function() {
+                    if (document.getElementById('logisticChart')) {
+                        renderLogisticChart();
+                    }
+                });
+            </script>
+
+            <!-- Sección de Tablas de Presupuestos -->
+            <section class="content-section" style="margin-top: 60px; margin-bottom: 60px;">
+                <h2 class="section-title">
+                    <span>Tablas</span> de Presupuestos
+                </h2>
+
+                <h3 style="text-align: center; font-size: 20px; font-weight: 600; margin: 40px 0 30px 0; color: var(--text-primary);">Tabla 1: Presupuesto Total, Matrícula y Presupuesto por Alumno</h3>
+                <div style="width: 100%; overflow-x: auto; margin-bottom: 50px;">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 13px; background: transparent;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid #6A7FA0;">
+                                <th style="padding: 12px 15px; text-align: left; color: #E0E0E0; font-weight: 600; background-color: rgba(60, 80, 110, 0.3);">Semestre</th>
+                                <th style="padding: 12px 15px; text-align: right; color: #E0E0E0; font-weight: 600; background-color: rgba(60, 80, 110, 0.3);">Presupuesto</th>
+                                <th style="padding: 12px 15px; text-align: right; color: #E0E0E0; font-weight: 600; background-color: rgba(60, 80, 110, 0.3);">Matrícula Inscrita</th>
+                                <th style="padding: 12px 15px; text-align: right; color: #E0E0E0; font-weight: 600; background-color: rgba(60, 80, 110, 0.3);">Matrícula Ciencia de Datos</th>
+                                <th style="padding: 12px 15px; text-align: right; color: #E0E0E0; font-weight: 600; background-color: rgba(60, 80, 110, 0.3);">Presupuesto por Alumno</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); transition: background-color 0.3s;">
+                                <td style="padding: 12px 15px; color: #D0D0D0;">2019-2</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">$ 38,114,118.00</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">6,949.00</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">281</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">$ 5,484.83</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); background-color: rgba(255, 255, 255, 0.02);">
+                                <td style="padding: 12px 15px; color: #D0D0D0;">2020-2</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">$ 150,779,877.73</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">13,428</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">79</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">$ 11,228.77</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                                <td style="padding: 12px 15px; color: #D0D0D0;">2021-1/2021-2</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">$ 276,368,549.48</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">25,429</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">733</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">$ 10,868.24</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); background-color: rgba(255, 255, 255, 0.02);">
+                                <td style="padding: 12px 15px; color: #D0D0D0;">2022</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">$ 295,259,776.31</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">36,616</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">836</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">$ 8,063.68</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                                <td style="padding: 12px 15px; color: #D0D0D0;">2023</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">$ 410,968,604.29</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">44,028</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">1,085</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">$ 9,334.26</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); background-color: rgba(255, 255, 255, 0.02);">
+                                <td style="padding: 12px 15px; color: #D0D0D0;">2024</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">$ 321,228,030.90</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">55,738</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">1,425</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">$ 5,763.18</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 style="text-align: center; font-size: 20px; font-weight: 600; margin: 40px 0 30px 0; color: var(--text-primary);">Tabla 2: Presupuesto Específico, Egresados, Género y Bajas</h3>
+                <div style="width: 100%; overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 13px; background: transparent;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid #6A7FA0;">
+                                <th style="padding: 12px 15px; text-align: right; color: #E0E0E0; font-weight: 600; background-color: rgba(60, 80, 110, 0.3);">Presupuesto Ciencia de Datos</th>
+                                <th style="padding: 12px 15px; text-align: right; color: #E0E0E0; font-weight: 600; background-color: rgba(60, 80, 110, 0.3);">Egresados</th>
+                                <th style="padding: 12px 15px; text-align: right; color: #E0E0E0; font-weight: 600; background-color: rgba(60, 80, 110, 0.3);">Egresados Ciencia de Datos</th>
+                                <th style="padding: 12px 15px; text-align: right; color: #E0E0E0; font-weight: 600; background-color: rgba(60, 80, 110, 0.3);">Hombres</th>
+                                <th style="padding: 12px 15px; text-align: right; color: #E0E0E0; font-weight: 600; background-color: rgba(60, 80, 110, 0.3);">Mujeres</th>
+                                <th style="padding: 12px 15px; text-align: right; color: #E0E0E0; font-weight: 600; background-color: rgba(60, 80, 110, 0.3);">Bajas Definitivas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">$ 1,541,238.62</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">0</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">0</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">0</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">0</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">0</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); background-color: rgba(255, 255, 255, 0.02);">
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">$ 887,072.56</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">0</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">0</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">0</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">0</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">0</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">$ 7,966,422.07</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">160</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">31</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">11</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">20</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">295</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); background-color: rgba(255, 255, 255, 0.02);">
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">$ 6,741,238.07</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">424</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">41</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">12</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">29</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">1,022</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">$ 10,127,667.29</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">2,357</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">70</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">33</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">37</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">1,229</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); background-color: rgba(255, 255, 255, 0.02);">
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">$ 8,212,529.05</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">5,572</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">0</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">0</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">0</td>
+                                <td style="padding: 12px 15px; text-align: right; color: #D0D0D0;">0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Sección de Gráficas de Presupuesto -->
+            <section class="content-section" style="margin-top: 60px; margin-bottom: 60px;">
+                <h2 class="section-title">
+                    Análisis de <span>Presupuesto</span>
+                </h2>
+
+                <h3 style="text-align: center; font-size: 22px; font-weight: 600; margin: 40px 0 30px 0; color: var(--text-primary);">Presupuesto por Alumno por Semestre (Gráfica Azul)</h3>
+                <div id="graph1_general" style="width: 100%; max-width: 900px; height: 500px; margin: 0 auto;"></div>
+
+                <hr style="margin: 60px 0; border: none; border-top: 1px solid var(--gray-border);">
+
+                <h3 style="text-align: center; font-size: 22px; font-weight: 600; margin: 40px 0 30px 0; color: var(--text-primary);">Presupuesto por Alumno (Ciencia de Datos) por Semestre (Gráfica Teal)</h3>
+                <div id="graph2_dataciencia" style="width: 100%; max-width: 900px; height: 500px; margin: 0 auto;"></div>
+            </section>
+
+            <!-- Script para Gráficas de Presupuesto -->
+            <script>
+                // --- DATOS (6 Semestres) ---
+                const x_semestres = ['2019-2', '2020-2', '2021-1/2021-2', '2022', '2023', '2024'];
+                const y_presupuesto = [5484.83, 11228.77, 10868.24, 8063.68, 9334.26, 5763.18];
+                const text_labels = y_presupuesto.map(val => `$${val.toFixed(2)}`);
+
+                // --- LAYOUT BASE ---
+                const base_layout = {
+                    paper_bgcolor: 'transparent', 
+                    plot_bgcolor: 'transparent', 
+                    font: { color: 'white' },
+                    xaxis: {
+                        title: 'Semestre',
+                        automargin: true,
+                        showgrid: false,
+                        zeroline: false,
+                        tickfont: { color: 'white' },
+                        linecolor: 'transparent',
+                        tickangle: -90
+                    },
+                    yaxis: {
+                        title: 'Presupuesto por Alumno (USD)',
+                        tickformat: '$,.0f',
+                        range: [0, 13000], 
+                        gridcolor: 'rgba(255, 255, 255, 0.2)', 
+                        griddash: 'dash', 
+                        zeroline: false,
+                        tickfont: { color: 'white' },
+                        linecolor: 'transparent'
+                    },
+                    bargap: 0.1,
+                    hovermode: 'closest',
+                    margin: { l: 70, r: 40, t: 60, b: 100 }
+                };
+                
+                const config = {
+                    displayModeBar: false,
+                    responsive: true,
+                    displaylogo: false,
+                    staticPlot: true
+                };
+
+                // --- GRÁFICA 1: Presupuesto General (TERRACOTA MATE) ---
+                const trace_g1 = {
+                    x: x_semestres,
+                    y: y_presupuesto,
+                    type: 'bar',
+                    marker: {
+                        color: y_presupuesto,
+                        colorscale: [[0, '#8B5A3C'], [0.5, '#A67C52'], [1, '#C9A876']],
+                        showscale: false,
+                        line: { color: '#6B3A1C', width: 1.5 }
+                    },
+                    text: text_labels,
+                    textposition: 'outside',
+                    textfont: { color: '#D0D0D0', size: 11, family: 'Arial' },
+                    hovertemplate: 'Semestre: %{x}<br>Presupuesto: $%{y:,.2f}<extra></extra>' 
+                };
+
+                const layout_g1 = {
+                    ...base_layout,
+                    title: {
+                        text: '<b>Presupuesto por Alumno por Semestre</b>',
+                        font: { size: 20, color: 'white' }
+                    }
+                };
+
+                Plotly.newPlot('graph1_general', [trace_g1], layout_g1, config);
+
+                // --- GRÁFICA 2: Ciencia de Datos (AZUL-GRIS MATE) ---
+                const trace_g2 = {
+                    x: x_semestres,
+                    y: y_presupuesto,
+                    type: 'bar',
+                    marker: {
+                        color: y_presupuesto,
+                        colorscale: [[0, '#475569'], [0.5, '#64748B'], [1, '#94A3B8']],
+                        showscale: false,
+                        line: { color: '#1E293B', width: 1.5 }
+                    },
+                    text: text_labels,
+                    textposition: 'outside',
+                    textfont: { color: '#D0D0D0', size: 11, family: 'Arial' },
+                    hovertemplate: 'Semestre: %{x}<br>Presupuesto: $%{y:,.2f}<extra></extra>' 
+                };
+
+                const layout_g2 = {
+                    ...base_layout,
+                    title: {
+                        text: '<b>Presupuesto por Alumno (Ciencia de Datos) por Semestre</b>',
+                        font: { size: 20, color: 'white' }
+                    },
+                    yaxis: {
+                        ...base_layout.yaxis,
+                        tickvals: [0, 2000, 4000, 6000, 8000, 10000, 12000]
+                    }
+                };
+
+                Plotly.newPlot('graph2_dataciencia', [trace_g2], layout_g2, config);
+            </script>
+
+            <!-- Sección de Probabilidad de Reprobar -->
+            <section class="content-section" style="margin-top: 60px; margin-bottom: 60px;">
+                <h2 class="section-title">
+                    Probabilidad de <span>Reprobar</span>
+                </h2>
+
+                <h3 style="text-align: center; font-size: 22px; font-weight: 600; margin: 40px 0 30px 0; color: var(--text-primary);">Probabilidad de Reprobar por Semestre (Empírica)</h3>
+                <div id="probabilidadReprobarChart" style="width: 100%; max-width: 900px; height: 500px; margin: 0 auto;"></div>
+            </section>
+
+            <!-- Script para Gráfica de Probabilidad de Reprobar -->
+            <script>
+                // --- DATOS ---
+                const x_semestre = [3, 7];
+                const y_probabilidad = [0.75, 0.50];
+
+                // --- TRACE ---
+                const trace_probabilidad = {
+                    x: x_semestre,
+                    y: y_probabilidad,
+                    type: 'bar',
+                    marker: {
+                        color: ['#D9668B', '#D99447'],
+                        line: { color: ['#A84D6F', '#C9A876'], width: 2 }
+                    },
+                    text: y_probabilidad.map(val => (val * 100).toFixed(0) + '%'),
+                    textposition: 'outside',
+                    textfont: { color: '#C9A876', size: 14, family: 'Arial Black' },
+                    hovertemplate: 'Semestre: %{x}<br>Probabilidad: %{y:.0%}<extra></extra>'
+                };
+
+                // --- LAYOUT ---
+                const layoutReprobar = {
+                    title: {
+                        text: '<b>Probabilidad de Reprobar por Semestre (Empírica)</b>',
+                        font: { size: 22, color: '#7EBFBF' }
+                    },
+                    paper_bgcolor: 'transparent',
+                    plot_bgcolor: 'transparent',
+                    xaxis: {
+                        title: {
+                            text: 'Semestre',
+                            font: { size: 14, color: '#7EBFBF' }
+                        },
+                        automargin: true,
+                        showgrid: false,
+                        zeroline: false,
+                        tickfont: { color: '#7EBFBF', size: 12 },
+                        linecolor: 'transparent'
+                    },
+                    yaxis: {
+                        title: {
+                            text: 'Probabilidad de Reprobar',
+                            font: { size: 14, color: '#7EBFBF' }
+                        },
+                        range: [0, 1],
+                        tickformat: '.0%',
+                        gridcolor: 'rgba(126, 191, 191, 0.15)',
+                        griddash: 'dash',
+                        zeroline: false,
+                        tickfont: { color: '#7EBFBF', size: 11 },
+                        linecolor: 'transparent'
+                    },
+                    bargap: 0.3,
+                    hovermode: 'closest',
+                    margin: { l: 80, r: 40, t: 80, b: 70 }
+                };
+
+                // --- CONFIGURACIÓN ---
+                const configReprobar = {
+                    displayModeBar: false,
+                    responsive: true,
+                    staticPlot: true
+                };
+
+                // --- RENDERIZADO ---
+                Plotly.newPlot('probabilidadReprobarChart', [trace_probabilidad], layoutReprobar, configReprobar);
+            </script>
 
             <!-- Modal para gráficas expandidas -->
             <div id="chartModal" class="chart-modal">
@@ -2164,6 +2721,132 @@
                     const modal = document.getElementById('chartModal');
                     const container = document.getElementById('expandedChartContainer');
                     
+                    // Manejo especial para gráfica de Regresión Logística (Plotly)
+                    if (chartKey === 'regresion') {
+                        container.innerHTML = '<div id="expandedLogisticChart" style="width: 100%; height: 100%;"></div>';
+                        modal.style.display = 'flex';
+                        
+                        // Renderizar la gráfica de Plotly expandida
+                        setTimeout(() => {
+                            const x_historico = [2, 3, 4, 6, 7];
+                            const y_historico = [1, 1, 1, 0, 0];
+                            
+                            const x_sigmoide = [];
+                            const y_sigmoide = [];
+                            for (let x = 2.0; x <= 7.0; x += 0.05) {
+                                x_sigmoide.push(x);
+                                const prob = 1 / (1 + Math.exp(3 * x - 15)); 
+                                y_sigmoide.push(prob);
+                            }
+
+                            const x_prediccion = [5];
+                            const y_prediccion = [0.52];
+
+                            const trace_historico = {
+                                x: x_historico,
+                                y: y_historico,
+                                mode: 'markers',
+                                type: 'scatter',
+                                name: 'Datos Históricos (Clases 0/1)',
+                                marker: {
+                                    color: '#4F46E5',
+                                    size: 12,
+                                    opacity: 0.8
+                                }
+                            };
+
+                            const trace_sigmoide = {
+                                x: x_sigmoide,
+                                y: y_sigmoide,
+                                mode: 'lines',
+                                type: 'scatter',
+                                name: 'Curva Sigmoide (Probabilidad P(Y=1))',
+                                line: {
+                                    color: '#DC2626',
+                                    width: 3
+                                }
+                            };
+
+                            const trace_prediccion = {
+                                x: x_prediccion,
+                                y: y_prediccion,
+                                mode: 'markers',
+                                type: 'scatter',
+                                name: 'Semestre 5 (Predicción) P(Y=1) = 0.52',
+                                marker: {
+                                    color: '#F59E0B',
+                                    size: 15,
+                                    symbol: 'circle',
+                                    line: {
+                                        color: 'black',
+                                        width: 1
+                                    }
+                                }
+                            };
+
+                            const data = [trace_sigmoide, trace_historico, trace_prediccion];
+
+                            const layout = {
+                                title: {
+                                    text: '<b>Regresión Logística: Predicción del Semestre 5</b>',
+                                    font: { size: 22 }
+                                },
+                                xaxis: {
+                                    title: 'Semestre (X)',
+                                    range: [1.8, 7.2],
+                                    tickmode: 'linear',
+                                    tick0: 2,
+                                    dtick: 1,
+                                    gridcolor: '#ddd',
+                                    zeroline: false
+                                },
+                                yaxis: {
+                                    title: 'Probabilidad de Reprueba Alto (P(Y=1))',
+                                    range: [-0.05, 1.05],
+                                    tickvals: [0, 0.5, 1],
+                                    ticktext: ['0 (NO)', '0.5', '1 (SÍ)'],
+                                    gridcolor: '#ddd',
+                                    zeroline: false
+                                },
+                                showlegend: true,
+                                legend: {
+                                    x: 0.6,
+                                    y: 0.8,
+                                    bgcolor: 'rgba(255, 255, 255, 0.5)',
+                                    bordercolor: '#ccc',
+                                    borderwidth: 1
+                                },
+                                shapes: [
+                                    {
+                                        type: 'line',
+                                        xref: 'paper',
+                                        yref: 'y',
+                                        x0: 0,
+                                        y0: 0.5,
+                                        x1: 1,
+                                        y1: 0.5,
+                                        line: {
+                                            color: '#10B981',
+                                            width: 2,
+                                            dash: 'dot'
+                                        }
+                                    }
+                                ],
+                                hovermode: 'closest'
+                            };
+
+                            const config = {
+                                displayModeBar: true,
+                                responsive: true,
+                                displaylogo: false
+                            };
+
+                            Plotly.newPlot('expandedLogisticChart', data, layout, config);
+                        }, 100);
+                        return;
+                    }
+                    
+                    // Manejo para gráficas de Chart.js
                     if (!chartsInstances[chartKey]) return;
                     
                     const originalChart = chartsInstances[chartKey];
