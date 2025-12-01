@@ -320,6 +320,8 @@
             letter-spacing: 0.5px;
             position: relative;
             overflow: hidden;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .btn-primary::before {
@@ -1416,7 +1418,7 @@
                     Descubre <strong>Mentor U.N.R.C</strong>, la plataforma que conecta estudiantes con tutores para un <strong>aprendizaje efectivo y personalizado</strong>, y que además te brinda <strong>beneficios exclusivos</strong>.
                 </p>
                 <div class="welcome-cta">
-                    <button class="btn-primary">Descargar App</button>
+                    <a href="https://drive.google.com/drive/folders/1S43g-E_2wUe6IV82_dIwty6YEVQsotdq?usp=sharing" target="_blank" rel="noopener" class="btn-primary">Descargar App</a>
                     <button class="btn-secondary">Ver Documentación</button>
                 </div>
             </div>
@@ -1563,12 +1565,12 @@
             </div>
 
             <!-- Download Section -->
-            <div class="app-download">
+            <div class="app-download" id="download-section">
                 <h3>Descarga la App</h3>
                 <p>Disponible por el momento solo para Android. ¡Comienza a transformar tu experiencia universitaria hoy!</p>
                 <div class="download-grid">
-                    <img src="imagenes/qr.png" alt="Código QR para descargar MentorsUNRC" class="qr-code">
-                    <button class="btn-primary">Descargar para Android</button>
+                    <img src="qr_app.png" alt="Código QR para descargar MentorsUNRC" class="qr-code">
+                    <a href="https://drive.google.com/drive/folders/1S43g-E_2wUe6IV82_dIwty6YEVQsotdq?usp=sharing" target="_blank" rel="noopener" class="btn-primary">Descargar para Android</a>
                 </div>
             </div>
 
@@ -1896,6 +1898,21 @@
                 }, 150);
             });
         });
+
+        // QR Code Click - Scroll to Download Section
+        const qrCode = document.querySelector('.qr-code');
+        if (qrCode) {
+            qrCode.style.cursor = 'pointer';
+            qrCode.addEventListener('click', function() {
+                const downloadSection = document.getElementById('download-section');
+                if (downloadSection) {
+                    downloadSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        }
 
         // Lazy load iframes
         if ('IntersectionObserver' in window) {
