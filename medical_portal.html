@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.N.S. | Portal de Diagnóstico Médico</title>
+    <link rel="stylesheet" href="css/medical_login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+</head>
+<body class="medical-theme">
+    <div id="main-container">
+        <!-- Pantalla 1: Login Médico -->
+        <section id="login-screen" class="screen active">
+            <div class="institution-marquee">
+                <div class="marquee-content">
+                    <span><i class="fas fa-hospital-symbol"></i> IMSS CONECTADO</span>
+                    <span><i class="fas fa-hand-holding-medical"></i> ISSSTE CONECTADO</span>
+                    <span><i class="fas fa-shield-virus"></i> RED NACIONAL DE SALUD</span>
+                </div>
+            </div>
+            <div class="login-wrapper">
+                <div class="login-box-central">
+                    <div class="login-header">
+                        <i class="fas fa-user-shield"></i>
+                        <h2>Acceso Médico</h2>
+                        <p>Identificación Profesional Requerida</p>
+                    </div>
+                    <form id="medical-login-form">
+                        <div class="input-group">
+                            <label>CÉDULA PROFESIONAL</label>
+                            <input type="text" id="medic-id" placeholder="SNS-78B-X" required>
+                        </div>
+                        <div class="input-group">
+                            <label>PASSWORD DE ACCESO</label>
+                            <input type="password" id="medic-pass" placeholder="" required>
+                        </div>
+                        <button type="submit" class="btn-primary-glow" style="width:100%; padding: 18px; background: #38bdf8; border: none; border-radius: 12px; font-weight:700; cursor:pointer;">INICIAR SESIÓN</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pantalla 2: Escáner QR Estructurado -->
+        <section id="scanner-screen" class="screen">
+            <div class="scanner-layout">
+                <aside class="panel-info">
+                    <div class="status-card" style="background:var(--card-bg); padding:30px; border-radius:20px; border:1px solid var(--glass-border);">
+                        <div style="width:12px; height:12px; background:var(--medical-green); border-radius:50%; margin-bottom:10px; box-shadow:0 0 10px var(--medical-green);"></div>
+                        <h3>HARDWARE LISTO</h3>
+                        <p id="scan-status-text" style="color:var(--text-muted); font-size:0.9rem; margin-top:10px;">Enfoque el código QR del paciente en el visor central.</p>
+                    </div>
+                </aside>
+
+                <main class="scanner-main-section">
+                    <div id="reader"></div>
+                    <div class="scanner-overlay"></div>
+                </main>
+
+                <aside class="metrics-panel">
+                    <h3>CONTROL DE ACCESO</h3>
+                    <p style="color:var(--text-muted); margin-bottom:20px;">Validación de Identidad del Paciente</p>
+                    <input type="password" id="nip-input" maxlength="4" placeholder="" readonly>
+                    <div class="digital-keypad">
+                        <button class="key-btn" onclick="addNip('1')">1</button>
+                        <button class="key-btn" onclick="addNip('2')">2</button>
+                        <button class="key-btn" onclick="addNip('3')">3</button>
+                        <button class="key-btn" onclick="addNip('4')">4</button>
+                        <button class="key-btn" onclick="addNip('5')">5</button>
+                        <button class="key-btn" onclick="addNip('6')">6</button>
+                        <button class="key-btn" onclick="addNip('7')">7</button>
+                        <button class="key-btn" onclick="addNip('8')">8</button>
+                        <button class="key-btn" onclick="addNip('9')">9</button>
+                        <button class="key-btn" style="color:var(--medical-red)" onclick="clearNip()">C</button>
+                        <button class="key-btn" onclick="addNip('0')">0</button>
+                        <button class="key-btn" style="color:var(--medical-green)" onclick="verifyNip()">OK</button>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Pantalla 3: Dashboard Diagnóstico Mejorado -->
+        <section id="dashboard-screen" class="screen">
+            <div class="dashboard-grid">
+                <aside class="patient-profile-card">
+                    <div style="width:120px; height:120px; background:rgba(56,189,248,0.1); border-radius:50%; margin: 0 auto 20px; display:flex; align-items:center; justify-content:center;">
+                        <i class="fas fa-user-circle" style="font-size:5rem; color:var(--accent-primary);"></i>
+                    </div>
+                    <h1 id="patient-name-display" style="font-size:1.8rem; margin-bottom:10px;">-</h1>
+                    <p id="p-id" style="color:var(--accent-primary); font-weight:bold; letter-spacing:2px; margin-bottom:30px;">ID-P000</p>
+                    
+                    <div style="text-align:left; border-top:1px solid var(--glass-border); padding-top:20px;">
+                        <div style="display:flex; justify-content:space-between; margin-bottom:15px;">
+                            <span style="color:var(--text-muted)">EDAD:</span><span id="p-age">-</span>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; margin-bottom:15px;">
+                            <span style="color:var(--text-muted)">SANGRE:</span><span id="p-blood">-</span>
+                        </div>
+                    </div>
+                    <button onclick="location.reload()" style="margin-top:40px; width:100%; padding:15px; border:1px solid var(--medical-red); background:none; color:var(--medical-red); border-radius:12px; cursor:pointer; font-weight:bold;">CERRAR EXPEDIENTE</button>
+                </aside>
+
+                <main class="stats-container">
+                    <div class="diag-card">
+                        <h4>Frecuencia Cardíaca</h4>
+                        <div class="value">72 <span style="font-size:1rem; color:var(--text-muted)">BPM</span></div>
+                        <span class="risk-indicator risk-low">ESTABLE</span>
+                    </div>
+                    <div class="diag-card">
+                        <h4>Glucosa en Sangre</h4>
+                        <div class="value" id="p-glucose">-</div>
+                        <span class="risk-indicator risk-high">ATENCIÓN REQUERIDA</span>
+                    </div>
+                    <div class="diag-card" style="grid-column: span 2; border-left-color: var(--medical-green);">
+                        <h4>Diagnóstico de Riesgo</h4>
+                        <p style="font-size:1.1rem; line-height:1.6; margin-top:10px;">Paciente muestra indicadores de pre-diabetes. Se recomienda ajuste inmediato en dieta y monitoreo de niveles de insulina cada 12 horas.</p>
+                    </div>
+                </main>
+            </div>
+        </section>
+    </div>
+    <script src="js/medical_logic.js"></script>
+</body>
+</html>

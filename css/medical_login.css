@@ -1,0 +1,209 @@
+﻿/* medical_login.css - REDISEÑO ELITE SNS v2 */
+:root {
+    --bg-dark: #020617;
+    --card-bg: rgba(15, 23, 42, 0.7);
+    --accent-primary: #38bdf8;
+    --accent-glow: rgba(56, 189, 248, 0.3);
+    --medical-green: #10b981;
+    --medical-red: #ef4444;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+body {
+    background: var(--bg-dark);
+    color: var(--text-main);
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* EFECTO DE FONDO ANIMADO */
+.medical-theme {
+    background: radial-gradient(circle at 50% 50%, #0f172a 0%, #020617 100%);
+    position: relative;
+}
+
+.medical-theme::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(56, 189, 248, 0.03) 1px, transparent 1px), 
+                      linear-gradient(90deg, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+}
+
+.screen { display: none; width: 100%; height: 100vh; }
+.screen.active { display: flex; flex-direction: column; }
+
+/* LOGIN - REDISEÑO MÁS ELEGANTE */
+.login-wrapper {
+    flex: 1; display: flex; align-items: center; justify-content: center;
+}
+
+.login-box-central {
+    background: var(--card-bg);
+    padding: 60px;
+    border-radius: 30px;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+    width: 480px;
+    box-shadow: 0 0 80px rgba(0,0,0,0.8), 0 0 30px var(--accent-glow);
+    text-align: center;
+}
+
+.login-header i { 
+    font-size: 4rem; color: var(--accent-primary); 
+    filter: drop-shadow(0 0 10px var(--accent-glow));
+    margin-bottom: 20px;
+}
+
+.login-header h2 { font-size: 2rem; letter-spacing: -0.5px; margin-bottom: 10px; }
+
+.input-group { text-align: left; margin-bottom: 25px; }
+.input-group label { display: block; color: var(--text-muted); font-size: 0.85rem; margin-bottom: 8px; font-weight: 600; }
+.input-group input { 
+    width: 100%; background: rgba(0,0,0,0.3); border: 1px solid var(--glass-border); 
+    padding: 15px; border-radius: 12px; color: #fff; font-size: 1rem;
+    transition: all 0.3s;
+}
+.input-group input:focus { border-color: var(--accent-primary); outline: none; box-shadow: 0 0 15px var(--accent-glow); }
+
+/* SCANNER LAYOUT - ESTRUCTURA VERTICAL */
+.scanner-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr 400px;
+    gap: 30px;
+    width: 95%;
+    max-width: 1600px;
+    margin: 30px auto;
+    height: calc(100vh - 120px);
+}
+
+.scanner-main-section {
+    background: #000;
+    border-radius: 40px;
+    border: 2px solid var(--accent-primary);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#reader {
+    width: 100% !important;
+    height: 100% !important;
+    border: none !important;
+}
+
+#reader video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Llena el contenedor */
+    transform: scaleX(-1); /* Corrige el efecto espejo */
+}
+
+.scanner-overlay {
+    position: absolute;
+    top: 50%; left: 50%; width: 320px; height: 450px;
+    transform: translate(-50%, -50%);
+    border: 3px solid var(--accent-primary);
+    border-radius: 20px;
+    box-shadow: 0 0 0 3000px rgba(2, 6, 23, 0.7);
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Animación de línea de escaneo */
+.scanner-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--accent-primary);
+    box-shadow: 0 0 15px var(--accent-primary);
+    animation: scan-move 3s linear infinite;
+}
+
+@keyframes scan-move {
+    0% { top: 0%; }
+    100% { top: 100%; }
+}
+
+/* NIP PANEL - TERMINAL TIPO SCI-FI */
+.metrics-panel {
+    background: var(--card-bg);
+    border-radius: 30px;
+    padding: 35px;
+    border: 1px solid var(--glass-border);
+    display: flex; flex-direction: column;
+}
+
+#nip-input {
+    width: 100%; height: 80px; background: #000; border: 2px solid var(--accent-primary);
+    border-radius: 15px; color: var(--accent-primary); font-size: 3rem;
+    text-align: center; letter-spacing: 20px; margin-bottom: 30px;
+    text-shadow: 0 0 10px var(--accent-glow);
+}
+
+.digital-keypad { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+.key-btn { 
+    background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border);
+    color: #fff; padding: 25px; border-radius: 15px; font-size: 1.6rem; cursor: pointer;
+    transition: 0.2s;
+}
+.key-btn:hover { background: var(--accent-primary); color: #000; font-weight: bold; }
+
+/* DASHBOARD - DIAGNÓSTICO PROFESIONAL */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 30px;
+    padding: 40px;
+    height: calc(100vh - 100px);
+}
+
+.patient-profile-card {
+    background: var(--card-bg);
+    border-radius: 30px;
+    padding: 40px;
+    border: 1px solid var(--glass-border);
+    text-align: center;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.diag-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    padding: 25px;
+    border-left: 5px solid var(--accent-primary);
+}
+
+.diag-card h4 { color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 10px; }
+.diag-card .value { font-size: 2.2rem; font-weight: 700; color: #fff; }
+
+.risk-indicator {
+    margin-top: 15px;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.risk-low { background: rgba(16, 185, 129, 0.2); color: var(--medical-green); }
+.risk-high { background: rgba(239, 68, 68, 0.2); color: var(--medical-red); }
+
+/* MARQUEE */
+.institution-marquee { background: rgba(0,0,0,0.5); padding: 15px; border-bottom: 1px solid var(--accent-primary); }
+.marquee-content { display: flex; gap: 60px; animation: scroll 40s linear infinite; }
+@keyframes scroll { from { transform: translateX(100%); } to { transform: translateX(-100%); } }
