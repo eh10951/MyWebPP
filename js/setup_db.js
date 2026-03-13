@@ -13,8 +13,8 @@ if (!firebase.apps.length) {
 }
 const db = firebase.firestore();
 
-const pacientesData = [
-    { id: 1, nip: "6692", nombre: "Alta Gracia Cadena", curp: "NAFX571215MBCDTY01", edad: 19, genero: "Femenino", tipoSangre: "B+", presion: "112/72", bpm: "79 lpm", glucosa: "70 mg/dL", diagnostico: "Lumbalgia", institucion: "S.N.S." },
+const patients = [
+    { id: 1, nip: "6692", nombre: "Alta  Gracia Cadena", curp: "NAFX571215MBCDTY01", edad: 19, genero: "Femenino", tipoSangre: "B+", presion: "112/72", bpm: "79 lpm", glucosa: "70 mg/dL", diagnostico: "Lumbalgia", institucion: "S.N.S." },
     { id: 2, nip: "2213", nombre: "Marisol Rosa Villegas", curp: "BOVP800326MMSHWD06", edad: 30, genero: "Masculino", tipoSangre: "A+", presion: "128/83", bpm: "66 lpm", glucosa: "85 mg/dL", diagnostico: "Control de Diabetes", institucion: "S.N.S." },
     { id: 3, nip: "9176", nombre: "Perla Santiago Pelayo", curp: "HALL100504HZSVWJ07", edad: 66, genero: "Masculino", tipoSangre: "AB+", presion: "112/78", bpm: "65 lpm", glucosa: "87 mg/dL", diagnostico: "Check-up anual", institucion: "S.N.S." },
     { id: 4, nip: "8949", nombre: "Francisco Tania González Quintana", curp: "SUBG110322MSPLXMA5", edad: 22, genero: "Masculino", tipoSangre: "O+", presion: "111/83", bpm: "76 lpm", glucosa: "101 mg/dL", diagnostico: "Faringitis", institucion: "S.N.S." },
@@ -42,8 +42,7 @@ const pacientesData = [
     { id: 26, nip: "6644", nombre: "Ing. Ofelia Portillo", curp: "SIMZ890311MCSTZW02", edad: 41, genero: "Femenino", tipoSangre: "AB+", presion: "116/72", bpm: "91 lpm", glucosa: "75 mg/dL", diagnostico: "Control de Diabetes", institucion: "S.N.S." },
     { id: 27, nip: "2540", nombre: "Marisol Julio César Correa Serrano", curp: "UEKJ041106HJCBNYA7", edad: 19, genero: "Femenino", tipoSangre: "B+", presion: "130/84", bpm: "77 lpm", glucosa: "89 mg/dL", diagnostico: "Control de Diabetes", institucion: "S.N.S." },
     { id: 28, nip: "6090", nombre: "Silvano Marisol Carmona Velásquez", curp: "DIIS120526HDGGSV03", edad: 21, genero: "Femenino", tipoSangre: "O+", presion: "124/70", bpm: "76 lpm", glucosa: "93 mg/dL", diagnostico: "Check-up anual", institucion: "S.N.S." },
-    { id: 29, nip: "5362", nombre: "Mariano Abel Salazar", curp: "MEXC951018HJCQGZ09", edad: 78, genero: "Masculino", tipoSangre: "A+", presion: "123/73", bpm: "93 lpm", glucosa: "79 mg/dL", diagnostico: "Faringitis", institucion: "S.N.S." },
-    { id: 30, nip: "9589", nombre: "Mónica Duarte Laboy", curp: "JABK670717HDGQJK03", edad: 84, genero: "Femenino", tipoSangre: "B+", presion: "124/76", bpm: "96 lpm", glucosa: "91 mg/dL", diagnostico: "Check-up anual", institucion: "S.N.S." }
+    { id: 29, nip: "5362", nombre: "Mariano Abel Salazar", curp: "MEXC951018HJCQGZ09", edad: 78, genero: "Masculino", tipoSangre: "A+", presion: "123/73", bpm: "93 lpm", glucosa: "79 mg/dL", diagnostico: "Faringitis", institucion: "S.N.S." }
 ];
 
 async function importPatients() {
@@ -51,12 +50,12 @@ async function importPatients() {
     let successCount = 0;
     let errorCount = 0;
 
-    for (const data of pacientesData) {
+    for (const data of patients) {
         // Formatear ID a 3 dígitos: PACIENTE_001
-        const docId = `PACIENTE_${data.id.toString().padStart(3, '0')}`;
+        const id = `PACIENTE_${data.id.toString().padStart(3, '0')}`;
         
         try {
-            await db.collection("pacientes").doc(docId).set({
+            await firebase.firestore().collection("pacientes").doc(id).set({
                 nip: data.nip,
                 nombre: data.nombre,
                 curp: data.curp,
@@ -67,7 +66,7 @@ async function importPatients() {
                 bpm: data.bpm,
                 glucosa: data.glucosa,
                 diagnostico: data.diagnostico,
-                institucion: data.institucion,
+                institucion: "S.N.S.",
                 ultimaSincronizacion: firebase.firestore.FieldValue.serverTimestamp()
             });
             console.log(`✅ Importado: ${docId}`);
