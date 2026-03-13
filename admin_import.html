@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Importar Base de Datos</title>
+    <!-- Firebase SDK (Version 8) para coincidir con la de tu web original -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <!-- Incluimos el código de importación que ya ajustamos -->
+    <script src="js/import_csv.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            background-color: #1e293b;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            max-width: 500px;
+        }
+        h2 { color: #38bdf8; }
+        input[type="file"] {
+            margin: 20px 0;
+            padding: 10px;
+            background: #334155;
+            border-radius: 5px;
+            width: 100%;
+        }
+        p { color: #94a3b8; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Actualizar Base de Datos de Pacientes</h2>
+        <p>Selecciona tu archivo <b>dataset_medico_visuales.csv</b>. Al seleccionarlo, se limpiará la base de datos antigua y se cargarán los miles de historiales de forma automática y agrupada.</p>
+        
+        <input type="file" id="archivoCsv" accept=".csv" />
+        
+        <p id="status-text" style="color: #10b981; font-weight: bold; margin-top: 20px;"></p>
+    </div>
+
+    <script>
+        document.getElementById('archivoCsv').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (!file) {
+                return;
+            }
+
+            const statusText = document.getElementById('status-text');
+            statusText.innerText = "Leyendo archivo y contactando a la base de datos... Por favor espera.";
+
+            const reader = new FileReader();
+            
+            reader.onload = function(e) {
+                const csvData = e.target.result;
+                
+                // Sobrescribir el console.log y el alert temporalmente para que lo veas en la pantalla
+                const logOriginal = console.log;
+                console.log = function(mensaje) {
+                    statusText.innerText = mensaje;
+                    logOriginal(mensaje);
+                };
+                
+                const alertOriginal = window.alert;
+                window.alert = function(mensaje) {
+                    statusText.innerText = "¡Proceso terminado con éxito!";
+                    alertOriginal(mensaje);
+                };
+
+                // Llama al script automatizado
+                importFromConsole(csvData);
+            };
+            
+            reader.onerror = function() {
+                statusText.innerText = "Hubo un error leyendo el archivo en tu PC.";
+                statusText.style.color = "#ef4444";
+            };
+
+            reader.readAsText(file);
+        });
+    </script>
+</body>
+</html>

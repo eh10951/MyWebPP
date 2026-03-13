@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "usuario": "doctor1",
+    "password": "password123",
+    "nombre": "Dr. Juan Pérez",
+    "especialidad": "Cardiología",
+    "licencia": "MED-123456"
+  },
+  {
+    "id": 2,
+    "usuario": "admin_medico",
+    "password": "adminpassword",
+    "nombre": "Dra. María González",
+    "especialidad": "Pediatría",
+    "licencia": "MED-654321"
+  }
+]
+
+Ve a la pestaña "Users" y haz clic en "Add user".
+Correo: 12345678@salud.gob.mx (Tu cédula + dominio simulado).
+Contraseña: Medico2026*

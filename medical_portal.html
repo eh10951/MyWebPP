@@ -10,6 +10,7 @@
     <script src="https://unpkg.com/html5-qrcode"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="medical-theme">
     <div id="main-container">
@@ -17,9 +18,17 @@
         <section id="login-screen" class="screen active">
             <div class="institution-marquee">
                 <div class="marquee-content">
-                    <span><i class="fas fa-hospital-symbol"></i> IMSS CONECTADO</span>
-                    <span><i class="fas fa-hand-holding-medical"></i> ISSSTE CONECTADO</span>
-                    <span><i class="fas fa-shield-virus"></i> RED NACIONAL DE SALUD</span>
+                    <span><i class="fas fa-hospital-symbol"></i> IMSS (Instituto Mexicano del Seguro Social)</span>
+                    <span><i class="fas fa-hand-holding-medical"></i> ISSSTE (Instituto de Seguridad y Servicios Sociales)</span>
+                    <span><i class="fas fa-heartbeat"></i> IMSS-Bienestar</span>
+                    <span><i class="fas fa-oil-can"></i> PEMEX (Petróleos Mexicanos)</span>
+                    <span><i class="fas fa-shield-alt"></i> SEDENA (Secretaría de la Defensa Nacional)</span>
+                    <span><i class="fas fa-anchor"></i> SEMAR (Secretaría de Marina)</span>
+                    <span><i class="fas fa-child"></i> DIF (Desarrollo Integral de la Familia)</span>
+                    <span><i class="fas fa-clinic-medical"></i> Institutos Nacionales de Salud</span>
+                    <span><i class="fas fa-hospital-alt"></i> Hospitales Regionales de Alta Especialidad</span>
+                    <span><i class="fas fa-briefcase-medical"></i> Servicios Estatales de Salud</span>
+                    <span><i class="fas fa-user-md"></i> Sector Privado (Clínicas y Hospitales)</span>
                 </div>
             </div>
             <div class="login-wrapper">
@@ -50,8 +59,25 @@
                 <aside class="panel-info">
                     <div class="status-card" style="background:var(--card-bg); padding:30px; border-radius:20px; border:1px solid var(--glass-border);">
                         <div style="width:12px; height:12px; background:var(--medical-green); border-radius:50%; margin-bottom:10px; box-shadow:0 0 10px var(--medical-green);"></div>
-                        <h3>HARDWARE LISTO</h3>
-                        <p id="scan-status-text" style="color:var(--text-muted); font-size:0.9rem; margin-top:10px;">Enfoque el código QR del paciente en el visor central.</p>
+                        <h3 style="margin-bottom: 5px;">HARDWARE LISTO</h3>
+                        <p id="scan-status-text" style="color:var(--medical-green); font-size:1rem; margin-top:10px; font-weight: 600;"></p>
+                    </div>
+                    
+                    <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 16px;">
+                        <div style="background: linear-gradient(145deg, #ffffff 0%, #f0f9ff 100%); padding: 18px 20px; border-radius: 20px; border: 1px solid rgba(56, 189, 248, 0.2); display: flex; align-items: flex-start; gap: 16px; box-shadow: 0 6px 20px rgba(0, 50, 100, 0.05);">
+                            <div style="background: linear-gradient(135deg, var(--medical-blue), #3b82f6); color: #fff; width: 36px; height: 36px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; flex-shrink: 0; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3); border: 1px solid rgba(255,255,255,0.4); margin-top: 2px;">1</div>
+                            <div style="display: flex; flex-direction: column; justify-content: center;">
+                                <h4 style="color: #0f172a; margin: 0 0 6px 0; font-size: 1.05rem; font-weight: 700; letter-spacing: 0.3px;">Escanear QR</h4>
+                                <p style="color: #475569; font-size: 0.85rem; margin: 0; line-height: 1.4; font-weight: 500;">Enfoque el código del paciente en el visor central.</p>
+                            </div>
+                        </div>
+                        <div style="background: linear-gradient(145deg, #ffffff 0%, #f0f9ff 100%); padding: 18px 20px; border-radius: 20px; border: 1px solid rgba(56, 189, 248, 0.2); display: flex; align-items: flex-start; gap: 16px; box-shadow: 0 6px 20px rgba(0, 50, 100, 0.05);">
+                            <div style="background: linear-gradient(135deg, var(--medical-blue), #3b82f6); color: #fff; width: 36px; height: 36px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; flex-shrink: 0; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3); border: 1px solid rgba(255,255,255,0.4); margin-top: 2px;">2</div>
+                            <div style="display: flex; flex-direction: column; justify-content: center;">
+                                <h4 style="color: #0f172a; margin: 0 0 6px 0; font-size: 1.05rem; font-weight: 700; letter-spacing: 0.3px;">Validar Identidad</h4>
+                                <p style="color: #475569; font-size: 0.85rem; margin: 0; line-height: 1.4; font-weight: 500;">Ingrese el NIP de 4 dígitos en el teclado derecho.</p>
+                            </div>
+                        </div>
                     </div>
                 </aside>
 
@@ -100,39 +126,83 @@
                             <span style="color:var(--text-muted)">GÉNERO:</span><span id="p-gender">-</span>
                         </div>
                         <div style="display:flex; justify-content:space-between; margin-bottom:15px;">
-                            <span style="color:var(--text-muted)">CURP:</span><span id="p-curp" style="font-size:0.8rem">-</span>
+                            <span style="color:var(--text-muted)">ATENCIONES:</span><span id="p-curp" style="font-size:0.8rem">-</span>
                         </div>
                         <div style="display:flex; justify-content:space-between; margin-bottom:15px;">
-                            <span style="color:var(--text-muted)">SANGRE:</span><span id="p-blood">-</span>
+                            <span style="color:var(--text-muted)">PESO:</span><span id="p-weight">-</span>
                         </div>
                     </div>
                     <button onclick="location.reload()" style="margin-top:40px; width:100%; padding:15px; border:1px solid var(--medical-red); background:none; color:var(--medical-red); border-radius:12px; cursor:pointer; font-weight:bold;">CERRAR EXPEDIENTE</button>
                 </aside>
 
-                <main class="stats-container">
-                    <div class="diag-card">
-                        <h4>Pulsaciones</h4>
-                        <div class="value" id="p-bpm">-</div>
-                        <span class="risk-indicator risk-low">FRECUENCIA</span>
+                <main class="stats-container" style="align-content: start;">
+                    
+                    <!-- Última Consulta (Hero Card) -->
+                    <div class="diag-card" style="grid-column: span 2; border-left-color: var(--accent-blue); background: linear-gradient(145deg, #ffffff 0%, #f8fcfd 100%);">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <h4 style="color: var(--accent-blue);">Última Consulta Atendida</h4>
+                                <div class="value" id="p-last-date" style="font-size: 1.8rem; margin-top: 5px;">-</div>
+                            </div>
+                            <div style="text-align: right;">
+                                <i class="fas fa-hospital" style="font-size: 2rem; color: #cbd5e1; margin-bottom: 10px; display: block;"></i>
+                                <span class="risk-indicator risk-low" id="p-clinic" style="margin: 0; background: var(--glass-border); color: var(--text-primary);">CLÍNICA</span>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Métricas Vitales -->
                     <div class="diag-card">
-                        <h4>Presión Arterial</h4>
+                        <h4><i class="fas fa-heartbeat" style="color: #ef4444; margin-right: 8px;"></i> Presión Arterial</h4>
                         <div class="value" id="p-pressure">-</div>
-                        <span class="risk-indicator risk-low">SISTÓLICA/DIAS.</span>
+                        <span class="risk-indicator risk-low">SISTÓLICA / DIASTÓLICA</span>
                     </div>
+
                     <div class="diag-card">
-                        <h4>Glucosa</h4>
-                        <div class="value" id="p-glucose">-</div>
-                        <span class="risk-indicator risk-high">LABORATORIO</span>
+                        <h4><i class="fas fa-tint" style="color: #3b82f6; margin-right: 8px;"></i> Glucosa</h4>
+                        <div class="value" id="p-glucose">-<span style="font-size: 1rem; color: var(--text-muted); margin-left: 5px;">mg/dL</span></div>
+                        <span class="risk-indicator" id="p-glucose-risk">LABORATORIO</span>
                     </div>
-                    <div class="diag-card">
-                        <h4>Frecuencia Cardíaca</h4>
-                        <div class="value">72 <span style="font-size:1rem; color:var(--text-muted)">BPM</span></div>
-                        <span class="risk-indicator risk-low">ESTABLE</span>
-                    </div>
+
+                    <!-- Diagnóstico -->
                     <div class="diag-card" style="grid-column: span 2; border-left-color: var(--medical-green);">
-                        <h4>Diagnóstico de Riesgo</h4>
-                        <p id="p-diag" style="font-size:1.1rem; line-height:1.6; margin-top:10px;">-</p>
+                        <h4><i class="fas fa-notes-medical" style="color: var(--medical-green); margin-right: 8px;"></i> Diagnóstico Médico y Estado</h4>
+                        <p id="p-diag" style="font-size:1.2rem; line-height:1.6; margin-top:10px; font-weight: 500; color: var(--text-primary);">-</p>
+                    </div>
+
+                    <!-- Gráficas Dashboard -->
+                    <div class="diag-card" style="grid-column: span 2; border-left-color: #8b5cf6; padding: 25px;">
+                        <h4 style="margin-bottom: 20px;"><i class="fas fa-chart-line" style="color: #8b5cf6; margin-right: 8px;"></i> Evolución Clínica</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div style="background: rgba(255,255,255,0.5); border-radius: 12px; padding: 15px; border: 1px solid var(--glass-border);">
+                                <canvas id="glucoseChart" style="max-height: 220px;"></canvas>
+                            </div>
+                            <div style="background: rgba(255,255,255,0.5); border-radius: 12px; padding: 15px; border: 1px solid var(--glass-border);">
+                                <canvas id="weightChart" style="max-height: 220px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Historial Clínico (Tabla) -->
+                    <div class="diag-card" style="grid-column: span 2; border-left: none; padding: 25px;">
+                        <h4 style="margin-bottom: 20px;"><i class="fas fa-history" style="color: var(--text-secondary); margin-right: 8px;"></i> Historial Clínico Analítico</h4>
+                        <div style="overflow-x: auto; max-height: 250px; border-radius: 12px; border: 1px solid var(--glass-border);">
+                            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
+                                <thead style="background: rgba(0,0,0,0.03); position: sticky; top: 0; z-index: 1;">
+                                    <tr>
+                                        <th style="padding: 12px 15px; color: var(--text-secondary); font-weight: 600;">Fecha</th>
+                                        <th style="padding: 12px 15px; color: var(--text-secondary); font-weight: 600;">Instancia</th>
+                                        <th style="padding: 12px 15px; color: var(--text-secondary); font-weight: 600;">Peso</th>
+                                        <th style="padding: 12px 15px; color: var(--text-secondary); font-weight: 600;">Presión</th>
+                                        <th style="padding: 12px 15px; color: var(--text-secondary); font-weight: 600;">Glucosa</th>
+                                        <th style="padding: 12px 15px; color: var(--text-secondary); font-weight: 600;">Diagnóstico</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="history-table-body">
+                                    <!-- Generado dinámicamente -->
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </main>
             </div>

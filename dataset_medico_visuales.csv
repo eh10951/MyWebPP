@@ -1,0 +1,881 @@
+﻿paciente_id,nip,nombre,edad,genero,fecha_consulta,instancia_medica,peso_kg,glucosa_mg_dL,presion_sistolica,presion_diastolica,diagnostico
+1,4695,Serafín Aragón,47,F,2023-09-25,Clínica 22 IMSS,67.3,99.0,129,76,Mejoría
+1,4695,Serafín Aragón,47,F,2023-11-24,Unidad Tlatelolco,66.4,97.3,123,76,Estable
+1,4695,Serafín Aragón,47,F,2024-01-23,Unidad Tlatelolco,65.5,95.4,125,78,Estable
+1,4695,Serafín Aragón,47,F,2024-03-23,Hospital General CDMX,68.6,101.7,123,79,Estable
+1,4695,Serafín Aragón,47,F,2024-05-22,Hospital ABC,64.3,93.1,127,77,Mejoría
+1,4695,Serafín Aragón,47,F,2024-07-21,Hospital General CDMX,66.3,97.1,128,79,Mejoría
+1,4695,Serafín Aragón,47,F,2024-09-19,Centro de Salud Mixcoac,65.0,94.5,121,79,Crítico
+1,4695,Serafín Aragón,47,F,2024-11-18,Centro Médico Naval,69.8,104.1,126,79,Crítico
+2,7106,Ing. César Puente,61,F,2023-09-25,Hospital Ángeles,61.7,93.6,121,82,Estable
+2,7106,Ing. César Puente,61,F,2023-11-24,Médica Sur,62.5,95.1,123,76,Crítico
+2,7106,Ing. César Puente,61,F,2024-01-23,Clínica Londres,63.6,97.3,119,79,En Observación
+2,7106,Ing. César Puente,61,F,2024-03-23,Clínica 22 IMSS,62.7,95.5,121,76,Estable
+2,7106,Ing. César Puente,61,F,2024-05-22,Clínica Londres,63.8,97.7,120,81,Mejoría
+2,7106,Ing. César Puente,61,F,2024-07-21,Hospital Xochimilco,59.7,89.5,121,76,Crítico
+2,7106,Ing. César Puente,61,F,2024-09-19,Clínica Londres,63.8,97.7,122,80,Estable
+2,7106,Ing. César Puente,61,F,2024-11-18,Centro Médico Naval,64.7,99.6,121,79,Mejoría
+3,1914,Graciela Caballero,25,F,2023-09-25,Médica Sur,92.9,99.0,121,83,Crítico
+3,1914,Graciela Caballero,25,F,2023-11-24,Hospital Xochimilco,93.6,100.5,128,82,En Observación
+3,1914,Graciela Caballero,25,F,2024-01-23,Centro de Salud Mixcoac,94.7,102.7,124,80,Estable
+3,1914,Graciela Caballero,25,F,2024-03-23,Hospital ABC,94.5,102.3,129,82,En Observación
+3,1914,Graciela Caballero,25,F,2024-05-22,Hospital General CDMX,92.9,99.2,129,81,Crítico
+3,1914,Graciela Caballero,25,F,2024-07-21,Hospital General CDMX,88.1,89.6,122,81,Mejoría
+3,1914,Graciela Caballero,25,F,2024-09-19,Médica Sur,89.3,91.9,122,79,Crítico
+3,1914,Graciela Caballero,25,F,2024-11-18,Centro de Salud Mixcoac,86.1,85.5,125,80,En Observación
+4,8689,Javier Patricia Rodarte,57,M,2023-09-25,Médica Sur,79.1,81.0,121,77,Mejoría
+4,8689,Javier Patricia Rodarte,57,M,2023-11-24,Hospital General CDMX,79.7,82.2,122,82,Estable
+4,8689,Javier Patricia Rodarte,57,M,2024-01-23,Centro de Salud Mixcoac,80.7,84.1,119,82,Estable
+4,8689,Javier Patricia Rodarte,57,M,2024-03-23,Centro de Salud Mixcoac,81.2,85.2,124,81,Crítico
+4,8689,Javier Patricia Rodarte,57,M,2024-05-22,Centro de Salud Mixcoac,81.8,86.3,125,77,En Observación
+4,8689,Javier Patricia Rodarte,57,M,2024-07-21,Hospital Xochimilco,79.8,82.4,129,82,Estable
+4,8689,Javier Patricia Rodarte,57,M,2024-09-19,Centro Médico Naval,80.1,82.9,125,78,Estable
+4,8689,Javier Patricia Rodarte,57,M,2024-11-18,Clínica Londres,81.7,86.1,126,76,Crítico
+5,4530,Dr. Gilberto Gamboa,72,F,2023-09-25,Médica Sur,83.1,138.0,126,84,Mejoría
+5,4530,Dr. Gilberto Gamboa,72,F,2023-11-24,Hospital ABC,82.2,136.2,122,80,Mejoría
+5,4530,Dr. Gilberto Gamboa,72,F,2024-01-23,Hospital Xochimilco,82.5,137.0,127,78,En Observación
+5,4530,Dr. Gilberto Gamboa,72,F,2024-03-23,Hospital Xochimilco,85.4,142.8,123,81,En Observación
+5,4530,Dr. Gilberto Gamboa,72,F,2024-05-22,Hospital Ángeles,79.4,130.7,132,81,En Observación
+5,4530,Dr. Gilberto Gamboa,72,F,2024-07-21,Hospital General CDMX,83.3,138.5,129,79,Estable
+5,4530,Dr. Gilberto Gamboa,72,F,2024-09-19,Clínica Londres,84.5,140.9,131,78,Crítico
+5,4530,Dr. Gilberto Gamboa,72,F,2024-11-18,Médica Sur,78.0,127.9,124,80,Estable
+6,9459,Lic. Nadia Cotto,59,F,2023-09-25,Centro Médico Naval,79.2,111.0,121,78,Crítico
+6,9459,Lic. Nadia Cotto,59,F,2023-11-24,Centro Médico Naval,80.1,112.9,125,83,Estable
+6,9459,Lic. Nadia Cotto,59,F,2024-01-23,Médica Sur,78.7,110.1,123,82,En Observación
+6,9459,Lic. Nadia Cotto,59,F,2024-03-23,Clínica 22 IMSS,81.0,114.6,129,77,Mejoría
+6,9459,Lic. Nadia Cotto,59,F,2024-05-22,Médica Sur,81.8,116.3,128,81,Crítico
+6,9459,Lic. Nadia Cotto,59,F,2024-07-21,Hospital Xochimilco,75.0,102.7,126,78,Mejoría
+6,9459,Lic. Nadia Cotto,59,F,2024-09-19,Hospital ABC,84.5,121.6,124,81,En Observación
+6,9459,Lic. Nadia Cotto,59,F,2024-11-18,Hospital Xochimilco,83.0,118.7,124,80,En Observación
+7,1720,Gonzalo Hugo Henríquez Santacruz,50,F,2023-09-25,Médica Sur,79.0,93.5,124,80,Estable
+7,1720,Gonzalo Hugo Henríquez Santacruz,50,F,2023-11-24,Hospital Xochimilco,78.8,93.1,123,82,Crítico
+7,1720,Gonzalo Hugo Henríquez Santacruz,50,F,2024-01-23,Hospital General CDMX,77.3,90.0,124,79,En Observación
+7,1720,Gonzalo Hugo Henríquez Santacruz,50,F,2024-03-23,Clínica Londres,81.7,98.9,124,82,Mejoría
+7,1720,Gonzalo Hugo Henríquez Santacruz,50,F,2024-05-22,Centro de Salud Mixcoac,79.6,94.7,130,83,Crítico
+7,1720,Gonzalo Hugo Henríquez Santacruz,50,F,2024-07-21,Clínica Londres,76.4,88.2,123,83,Crítico
+7,1720,Gonzalo Hugo Henríquez Santacruz,50,F,2024-09-19,Hospital ABC,81.7,98.8,121,77,Estable
+7,1720,Gonzalo Hugo Henríquez Santacruz,50,F,2024-11-18,Hospital Xochimilco,81.6,98.7,121,83,En Observación
+8,8349,Alejandra Saldaña Patiño,58,M,2023-09-25,Unidad Tlatelolco,98.2,91.8,124,77,Mejoría
+8,8349,Alejandra Saldaña Patiño,58,M,2023-11-24,Hospital Militar,98.8,93.0,121,80,Mejoría
+8,8349,Alejandra Saldaña Patiño,58,M,2024-01-23,Hospital Xochimilco,98.2,91.8,123,76,En Observación
+8,8349,Alejandra Saldaña Patiño,58,M,2024-03-23,Unidad Tlatelolco,96.7,88.8,126,78,Estable
+8,8349,Alejandra Saldaña Patiño,58,M,2024-05-22,Hospital Xochimilco,96.8,89.0,127,77,Estable
+8,8349,Alejandra Saldaña Patiño,58,M,2024-07-21,Clínica 22 IMSS,94.6,84.6,122,76,En Observación
+8,8349,Alejandra Saldaña Patiño,58,M,2024-09-19,Médica Sur,102.3,99.9,128,79,En Observación
+8,8349,Alejandra Saldaña Patiño,58,M,2024-11-18,Clínica Londres,104.2,103.8,126,79,En Observación
+9,9255,Arcelia Silvano de la O,36,M,2023-09-25,Hospital General CDMX,73.5,104.5,123,82,En Observación
+9,9255,Arcelia Silvano de la O,36,M,2023-11-24,Clínica 22 IMSS,73.4,104.4,124,83,Estable
+9,9255,Arcelia Silvano de la O,36,M,2024-01-23,Centro de Salud Mixcoac,71.6,100.7,127,77,En Observación
+9,9255,Arcelia Silvano de la O,36,M,2024-03-23,Unidad Tlatelolco,73.9,105.3,123,81,En Observación
+9,9255,Arcelia Silvano de la O,36,M,2024-05-22,Médica Sur,74.7,106.9,121,77,Mejoría
+9,9255,Arcelia Silvano de la O,36,M,2024-07-21,Hospital Xochimilco,73.7,105.0,122,81,En Observación
+9,9255,Arcelia Silvano de la O,36,M,2024-09-19,Clínica Londres,68.0,93.5,127,81,Mejoría
+9,9255,Arcelia Silvano de la O,36,M,2024-11-18,Hospital Ángeles,79.1,115.7,124,81,Crítico
+10,9750,Javier Pacheco Hernandes,48,F,2023-09-25,Clínica Londres,56.0,126.5,123,81,Estable
+10,9750,Javier Pacheco Hernandes,48,F,2023-11-24,Hospital General CDMX,55.4,125.2,131,80,Estable
+10,9750,Javier Pacheco Hernandes,48,F,2024-01-23,Hospital Xochimilco,56.9,128.3,131,81,Estable
+10,9750,Javier Pacheco Hernandes,48,F,2024-03-23,Hospital Ángeles,58.3,131.1,125,78,En Observación
+10,9750,Javier Pacheco Hernandes,48,F,2024-05-22,Clínica 22 IMSS,55.1,124.7,124,77,Estable
+10,9750,Javier Pacheco Hernandes,48,F,2024-07-21,Centro de Salud Mixcoac,57.3,129.1,121,80,En Observación
+10,9750,Javier Pacheco Hernandes,48,F,2024-09-19,Hospital Ángeles,58.1,130.6,125,80,Mejoría
+10,9750,Javier Pacheco Hernandes,48,F,2024-11-18,Centro de Salud Mixcoac,49.2,112.8,125,80,En Observación
+11,5571,Josefina Amanda Rocha Abrego,54,M,2023-09-25,Clínica Londres,91.3,94.5,120,81,En Observación
+11,5571,Josefina Amanda Rocha Abrego,54,M,2023-11-24,Hospital General CDMX,91.6,95.0,129,77,En Observación
+11,5571,Josefina Amanda Rocha Abrego,54,M,2024-01-23,Centro Médico Naval,91.1,94.1,128,82,Crítico
+11,5571,Josefina Amanda Rocha Abrego,54,M,2024-03-23,Hospital Xochimilco,91.1,93.9,128,78,Estable
+11,5571,Josefina Amanda Rocha Abrego,54,M,2024-05-22,Hospital Militar,92.5,96.8,128,76,Estable
+11,5571,Josefina Amanda Rocha Abrego,54,M,2024-07-21,Hospital Militar,88.0,87.8,124,76,Crítico
+11,5571,Josefina Amanda Rocha Abrego,54,M,2024-09-19,Hospital General CDMX,92.4,96.6,127,78,En Observación
+11,5571,Josefina Amanda Rocha Abrego,54,M,2024-11-18,Clínica 22 IMSS,92.7,97.3,123,77,Estable
+12,2933,Lic. Vanesa Sanches,65,F,2023-09-25,Médica Sur,76.3,97.9,123,80,Mejoría
+12,2933,Lic. Vanesa Sanches,65,F,2023-11-24,Unidad Tlatelolco,76.0,97.2,122,81,Estable
+12,2933,Lic. Vanesa Sanches,65,F,2024-01-23,Hospital General CDMX,75.5,96.2,130,78,Mejoría
+12,2933,Lic. Vanesa Sanches,65,F,2024-03-23,Hospital Ángeles,78.0,101.3,127,80,Mejoría
+12,2933,Lic. Vanesa Sanches,65,F,2024-05-22,Centro de Salud Mixcoac,77.8,100.8,130,79,Estable
+12,2933,Lic. Vanesa Sanches,65,F,2024-07-21,Hospital Xochimilco,76.5,98.3,123,79,Crítico
+12,2933,Lic. Vanesa Sanches,65,F,2024-09-19,Hospital General CDMX,81.0,107.2,129,79,En Observación
+12,2933,Lic. Vanesa Sanches,65,F,2024-11-18,Unidad Tlatelolco,70.7,86.6,128,82,Mejoría
+13,6621,Andrés Bañuelos Monroy,31,M,2023-09-25,Hospital General CDMX,60.4,101.7,119,76,Estable
+13,6621,Andrés Bañuelos Monroy,31,M,2023-11-24,Hospital Xochimilco,60.0,100.7,121,80,Mejoría
+13,6621,Andrés Bañuelos Monroy,31,M,2024-01-23,Centro Médico Naval,60.0,100.9,119,76,Estable
+13,6621,Andrés Bañuelos Monroy,31,M,2024-03-23,Hospital General CDMX,58.5,97.8,124,79,En Observación
+13,6621,Andrés Bañuelos Monroy,31,M,2024-05-22,Clínica 22 IMSS,63.1,107.1,128,77,Crítico
+13,6621,Andrés Bañuelos Monroy,31,M,2024-07-21,Centro de Salud Mixcoac,59.5,99.9,121,81,Estable
+13,6621,Andrés Bañuelos Monroy,31,M,2024-09-19,Hospital ABC,54.6,90.0,119,81,En Observación
+13,6621,Andrés Bañuelos Monroy,31,M,2024-11-18,Centro de Salud Mixcoac,53.5,87.9,121,76,Estable
+14,2633,Ing. Ofelia Sosa,34,M,2023-09-25,Hospital Ángeles,56.8,112.0,130,82,Mejoría
+14,2633,Ing. Ofelia Sosa,34,M,2023-11-24,Centro de Salud Mixcoac,57.1,112.5,120,81,Estable
+14,2633,Ing. Ofelia Sosa,34,M,2024-01-23,Hospital ABC,58.0,114.5,122,81,Estable
+14,2633,Ing. Ofelia Sosa,34,M,2024-03-23,Centro de Salud Mixcoac,57.1,112.6,125,79,Mejoría
+14,2633,Ing. Ofelia Sosa,34,M,2024-05-22,Hospital Ángeles,53.5,105.3,127,82,Mejoría
+14,2633,Ing. Ofelia Sosa,34,M,2024-07-21,Hospital Militar,55.2,108.9,124,82,Crítico
+14,2633,Ing. Ofelia Sosa,34,M,2024-09-19,Médica Sur,61.8,122.0,123,82,Crítico
+14,2633,Ing. Ofelia Sosa,34,M,2024-11-18,Médica Sur,57.7,113.9,124,79,Crítico
+15,5813,Mónica Pedroza,49,M,2023-09-25,Médica Sur,59.5,117.7,121,77,Crítico
+15,5813,Mónica Pedroza,49,M,2023-11-24,Clínica 22 IMSS,59.7,118.1,126,80,Crítico
+15,5813,Mónica Pedroza,49,M,2024-01-23,Centro de Salud Mixcoac,58.4,115.5,128,82,Estable
+15,5813,Mónica Pedroza,49,M,2024-03-23,Hospital ABC,58.6,116.0,130,83,En Observación
+15,5813,Mónica Pedroza,49,M,2024-05-22,Centro Médico Naval,61.2,121.1,122,81,En Observación
+15,5813,Mónica Pedroza,49,M,2024-07-21,Hospital Xochimilco,58.2,115.1,129,82,Crítico
+15,5813,Mónica Pedroza,49,M,2024-09-19,Clínica Londres,59.9,118.6,131,80,En Observación
+15,5813,Mónica Pedroza,49,M,2024-11-18,Hospital General CDMX,65.7,130.2,122,81,Estable
+16,9293,Luis Miguel Inés Paredes,33,F,2023-09-25,Hospital Militar,65.2,108.0,122,84,Crítico
+16,9293,Luis Miguel Inés Paredes,33,F,2023-11-24,Clínica Londres,65.7,109.0,131,83,Crítico
+16,9293,Luis Miguel Inés Paredes,33,F,2024-01-23,Hospital Xochimilco,64.0,105.6,125,81,En Observación
+16,9293,Luis Miguel Inés Paredes,33,F,2024-03-23,Centro Médico Naval,67.8,113.2,130,81,Crítico
+16,9293,Luis Miguel Inés Paredes,33,F,2024-05-22,Hospital General CDMX,64.3,106.3,128,82,Crítico
+16,9293,Luis Miguel Inés Paredes,33,F,2024-07-21,Hospital ABC,66.2,110.1,125,83,Crítico
+16,9293,Luis Miguel Inés Paredes,33,F,2024-09-19,Clínica 22 IMSS,60.4,98.4,126,80,Mejoría
+16,9293,Luis Miguel Inés Paredes,33,F,2024-11-18,Hospital Militar,59.5,96.7,132,78,Estable
+17,4030,Jacinto Jorge Luis Meléndez,53,F,2023-09-25,Centro Médico Naval,83.9,111.0,123,82,Estable
+17,4030,Jacinto Jorge Luis Meléndez,53,F,2023-11-24,Clínica 22 IMSS,84.3,111.8,128,78,Mejoría
+17,4030,Jacinto Jorge Luis Meléndez,53,F,2024-01-23,Clínica 22 IMSS,83.5,110.1,122,78,Estable
+17,4030,Jacinto Jorge Luis Meléndez,53,F,2024-03-23,Clínica 22 IMSS,86.2,115.5,125,78,En Observación
+17,4030,Jacinto Jorge Luis Meléndez,53,F,2024-05-22,Clínica Londres,87.3,117.8,125,83,Mejoría
+17,4030,Jacinto Jorge Luis Meléndez,53,F,2024-07-21,Hospital Ángeles,88.5,120.2,130,80,En Observación
+17,4030,Jacinto Jorge Luis Meléndez,53,F,2024-09-19,Hospital Ángeles,81.8,106.7,128,81,Mejoría
+17,4030,Jacinto Jorge Luis Meléndez,53,F,2024-11-18,Hospital Xochimilco,82.3,107.7,121,78,Estable
+18,1660,Dulce Frías Zedillo,36,F,2023-09-25,Hospital Ángeles,71.9,85.5,125,81,Crítico
+18,1660,Dulce Frías Zedillo,36,F,2023-11-24,Hospital Xochimilco,71.9,85.5,122,77,Estable
+18,1660,Dulce Frías Zedillo,36,F,2024-01-23,Clínica Londres,71.6,84.9,119,82,Estable
+18,1660,Dulce Frías Zedillo,36,F,2024-03-23,Clínica Londres,72.4,86.5,121,82,Crítico
+18,1660,Dulce Frías Zedillo,36,F,2024-05-22,Centro de Salud Mixcoac,74.8,91.3,128,80,Mejoría
+18,1660,Dulce Frías Zedillo,36,F,2024-07-21,Hospital Xochimilco,71.1,83.8,127,77,Mejoría
+18,1660,Dulce Frías Zedillo,36,F,2024-09-19,Centro de Salud Mixcoac,71.5,84.7,128,77,Estable
+18,1660,Dulce Frías Zedillo,36,F,2024-11-18,Hospital ABC,65.4,72.4,128,77,En Observación
+19,5698,María Luisa Girón,61,F,2023-09-25,Clínica 22 IMSS,90.7,117.6,123,79,Mejoría
+19,5698,María Luisa Girón,61,F,2023-11-24,Hospital Ángeles,90.4,116.9,122,81,Crítico
+19,5698,María Luisa Girón,61,F,2024-01-23,Clínica 22 IMSS,90.9,118.0,129,78,Mejoría
+19,5698,María Luisa Girón,61,F,2024-03-23,Hospital ABC,89.7,115.6,122,78,Crítico
+19,5698,María Luisa Girón,61,F,2024-05-22,Hospital General CDMX,92.2,120.5,122,78,En Observación
+19,5698,María Luisa Girón,61,F,2024-07-21,Hospital Militar,85.8,107.7,126,79,Estable
+19,5698,María Luisa Girón,61,F,2024-09-19,Hospital Xochimilco,93.8,123.9,132,79,Crítico
+19,5698,María Luisa Girón,61,F,2024-11-18,Hospital Xochimilco,85.4,106.9,122,82,En Observación
+20,7148,Ernesto José Manuél Loya,41,M,2023-09-25,Clínica Londres,70.4,92.7,124,81,Estable
+20,7148,Ernesto José Manuél Loya,41,M,2023-11-24,Hospital Militar,71.3,94.7,119,82,En Observación
+20,7148,Ernesto José Manuél Loya,41,M,2024-01-23,Hospital General CDMX,69.1,90.1,120,77,Mejoría
+20,7148,Ernesto José Manuél Loya,41,M,2024-03-23,Hospital Xochimilco,71.1,94.2,126,78,Crítico
+20,7148,Ernesto José Manuél Loya,41,M,2024-05-22,Hospital General CDMX,72.9,97.8,127,81,Estable
+20,7148,Ernesto José Manuél Loya,41,M,2024-07-21,Médica Sur,73.8,99.5,129,80,Crítico
+20,7148,Ernesto José Manuél Loya,41,M,2024-09-19,Hospital Ángeles,65.2,82.4,122,77,Mejoría
+20,7148,Ernesto José Manuél Loya,41,M,2024-11-18,Hospital ABC,65.9,83.9,123,76,Crítico
+21,9965,Lic. Minerva Casillas,67,F,2023-09-25,Centro de Salud Mixcoac,87.5,106.8,131,83,Crítico
+21,9965,Lic. Minerva Casillas,67,F,2023-11-24,Centro de Salud Mixcoac,87.2,106.3,128,81,Estable
+21,9965,Lic. Minerva Casillas,67,F,2024-01-23,Hospital General CDMX,85.7,103.2,128,78,Estable
+21,9965,Lic. Minerva Casillas,67,F,2024-03-23,Centro de Salud Mixcoac,88.4,108.6,130,78,En Observación
+21,9965,Lic. Minerva Casillas,67,F,2024-05-22,Hospital Xochimilco,87.3,106.3,124,83,Mejoría
+21,9965,Lic. Minerva Casillas,67,F,2024-07-21,Centro de Salud Mixcoac,87.6,106.9,132,83,Estable
+21,9965,Lic. Minerva Casillas,67,F,2024-09-19,Centro de Salud Mixcoac,92.0,115.8,132,83,Crítico
+21,9965,Lic. Minerva Casillas,67,F,2024-11-18,Médica Sur,93.7,119.2,125,80,Mejoría
+22,5018,Eloy Quezada Urrutia,66,F,2023-09-25,Hospital ABC,72.8,125.4,127,78,Crítico
+22,5018,Eloy Quezada Urrutia,66,F,2023-11-24,Hospital Xochimilco,72.7,125.3,124,78,Crítico
+22,5018,Eloy Quezada Urrutia,66,F,2024-01-23,Unidad Tlatelolco,72.9,125.7,127,78,En Observación
+22,5018,Eloy Quezada Urrutia,66,F,2024-03-23,Hospital Militar,73.6,127.1,124,82,Mejoría
+22,5018,Eloy Quezada Urrutia,66,F,2024-05-22,Hospital Xochimilco,73.1,126.1,130,79,Mejoría
+22,5018,Eloy Quezada Urrutia,66,F,2024-07-21,Hospital ABC,67.8,115.4,131,80,En Observación
+22,5018,Eloy Quezada Urrutia,66,F,2024-09-19,Unidad Tlatelolco,67.8,115.5,125,83,Mejoría
+22,5018,Eloy Quezada Urrutia,66,F,2024-11-18,Hospital General CDMX,79.6,139.0,121,80,Mejoría
+23,7761,Elsa Alma Piña,53,F,2023-09-25,Hospital ABC,72.9,107.8,125,77,Mejoría
+23,7761,Elsa Alma Piña,53,F,2023-11-24,Hospital Militar,73.1,108.3,125,83,Estable
+23,7761,Elsa Alma Piña,53,F,2024-01-23,Médica Sur,72.0,106.1,128,81,En Observación
+23,7761,Elsa Alma Piña,53,F,2024-03-23,Hospital Militar,72.1,106.2,125,78,Estable
+23,7761,Elsa Alma Piña,53,F,2024-05-22,Hospital ABC,76.1,114.3,131,82,Crítico
+23,7761,Elsa Alma Piña,53,F,2024-07-21,Médica Sur,74.8,111.6,128,79,Mejoría
+23,7761,Elsa Alma Piña,53,F,2024-09-19,Centro Médico Naval,74.0,110.1,123,82,Estable
+23,7761,Elsa Alma Piña,53,F,2024-11-18,Hospital Militar,68.0,98.2,130,77,Mejoría
+24,4829,Nelly Peres Mares,71,F,2023-09-25,Hospital Ángeles,101.8,134.4,125,79,Crítico
+24,4829,Nelly Peres Mares,71,F,2023-11-24,Centro de Salud Mixcoac,101.8,134.3,124,81,Mejoría
+24,4829,Nelly Peres Mares,71,F,2024-01-23,Médica Sur,101.4,133.6,129,79,En Observación
+24,4829,Nelly Peres Mares,71,F,2024-03-23,Clínica 22 IMSS,100.4,131.5,129,84,Crítico
+24,4829,Nelly Peres Mares,71,F,2024-05-22,Hospital General CDMX,101.2,133.3,127,84,Mejoría
+24,4829,Nelly Peres Mares,71,F,2024-07-21,Hospital Xochimilco,106.3,143.5,126,82,Crítico
+24,4829,Nelly Peres Mares,71,F,2024-09-19,Clínica Londres,100.6,132.0,122,78,Mejoría
+24,4829,Nelly Peres Mares,71,F,2024-11-18,Hospital ABC,95.6,121.9,126,80,En Observación
+25,7337,Eugenio Diana Torres,65,F,2023-09-25,Hospital Xochimilco,96.8,124.8,123,80,Estable
+25,7337,Eugenio Diana Torres,65,F,2023-11-24,Hospital ABC,97.4,125.9,132,80,Mejoría
+25,7337,Eugenio Diana Torres,65,F,2024-01-23,Hospital ABC,96.8,124.9,126,79,Estable
+25,7337,Eugenio Diana Torres,65,F,2024-03-23,Clínica 22 IMSS,94.7,120.5,125,84,Mejoría
+25,7337,Eugenio Diana Torres,65,F,2024-05-22,Hospital Ángeles,95.8,122.9,124,84,Estable
+25,7337,Eugenio Diana Torres,65,F,2024-07-21,Unidad Tlatelolco,100.7,132.6,129,78,Estable
+25,7337,Eugenio Diana Torres,65,F,2024-09-19,Médica Sur,91.4,113.9,128,83,Crítico
+25,7337,Eugenio Diana Torres,65,F,2024-11-18,Centro de Salud Mixcoac,93.2,117.5,129,84,Mejoría
+26,1082,Marco Antonio Hernádez Palacios,35,F,2023-09-25,Hospital ABC,102.9,88.0,129,78,Crítico
+26,1082,Marco Antonio Hernádez Palacios,35,F,2023-11-24,Hospital ABC,103.6,89.4,124,83,En Observación
+26,1082,Marco Antonio Hernádez Palacios,35,F,2024-01-23,Centro Médico Naval,101.6,85.4,128,80,Mejoría
+26,1082,Marco Antonio Hernádez Palacios,35,F,2024-03-23,Centro Médico Naval,102.0,86.2,122,78,Mejoría
+26,1082,Marco Antonio Hernádez Palacios,35,F,2024-05-22,Hospital Ángeles,104.2,90.6,127,81,Crítico
+26,1082,Marco Antonio Hernádez Palacios,35,F,2024-07-21,Unidad Tlatelolco,103.1,88.2,122,83,Mejoría
+26,1082,Marco Antonio Hernádez Palacios,35,F,2024-09-19,Hospital Ángeles,106.3,94.8,120,79,Mejoría
+26,1082,Marco Antonio Hernádez Palacios,35,F,2024-11-18,Hospital Xochimilco,97.4,76.9,123,81,Mejoría
+27,1178,Wendolin Navarrete,51,F,2023-09-25,Hospital ABC,101.2,114.4,126,78,En Observación
+27,1178,Wendolin Navarrete,51,F,2023-11-24,Hospital ABC,100.7,113.5,125,77,Crítico
+27,1178,Wendolin Navarrete,51,F,2024-01-23,Hospital ABC,101.4,114.7,122,81,En Observación
+27,1178,Wendolin Navarrete,51,F,2024-03-23,Clínica 22 IMSS,100.6,113.3,130,78,En Observación
+27,1178,Wendolin Navarrete,51,F,2024-05-22,Hospital Militar,99.3,110.5,122,80,En Observación
+27,1178,Wendolin Navarrete,51,F,2024-07-21,Centro Médico Naval,99.0,110.0,121,77,En Observación
+27,1178,Wendolin Navarrete,51,F,2024-09-19,Hospital General CDMX,98.8,109.6,128,81,Mejoría
+27,1178,Wendolin Navarrete,51,F,2024-11-18,Unidad Tlatelolco,99.8,111.6,121,81,Mejoría
+28,2160,Soledad de la Fuente Sanabria,21,M,2023-09-25,Centro Médico Naval,98.3,110.0,131,77,Crítico
+28,2160,Soledad de la Fuente Sanabria,21,M,2023-11-24,Hospital Xochimilco,98.9,111.3,131,82,Estable
+28,2160,Soledad de la Fuente Sanabria,21,M,2024-01-23,Hospital Xochimilco,99.6,112.5,128,77,Crítico
+28,2160,Soledad de la Fuente Sanabria,21,M,2024-03-23,Médica Sur,100.8,115.0,129,82,Crítico
+28,2160,Soledad de la Fuente Sanabria,21,M,2024-05-22,Centro Médico Naval,96.7,106.8,131,79,En Observación
+28,2160,Soledad de la Fuente Sanabria,21,M,2024-07-21,Médica Sur,101.0,115.4,127,83,Mejoría
+28,2160,Soledad de la Fuente Sanabria,21,M,2024-09-19,Clínica Londres,99.2,111.8,127,81,Estable
+28,2160,Soledad de la Fuente Sanabria,21,M,2024-11-18,Hospital Xochimilco,98.7,110.9,131,83,En Observación
+29,2284,Juana Arevalo Zelaya,72,F,2023-09-25,Hospital Xochimilco,88.5,103.0,126,77,Mejoría
+29,2284,Juana Arevalo Zelaya,72,F,2023-11-24,Médica Sur,87.5,101.1,125,83,Mejoría
+29,2284,Juana Arevalo Zelaya,72,F,2024-01-23,Centro Médico Naval,89.8,105.7,126,82,Estable
+29,2284,Juana Arevalo Zelaya,72,F,2024-03-23,Unidad Tlatelolco,87.6,101.3,129,80,En Observación
+29,2284,Juana Arevalo Zelaya,72,F,2024-05-22,Centro Médico Naval,92.0,110.1,128,80,En Observación
+29,2284,Juana Arevalo Zelaya,72,F,2024-07-21,Hospital Militar,84.2,94.5,125,77,Crítico
+29,2284,Juana Arevalo Zelaya,72,F,2024-09-19,Hospital Ángeles,88.4,102.8,123,79,En Observación
+29,2284,Juana Arevalo Zelaya,72,F,2024-11-18,Centro Médico Naval,89.9,105.8,123,83,Estable
+30,4659,Lilia Yuridia Godoy,28,F,2023-09-25,Hospital Ángeles,91.1,114.0,126,83,Estable
+30,4659,Lilia Yuridia Godoy,28,F,2023-11-24,Centro de Salud Mixcoac,91.4,114.7,131,81,Crítico
+30,4659,Lilia Yuridia Godoy,28,F,2024-01-23,Centro Médico Naval,92.0,115.7,126,82,Crítico
+30,4659,Lilia Yuridia Godoy,28,F,2024-03-23,Hospital ABC,91.6,115.0,131,80,Crítico
+30,4659,Lilia Yuridia Godoy,28,F,2024-05-22,Centro Médico Naval,94.0,119.9,132,84,Mejoría
+30,4659,Lilia Yuridia Godoy,28,F,2024-07-21,Hospital ABC,88.4,108.7,126,81,En Observación
+30,4659,Lilia Yuridia Godoy,28,F,2024-09-19,Unidad Tlatelolco,96.2,124.3,125,79,Mejoría
+30,4659,Lilia Yuridia Godoy,28,F,2024-11-18,Hospital ABC,89.2,110.2,124,81,Crítico
+31,6625,Amelia Godoy,57,F,2023-09-25,Unidad Tlatelolco,87.3,105.6,128,81,En Observación
+31,6625,Amelia Godoy,57,F,2023-11-24,Hospital ABC,87.6,106.2,130,78,Mejoría
+31,6625,Amelia Godoy,57,F,2024-01-23,Clínica Londres,89.1,109.2,131,84,En Observación
+31,6625,Amelia Godoy,57,F,2024-03-23,Hospital Ángeles,90.3,111.5,125,83,Estable
+31,6625,Amelia Godoy,57,F,2024-05-22,Unidad Tlatelolco,90.5,111.9,132,84,Crítico
+31,6625,Amelia Godoy,57,F,2024-07-21,Clínica Londres,86.9,104.8,131,82,Estable
+31,6625,Amelia Godoy,57,F,2024-09-19,Centro de Salud Mixcoac,84.7,100.3,128,78,Crítico
+31,6625,Amelia Godoy,57,F,2024-11-18,Hospital Militar,94.2,119.5,131,80,Mejoría
+32,1431,Dr. Silvia Lozano,71,F,2023-09-25,Médica Sur,87.7,135.6,124,82,Mejoría
+32,1431,Dr. Silvia Lozano,71,F,2023-11-24,Hospital Militar,87.2,134.7,131,82,Crítico
+32,1431,Dr. Silvia Lozano,71,F,2024-01-23,Clínica Londres,86.6,133.5,128,79,Estable
+32,1431,Dr. Silvia Lozano,71,F,2024-03-23,Hospital Militar,89.0,138.3,127,83,En Observación
+32,1431,Dr. Silvia Lozano,71,F,2024-05-22,Unidad Tlatelolco,90.1,140.4,122,79,Crítico
+32,1431,Dr. Silvia Lozano,71,F,2024-07-21,Centro de Salud Mixcoac,92.6,145.3,127,78,Crítico
+32,1431,Dr. Silvia Lozano,71,F,2024-09-19,Unidad Tlatelolco,83.0,126.3,122,78,Estable
+32,1431,Dr. Silvia Lozano,71,F,2024-11-18,Hospital Xochimilco,87.0,134.1,127,81,Mejoría
+33,7916,Emiliano Arteaga,37,M,2023-09-25,Hospital Ángeles,68.0,115.5,121,79,Mejoría
+33,7916,Emiliano Arteaga,37,M,2023-11-24,Hospital ABC,68.2,115.9,125,81,Mejoría
+33,7916,Emiliano Arteaga,37,M,2024-01-23,Hospital Militar,69.9,119.2,123,79,Estable
+33,7916,Emiliano Arteaga,37,M,2024-03-23,Hospital Militar,66.7,112.9,124,83,Mejoría
+33,7916,Emiliano Arteaga,37,M,2024-05-22,Hospital Ángeles,64.3,108.0,124,79,Mejoría
+33,7916,Emiliano Arteaga,37,M,2024-07-21,Hospital Militar,68.4,116.2,131,77,Mejoría
+33,7916,Emiliano Arteaga,37,M,2024-09-19,Clínica Londres,63.2,105.8,128,79,Crítico
+33,7916,Emiliano Arteaga,37,M,2024-11-18,Hospital Ángeles,67.6,114.7,122,78,Crítico
+34,8763,Sr(a). Octavio Aguayo,34,M,2023-09-25,Hospital Ángeles,100.4,138.0,126,81,En Observación
+34,8763,Sr(a). Octavio Aguayo,34,M,2023-11-24,Unidad Tlatelolco,100.6,138.4,128,81,Crítico
+34,8763,Sr(a). Octavio Aguayo,34,M,2024-01-23,Hospital Militar,99.1,135.4,123,80,Crítico
+34,8763,Sr(a). Octavio Aguayo,34,M,2024-03-23,Unidad Tlatelolco,101.4,140.1,129,81,Estable
+34,8763,Sr(a). Octavio Aguayo,34,M,2024-05-22,Hospital ABC,97.6,132.4,127,84,Mejoría
+34,8763,Sr(a). Octavio Aguayo,34,M,2024-07-21,Centro de Salud Mixcoac,99.8,136.8,128,78,Crítico
+34,8763,Sr(a). Octavio Aguayo,34,M,2024-09-19,Médica Sur,105.5,148.3,131,79,Estable
+34,8763,Sr(a). Octavio Aguayo,34,M,2024-11-18,Hospital ABC,98.7,134.6,132,79,Mejoría
+35,7724,Guadalupe Almanza Campos,58,M,2023-09-25,Hospital Militar,84.0,128.4,131,83,Crítico
+35,7724,Guadalupe Almanza Campos,58,M,2023-11-24,Hospital Ángeles,84.7,129.9,124,78,En Observación
+35,7724,Guadalupe Almanza Campos,58,M,2024-01-23,Médica Sur,84.5,129.5,132,84,En Observación
+35,7724,Guadalupe Almanza Campos,58,M,2024-03-23,Centro de Salud Mixcoac,81.0,122.5,128,78,Crítico
+35,7724,Guadalupe Almanza Campos,58,M,2024-05-22,Clínica 22 IMSS,87.5,135.4,123,81,En Observación
+35,7724,Guadalupe Almanza Campos,58,M,2024-07-21,Hospital Xochimilco,86.5,133.6,128,80,Crítico
+35,7724,Guadalupe Almanza Campos,58,M,2024-09-19,Hospital Militar,88.7,137.8,124,83,Estable
+35,7724,Guadalupe Almanza Campos,58,M,2024-11-18,Hospital Ángeles,89.3,139.1,122,83,Crítico
+36,2258,Mario Varela,24,M,2023-09-25,Hospital Militar,94.3,105.6,131,78,En Observación
+36,2258,Mario Varela,24,M,2023-11-24,Hospital Militar,94.9,106.7,122,80,En Observación
+36,2258,Mario Varela,24,M,2024-01-23,Clínica Londres,95.9,108.8,126,77,En Observación
+36,2258,Mario Varela,24,M,2024-03-23,Hospital Ángeles,93.6,104.2,125,81,En Observación
+36,2258,Mario Varela,24,M,2024-05-22,Clínica Londres,96.9,110.7,122,78,Estable
+36,2258,Mario Varela,24,M,2024-07-21,Hospital ABC,95.7,108.3,121,81,Mejoría
+36,2258,Mario Varela,24,M,2024-09-19,Centro Médico Naval,99.3,115.5,125,79,Mejoría
+36,2258,Mario Varela,24,M,2024-11-18,Unidad Tlatelolco,94.0,105.0,131,81,Mejoría
+37,1268,Patricio Pineda,54,M,2023-09-25,Hospital Ángeles,62.3,107.8,127,82,En Observación
+37,1268,Patricio Pineda,54,M,2023-11-24,Centro de Salud Mixcoac,63.3,109.7,127,82,Mejoría
+37,1268,Patricio Pineda,54,M,2024-01-23,Clínica Londres,64.3,111.7,126,78,Crítico
+37,1268,Patricio Pineda,54,M,2024-03-23,Clínica Londres,65.2,113.5,121,83,Crítico
+37,1268,Patricio Pineda,54,M,2024-05-22,Hospital Xochimilco,64.4,112.0,129,79,Mejoría
+37,1268,Patricio Pineda,54,M,2024-07-21,Hospital Ángeles,63.6,110.3,130,77,Estable
+37,1268,Patricio Pineda,54,M,2024-09-19,Centro de Salud Mixcoac,62.6,108.3,126,79,Mejoría
+37,1268,Patricio Pineda,54,M,2024-11-18,Hospital Xochimilco,65.4,114.0,121,80,Crítico
+38,9959,Renato Sergio Padilla,56,M,2023-09-25,Hospital ABC,67.0,102.3,128,77,En Observación
+38,9959,Renato Sergio Padilla,56,M,2023-11-24,Centro Médico Naval,67.0,102.2,126,83,Mejoría
+38,9959,Renato Sergio Padilla,56,M,2024-01-23,Centro Médico Naval,66.0,100.3,125,79,Crítico
+38,9959,Renato Sergio Padilla,56,M,2024-03-23,Hospital Xochimilco,66.6,101.5,121,83,Mejoría
+38,9959,Renato Sergio Padilla,56,M,2024-05-22,Unidad Tlatelolco,67.7,103.7,125,83,Crítico
+38,9959,Renato Sergio Padilla,56,M,2024-07-21,Centro Médico Naval,69.6,107.6,127,82,Mejoría
+38,9959,Renato Sergio Padilla,56,M,2024-09-19,Hospital Xochimilco,67.7,103.8,123,82,Crítico
+38,9959,Renato Sergio Padilla,56,M,2024-11-18,Hospital General CDMX,65.2,98.8,124,79,Crítico
+39,8782,Luis Salvador Ávila Barela,29,M,2023-09-25,Centro Médico Naval,90.3,109.2,126,79,Crítico
+39,8782,Luis Salvador Ávila Barela,29,M,2023-11-24,Médica Sur,89.4,107.5,128,79,Crítico
+39,8782,Luis Salvador Ávila Barela,29,M,2024-01-23,Hospital ABC,92.1,112.9,127,81,Mejoría
+39,8782,Luis Salvador Ávila Barela,29,M,2024-03-23,Hospital Xochimilco,89.7,108.0,128,82,Estable
+39,8782,Luis Salvador Ávila Barela,29,M,2024-05-22,Clínica 22 IMSS,93.7,116.0,123,83,Estable
+39,8782,Luis Salvador Ávila Barela,29,M,2024-07-21,Hospital General CDMX,86.9,102.6,122,82,Crítico
+39,8782,Luis Salvador Ávila Barela,29,M,2024-09-19,Hospital ABC,94.7,118.1,127,80,En Observación
+39,8782,Luis Salvador Ávila Barela,29,M,2024-11-18,Centro Médico Naval,90.1,108.9,125,82,En Observación
+40,9087,José Nadia Valles de Anda,45,F,2023-09-25,Centro de Salud Mixcoac,92.9,97.9,121,82,Estable
+40,9087,José Nadia Valles de Anda,45,F,2023-11-24,Centro de Salud Mixcoac,93.8,99.7,126,83,En Observación
+40,9087,José Nadia Valles de Anda,45,F,2024-01-23,Clínica 22 IMSS,93.4,99.0,122,81,Mejoría
+40,9087,José Nadia Valles de Anda,45,F,2024-03-23,Hospital Militar,95.7,103.6,129,79,Estable
+40,9087,José Nadia Valles de Anda,45,F,2024-05-22,Centro Médico Naval,93.3,98.7,125,82,Mejoría
+40,9087,José Nadia Valles de Anda,45,F,2024-07-21,Hospital Ángeles,97.9,107.9,124,81,Estable
+40,9087,José Nadia Valles de Anda,45,F,2024-09-19,Hospital Militar,90.6,93.2,123,83,Estable
+40,9087,José Nadia Valles de Anda,45,F,2024-11-18,Hospital ABC,94.1,100.3,123,81,Mejoría
+41,5560,Diana Márquez,67,F,2023-09-25,Hospital General CDMX,93.3,110.0,124,79,Crítico
+41,5560,Diana Márquez,67,F,2023-11-24,Médica Sur,94.2,111.8,120,78,Estable
+41,5560,Diana Márquez,67,F,2024-01-23,Clínica 22 IMSS,94.2,111.7,120,78,Crítico
+41,5560,Diana Márquez,67,F,2024-03-23,Clínica Londres,92.8,109.0,125,78,Mejoría
+41,5560,Diana Márquez,67,F,2024-05-22,Centro de Salud Mixcoac,91.1,105.5,120,78,Crítico
+41,5560,Diana Márquez,67,F,2024-07-21,Centro de Salud Mixcoac,93.5,110.3,126,78,Mejoría
+41,5560,Diana Márquez,67,F,2024-09-19,Hospital Xochimilco,88.9,101.1,130,80,Crítico
+41,5560,Diana Márquez,67,F,2024-11-18,Centro de Salud Mixcoac,89.9,103.1,120,78,Mejoría
+42,3020,Genaro Barraza Carrero,64,M,2023-09-25,Hospital Xochimilco,84.1,99.0,126,80,En Observación
+42,3020,Genaro Barraza Carrero,64,M,2023-11-24,Centro de Salud Mixcoac,84.8,100.5,131,79,Crítico
+42,3020,Genaro Barraza Carrero,64,M,2024-01-23,Hospital Militar,85.0,100.7,125,80,Crítico
+42,3020,Genaro Barraza Carrero,64,M,2024-03-23,Hospital Ángeles,83.1,97.1,126,78,Crítico
+42,3020,Genaro Barraza Carrero,64,M,2024-05-22,Unidad Tlatelolco,86.3,103.4,125,81,En Observación
+42,3020,Genaro Barraza Carrero,64,M,2024-07-21,Hospital ABC,84.3,99.3,128,78,Crítico
+42,3020,Genaro Barraza Carrero,64,M,2024-09-19,Clínica 22 IMSS,88.8,108.4,125,79,Crítico
+42,3020,Genaro Barraza Carrero,64,M,2024-11-18,Centro de Salud Mixcoac,87.5,105.7,122,79,Crítico
+43,8590,José Manuél Cervantes,24,M,2023-09-25,Médica Sur,78.0,128.4,128,81,En Observación
+43,8590,José Manuél Cervantes,24,M,2023-11-24,Hospital Ángeles,77.4,127.3,130,79,Crítico
+43,8590,José Manuél Cervantes,24,M,2024-01-23,Médica Sur,79.5,131.4,122,84,En Observación
+43,8590,José Manuél Cervantes,24,M,2024-03-23,Centro de Salud Mixcoac,78.2,128.9,131,81,Crítico
+43,8590,José Manuél Cervantes,24,M,2024-05-22,Centro de Salud Mixcoac,80.8,134.2,129,83,Estable
+43,8590,José Manuél Cervantes,24,M,2024-07-21,Centro de Salud Mixcoac,82.6,137.8,130,83,Mejoría
+43,8590,José Manuél Cervantes,24,M,2024-09-19,Clínica Londres,76.8,126.1,124,80,Mejoría
+43,8590,José Manuél Cervantes,24,M,2024-11-18,Hospital Militar,73.1,118.7,124,81,En Observación
+44,3421,Wendolin Gregorio Naranjo Flórez,63,F,2023-09-25,Unidad Tlatelolco,93.7,130.8,131,83,Mejoría
+44,3421,Wendolin Gregorio Naranjo Flórez,63,F,2023-11-24,Clínica 22 IMSS,92.9,129.2,126,79,Mejoría
+44,3421,Wendolin Gregorio Naranjo Flórez,63,F,2024-01-23,Centro Médico Naval,91.9,127.3,131,82,Mejoría
+44,3421,Wendolin Gregorio Naranjo Flórez,63,F,2024-03-23,Centro de Salud Mixcoac,91.8,127.0,123,79,Mejoría
+44,3421,Wendolin Gregorio Naranjo Flórez,63,F,2024-05-22,Hospital Xochimilco,94.5,132.5,124,80,En Observación
+44,3421,Wendolin Gregorio Naranjo Flórez,63,F,2024-07-21,Centro Médico Naval,93.9,131.2,126,84,En Observación
+44,3421,Wendolin Gregorio Naranjo Flórez,63,F,2024-09-19,Hospital ABC,95.7,134.9,122,79,En Observación
+44,3421,Wendolin Gregorio Naranjo Flórez,63,F,2024-11-18,Clínica Londres,95.4,134.3,128,84,Mejoría
+45,3672,Berta Rincón,74,F,2023-09-25,Hospital ABC,76.0,122.1,125,79,Estable
+45,3672,Berta Rincón,74,F,2023-11-24,Hospital Ángeles,75.2,120.5,124,81,Crítico
+45,3672,Berta Rincón,74,F,2024-01-23,Clínica Londres,76.1,122.3,124,80,En Observación
+45,3672,Berta Rincón,74,F,2024-03-23,Hospital Xochimilco,74.7,119.5,125,82,Crítico
+45,3672,Berta Rincón,74,F,2024-05-22,Médica Sur,77.9,125.9,125,83,Estable
+45,3672,Berta Rincón,74,F,2024-07-21,Clínica 22 IMSS,71.3,112.7,121,81,Crítico
+45,3672,Berta Rincón,74,F,2024-09-19,Médica Sur,72.2,114.5,121,83,Crítico
+45,3672,Berta Rincón,74,F,2024-11-18,Centro Médico Naval,76.6,123.3,131,79,Mejoría
+46,7789,Sr(a). Adán Sisneros,44,M,2023-09-25,Unidad Tlatelolco,95.4,87.3,123,78,Mejoría
+46,7789,Sr(a). Adán Sisneros,44,M,2023-11-24,Clínica Londres,95.0,86.5,129,81,Estable
+46,7789,Sr(a). Adán Sisneros,44,M,2024-01-23,Clínica Londres,94.6,85.7,125,76,Crítico
+46,7789,Sr(a). Adán Sisneros,44,M,2024-03-23,Clínica 22 IMSS,94.5,85.5,125,81,Estable
+46,7789,Sr(a). Adán Sisneros,44,M,2024-05-22,Centro de Salud Mixcoac,92.5,81.6,127,76,Mejoría
+46,7789,Sr(a). Adán Sisneros,44,M,2024-07-21,Hospital General CDMX,90.6,77.7,122,78,Crítico
+46,7789,Sr(a). Adán Sisneros,44,M,2024-09-19,Hospital Militar,101.1,98.7,127,81,Crítico
+46,7789,Sr(a). Adán Sisneros,44,M,2024-11-18,Médica Sur,97.1,90.7,125,82,En Observación
+47,9805,Gabriela Hinojosa,65,F,2023-09-25,Clínica 22 IMSS,91.0,127.2,127,81,Estable
+47,9805,Gabriela Hinojosa,65,F,2023-11-24,Hospital General CDMX,91.6,128.5,126,82,Crítico
+47,9805,Gabriela Hinojosa,65,F,2024-01-23,Clínica Londres,92.9,131.1,127,84,Mejoría
+47,9805,Gabriela Hinojosa,65,F,2024-03-23,Hospital General CDMX,92.6,130.5,122,82,En Observación
+47,9805,Gabriela Hinojosa,65,F,2024-05-22,Clínica Londres,89.7,124.7,122,80,Mejoría
+47,9805,Gabriela Hinojosa,65,F,2024-07-21,Centro Médico Naval,86.5,118.3,122,81,En Observación
+47,9805,Gabriela Hinojosa,65,F,2024-09-19,Clínica Londres,89.9,125.2,127,84,Crítico
+47,9805,Gabriela Hinojosa,65,F,2024-11-18,Unidad Tlatelolco,89.5,124.2,122,80,Estable
+48,7867,Mtro. Pilar Mendoza,40,M,2023-09-25,Hospital Ángeles,71.2,94.6,125,77,Estable
+48,7867,Mtro. Pilar Mendoza,40,M,2023-11-24,Clínica 22 IMSS,71.4,95.0,130,82,Mejoría
+48,7867,Mtro. Pilar Mendoza,40,M,2024-01-23,Clínica Londres,69.9,92.0,126,78,En Observación
+48,7867,Mtro. Pilar Mendoza,40,M,2024-03-23,Clínica 22 IMSS,73.8,99.7,122,78,Estable
+48,7867,Mtro. Pilar Mendoza,40,M,2024-05-22,Hospital Ángeles,73.3,98.8,121,78,Crítico
+48,7867,Mtro. Pilar Mendoza,40,M,2024-07-21,Hospital Xochimilco,67.9,88.0,131,78,Crítico
+48,7867,Mtro. Pilar Mendoza,40,M,2024-09-19,Hospital ABC,70.2,92.6,128,82,En Observación
+48,7867,Mtro. Pilar Mendoza,40,M,2024-11-18,Clínica Londres,69.6,91.5,129,79,Estable
+49,5785,Víctor Peres,69,F,2023-09-25,Unidad Tlatelolco,75.1,91.8,126,81,Estable
+49,5785,Víctor Peres,69,F,2023-11-24,Clínica Londres,75.0,91.5,127,80,Mejoría
+49,5785,Víctor Peres,69,F,2024-01-23,Centro Médico Naval,76.8,95.2,122,77,Mejoría
+49,5785,Víctor Peres,69,F,2024-03-23,Médica Sur,73.4,88.5,122,78,En Observación
+49,5785,Víctor Peres,69,F,2024-05-22,Clínica Londres,74.2,89.9,128,79,Estable
+49,5785,Víctor Peres,69,F,2024-07-21,Clínica 22 IMSS,73.8,89.3,129,80,Crítico
+49,5785,Víctor Peres,69,F,2024-09-19,Médica Sur,75.2,92.0,127,77,Estable
+49,5785,Víctor Peres,69,F,2024-11-18,Hospital General CDMX,72.4,86.4,122,80,Mejoría
+50,2388,Dr. Úrsula Carrero,55,F,2023-09-25,Hospital Militar,100.9,102.6,128,81,Mejoría
+50,2388,Dr. Úrsula Carrero,55,F,2023-11-24,Hospital General CDMX,100.5,101.9,123,78,Crítico
+50,2388,Dr. Úrsula Carrero,55,F,2024-01-23,Clínica 22 IMSS,102.4,105.6,125,78,En Observación
+50,2388,Dr. Úrsula Carrero,55,F,2024-03-23,Unidad Tlatelolco,100.7,102.2,128,79,Mejoría
+50,2388,Dr. Úrsula Carrero,55,F,2024-05-22,Hospital ABC,99.1,99.1,119,79,Estable
+50,2388,Dr. Úrsula Carrero,55,F,2024-07-21,Clínica 22 IMSS,104.5,109.9,120,76,Mejoría
+50,2388,Dr. Úrsula Carrero,55,F,2024-09-19,Centro Médico Naval,100.5,101.9,123,77,Mejoría
+50,2388,Dr. Úrsula Carrero,55,F,2024-11-18,Centro de Salud Mixcoac,101.1,103.0,127,80,En Observación
+51,5835,Mtro. Nadia Tello,27,F,2023-09-25,Centro Médico Naval,67.4,104.5,128,83,En Observación
+51,5835,Mtro. Nadia Tello,27,F,2023-11-24,Unidad Tlatelolco,67.2,103.9,128,78,Estable
+51,5835,Mtro. Nadia Tello,27,F,2024-01-23,Hospital ABC,66.7,103.0,123,78,En Observación
+51,5835,Mtro. Nadia Tello,27,F,2024-03-23,Médica Sur,69.1,107.9,126,82,Estable
+51,5835,Mtro. Nadia Tello,27,F,2024-05-22,Hospital Militar,67.1,103.8,124,80,En Observación
+51,5835,Mtro. Nadia Tello,27,F,2024-07-21,Clínica 22 IMSS,64.4,98.5,126,83,Crítico
+51,5835,Mtro. Nadia Tello,27,F,2024-09-19,Clínica Londres,72.0,113.7,125,81,En Observación
+51,5835,Mtro. Nadia Tello,27,F,2024-11-18,Clínica 22 IMSS,70.8,111.3,128,82,Crítico
+52,9255,Alta  Gracia Mariano Garay,74,F,2023-09-25,Unidad Tlatelolco,56.8,124.8,131,78,Estable
+52,9255,Alta  Gracia Mariano Garay,74,F,2023-11-24,Unidad Tlatelolco,56.6,124.5,132,81,Mejoría
+52,9255,Alta  Gracia Mariano Garay,74,F,2024-01-23,Clínica 22 IMSS,55.2,121.6,128,79,Crítico
+52,9255,Alta  Gracia Mariano Garay,74,F,2024-03-23,Clínica Londres,56.0,123.2,126,82,Crítico
+52,9255,Alta  Gracia Mariano Garay,74,F,2024-05-22,Hospital Ángeles,57.9,127.0,122,83,Crítico
+52,9255,Alta  Gracia Mariano Garay,74,F,2024-07-21,Clínica 22 IMSS,59.5,130.3,130,81,En Observación
+52,9255,Alta  Gracia Mariano Garay,74,F,2024-09-19,Hospital Xochimilco,62.6,136.5,128,82,Crítico
+52,9255,Alta  Gracia Mariano Garay,74,F,2024-11-18,Centro de Salud Mixcoac,54.3,119.8,129,82,Mejoría
+53,4246,Mario Ríos,54,M,2023-09-25,Centro de Salud Mixcoac,57.2,108.0,131,83,En Observación
+53,4246,Mario Ríos,54,M,2023-11-24,Unidad Tlatelolco,57.5,108.5,129,81,En Observación
+53,4246,Mario Ríos,54,M,2024-01-23,Hospital General CDMX,55.5,104.5,130,82,Estable
+53,4246,Mario Ríos,54,M,2024-03-23,Unidad Tlatelolco,58.0,109.5,122,81,En Observación
+53,4246,Mario Ríos,54,M,2024-05-22,Hospital ABC,56.5,106.5,129,83,En Observación
+53,4246,Mario Ríos,54,M,2024-07-21,Clínica Londres,61.9,117.3,129,81,Mejoría
+53,4246,Mario Ríos,54,M,2024-09-19,Hospital Ángeles,51.9,97.5,124,82,Mejoría
+53,4246,Mario Ríos,54,M,2024-11-18,Centro de Salud Mixcoac,51.5,96.6,123,82,Mejoría
+54,7936,Salma Ana María Hernández,43,M,2023-09-25,Médica Sur,58.1,81.0,121,79,En Observación
+54,7936,Salma Ana María Hernández,43,M,2023-11-24,Hospital ABC,58.0,80.7,121,82,Estable
+54,7936,Salma Ana María Hernández,43,M,2024-01-23,Hospital Militar,58.0,80.7,122,79,Mejoría
+54,7936,Salma Ana María Hernández,43,M,2024-03-23,Clínica Londres,60.3,85.3,127,77,Crítico
+54,7936,Salma Ana María Hernández,43,M,2024-05-22,Hospital Ángeles,54.8,74.3,125,76,En Observación
+54,7936,Salma Ana María Hernández,43,M,2024-07-21,Hospital Militar,62.4,89.5,124,76,Estable
+54,7936,Salma Ana María Hernández,43,M,2024-09-19,Clínica Londres,59.9,84.5,121,78,Mejoría
+54,7936,Salma Ana María Hernández,43,M,2024-11-18,Centro Médico Naval,55.6,76.0,127,76,Crítico
+55,4291,Mtro. Yuridia Romo,56,M,2023-09-25,Hospital Xochimilco,75.9,123.6,125,79,Estable
+55,4291,Mtro. Yuridia Romo,56,M,2023-11-24,Hospital Ángeles,75.9,123.6,129,82,Mejoría
+55,4291,Mtro. Yuridia Romo,56,M,2024-01-23,Clínica Londres,76.3,124.5,130,79,Estable
+55,4291,Mtro. Yuridia Romo,56,M,2024-03-23,Hospital Xochimilco,74.3,120.4,122,78,En Observación
+55,4291,Mtro. Yuridia Romo,56,M,2024-05-22,Clínica 22 IMSS,78.9,129.7,129,78,Estable
+55,4291,Mtro. Yuridia Romo,56,M,2024-07-21,Hospital Militar,77.1,126.1,124,80,En Observación
+55,4291,Mtro. Yuridia Romo,56,M,2024-09-19,Clínica 22 IMSS,76.6,125.0,127,82,En Observación
+55,4291,Mtro. Yuridia Romo,56,M,2024-11-18,Centro de Salud Mixcoac,80.8,133.4,125,84,Mejoría
+56,1890,Lic. Julio César Leiva,68,F,2023-09-25,Hospital Ángeles,65.6,93.0,120,78,Estable
+56,1890,Lic. Julio César Leiva,68,F,2023-11-24,Centro Médico Naval,66.4,94.4,130,77,Crítico
+56,1890,Lic. Julio César Leiva,68,F,2024-01-23,Centro Médico Naval,65.6,93.0,120,81,Mejoría
+56,1890,Lic. Julio César Leiva,68,F,2024-03-23,Clínica Londres,63.4,88.5,128,78,Estable
+56,1890,Lic. Julio César Leiva,68,F,2024-05-22,Hospital Militar,63.8,89.3,123,83,Crítico
+56,1890,Lic. Julio César Leiva,68,F,2024-07-21,Médica Sur,64.1,89.8,130,82,Crítico
+56,1890,Lic. Julio César Leiva,68,F,2024-09-19,Clínica Londres,63.5,88.8,120,83,Crítico
+56,1890,Lic. Julio César Leiva,68,F,2024-11-18,Médica Sur,69.5,100.8,122,80,Crítico
+57,3183,Teodoro Natividad Chávez Iglesias,67,F,2023-09-25,Clínica Londres,66.4,136.8,129,81,En Observación
+57,3183,Teodoro Natividad Chávez Iglesias,67,F,2023-11-24,Clínica 22 IMSS,66.2,136.3,127,84,Crítico
+57,3183,Teodoro Natividad Chávez Iglesias,67,F,2024-01-23,Centro Médico Naval,64.6,133.2,124,81,Mejoría
+57,3183,Teodoro Natividad Chávez Iglesias,67,F,2024-03-23,Centro Médico Naval,65.2,134.4,129,78,Crítico
+57,3183,Teodoro Natividad Chávez Iglesias,67,F,2024-05-22,Hospital Ángeles,70.2,144.2,128,84,Mejoría
+57,3183,Teodoro Natividad Chávez Iglesias,67,F,2024-07-21,Centro Médico Naval,64.5,133.0,128,80,Mejoría
+57,3183,Teodoro Natividad Chávez Iglesias,67,F,2024-09-19,Hospital Xochimilco,60.7,125.4,124,84,Mejoría
+57,3183,Teodoro Natividad Chávez Iglesias,67,F,2024-11-18,Centro de Salud Mixcoac,64.9,133.7,127,80,En Observación
+58,7564,Nicolás Chacón Toro,31,F,2023-09-25,Hospital ABC,81.0,82.8,119,79,Mejoría
+58,7564,Nicolás Chacón Toro,31,F,2023-11-24,Clínica Londres,81.2,83.3,127,76,Crítico
+58,7564,Nicolás Chacón Toro,31,F,2024-01-23,Hospital Militar,81.0,82.8,123,78,Estable
+58,7564,Nicolás Chacón Toro,31,F,2024-03-23,Hospital Ángeles,83.1,87.0,122,82,Mejoría
+58,7564,Nicolás Chacón Toro,31,F,2024-05-22,Hospital Xochimilco,81.3,83.5,119,82,En Observación
+58,7564,Nicolás Chacón Toro,31,F,2024-07-21,Médica Sur,81.7,84.3,122,81,Mejoría
+58,7564,Nicolás Chacón Toro,31,F,2024-09-19,Centro Médico Naval,78.2,77.3,119,79,Crítico
+58,7564,Nicolás Chacón Toro,31,F,2024-11-18,Unidad Tlatelolco,79.0,78.9,119,76,Estable
+59,7866,María José Carmen Apodaca,55,M,2023-09-25,Clínica Londres,90.1,108.0,132,78,Mejoría
+59,7866,María José Carmen Apodaca,55,M,2023-11-24,Clínica Londres,89.5,106.7,130,79,Crítico
+59,7866,María José Carmen Apodaca,55,M,2024-01-23,Clínica Londres,90.7,109.1,127,80,Mejoría
+59,7866,María José Carmen Apodaca,55,M,2024-03-23,Hospital Ángeles,87.2,102.2,126,84,Mejoría
+59,7866,María José Carmen Apodaca,55,M,2024-05-22,Hospital General CDMX,92.9,113.5,123,78,Estable
+59,7866,María José Carmen Apodaca,55,M,2024-07-21,Médica Sur,85.8,99.3,131,82,En Observación
+59,7866,María José Carmen Apodaca,55,M,2024-09-19,Médica Sur,90.7,109.0,128,82,Crítico
+59,7866,María José Carmen Apodaca,55,M,2024-11-18,Clínica 22 IMSS,89.4,106.5,123,78,Crítico
+60,3097,Hermelinda Razo,22,F,2023-09-25,Hospital General CDMX,67.5,103.4,130,81,Mejoría
+60,3097,Hermelinda Razo,22,F,2023-11-24,Clínica 22 IMSS,67.7,103.7,129,78,En Observación
+60,3097,Hermelinda Razo,22,F,2024-01-23,Hospital General CDMX,66.3,101.0,121,80,Estable
+60,3097,Hermelinda Razo,22,F,2024-03-23,Hospital Militar,67.9,104.1,126,77,En Observación
+60,3097,Hermelinda Razo,22,F,2024-05-22,Hospital Militar,66.9,102.1,129,78,Estable
+60,3097,Hermelinda Razo,22,F,2024-07-21,Clínica 22 IMSS,68.7,105.7,122,81,Crítico
+60,3097,Hermelinda Razo,22,F,2024-09-19,Hospital Militar,64.1,96.5,128,81,Mejoría
+60,3097,Hermelinda Razo,22,F,2024-11-18,Clínica 22 IMSS,69.5,107.3,129,79,En Observación
+61,5523,Carlos Estela Sisneros,70,F,2023-09-25,Unidad Tlatelolco,80.7,115.0,129,79,Mejoría
+61,5523,Carlos Estela Sisneros,70,F,2023-11-24,Hospital Ángeles,79.9,113.6,124,79,Estable
+61,5523,Carlos Estela Sisneros,70,F,2024-01-23,Hospital Xochimilco,82.1,117.9,123,78,Mejoría
+61,5523,Carlos Estela Sisneros,70,F,2024-03-23,Hospital Xochimilco,79.8,113.3,129,79,En Observación
+61,5523,Carlos Estela Sisneros,70,F,2024-05-22,Médica Sur,80.5,114.6,120,79,En Observación
+61,5523,Carlos Estela Sisneros,70,F,2024-07-21,Hospital Militar,83.4,120.5,127,78,Mejoría
+61,5523,Carlos Estela Sisneros,70,F,2024-09-19,Clínica Londres,76.5,106.7,129,81,Estable
+61,5523,Carlos Estela Sisneros,70,F,2024-11-18,Clínica 22 IMSS,86.4,126.4,128,77,En Observación
+62,6120,José Emilio Rodríguez Mojica,20,M,2023-09-25,Centro de Salud Mixcoac,55.6,90.0,125,79,Estable
+62,6120,José Emilio Rodríguez Mojica,20,M,2023-11-24,Hospital Xochimilco,55.0,88.7,126,77,Mejoría
+62,6120,José Emilio Rodríguez Mojica,20,M,2024-01-23,Clínica 22 IMSS,55.4,89.6,124,83,Crítico
+62,6120,José Emilio Rodríguez Mojica,20,M,2024-03-23,Unidad Tlatelolco,58.0,94.7,122,82,En Observación
+62,6120,José Emilio Rodríguez Mojica,20,M,2024-05-22,Centro Médico Naval,55.4,89.6,120,80,Estable
+62,6120,José Emilio Rodríguez Mojica,20,M,2024-07-21,Hospital Militar,53.0,84.8,130,77,Estable
+62,6120,José Emilio Rodríguez Mojica,20,M,2024-09-19,Unidad Tlatelolco,52.6,83.9,126,81,Crítico
+62,6120,José Emilio Rodríguez Mojica,20,M,2024-11-18,Hospital ABC,54.6,88.0,120,78,Estable
+63,1489,Mtro. Cecilia Limón,72,M,2023-09-25,Hospital Ángeles,88.3,122.4,125,81,Estable
+63,1489,Mtro. Cecilia Limón,72,M,2023-11-24,Clínica 22 IMSS,87.6,120.9,124,83,Crítico
+63,1489,Mtro. Cecilia Limón,72,M,2024-01-23,Médica Sur,89.8,125.5,128,84,En Observación
+63,1489,Mtro. Cecilia Limón,72,M,2024-03-23,Centro de Salud Mixcoac,88.4,122.6,129,81,Estable
+63,1489,Mtro. Cecilia Limón,72,M,2024-05-22,Clínica 22 IMSS,92.1,129.9,123,83,Mejoría
+63,1489,Mtro. Cecilia Limón,72,M,2024-07-21,Centro Médico Naval,92.3,130.4,126,83,Estable
+63,1489,Mtro. Cecilia Limón,72,M,2024-09-19,Médica Sur,93.1,132.0,131,84,En Observación
+63,1489,Mtro. Cecilia Limón,72,M,2024-11-18,Hospital ABC,81.4,108.5,129,84,Estable
+64,6002,Esteban Méndez,58,M,2023-09-25,Clínica Londres,91.4,96.8,122,77,Estable
+64,6002,Esteban Méndez,58,M,2023-11-24,Hospital Ángeles,91.4,96.8,124,83,Estable
+64,6002,Esteban Méndez,58,M,2024-01-23,Hospital Militar,92.9,99.9,123,81,Crítico
+64,6002,Esteban Méndez,58,M,2024-03-23,Centro Médico Naval,92.4,98.8,126,78,Mejoría
+64,6002,Esteban Méndez,58,M,2024-05-22,Clínica Londres,93.3,100.6,122,78,En Observación
+64,6002,Esteban Méndez,58,M,2024-07-21,Unidad Tlatelolco,88.6,91.2,127,81,En Observación
+64,6002,Esteban Méndez,58,M,2024-09-19,Médica Sur,90.8,95.7,128,78,Crítico
+64,6002,Esteban Méndez,58,M,2024-11-18,Hospital ABC,88.8,91.7,125,77,En Observación
+65,4400,Lic. Frida Corral,34,M,2023-09-25,Centro de Salud Mixcoac,94.5,114.4,129,83,Mejoría
+65,4400,Lic. Frida Corral,34,M,2023-11-24,Hospital Ángeles,94.5,114.3,121,77,En Observación
+65,4400,Lic. Frida Corral,34,M,2024-01-23,Centro Médico Naval,92.9,111.2,122,79,Crítico
+65,4400,Lic. Frida Corral,34,M,2024-03-23,Hospital Militar,96.9,119.3,123,77,Estable
+65,4400,Lic. Frida Corral,34,M,2024-05-22,Unidad Tlatelolco,93.2,111.7,122,78,En Observación
+65,4400,Lic. Frida Corral,34,M,2024-07-21,Centro de Salud Mixcoac,97.9,121.2,125,80,Mejoría
+65,4400,Lic. Frida Corral,34,M,2024-09-19,Unidad Tlatelolco,100.0,125.3,128,77,En Observación
+65,4400,Lic. Frida Corral,34,M,2024-11-18,Clínica 22 IMSS,101.0,127.4,122,82,En Observación
+66,6735,Amador Gregorio Manzanares Almanza,74,F,2023-09-25,Clínica 22 IMSS,80.2,101.2,128,80,En Observación
+66,6735,Amador Gregorio Manzanares Almanza,74,F,2023-11-24,Hospital ABC,80.2,101.1,129,79,Estable
+66,6735,Amador Gregorio Manzanares Almanza,74,F,2024-01-23,Hospital Militar,79.4,99.6,130,82,Mejoría
+66,6735,Amador Gregorio Manzanares Almanza,74,F,2024-03-23,Hospital General CDMX,78.3,97.4,130,81,Mejoría
+66,6735,Amador Gregorio Manzanares Almanza,74,F,2024-05-22,Hospital General CDMX,77.0,94.8,128,83,Crítico
+66,6735,Amador Gregorio Manzanares Almanza,74,F,2024-07-21,Hospital General CDMX,81.9,104.6,121,77,Crítico
+66,6735,Amador Gregorio Manzanares Almanza,74,F,2024-09-19,Hospital Ángeles,85.1,110.9,126,78,Mejoría
+66,6735,Amador Gregorio Manzanares Almanza,74,F,2024-11-18,Clínica Londres,81.9,104.6,124,80,En Observación
+67,1588,María Eugenia Teresa Corral,48,F,2023-09-25,Hospital ABC,83.7,98.0,129,79,Mejoría
+67,1588,María Eugenia Teresa Corral,48,F,2023-11-24,Hospital Ángeles,82.9,96.4,125,78,Estable
+67,1588,María Eugenia Teresa Corral,48,F,2024-01-23,Clínica 22 IMSS,85.0,100.7,121,77,Estable
+67,1588,María Eugenia Teresa Corral,48,F,2024-03-23,Médica Sur,81.4,93.3,124,79,Estable
+67,1588,María Eugenia Teresa Corral,48,F,2024-05-22,Hospital Xochimilco,82.9,96.4,130,78,Mejoría
+67,1588,María Eugenia Teresa Corral,48,F,2024-07-21,Clínica 22 IMSS,83.8,98.2,126,83,Crítico
+67,1588,María Eugenia Teresa Corral,48,F,2024-09-19,Hospital Militar,86.0,102.6,124,77,Mejoría
+67,1588,María Eugenia Teresa Corral,48,F,2024-11-18,Unidad Tlatelolco,77.9,86.3,126,82,Estable
+68,8736,Ariadna Briones,21,F,2023-09-25,Hospital Militar,100.6,117.7,122,82,Estable
+68,8736,Ariadna Briones,21,F,2023-11-24,Hospital Militar,99.8,116.2,131,81,Estable
+68,8736,Ariadna Briones,21,F,2024-01-23,Hospital ABC,100.8,118.1,125,79,Crítico
+68,8736,Ariadna Briones,21,F,2024-03-23,Hospital General CDMX,99.0,114.4,125,81,En Observación
+68,8736,Ariadna Briones,21,F,2024-05-22,Centro Médico Naval,102.8,122.0,123,77,Crítico
+68,8736,Ariadna Briones,21,F,2024-07-21,Hospital ABC,100.2,116.9,122,83,Estable
+68,8736,Ariadna Briones,21,F,2024-09-19,Centro Médico Naval,105.2,126.9,128,79,Crítico
+68,8736,Ariadna Briones,21,F,2024-11-18,Clínica Londres,105.7,128.0,126,81,Mejoría
+69,2135,María Elena Sotelo,61,F,2023-09-25,Hospital Militar,79.2,104.0,126,79,Mejoría
+69,2135,María Elena Sotelo,61,F,2023-11-24,Unidad Tlatelolco,78.8,103.1,129,82,En Observación
+69,2135,María Elena Sotelo,61,F,2024-01-23,Unidad Tlatelolco,79.8,105.2,123,79,Estable
+69,2135,María Elena Sotelo,61,F,2024-03-23,Centro de Salud Mixcoac,76.6,98.9,121,78,En Observación
+69,2135,María Elena Sotelo,61,F,2024-05-22,Hospital Militar,83.1,111.8,124,82,Crítico
+69,2135,María Elena Sotelo,61,F,2024-07-21,Centro de Salud Mixcoac,77.2,99.9,126,77,Crítico
+69,2135,María Elena Sotelo,61,F,2024-09-19,Centro Médico Naval,76.6,98.8,129,81,Mejoría
+69,2135,María Elena Sotelo,61,F,2024-11-18,Hospital Xochimilco,78.9,103.3,128,80,Estable
+70,5597,Sr(a). Yolanda Gaona,22,F,2023-09-25,Hospital General CDMX,78.8,95.0,126,82,Mejoría
+70,5597,Sr(a). Yolanda Gaona,22,F,2023-11-24,Hospital Ángeles,78.8,95.0,122,79,Mejoría
+70,5597,Sr(a). Yolanda Gaona,22,F,2024-01-23,Clínica Londres,79.5,96.3,130,79,Mejoría
+70,5597,Sr(a). Yolanda Gaona,22,F,2024-03-23,Hospital Xochimilco,78.6,94.5,122,80,Crítico
+70,5597,Sr(a). Yolanda Gaona,22,F,2024-05-22,Centro de Salud Mixcoac,78.9,95.2,123,82,Mejoría
+70,5597,Sr(a). Yolanda Gaona,22,F,2024-07-21,Centro de Salud Mixcoac,82.6,102.5,121,78,Crítico
+70,5597,Sr(a). Yolanda Gaona,22,F,2024-09-19,Unidad Tlatelolco,80.3,97.9,121,83,Estable
+70,5597,Sr(a). Yolanda Gaona,22,F,2024-11-18,Hospital General CDMX,82.0,101.3,120,79,Crítico
+71,1151,Bernabé Vanegas Villareal,43,F,2023-09-25,Hospital Ángeles,71.9,122.4,122,83,Crítico
+71,1151,Bernabé Vanegas Villareal,43,F,2023-11-24,Clínica Londres,72.8,124.1,130,79,Crítico
+71,1151,Bernabé Vanegas Villareal,43,F,2024-01-23,Centro de Salud Mixcoac,70.4,119.4,126,79,En Observación
+71,1151,Bernabé Vanegas Villareal,43,F,2024-03-23,Médica Sur,74.6,127.8,130,81,Mejoría
+71,1151,Bernabé Vanegas Villareal,43,F,2024-05-22,Centro Médico Naval,71.2,121.0,122,83,Mejoría
+71,1151,Bernabé Vanegas Villareal,43,F,2024-07-21,Hospital ABC,67.9,114.4,122,79,Estable
+71,1151,Bernabé Vanegas Villareal,43,F,2024-09-19,Hospital Ángeles,66.8,112.1,123,81,Estable
+71,1151,Bernabé Vanegas Villareal,43,F,2024-11-18,Unidad Tlatelolco,74.4,127.5,130,81,Estable
+72,5375,Carolina Acuña Domínguez,40,F,2023-09-25,Hospital General CDMX,95.3,86.0,122,78,Crítico
+72,5375,Carolina Acuña Domínguez,40,F,2023-11-24,Hospital Militar,96.2,87.8,121,78,En Observación
+72,5375,Carolina Acuña Domínguez,40,F,2024-01-23,Médica Sur,94.5,84.5,128,83,Crítico
+72,5375,Carolina Acuña Domínguez,40,F,2024-03-23,Hospital ABC,97.0,89.5,126,78,En Observación
+72,5375,Carolina Acuña Domínguez,40,F,2024-05-22,Médica Sur,98.7,92.8,129,81,Crítico
+72,5375,Carolina Acuña Domínguez,40,F,2024-07-21,Hospital Ángeles,99.6,94.6,124,78,Crítico
+72,5375,Carolina Acuña Domínguez,40,F,2024-09-19,Hospital Militar,89.5,74.5,124,80,Mejoría
+72,5375,Carolina Acuña Domínguez,40,F,2024-11-18,Hospital Ángeles,96.3,88.0,124,80,Crítico
+73,8514,Nadia Eugenio Leiva,74,F,2023-09-25,Clínica 22 IMSS,74.4,84.6,120,82,Mejoría
+73,8514,Nadia Eugenio Leiva,74,F,2023-11-24,Hospital ABC,75.4,86.6,129,78,En Observación
+73,8514,Nadia Eugenio Leiva,74,F,2024-01-23,Hospital General CDMX,73.3,82.3,121,80,Mejoría
+73,8514,Nadia Eugenio Leiva,74,F,2024-03-23,Centro de Salud Mixcoac,74.3,84.2,124,76,Estable
+73,8514,Nadia Eugenio Leiva,74,F,2024-05-22,Hospital ABC,76.5,88.8,125,78,Crítico
+73,8514,Nadia Eugenio Leiva,74,F,2024-07-21,Hospital ABC,70.7,77.1,119,80,En Observación
+73,8514,Nadia Eugenio Leiva,74,F,2024-09-19,Hospital Xochimilco,75.9,87.6,129,76,Estable
+73,8514,Nadia Eugenio Leiva,74,F,2024-11-18,Hospital Militar,67.5,70.7,128,76,En Observación
+74,3960,Nancy Mares Arce,55,M,2023-09-25,Médica Sur,94.8,101.7,120,77,Estable
+74,3960,Nancy Mares Arce,55,M,2023-11-24,Hospital Militar,94.9,101.8,120,80,Estable
+74,3960,Nancy Mares Arce,55,M,2024-01-23,Hospital General CDMX,95.4,102.8,123,77,En Observación
+74,3960,Nancy Mares Arce,55,M,2024-03-23,Centro de Salud Mixcoac,96.5,105.1,129,82,Mejoría
+74,3960,Nancy Mares Arce,55,M,2024-05-22,Hospital Ángeles,91.6,95.2,127,82,Crítico
+74,3960,Nancy Mares Arce,55,M,2024-07-21,Centro Médico Naval,96.3,104.7,120,80,En Observación
+74,3960,Nancy Mares Arce,55,M,2024-09-19,Centro de Salud Mixcoac,96.0,104.1,125,76,En Observación
+74,3960,Nancy Mares Arce,55,M,2024-11-18,Clínica Londres,101.6,115.3,125,80,En Observación
+75,1279,Ramiro Rosario Herrera Zúñiga,22,F,2023-09-25,Médica Sur,99.1,105.0,126,82,Estable
+75,1279,Ramiro Rosario Herrera Zúñiga,22,F,2023-11-24,Hospital ABC,98.6,104.1,123,80,Estable
+75,1279,Ramiro Rosario Herrera Zúñiga,22,F,2024-01-23,Hospital ABC,100.9,108.6,123,82,Estable
+75,1279,Ramiro Rosario Herrera Zúñiga,22,F,2024-03-23,Centro Médico Naval,101.5,109.9,126,82,Crítico
+75,1279,Ramiro Rosario Herrera Zúñiga,22,F,2024-05-22,Unidad Tlatelolco,97.3,101.4,130,78,En Observación
+75,1279,Ramiro Rosario Herrera Zúñiga,22,F,2024-07-21,Clínica 22 IMSS,97.9,102.5,126,78,Crítico
+75,1279,Ramiro Rosario Herrera Zúñiga,22,F,2024-09-19,Centro Médico Naval,104.8,116.5,125,82,Crítico
+75,1279,Ramiro Rosario Herrera Zúñiga,22,F,2024-11-18,Médica Sur,100.7,108.3,130,80,En Observación
+76,8817,Tomás Cristina Curiel Varela,73,F,2023-09-25,Unidad Tlatelolco,99.2,124.3,123,80,Mejoría
+76,8817,Tomás Cristina Curiel Varela,73,F,2023-11-24,Hospital Ángeles,99.7,125.5,125,77,Mejoría
+76,8817,Tomás Cristina Curiel Varela,73,F,2024-01-23,Centro de Salud Mixcoac,98.6,123.1,131,78,Crítico
+76,8817,Tomás Cristina Curiel Varela,73,F,2024-03-23,Clínica 22 IMSS,98.7,123.4,129,83,En Observación
+76,8817,Tomás Cristina Curiel Varela,73,F,2024-05-22,Clínica Londres,101.3,128.6,126,81,En Observación
+76,8817,Tomás Cristina Curiel Varela,73,F,2024-07-21,Clínica Londres,99.9,125.8,124,78,En Observación
+76,8817,Tomás Cristina Curiel Varela,73,F,2024-09-19,Hospital ABC,97.6,121.2,121,77,Mejoría
+76,8817,Tomás Cristina Curiel Varela,73,F,2024-11-18,Centro de Salud Mixcoac,97.4,120.9,130,80,Crítico
+77,4797,Eric Mireles Mireles,71,M,2023-09-25,Hospital General CDMX,101.5,81.9,126,82,Estable
+77,4797,Eric Mireles Mireles,71,M,2023-11-24,Hospital ABC,102.0,82.9,123,77,Crítico
+77,4797,Eric Mireles Mireles,71,M,2024-01-23,Médica Sur,101.6,82.1,126,77,Crítico
+77,4797,Eric Mireles Mireles,71,M,2024-03-23,Centro de Salud Mixcoac,101.3,81.6,128,76,En Observación
+77,4797,Eric Mireles Mireles,71,M,2024-05-22,Unidad Tlatelolco,101.2,81.3,129,77,Estable
+77,4797,Eric Mireles Mireles,71,M,2024-07-21,Hospital Ángeles,102.1,83.1,119,80,Mejoría
+77,4797,Eric Mireles Mireles,71,M,2024-09-19,Hospital Ángeles,106.8,92.6,126,79,En Observación
+77,4797,Eric Mireles Mireles,71,M,2024-11-18,Unidad Tlatelolco,102.4,83.8,124,81,Estable
+78,7464,Lic. Patricia Alvarado,52,F,2023-09-25,Hospital Ángeles,63.4,93.5,131,80,En Observación
+78,7464,Lic. Patricia Alvarado,52,F,2023-11-24,Clínica Londres,62.9,92.5,130,78,Crítico
+78,7464,Lic. Patricia Alvarado,52,F,2024-01-23,Centro Médico Naval,63.7,94.1,126,83,Crítico
+78,7464,Lic. Patricia Alvarado,52,F,2024-03-23,Hospital General CDMX,65.7,98.0,122,79,Crítico
+78,7464,Lic. Patricia Alvarado,52,F,2024-05-22,Hospital General CDMX,66.3,99.3,127,80,Mejoría
+78,7464,Lic. Patricia Alvarado,52,F,2024-07-21,Médica Sur,62.7,92.1,122,81,Estable
+78,7464,Lic. Patricia Alvarado,52,F,2024-09-19,Hospital Xochimilco,60.8,88.3,128,81,Crítico
+78,7464,Lic. Patricia Alvarado,52,F,2024-11-18,Clínica 22 IMSS,67.6,101.8,129,79,Estable
+79,8425,Abril Gilberto Mascareñas Estrada,55,F,2023-09-25,Hospital Ángeles,97.9,108.0,126,82,En Observación
+79,8425,Abril Gilberto Mascareñas Estrada,55,F,2023-11-24,Clínica 22 IMSS,98.0,108.2,125,81,Crítico
+79,8425,Abril Gilberto Mascareñas Estrada,55,F,2024-01-23,Hospital ABC,97.0,106.1,129,79,En Observación
+79,8425,Abril Gilberto Mascareñas Estrada,55,F,2024-03-23,Centro de Salud Mixcoac,98.1,108.2,129,79,Estable
+79,8425,Abril Gilberto Mascareñas Estrada,55,F,2024-05-22,Clínica 22 IMSS,101.5,115.1,126,82,En Observación
+79,8425,Abril Gilberto Mascareñas Estrada,55,F,2024-07-21,Centro de Salud Mixcoac,97.0,106.1,122,81,En Observación
+79,8425,Abril Gilberto Mascareñas Estrada,55,F,2024-09-19,Médica Sur,92.6,97.3,125,79,Mejoría
+79,8425,Abril Gilberto Mascareñas Estrada,55,F,2024-11-18,Hospital ABC,93.3,98.7,130,81,En Observación
+80,8969,Olivia Reyes Flores,38,M,2023-09-25,Clínica Londres,94.7,111.0,122,82,Mejoría
+80,8969,Olivia Reyes Flores,38,M,2023-11-24,Clínica Londres,94.6,110.9,129,78,Estable
+80,8969,Olivia Reyes Flores,38,M,2024-01-23,Hospital General CDMX,92.7,107.1,122,81,Mejoría
+80,8969,Olivia Reyes Flores,38,M,2024-03-23,Clínica 22 IMSS,95.2,112.1,121,81,Crítico
+80,8969,Olivia Reyes Flores,38,M,2024-05-22,Médica Sur,97.3,116.4,122,79,En Observación
+80,8969,Olivia Reyes Flores,38,M,2024-07-21,Hospital ABC,99.1,119.9,128,79,Estable
+80,8969,Olivia Reyes Flores,38,M,2024-09-19,Clínica Londres,100.4,122.5,123,83,Crítico
+80,8969,Olivia Reyes Flores,38,M,2024-11-18,Hospital Xochimilco,93.8,109.2,127,78,Mejoría
+81,5530,Sr(a). Alma Sosa,52,F,2023-09-25,Centro de Salud Mixcoac,99.2,92.7,122,77,Crítico
+81,5530,Sr(a). Alma Sosa,52,F,2023-11-24,Unidad Tlatelolco,98.5,91.3,122,76,En Observación
+81,5530,Sr(a). Alma Sosa,52,F,2024-01-23,Centro Médico Naval,98.2,90.8,124,76,Crítico
+81,5530,Sr(a). Alma Sosa,52,F,2024-03-23,Clínica 22 IMSS,99.4,93.2,122,82,Estable
+81,5530,Sr(a). Alma Sosa,52,F,2024-05-22,Médica Sur,102.4,99.1,128,77,Crítico
+81,5530,Sr(a). Alma Sosa,52,F,2024-07-21,Hospital Militar,103.9,102.0,122,78,Crítico
+81,5530,Sr(a). Alma Sosa,52,F,2024-09-19,Clínica 22 IMSS,96.9,88.1,128,77,Crítico
+81,5530,Sr(a). Alma Sosa,52,F,2024-11-18,Hospital Militar,92.9,80.2,122,82,Mejoría
+82,7020,Timoteo Adela Barrientos,46,M,2023-09-25,Clínica 22 IMSS,83.2,106.0,128,80,Mejoría
+82,7020,Timoteo Adela Barrientos,46,M,2023-11-24,Médica Sur,83.2,106.1,127,80,Mejoría
+82,7020,Timoteo Adela Barrientos,46,M,2024-01-23,Clínica 22 IMSS,81.6,102.9,129,78,Crítico
+82,7020,Timoteo Adela Barrientos,46,M,2024-03-23,Unidad Tlatelolco,83.8,107.3,124,82,Estable
+82,7020,Timoteo Adela Barrientos,46,M,2024-05-22,Hospital Militar,85.3,110.3,124,83,Crítico
+82,7020,Timoteo Adela Barrientos,46,M,2024-07-21,Hospital General CDMX,86.8,113.3,121,83,En Observación
+82,7020,Timoteo Adela Barrientos,46,M,2024-09-19,Clínica Londres,79.3,98.3,124,79,Mejoría
+82,7020,Timoteo Adela Barrientos,46,M,2024-11-18,Centro Médico Naval,77.8,95.3,122,83,Estable
+83,4110,Eduardo Burgos Bermúdez,47,M,2023-09-25,Hospital Xochimilco,92.7,93.0,129,79,Mejoría
+83,4110,Eduardo Burgos Bermúdez,47,M,2023-11-24,Unidad Tlatelolco,92.6,92.8,124,78,En Observación
+83,4110,Eduardo Burgos Bermúdez,47,M,2024-01-23,Hospital Militar,94.4,96.5,127,82,Crítico
+83,4110,Eduardo Burgos Bermúdez,47,M,2024-03-23,Unidad Tlatelolco,94.6,96.9,128,78,Mejoría
+83,4110,Eduardo Burgos Bermúdez,47,M,2024-05-22,Médica Sur,96.0,99.7,124,80,Estable
+83,4110,Eduardo Burgos Bermúdez,47,M,2024-07-21,Centro de Salud Mixcoac,92.5,92.7,122,78,Crítico
+83,4110,Eduardo Burgos Bermúdez,47,M,2024-09-19,Hospital ABC,87.8,83.2,123,83,Mejoría
+83,4110,Eduardo Burgos Bermúdez,47,M,2024-11-18,Clínica 22 IMSS,90.0,87.7,124,83,Mejoría
+84,8321,Marisol Partida,38,M,2023-09-25,Centro de Salud Mixcoac,56.2,105.0,123,79,Crítico
+84,8321,Marisol Partida,38,M,2023-11-24,Hospital ABC,55.3,103.2,125,81,Mejoría
+84,8321,Marisol Partida,38,M,2024-01-23,Centro Médico Naval,58.0,108.7,120,79,Estable
+84,8321,Marisol Partida,38,M,2024-03-23,Centro Médico Naval,55.2,103.2,126,83,Crítico
+84,8321,Marisol Partida,38,M,2024-05-22,Clínica Londres,57.8,108.3,126,83,Crítico
+84,8321,Marisol Partida,38,M,2024-07-21,Clínica Londres,57.2,107.0,123,77,En Observación
+84,8321,Marisol Partida,38,M,2024-09-19,Unidad Tlatelolco,55.9,104.4,121,79,En Observación
+84,8321,Marisol Partida,38,M,2024-11-18,Médica Sur,52.5,97.7,121,82,Crítico
+85,5205,Cristina Cornelio Villalobos Narváez,71,M,2023-09-25,Hospital General CDMX,102.8,91.8,124,78,Estable
+85,5205,Cristina Cornelio Villalobos Narváez,71,M,2023-11-24,Hospital General CDMX,103.6,93.4,125,76,Crítico
+85,5205,Cristina Cornelio Villalobos Narváez,71,M,2024-01-23,Centro de Salud Mixcoac,104.2,94.6,121,78,En Observación
+85,5205,Cristina Cornelio Villalobos Narváez,71,M,2024-03-23,Clínica 22 IMSS,103.3,92.8,123,77,Mejoría
+85,5205,Cristina Cornelio Villalobos Narváez,71,M,2024-05-22,Hospital Xochimilco,106.3,98.8,126,82,Crítico
+85,5205,Cristina Cornelio Villalobos Narváez,71,M,2024-07-21,Clínica 22 IMSS,104.7,95.6,120,80,Estable
+85,5205,Cristina Cornelio Villalobos Narváez,71,M,2024-09-19,Hospital Ángeles,101.0,88.1,121,82,En Observación
+85,5205,Cristina Cornelio Villalobos Narváez,71,M,2024-11-18,Clínica 22 IMSS,105.6,97.5,125,82,Crítico
+86,5523,Emiliano Eloy Prieto,48,M,2023-09-25,Hospital Militar,79.2,95.7,130,77,Crítico
+86,5523,Emiliano Eloy Prieto,48,M,2023-11-24,Clínica 22 IMSS,78.7,94.8,127,81,Estable
+86,5523,Emiliano Eloy Prieto,48,M,2024-01-23,Hospital Ángeles,78.8,94.8,126,78,Mejoría
+86,5523,Emiliano Eloy Prieto,48,M,2024-03-23,Médica Sur,80.8,98.8,126,83,Mejoría
+86,5523,Emiliano Eloy Prieto,48,M,2024-05-22,Hospital ABC,76.9,91.1,130,79,Crítico
+86,5523,Emiliano Eloy Prieto,48,M,2024-07-21,Clínica Londres,76.3,89.8,121,80,Mejoría
+86,5523,Emiliano Eloy Prieto,48,M,2024-09-19,Centro Médico Naval,73.5,84.3,123,83,Estable
+86,5523,Emiliano Eloy Prieto,48,M,2024-11-18,Unidad Tlatelolco,78.8,94.9,128,82,Mejoría
+87,9171,Marco Antonio Marcela Riojas,64,F,2023-09-25,Clínica 22 IMSS,71.0,109.2,127,79,Estable
+87,9171,Marco Antonio Marcela Riojas,64,F,2023-11-24,Centro de Salud Mixcoac,71.2,109.7,125,78,Crítico
+87,9171,Marco Antonio Marcela Riojas,64,F,2024-01-23,Centro Médico Naval,69.4,106.1,130,78,Mejoría
+87,9171,Marco Antonio Marcela Riojas,64,F,2024-03-23,Unidad Tlatelolco,71.9,111.0,126,83,Crítico
+87,9171,Marco Antonio Marcela Riojas,64,F,2024-05-22,Centro Médico Naval,73.0,113.1,127,84,Mejoría
+87,9171,Marco Antonio Marcela Riojas,64,F,2024-07-21,Clínica Londres,72.0,111.2,129,84,Crítico
+87,9171,Marco Antonio Marcela Riojas,64,F,2024-09-19,Centro de Salud Mixcoac,70.0,107.2,132,84,Crítico
+87,9171,Marco Antonio Marcela Riojas,64,F,2024-11-18,Hospital Ángeles,70.2,107.5,132,82,En Observación
+88,9261,Ing. Florencia Valentín,51,M,2023-09-25,Clínica Londres,62.5,101.0,129,80,Crítico
+88,9261,Ing. Florencia Valentín,51,M,2023-11-24,Hospital Ángeles,62.9,101.8,125,78,En Observación
+88,9261,Ing. Florencia Valentín,51,M,2024-01-23,Hospital General CDMX,62.3,100.7,130,79,Mejoría
+88,9261,Ing. Florencia Valentín,51,M,2024-03-23,Hospital General CDMX,59.8,95.5,129,77,Mejoría
+88,9261,Ing. Florencia Valentín,51,M,2024-05-22,Centro de Salud Mixcoac,65.0,106.0,128,79,Mejoría
+88,9261,Ing. Florencia Valentín,51,M,2024-07-21,Centro de Salud Mixcoac,57.8,91.6,125,81,En Observación
+88,9261,Ing. Florencia Valentín,51,M,2024-09-19,Centro de Salud Mixcoac,56.6,89.3,123,78,Crítico
+88,9261,Ing. Florencia Valentín,51,M,2024-11-18,Centro Médico Naval,59.8,95.7,129,82,Crítico
+89,8526,María Teresa Reyna Casares,20,F,2023-09-25,Centro Médico Naval,103.3,106.8,127,81,En Observación
+89,8526,María Teresa Reyna Casares,20,F,2023-11-24,Unidad Tlatelolco,102.6,105.5,127,79,En Observación
+89,8526,María Teresa Reyna Casares,20,F,2024-01-23,Clínica Londres,101.9,104.1,132,83,Estable
+89,8526,María Teresa Reyna Casares,20,F,2024-03-23,Hospital Militar,101.7,103.6,130,81,Estable
+89,8526,María Teresa Reyna Casares,20,F,2024-05-22,Hospital Militar,103.8,107.8,128,79,Estable
+89,8526,María Teresa Reyna Casares,20,F,2024-07-21,Centro de Salud Mixcoac,103.0,106.3,125,82,En Observación
+89,8526,María Teresa Reyna Casares,20,F,2024-09-19,Clínica 22 IMSS,99.1,98.4,126,81,Crítico
+89,8526,María Teresa Reyna Casares,20,F,2024-11-18,Clínica 22 IMSS,101.0,102.2,129,84,En Observación
+90,1866,Pamela Ricardo Arevalo,52,M,2023-09-25,Centro de Salud Mixcoac,93.4,118.8,124,83,Estable
+90,1866,Pamela Ricardo Arevalo,52,M,2023-11-24,Unidad Tlatelolco,92.8,117.5,131,82,Estable
+90,1866,Pamela Ricardo Arevalo,52,M,2024-01-23,Centro Médico Naval,95.0,122.0,124,84,Estable
+90,1866,Pamela Ricardo Arevalo,52,M,2024-03-23,Hospital Ángeles,90.7,113.4,123,79,En Observación
+90,1866,Pamela Ricardo Arevalo,52,M,2024-05-22,Clínica Londres,93.9,119.8,125,78,Crítico
+90,1866,Pamela Ricardo Arevalo,52,M,2024-07-21,Hospital General CDMX,88.5,109.0,126,82,En Observación
+90,1866,Pamela Ricardo Arevalo,52,M,2024-09-19,Unidad Tlatelolco,88.3,108.5,126,79,Crítico
+90,1866,Pamela Ricardo Arevalo,52,M,2024-11-18,Hospital General CDMX,87.4,106.8,129,79,En Observación
+91,5088,Julio César Camila Rojo,49,M,2023-09-25,Clínica Londres,71.4,115.2,122,81,Estable
+91,5088,Julio César Camila Rojo,49,M,2023-11-24,Centro Médico Naval,70.7,113.8,125,78,Estable
+91,5088,Julio César Camila Rojo,49,M,2024-01-23,Médica Sur,72.1,116.6,128,81,Mejoría
+91,5088,Julio César Camila Rojo,49,M,2024-03-23,Unidad Tlatelolco,73.7,119.8,125,83,Crítico
+91,5088,Julio César Camila Rojo,49,M,2024-05-22,Centro Médico Naval,71.1,114.6,124,84,Estable
+91,5088,Julio César Camila Rojo,49,M,2024-07-21,Hospital Ángeles,67.5,107.4,126,80,Estable
+91,5088,Julio César Camila Rojo,49,M,2024-09-19,Centro de Salud Mixcoac,70.5,113.4,128,81,Crítico
+91,5088,Julio César Camila Rojo,49,M,2024-11-18,Hospital Xochimilco,75.9,124.3,124,80,Crítico
+92,2624,Marisol Archuleta,34,M,2023-09-25,Hospital Militar,92.5,90.0,122,81,Crítico
+92,2624,Marisol Archuleta,34,M,2023-11-24,Hospital General CDMX,93.0,91.0,129,76,En Observación
+92,2624,Marisol Archuleta,34,M,2024-01-23,Unidad Tlatelolco,93.0,90.9,124,76,Estable
+92,2624,Marisol Archuleta,34,M,2024-03-23,Centro de Salud Mixcoac,93.1,91.1,129,76,En Observación
+92,2624,Marisol Archuleta,34,M,2024-05-22,Clínica Londres,92.9,90.8,122,77,Estable
+92,2624,Marisol Archuleta,34,M,2024-07-21,Hospital General CDMX,93.7,92.3,124,76,En Observación
+92,2624,Marisol Archuleta,34,M,2024-09-19,Unidad Tlatelolco,98.5,101.9,129,77,Mejoría
+92,2624,Marisol Archuleta,34,M,2024-11-18,Clínica 22 IMSS,98.3,101.6,119,82,Mejoría
+93,6325,Mtro. Armando Barrientos,70,F,2023-09-25,Unidad Tlatelolco,93.9,117.7,123,77,Mejoría
+93,6325,Mtro. Armando Barrientos,70,F,2023-11-24,Hospital Xochimilco,92.9,115.7,126,78,Estable
+93,6325,Mtro. Armando Barrientos,70,F,2024-01-23,Hospital Ángeles,94.1,118.0,126,81,Crítico
+93,6325,Mtro. Armando Barrientos,70,F,2024-03-23,Hospital Militar,94.4,118.6,131,81,Mejoría
+93,6325,Mtro. Armando Barrientos,70,F,2024-05-22,Hospital Xochimilco,94.9,119.6,125,81,Estable
+93,6325,Mtro. Armando Barrientos,70,F,2024-07-21,Unidad Tlatelolco,98.3,126.3,123,81,Estable
+93,6325,Mtro. Armando Barrientos,70,F,2024-09-19,Clínica 22 IMSS,95.4,120.6,128,83,En Observación
+93,6325,Mtro. Armando Barrientos,70,F,2024-11-18,Hospital Xochimilco,98.4,126.7,122,79,Estable
+94,1038,Porfirio Galván Quintana,42,M,2023-09-25,Hospital Militar,65.9,97.0,122,78,En Observación
+94,1038,Porfirio Galván Quintana,42,M,2023-11-24,Clínica 22 IMSS,65.7,96.4,126,80,Crítico
+94,1038,Porfirio Galván Quintana,42,M,2024-01-23,Hospital ABC,67.0,99.1,124,83,En Observación
+94,1038,Porfirio Galván Quintana,42,M,2024-03-23,Médica Sur,66.8,98.8,121,78,Estable
+94,1038,Porfirio Galván Quintana,42,M,2024-05-22,Unidad Tlatelolco,66.4,97.9,130,78,Estable
+94,1038,Porfirio Galván Quintana,42,M,2024-07-21,Clínica Londres,70.7,106.5,130,81,Mejoría
+94,1038,Porfirio Galván Quintana,42,M,2024-09-19,Centro de Salud Mixcoac,60.8,86.8,121,82,Crítico
+94,1038,Porfirio Galván Quintana,42,M,2024-11-18,Centro de Salud Mixcoac,65.8,96.8,122,80,Estable
+95,7232,Samuel Piña,57,F,2023-09-25,Hospital Militar,97.5,114.4,129,81,Crítico
+95,7232,Samuel Piña,57,F,2023-11-24,Médica Sur,97.3,113.9,124,80,Crítico
+95,7232,Samuel Piña,57,F,2024-01-23,Clínica 22 IMSS,97.3,114.0,131,77,En Observación
+95,7232,Samuel Piña,57,F,2024-03-23,Médica Sur,99.9,119.3,127,78,Estable
+95,7232,Samuel Piña,57,F,2024-05-22,Centro de Salud Mixcoac,101.2,121.7,128,81,Crítico
+95,7232,Samuel Piña,57,F,2024-07-21,Unidad Tlatelolco,93.3,106.0,122,81,En Observación
+95,7232,Samuel Piña,57,F,2024-09-19,Hospital General CDMX,93.8,107.0,126,80,Crítico
+95,7232,Samuel Piña,57,F,2024-11-18,Unidad Tlatelolco,98.3,116.0,130,83,Estable
+96,1460,Carolina Esmeralda Delgado,32,F,2023-09-25,Hospital Militar,89.5,99.0,131,83,Mejoría
+96,1460,Carolina Esmeralda Delgado,32,F,2023-11-24,Centro Médico Naval,90.1,100.2,128,79,En Observación
+96,1460,Carolina Esmeralda Delgado,32,F,2024-01-23,Unidad Tlatelolco,90.8,101.6,129,77,Estable
+96,1460,Carolina Esmeralda Delgado,32,F,2024-03-23,Hospital Ángeles,90.3,100.6,131,82,Estable
+96,1460,Carolina Esmeralda Delgado,32,F,2024-05-22,Hospital General CDMX,92.0,104.0,125,82,En Observación
+96,1460,Carolina Esmeralda Delgado,32,F,2024-07-21,Hospital ABC,87.6,95.1,126,80,Estable
+96,1460,Carolina Esmeralda Delgado,32,F,2024-09-19,Centro Médico Naval,91.6,103.1,124,79,Crítico
+96,1460,Carolina Esmeralda Delgado,32,F,2024-11-18,Centro de Salud Mixcoac,91.1,102.1,124,82,Estable
+97,1023,Josefina Díaz,38,F,2023-09-25,Hospital Xochimilco,64.5,124.3,123,81,En Observación
+97,1023,Josefina Díaz,38,F,2023-11-24,Hospital Xochimilco,64.9,124.9,127,79,Crítico
+97,1023,Josefina Díaz,38,F,2024-01-23,Médica Sur,62.8,120.7,121,77,En Observación
+97,1023,Josefina Díaz,38,F,2024-03-23,Médica Sur,62.3,119.9,129,81,Mejoría
+97,1023,Josefina Díaz,38,F,2024-05-22,Hospital ABC,64.5,124.3,126,81,Estable
+97,1023,Josefina Díaz,38,F,2024-07-21,Hospital General CDMX,66.1,127.4,127,81,Crítico
+97,1023,Josefina Díaz,38,F,2024-09-19,Unidad Tlatelolco,61.9,119.0,126,77,Mejoría
+97,1023,Josefina Díaz,38,F,2024-11-18,Clínica 22 IMSS,69.4,134.0,129,78,Mejoría
+98,8720,Santiago Hernán de Jesús,56,M,2023-09-25,Hospital General CDMX,97.0,102.0,122,83,En Observación
+98,8720,Santiago Hernán de Jesús,56,M,2023-11-24,Hospital ABC,97.3,102.7,125,81,Crítico
+98,8720,Santiago Hernán de Jesús,56,M,2024-01-23,Hospital Militar,98.7,105.5,129,81,Estable
+98,8720,Santiago Hernán de Jesús,56,M,2024-03-23,Unidad Tlatelolco,94.6,97.2,126,83,Estable
+98,8720,Santiago Hernán de Jesús,56,M,2024-05-22,Hospital General CDMX,95.7,99.4,125,80,En Observación
+98,8720,Santiago Hernán de Jesús,56,M,2024-07-21,Centro Médico Naval,96.9,101.9,131,80,En Observación
+98,8720,Santiago Hernán de Jesús,56,M,2024-09-19,Médica Sur,94.3,96.6,130,83,Estable
+98,8720,Santiago Hernán de Jesús,56,M,2024-11-18,Centro Médico Naval,90.7,89.5,131,80,Estable
+99,6066,Esteban María José Sosa Terán,64,M,2023-09-25,Hospital ABC,92.5,95.7,121,82,Mejoría
+99,6066,Esteban María José Sosa Terán,64,M,2023-11-24,Hospital ABC,92.4,95.6,122,80,Estable
+99,6066,Esteban María José Sosa Terán,64,M,2024-01-23,Médica Sur,90.6,92.0,124,83,Crítico
+99,6066,Esteban María José Sosa Terán,64,M,2024-03-23,Hospital Xochimilco,94.8,100.3,123,83,Mejoría
+99,6066,Esteban María José Sosa Terán,64,M,2024-05-22,Médica Sur,94.3,99.4,123,78,En Observación
+99,6066,Esteban María José Sosa Terán,64,M,2024-07-21,Hospital General CDMX,96.9,104.6,126,77,En Observación
+99,6066,Esteban María José Sosa Terán,64,M,2024-09-19,Hospital Militar,96.9,104.4,121,80,Mejoría
+99,6066,Esteban María José Sosa Terán,64,M,2024-11-18,Centro Médico Naval,93.2,97.1,121,81,Estable
+100,5487,Leonardo Corona Colón,20,F,2023-09-25,Clínica Londres,78.4,78.3,123,77,En Observación
+100,5487,Leonardo Corona Colón,20,F,2023-11-24,Médica Sur,78.1,77.6,128,80,En Observación
+100,5487,Leonardo Corona Colón,20,F,2024-01-23,Centro Médico Naval,79.5,80.6,126,80,Crítico
+100,5487,Leonardo Corona Colón,20,F,2024-03-23,Hospital Xochimilco,80.1,81.8,125,81,En Observación
+100,5487,Leonardo Corona Colón,20,F,2024-05-22,Hospital Militar,79.9,81.4,129,77,Crítico
+100,5487,Leonardo Corona Colón,20,F,2024-07-21,Clínica 22 IMSS,76.7,74.8,123,78,En Observación
+100,5487,Leonardo Corona Colón,20,F,2024-09-19,Hospital ABC,75.0,71.5,125,82,En Observación
+100,5487,Leonardo Corona Colón,20,F,2024-11-18,Clínica 22 IMSS,83.3,88.2,129,78,Estable
+101,2513,Mtro. Eduardo Estévez,38,F,2023-09-25,Unidad Tlatelolco,71.4,101.0,128,77,Mejoría
+101,2513,Mtro. Eduardo Estévez,38,F,2023-11-24,Centro Médico Naval,71.4,101.0,128,78,Crítico
+101,2513,Mtro. Eduardo Estévez,38,F,2024-01-23,Unidad Tlatelolco,72.4,102.8,122,77,Crítico
+101,2513,Mtro. Eduardo Estévez,38,F,2024-03-23,Hospital Militar,71.7,101.6,120,81,En Observación
+101,2513,Mtro. Eduardo Estévez,38,F,2024-05-22,Hospital Ángeles,68.4,95.0,129,81,Estable
+101,2513,Mtro. Eduardo Estévez,38,F,2024-07-21,Médica Sur,75.9,109.9,128,79,Estable
+101,2513,Mtro. Eduardo Estévez,38,F,2024-09-19,Hospital General CDMX,69.0,96.1,127,83,Crítico
+101,2513,Mtro. Eduardo Estévez,38,F,2024-11-18,Hospital Militar,70.5,99.0,121,77,Mejoría
+102,6243,Aldo Joaquín Naranjo,52,M,2023-09-25,Hospital Militar,92.1,87.3,120,77,En Observación
+102,6243,Aldo Joaquín Naranjo,52,M,2023-11-24,Clínica Londres,91.2,85.6,122,82,Estable
+102,6243,Aldo Joaquín Naranjo,52,M,2024-01-23,Hospital Ángeles,93.5,90.1,119,78,Estable
+102,6243,Aldo Joaquín Naranjo,52,M,2024-03-23,Hospital Ángeles,94.7,92.6,124,82,En Observación
+102,6243,Aldo Joaquín Naranjo,52,M,2024-05-22,Hospital Xochimilco,92.0,87.1,119,82,En Observación
+102,6243,Aldo Joaquín Naranjo,52,M,2024-07-21,Hospital Xochimilco,88.8,80.7,120,81,En Observación
+102,6243,Aldo Joaquín Naranjo,52,M,2024-09-19,Hospital ABC,89.1,81.4,125,77,En Observación
+102,6243,Aldo Joaquín Naranjo,52,M,2024-11-18,Clínica Londres,94.3,91.7,129,81,Estable
+103,7757,Sr(a). Mónica Rosas,71,M,2023-09-25,Clínica Londres,69.3,103.5,119,79,Crítico
+103,7757,Sr(a). Mónica Rosas,71,M,2023-11-24,Médica Sur,68.8,102.4,128,77,Crítico
+103,7757,Sr(a). Mónica Rosas,71,M,2024-01-23,Hospital General CDMX,70.5,105.8,120,78,En Observación
+103,7757,Sr(a). Mónica Rosas,71,M,2024-03-23,Hospital Ángeles,68.8,102.4,122,76,Estable
+103,7757,Sr(a). Mónica Rosas,71,M,2024-05-22,Médica Sur,69.6,104.1,127,77,En Observación
+103,7757,Sr(a). Mónica Rosas,71,M,2024-07-21,Hospital ABC,74.0,112.9,123,80,Mejoría
+103,7757,Sr(a). Mónica Rosas,71,M,2024-09-19,Hospital Ángeles,73.3,111.4,120,82,En Observación
+103,7757,Sr(a). Mónica Rosas,71,M,2024-11-18,Hospital General CDMX,75.9,116.7,127,78,En Observación
+104,6307,Adán Chavarría,59,M,2023-09-25,Hospital Ángeles,77.0,103.5,127,80,Crítico
+104,6307,Adán Chavarría,59,M,2023-11-24,Centro de Salud Mixcoac,77.4,104.3,120,81,Crítico
+104,6307,Adán Chavarría,59,M,2024-01-23,Hospital ABC,76.9,103.4,123,78,Crítico
+104,6307,Adán Chavarría,59,M,2024-03-23,Hospital Militar,79.7,108.8,122,80,Estable
+104,6307,Adán Chavarría,59,M,2024-05-22,Hospital Militar,80.6,110.8,121,82,Estable
+104,6307,Adán Chavarría,59,M,2024-07-21,Hospital Militar,74.8,99.0,120,77,Estable
+104,6307,Adán Chavarría,59,M,2024-09-19,Clínica Londres,77.5,104.5,121,82,Estable
+104,6307,Adán Chavarría,59,M,2024-11-18,Centro de Salud Mixcoac,74.4,98.4,129,81,Crítico
+105,1733,Estefanía Varela,60,F,2023-09-25,Clínica 22 IMSS,55.8,98.0,130,82,En Observación
+105,1733,Estefanía Varela,60,F,2023-11-24,Médica Sur,55.1,96.5,126,81,Mejoría
+105,1733,Estefanía Varela,60,F,2024-01-23,Hospital Militar,57.4,101.3,120,78,Estable
+105,1733,Estefanía Varela,60,F,2024-03-23,Clínica 22 IMSS,53.4,93.3,123,78,Estable
+105,1733,Estefanía Varela,60,F,2024-05-22,Clínica Londres,54.6,95.7,129,83,Mejoría
+105,1733,Estefanía Varela,60,F,2024-07-21,Médica Sur,52.0,90.5,123,79,Mejoría
+105,1733,Estefanía Varela,60,F,2024-09-19,Hospital Xochimilco,56.8,100.1,128,81,En Observación
+105,1733,Estefanía Varela,60,F,2024-11-18,Centro de Salud Mixcoac,59.9,106.3,126,77,Mejoría
+106,6062,Ana Luisa Araceli Peres Montoya,67,F,2023-09-25,Clínica 22 IMSS,95.3,109.2,128,82,Mejoría
+106,6062,Ana Luisa Araceli Peres Montoya,67,F,2023-11-24,Hospital Ángeles,95.2,108.9,127,83,Mejoría
+106,6062,Ana Luisa Araceli Peres Montoya,67,F,2024-01-23,Hospital General CDMX,95.5,109.7,132,84,Mejoría
+106,6062,Ana Luisa Araceli Peres Montoya,67,F,2024-03-23,Hospital General CDMX,97.8,114.2,130,82,Crítico
+106,6062,Ana Luisa Araceli Peres Montoya,67,F,2024-05-22,Hospital General CDMX,92.7,104.0,130,79,Estable
+106,6062,Ana Luisa Araceli Peres Montoya,67,F,2024-07-21,Médica Sur,95.2,108.9,126,78,Mejoría
+106,6062,Ana Luisa Araceli Peres Montoya,67,F,2024-09-19,Centro de Salud Mixcoac,95.6,109.8,128,83,En Observación
+106,6062,Ana Luisa Araceli Peres Montoya,67,F,2024-11-18,Clínica 22 IMSS,88.3,95.2,127,84,En Observación
+107,8210,Sonia Isaac Zavala Tovar,63,M,2023-09-25,Clínica 22 IMSS,65.6,101.2,128,79,Estable
+107,8210,Sonia Isaac Zavala Tovar,63,M,2023-11-24,Centro Médico Naval,64.7,99.6,131,83,En Observación
+107,8210,Sonia Isaac Zavala Tovar,63,M,2024-01-23,Hospital Militar,64.7,99.6,125,80,Crítico
+107,8210,Sonia Isaac Zavala Tovar,63,M,2024-03-23,Hospital Xochimilco,66.2,102.4,127,81,En Observación
+107,8210,Sonia Isaac Zavala Tovar,63,M,2024-05-22,Hospital Xochimilco,63.5,97.0,121,82,En Observación
+107,8210,Sonia Isaac Zavala Tovar,63,M,2024-07-21,Hospital Militar,61.3,92.7,131,83,Mejoría
+107,8210,Sonia Isaac Zavala Tovar,63,M,2024-09-19,Hospital General CDMX,67.2,104.4,122,77,Estable
+107,8210,Sonia Isaac Zavala Tovar,63,M,2024-11-18,Médica Sur,63.5,97.0,128,83,Estable
+108,8903,Florencia Lucía Barreto Cepeda,44,F,2023-09-25,Hospital Ángeles,71.9,85.5,124,79,Crítico
+108,8903,Florencia Lucía Barreto Cepeda,44,F,2023-11-24,Hospital ABC,72.1,86.0,120,77,Crítico
+108,8903,Florencia Lucía Barreto Cepeda,44,F,2024-01-23,Hospital ABC,73.2,88.2,121,79,Mejoría
+108,8903,Florencia Lucía Barreto Cepeda,44,F,2024-03-23,Unidad Tlatelolco,70.7,83.1,124,78,Mejoría
+108,8903,Florencia Lucía Barreto Cepeda,44,F,2024-05-22,Unidad Tlatelolco,69.9,81.5,122,78,Crítico
+108,8903,Florencia Lucía Barreto Cepeda,44,F,2024-07-21,Hospital Militar,76.6,94.9,119,81,Mejoría
+108,8903,Florencia Lucía Barreto Cepeda,44,F,2024-09-19,Hospital Militar,74.6,90.9,120,77,Mejoría
+108,8903,Florencia Lucía Barreto Cepeda,44,F,2024-11-18,Clínica Londres,72.0,85.8,129,76,Mejoría
+109,1703,Jonás Cruz,59,F,2023-09-25,Hospital Xochimilco,57.7,91.8,125,80,Crítico
+109,1703,Jonás Cruz,59,F,2023-11-24,Clínica Londres,57.2,90.7,126,81,Crítico
+109,1703,Jonás Cruz,59,F,2024-01-23,Hospital Ángeles,56.9,90.1,123,82,Crítico
+109,1703,Jonás Cruz,59,F,2024-03-23,Clínica 22 IMSS,58.6,93.5,126,77,Mejoría
+109,1703,Jonás Cruz,59,F,2024-05-22,Médica Sur,61.5,99.3,122,80,Estable
+109,1703,Jonás Cruz,59,F,2024-07-21,Centro de Salud Mixcoac,54.9,86.2,119,79,Mejoría
+109,1703,Jonás Cruz,59,F,2024-09-19,Hospital Militar,59.9,96.1,121,79,Crítico
+109,1703,Jonás Cruz,59,F,2024-11-18,Hospital Ángeles,52.4,81.1,124,79,Mejoría
+110,3216,Mateo Horacio Alfaro,25,F,2023-09-25,Hospital General CDMX,55.9,94.6,127,82,Mejoría
+110,3216,Mateo Horacio Alfaro,25,F,2023-11-24,Clínica Londres,55.2,93.2,127,77,Mejoría
+110,3216,Mateo Horacio Alfaro,25,F,2024-01-23,Hospital Ángeles,54.4,91.5,125,78,Mejoría
+110,3216,Mateo Horacio Alfaro,25,F,2024-03-23,Médica Sur,58.6,100.0,121,79,Mejoría
+110,3216,Mateo Horacio Alfaro,25,F,2024-05-22,Centro de Salud Mixcoac,55.2,93.3,122,82,Mejoría
+110,3216,Mateo Horacio Alfaro,25,F,2024-07-21,Médica Sur,60.1,103.0,128,80,En Observación
+110,3216,Mateo Horacio Alfaro,25,F,2024-09-19,Médica Sur,61.5,105.9,131,78,Estable
+110,3216,Mateo Horacio Alfaro,25,F,2024-11-18,Centro de Salud Mixcoac,55.6,93.9,129,78,En Observación
