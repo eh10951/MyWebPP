@@ -85,20 +85,17 @@ window.verifyNip = async function() {
         const doc = await db.collection("pacientes").doc(scannedPatientID).get();
         if(doc.exists) {
             const data = doc.data();
-            // Bypass: Ya no comparamos data.nip == currentNip
-            if(html5QrScanner) html5QrScanner.stop();
-            showDashboard(data);
+            // Verificación real del NIP del CSV
+            if(data.nip === currentNip) {
+                if(html5QrScanner) html5QrScanner.stop();
+                showDashboard(data);
+            } else {
+                alert("NIP INCORRECTO. Intente de nuevo.");
+                clearNip();
+            }
         } else {
-            // Si el paciente no existe en Firestore, mostramos datos genéricos para que no se detenga la prueba
-            alert("Paciente no en Firestore. Cargando perfil de DEMOSTRACIÓN.");
-            if(html5QrScanner) html5QrScanner.stop();
-            showDashboard({
-                nombre: "Usuario de Prueba (DEMO)",
-                edad: "28",
-                tipoSangre: "A+",
-                glucosa: "95",
-                riesgoDiabetes: "BAJO"
-            });
+            alert("PACIENTE NO ENCONTRADO EN LA BASE DE DATOS.");
+            clearNip();
         }
     } catch(err) {
         console.error("Error en conexión, cargando DEMO:", err);
@@ -114,9 +111,14 @@ window.verifyNip = async function() {
 
 function showDashboard(data) {
     showScreen('dashboard-screen');
-    document.getElementById('patient-name-display').innerText = data.nombre;
-    document.getElementById('p-id').innerText = scannedPatientID;
-    document.getElementById('p-age').innerText = data.edad + " años";
-    document.getElementById('p-blood').innerText = data.tipoSangre;
-    document.getElementById('p-glucose').innerText = data.glucosa + " mg/dL";
+    document.getElementById('patient-name-display').innerText = data.nombre || "N/A";
+    document.getElementById('p-id').innerText = scannedPatientID || "PACIENTE_0XX";
+    document.getElementById('p-age').innerText = (data.edad || "--") + " AÑOS";
+    document.getElementById('p-gender').innerText = data.genero || "N/A";
+    document.getElementById('p-curp').innerText = data.curp || "N/A";
+    document.getElementById('p-blood').innerText = data.sangre || data.tipoSangre || "N/A";
+    document.getElementById('p-glucose').innerText = (data.glucosa || "0") + " mg/dL";
+    document.getElementById('p-bpm').innerText = data.bpm || "0";
+    document.getElementById('p-pressure').innerText = data.presion || "0/0";
+    document.getElementById('p-diag').innerText = data.diagnostico || data.riesgoDiabetes || "Sin observaciones.";
 }

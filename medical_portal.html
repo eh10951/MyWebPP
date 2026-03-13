@@ -97,6 +97,12 @@
                             <span style="color:var(--text-muted)">EDAD:</span><span id="p-age">-</span>
                         </div>
                         <div style="display:flex; justify-content:space-between; margin-bottom:15px;">
+                            <span style="color:var(--text-muted)">GÉNERO:</span><span id="p-gender">-</span>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; margin-bottom:15px;">
+                            <span style="color:var(--text-muted)">CURP:</span><span id="p-curp" style="font-size:0.8rem">-</span>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; margin-bottom:15px;">
                             <span style="color:var(--text-muted)">SANGRE:</span><span id="p-blood">-</span>
                         </div>
                     </div>
@@ -105,18 +111,28 @@
 
                 <main class="stats-container">
                     <div class="diag-card">
+                        <h4>Pulsaciones</h4>
+                        <div class="value" id="p-bpm">-</div>
+                        <span class="risk-indicator risk-low">FRECUENCIA</span>
+                    </div>
+                    <div class="diag-card">
+                        <h4>Presión Arterial</h4>
+                        <div class="value" id="p-pressure">-</div>
+                        <span class="risk-indicator risk-low">SISTÓLICA/DIAS.</span>
+                    </div>
+                    <div class="diag-card">
+                        <h4>Glucosa</h4>
+                        <div class="value" id="p-glucose">-</div>
+                        <span class="risk-indicator risk-high">LABORATORIO</span>
+                    </div>
+                    <div class="diag-card">
                         <h4>Frecuencia Cardíaca</h4>
                         <div class="value">72 <span style="font-size:1rem; color:var(--text-muted)">BPM</span></div>
                         <span class="risk-indicator risk-low">ESTABLE</span>
                     </div>
-                    <div class="diag-card">
-                        <h4>Glucosa en Sangre</h4>
-                        <div class="value" id="p-glucose">-</div>
-                        <span class="risk-indicator risk-high">ATENCIÓN REQUERIDA</span>
-                    </div>
                     <div class="diag-card" style="grid-column: span 2; border-left-color: var(--medical-green);">
                         <h4>Diagnóstico de Riesgo</h4>
-                        <p style="font-size:1.1rem; line-height:1.6; margin-top:10px;">Paciente muestra indicadores de pre-diabetes. Se recomienda ajuste inmediato en dieta y monitoreo de niveles de insulina cada 12 horas.</p>
+                        <p id="p-diag" style="font-size:1.1rem; line-height:1.6; margin-top:10px;">-</p>
                     </div>
                 </main>
             </div>
