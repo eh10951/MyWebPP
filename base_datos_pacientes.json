@@ -1,0 +1,3192 @@
+[
+    {
+        "paciente_id": 1,
+        "nip_acceso": "6692",
+        "identificacion": {
+            "nombre": "Alta  Gracia Cadena",
+            "curp": "NAFX571215MBCDTY01",
+            "edad": 19,
+            "genero": "Femenino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Aspirina",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-14",
+            "presion_arterial": "112/72",
+            "frecuencia_cardiaca": "79 lpm",
+            "temperatura": "37.0 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "70 mg/dL",
+            "colesterol": "214 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 2,
+        "nip_acceso": "2213",
+        "identificacion": {
+            "nombre": "Marisol Rosa Villegas",
+            "curp": "BOVP800326MMSHWD06",
+            "edad": 30,
+            "genero": "Masculino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Lactosa",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-17",
+            "presion_arterial": "128/83",
+            "frecuencia_cardiaca": "66 lpm",
+            "temperatura": "37.0 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "85 mg/dL",
+            "colesterol": "216 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 3,
+        "nip_acceso": "9176",
+        "identificacion": {
+            "nombre": "Perla Santiago Pelayo",
+            "curp": "HALL100504HZSVWJ07",
+            "edad": 66,
+            "genero": "Masculino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Penicilina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-08",
+            "presion_arterial": "112/78",
+            "frecuencia_cardiaca": "65 lpm",
+            "temperatura": "36.5 °C",
+            "diagnostico_actual": "Check-up anual"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "87 mg/dL",
+            "colesterol": "215 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 4,
+        "nip_acceso": "8949",
+        "identificacion": {
+            "nombre": "Francisco Tania González Quintana",
+            "curp": "SUBG110322MSPLXMA5",
+            "edad": 22,
+            "genero": "Masculino",
+            "sangre": "O+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Mariscos",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-20",
+            "presion_arterial": "111/83",
+            "frecuencia_cardiaca": "76 lpm",
+            "temperatura": "36.4 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "101 mg/dL",
+            "colesterol": "151 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 5,
+        "nip_acceso": "4603",
+        "identificacion": {
+            "nombre": "Luis Miguel Cepeda",
+            "curp": "ZETP230520HMSHDQ00",
+            "edad": 45,
+            "genero": "Masculino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Penicilina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-15",
+            "presion_arterial": "128/78",
+            "frecuencia_cardiaca": "67 lpm",
+            "temperatura": "36.3 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "73 mg/dL",
+            "colesterol": "220 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 6,
+        "nip_acceso": "4317",
+        "identificacion": {
+            "nombre": "Adriana Ballesteros Robledo",
+            "curp": "KUYS970115MHGFLW06",
+            "edad": 80,
+            "genero": "Femenino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Aspirina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-31",
+            "presion_arterial": "114/80",
+            "frecuencia_cardiaca": "72 lpm",
+            "temperatura": "36.4 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "92 mg/dL",
+            "colesterol": "162 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 7,
+        "nip_acceso": "3825",
+        "identificacion": {
+            "nombre": "Rodrigo Abril Dávila",
+            "curp": "WOLS430601MNTMFX01",
+            "edad": 19,
+            "genero": "Masculino",
+            "sangre": "O+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Penicilina",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-30",
+            "presion_arterial": "129/73",
+            "frecuencia_cardiaca": "61 lpm",
+            "temperatura": "36.9 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "98 mg/dL",
+            "colesterol": "192 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 8,
+        "nip_acceso": "4774",
+        "identificacion": {
+            "nombre": "Nelly Jonás Moya Valladares",
+            "curp": "OEMJ110418MDGYLA00",
+            "edad": 85,
+            "genero": "Femenino",
+            "sangre": "O+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Ninguna",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-06",
+            "presion_arterial": "120/77",
+            "frecuencia_cardiaca": "89 lpm",
+            "temperatura": "37.2 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "84 mg/dL",
+            "colesterol": "178 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 9,
+        "nip_acceso": "8527",
+        "identificacion": {
+            "nombre": "Cristobal Wendolin Borrego",
+            "curp": "OACY320704MNEWQU05",
+            "edad": 30,
+            "genero": "Femenino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Penicilina",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-01",
+            "presion_arterial": "121/84",
+            "frecuencia_cardiaca": "87 lpm",
+            "temperatura": "36.8 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "91 mg/dL",
+            "colesterol": "158 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 10,
+        "nip_acceso": "6759",
+        "identificacion": {
+            "nombre": "Carlota Margarita Ruiz Zamora",
+            "curp": "VAHD651114HQOYYZ01",
+            "edad": 75,
+            "genero": "Masculino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Penicilina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-24",
+            "presion_arterial": "128/85",
+            "frecuencia_cardiaca": "80 lpm",
+            "temperatura": "37.1 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "104 mg/dL",
+            "colesterol": "206 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 11,
+        "nip_acceso": "1346",
+        "identificacion": {
+            "nombre": "Tania Arenas",
+            "curp": "IUGJ320205MZSJMI04",
+            "edad": 69,
+            "genero": "Femenino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Mariscos",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-10",
+            "presion_arterial": "119/79",
+            "frecuencia_cardiaca": "96 lpm",
+            "temperatura": "36.3 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "80 mg/dL",
+            "colesterol": "181 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 12,
+        "nip_acceso": "5823",
+        "identificacion": {
+            "nombre": "Paulina Barragán",
+            "curp": "KOLT960418MDGFRH08",
+            "edad": 84,
+            "genero": "Femenino",
+            "sangre": "O+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Mariscos",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-09",
+            "presion_arterial": "117/80",
+            "frecuencia_cardiaca": "77 lpm",
+            "temperatura": "36.9 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "103 mg/dL",
+            "colesterol": "207 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 13,
+        "nip_acceso": "3735",
+        "identificacion": {
+            "nombre": "Abigail Mares",
+            "curp": "LAUR821210MQRWDA04",
+            "edad": 62,
+            "genero": "Masculino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Penicilina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-12",
+            "presion_arterial": "126/74",
+            "frecuencia_cardiaca": "98 lpm",
+            "temperatura": "37.0 °C",
+            "diagnostico_actual": "Check-up anual"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "78 mg/dL",
+            "colesterol": "200 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 14,
+        "nip_acceso": "2192",
+        "identificacion": {
+            "nombre": "Leonor Cazares Cantú",
+            "curp": "RIQP150409HOCKQD04",
+            "edad": 19,
+            "genero": "Masculino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Lactosa",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-03-11",
+            "presion_arterial": "126/77",
+            "frecuencia_cardiaca": "65 lpm",
+            "temperatura": "36.9 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "86 mg/dL",
+            "colesterol": "201 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 15,
+        "nip_acceso": "2738",
+        "identificacion": {
+            "nombre": "Paulina Juana Melgar",
+            "curp": "SIWM230822MCSXKTA7",
+            "edad": 48,
+            "genero": "Femenino",
+            "sangre": "O+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Ninguna",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-25",
+            "presion_arterial": "120/77",
+            "frecuencia_cardiaca": "73 lpm",
+            "temperatura": "36.8 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "79 mg/dL",
+            "colesterol": "151 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 16,
+        "nip_acceso": "3274",
+        "identificacion": {
+            "nombre": "Marisol Silvano Mata",
+            "curp": "TUQP220412MTSHGY01",
+            "edad": 67,
+            "genero": "Femenino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Ninguna",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-17",
+            "presion_arterial": "114/72",
+            "frecuencia_cardiaca": "74 lpm",
+            "temperatura": "36.7 °C",
+            "diagnostico_actual": "Check-up anual"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "105 mg/dL",
+            "colesterol": "177 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 17,
+        "nip_acceso": "4154",
+        "identificacion": {
+            "nombre": "Jorge Luis Espartaco Herrera",
+            "curp": "AOUD780511MCMXCS01",
+            "edad": 65,
+            "genero": "Masculino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Ninguna",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-24",
+            "presion_arterial": "127/82",
+            "frecuencia_cardiaca": "80 lpm",
+            "temperatura": "36.4 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "85 mg/dL",
+            "colesterol": "174 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 18,
+        "nip_acceso": "9498",
+        "identificacion": {
+            "nombre": "Sr(a). Felix Cornejo",
+            "curp": "DEES421115HSRKQS07",
+            "edad": 57,
+            "genero": "Masculino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Penicilina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-08",
+            "presion_arterial": "111/85",
+            "frecuencia_cardiaca": "69 lpm",
+            "temperatura": "36.9 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "78 mg/dL",
+            "colesterol": "180 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 19,
+        "nip_acceso": "2016",
+        "identificacion": {
+            "nombre": "Georgina Débora Ulloa Quintana",
+            "curp": "XETL330219MBCDXD06",
+            "edad": 73,
+            "genero": "Masculino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Lactosa",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-13",
+            "presion_arterial": "112/85",
+            "frecuencia_cardiaca": "98 lpm",
+            "temperatura": "37.0 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "89 mg/dL",
+            "colesterol": "176 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 20,
+        "nip_acceso": "9452",
+        "identificacion": {
+            "nombre": "Nayeli Caballero",
+            "curp": "GEGS740719HCSDNQ03",
+            "edad": 58,
+            "genero": "Masculino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Aspirina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-03-01",
+            "presion_arterial": "119/77",
+            "frecuencia_cardiaca": "62 lpm",
+            "temperatura": "36.7 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "104 mg/dL",
+            "colesterol": "186 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 21,
+        "nip_acceso": "2523",
+        "identificacion": {
+            "nombre": "Rosalia Armando Almaraz Puente",
+            "curp": "GIYY390519HGTGFT08",
+            "edad": 23,
+            "genero": "Femenino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Ninguna",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-01",
+            "presion_arterial": "112/72",
+            "frecuencia_cardiaca": "82 lpm",
+            "temperatura": "36.6 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "86 mg/dL",
+            "colesterol": "220 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 22,
+        "nip_acceso": "9307",
+        "identificacion": {
+            "nombre": "Frida Paulina Nevárez Berríos",
+            "curp": "BOFX030414HBCVXQA6",
+            "edad": 85,
+            "genero": "Femenino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Mariscos",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-03-04",
+            "presion_arterial": "118/83",
+            "frecuencia_cardiaca": "84 lpm",
+            "temperatura": "36.5 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "84 mg/dL",
+            "colesterol": "173 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 23,
+        "nip_acceso": "6263",
+        "identificacion": {
+            "nombre": "Micaela Nazario",
+            "curp": "NARN020226HMNZKUA0",
+            "edad": 32,
+            "genero": "Femenino",
+            "sangre": "O+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Lactosa",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-02",
+            "presion_arterial": "113/79",
+            "frecuencia_cardiaca": "74 lpm",
+            "temperatura": "36.6 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "93 mg/dL",
+            "colesterol": "211 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 24,
+        "nip_acceso": "3419",
+        "identificacion": {
+            "nombre": "Pedro Sandra Mayorga",
+            "curp": "FUKC110508MOCWLIA3",
+            "edad": 62,
+            "genero": "Femenino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Aspirina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-09",
+            "presion_arterial": "117/84",
+            "frecuencia_cardiaca": "100 lpm",
+            "temperatura": "36.4 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "85 mg/dL",
+            "colesterol": "171 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 25,
+        "nip_acceso": "5710",
+        "identificacion": {
+            "nombre": "Rosalia Adalberto Jaramillo Barraza",
+            "curp": "UOZQ450226HGTWPW03",
+            "edad": 29,
+            "genero": "Femenino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Aspirina",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-21",
+            "presion_arterial": "117/77",
+            "frecuencia_cardiaca": "84 lpm",
+            "temperatura": "36.3 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "74 mg/dL",
+            "colesterol": "196 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 26,
+        "nip_acceso": "6644",
+        "identificacion": {
+            "nombre": "Ing. Ofelia Portillo",
+            "curp": "SIMZ890311MCSTZW02",
+            "edad": 41,
+            "genero": "Femenino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Ninguna",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-28",
+            "presion_arterial": "116/72",
+            "frecuencia_cardiaca": "91 lpm",
+            "temperatura": "36.4 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "75 mg/dL",
+            "colesterol": "152 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 27,
+        "nip_acceso": "2540",
+        "identificacion": {
+            "nombre": "Marisol Julio César Correa Serrano",
+            "curp": "UEKJ041106HJCBNYA7",
+            "edad": 19,
+            "genero": "Femenino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Mariscos",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-18",
+            "presion_arterial": "130/84",
+            "frecuencia_cardiaca": "77 lpm",
+            "temperatura": "36.4 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "89 mg/dL",
+            "colesterol": "201 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 28,
+        "nip_acceso": "6090",
+        "identificacion": {
+            "nombre": "Silvano Marisol Carmona Velásquez",
+            "curp": "DIIS120526HDGGSV03",
+            "edad": 21,
+            "genero": "Femenino",
+            "sangre": "O+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Aspirina",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-21",
+            "presion_arterial": "124/70",
+            "frecuencia_cardiaca": "76 lpm",
+            "temperatura": "36.5 °C",
+            "diagnostico_actual": "Check-up anual"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "93 mg/dL",
+            "colesterol": "165 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 29,
+        "nip_acceso": "5362",
+        "identificacion": {
+            "nombre": "Mariano Abel Salazar",
+            "curp": "MEXC951018HJCQGZ09",
+            "edad": 78,
+            "genero": "Masculino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Penicilina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-04",
+            "presion_arterial": "123/73",
+            "frecuencia_cardiaca": "93 lpm",
+            "temperatura": "36.9 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "79 mg/dL",
+            "colesterol": "200 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 30,
+        "nip_acceso": "9589",
+        "identificacion": {
+            "nombre": "Mónica Duarte Laboy",
+            "curp": "JABK670717HDGQJK03",
+            "edad": 84,
+            "genero": "Femenino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Lactosa",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-16",
+            "presion_arterial": "124/76",
+            "frecuencia_cardiaca": "96 lpm",
+            "temperatura": "36.5 °C",
+            "diagnostico_actual": "Check-up anual"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "91 mg/dL",
+            "colesterol": "188 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 31,
+        "nip_acceso": "2960",
+        "identificacion": {
+            "nombre": "Dr. Ángela Saavedra",
+            "curp": "COKN661115MBSDJX04",
+            "edad": 37,
+            "genero": "Masculino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Lactosa",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-25",
+            "presion_arterial": "113/78",
+            "frecuencia_cardiaca": "70 lpm",
+            "temperatura": "37.1 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "82 mg/dL",
+            "colesterol": "211 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 32,
+        "nip_acceso": "8154",
+        "identificacion": {
+            "nombre": "Enrique Solorzano Brito",
+            "curp": "SIKZ180519MSLRXU04",
+            "edad": 71,
+            "genero": "Femenino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Aspirina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-16",
+            "presion_arterial": "114/72",
+            "frecuencia_cardiaca": "97 lpm",
+            "temperatura": "36.6 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "89 mg/dL",
+            "colesterol": "172 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 33,
+        "nip_acceso": "2458",
+        "identificacion": {
+            "nombre": "Fabiola Gustavo Espinal Jaramillo",
+            "curp": "FUCV940308HJCZKW08",
+            "edad": 19,
+            "genero": "Masculino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Lactosa",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-16",
+            "presion_arterial": "113/83",
+            "frecuencia_cardiaca": "92 lpm",
+            "temperatura": "36.3 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "80 mg/dL",
+            "colesterol": "198 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 34,
+        "nip_acceso": "6938",
+        "identificacion": {
+            "nombre": "Pilar Ana Vanegas",
+            "curp": "WUUC660103MNESPV07",
+            "edad": 26,
+            "genero": "Femenino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Penicilina",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-08",
+            "presion_arterial": "124/70",
+            "frecuencia_cardiaca": "64 lpm",
+            "temperatura": "36.7 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "99 mg/dL",
+            "colesterol": "182 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 35,
+        "nip_acceso": "3280",
+        "identificacion": {
+            "nombre": "Jaime Carrera Frías",
+            "curp": "PUWU931002HNTQVY02",
+            "edad": 61,
+            "genero": "Masculino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Ninguna",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-07",
+            "presion_arterial": "110/78",
+            "frecuencia_cardiaca": "64 lpm",
+            "temperatura": "37.0 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "74 mg/dL",
+            "colesterol": "192 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 36,
+        "nip_acceso": "8454",
+        "identificacion": {
+            "nombre": "Elvia Navarro",
+            "curp": "AURO780120HCHWZG08",
+            "edad": 26,
+            "genero": "Femenino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Penicilina",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-06",
+            "presion_arterial": "129/71",
+            "frecuencia_cardiaca": "99 lpm",
+            "temperatura": "37.0 °C",
+            "diagnostico_actual": "Check-up anual"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "78 mg/dL",
+            "colesterol": "152 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 37,
+        "nip_acceso": "4877",
+        "identificacion": {
+            "nombre": "Mario Flavio Gonzales",
+            "curp": "BAGB720515MGTWFC08",
+            "edad": 83,
+            "genero": "Masculino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Lactosa",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-13",
+            "presion_arterial": "123/83",
+            "frecuencia_cardiaca": "70 lpm",
+            "temperatura": "37.2 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "93 mg/dL",
+            "colesterol": "189 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 38,
+        "nip_acceso": "5818",
+        "identificacion": {
+            "nombre": "Zacarías Jesús Jasso",
+            "curp": "UOOI030823HQOJBDA0",
+            "edad": 42,
+            "genero": "Femenino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Ninguna",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-22",
+            "presion_arterial": "124/81",
+            "frecuencia_cardiaca": "61 lpm",
+            "temperatura": "36.3 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "88 mg/dL",
+            "colesterol": "200 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 39,
+        "nip_acceso": "3948",
+        "identificacion": {
+            "nombre": "Hernán Octavio Carbajal",
+            "curp": "RALR911210HSPGNQ09",
+            "edad": 28,
+            "genero": "Femenino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Ninguna",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-03-05",
+            "presion_arterial": "116/80",
+            "frecuencia_cardiaca": "78 lpm",
+            "temperatura": "37.2 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "79 mg/dL",
+            "colesterol": "163 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 40,
+        "nip_acceso": "3527",
+        "identificacion": {
+            "nombre": "Mtro. Aldonza Alejandro",
+            "curp": "VIKI230220HOCRNF09",
+            "edad": 23,
+            "genero": "Masculino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Aspirina",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-22",
+            "presion_arterial": "111/83",
+            "frecuencia_cardiaca": "74 lpm",
+            "temperatura": "36.4 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "82 mg/dL",
+            "colesterol": "172 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 41,
+        "nip_acceso": "7013",
+        "identificacion": {
+            "nombre": "Eugenio Peralta Candelaria",
+            "curp": "MUAW260514MDFHJW08",
+            "edad": 73,
+            "genero": "Femenino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Lactosa",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-07",
+            "presion_arterial": "128/82",
+            "frecuencia_cardiaca": "98 lpm",
+            "temperatura": "36.6 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "108 mg/dL",
+            "colesterol": "188 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 42,
+        "nip_acceso": "5374",
+        "identificacion": {
+            "nombre": "José María Emilio Jimínez Lerma",
+            "curp": "XAJD391116MGRPFU04",
+            "edad": 54,
+            "genero": "Femenino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Lactosa",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-18",
+            "presion_arterial": "124/74",
+            "frecuencia_cardiaca": "98 lpm",
+            "temperatura": "36.3 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "98 mg/dL",
+            "colesterol": "203 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 43,
+        "nip_acceso": "1686",
+        "identificacion": {
+            "nombre": "Dr. María del Carmen Concepción",
+            "curp": "MIQF750218MNLVFB08",
+            "edad": 64,
+            "genero": "Masculino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Ninguna",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-03",
+            "presion_arterial": "110/81",
+            "frecuencia_cardiaca": "93 lpm",
+            "temperatura": "36.9 °C",
+            "diagnostico_actual": "Check-up anual"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "92 mg/dL",
+            "colesterol": "181 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 44,
+        "nip_acceso": "5219",
+        "identificacion": {
+            "nombre": "Manuel Rendón Verdugo",
+            "curp": "AULJ451227HHGRQR01",
+            "edad": 47,
+            "genero": "Femenino",
+            "sangre": "O+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Ninguna",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-02",
+            "presion_arterial": "127/79",
+            "frecuencia_cardiaca": "74 lpm",
+            "temperatura": "36.6 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "102 mg/dL",
+            "colesterol": "165 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 45,
+        "nip_acceso": "5856",
+        "identificacion": {
+            "nombre": "Lic. Karla Matos",
+            "curp": "TOWU500321MDGZWK05",
+            "edad": 44,
+            "genero": "Femenino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Aspirina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-20",
+            "presion_arterial": "120/79",
+            "frecuencia_cardiaca": "98 lpm",
+            "temperatura": "36.5 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "105 mg/dL",
+            "colesterol": "216 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 46,
+        "nip_acceso": "3745",
+        "identificacion": {
+            "nombre": "Homero Amanda Villegas",
+            "curp": "XUAA900312MCMBTA07",
+            "edad": 44,
+            "genero": "Femenino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Penicilina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-25",
+            "presion_arterial": "114/70",
+            "frecuencia_cardiaca": "76 lpm",
+            "temperatura": "36.8 °C",
+            "diagnostico_actual": "Check-up anual"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "83 mg/dL",
+            "colesterol": "175 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 47,
+        "nip_acceso": "4397",
+        "identificacion": {
+            "nombre": "Eugenio Mónica Toledo Linares",
+            "curp": "MOJE101102MNTCNZ03",
+            "edad": 21,
+            "genero": "Femenino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Aspirina",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-03",
+            "presion_arterial": "127/70",
+            "frecuencia_cardiaca": "90 lpm",
+            "temperatura": "37.0 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "91 mg/dL",
+            "colesterol": "183 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 48,
+        "nip_acceso": "2791",
+        "identificacion": {
+            "nombre": "Aida Marco Antonio Apodaca Villa",
+            "curp": "LANH400501MASDTK04",
+            "edad": 31,
+            "genero": "Femenino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Ninguna",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-03-10",
+            "presion_arterial": "121/82",
+            "frecuencia_cardiaca": "89 lpm",
+            "temperatura": "36.4 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "71 mg/dL",
+            "colesterol": "168 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 49,
+        "nip_acceso": "7230",
+        "identificacion": {
+            "nombre": "Carla Barela Pineda",
+            "curp": "WOID861121MPLNBK03",
+            "edad": 47,
+            "genero": "Masculino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Penicilina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-28",
+            "presion_arterial": "115/80",
+            "frecuencia_cardiaca": "85 lpm",
+            "temperatura": "36.6 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "108 mg/dL",
+            "colesterol": "206 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 50,
+        "nip_acceso": "8078",
+        "identificacion": {
+            "nombre": "Evelio Urías Méndez",
+            "curp": "PURR881231HGTSBF06",
+            "edad": 40,
+            "genero": "Femenino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Mariscos",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-27",
+            "presion_arterial": "111/79",
+            "frecuencia_cardiaca": "75 lpm",
+            "temperatura": "36.5 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "108 mg/dL",
+            "colesterol": "210 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 51,
+        "nip_acceso": "8610",
+        "identificacion": {
+            "nombre": "Mtro. Aurora Terán",
+            "curp": "RURK491129MHGWKM02",
+            "edad": 68,
+            "genero": "Masculino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Lactosa",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-05",
+            "presion_arterial": "115/79",
+            "frecuencia_cardiaca": "66 lpm",
+            "temperatura": "36.6 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "86 mg/dL",
+            "colesterol": "167 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 52,
+        "nip_acceso": "8205",
+        "identificacion": {
+            "nombre": "Raúl Paola Saucedo Pacheco",
+            "curp": "WAXA120804HSLDJD03",
+            "edad": 69,
+            "genero": "Femenino",
+            "sangre": "O+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Penicilina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-03-10",
+            "presion_arterial": "117/72",
+            "frecuencia_cardiaca": "66 lpm",
+            "temperatura": "36.8 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "93 mg/dL",
+            "colesterol": "216 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 53,
+        "nip_acceso": "5961",
+        "identificacion": {
+            "nombre": "Olga Catalina Santillán Marrero",
+            "curp": "RASI531115HZSDCX08",
+            "edad": 53,
+            "genero": "Masculino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Ninguna",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-17",
+            "presion_arterial": "119/77",
+            "frecuencia_cardiaca": "86 lpm",
+            "temperatura": "37.0 °C",
+            "diagnostico_actual": "Check-up anual"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "87 mg/dL",
+            "colesterol": "200 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 54,
+        "nip_acceso": "3892",
+        "identificacion": {
+            "nombre": "César Valdivia Valenzuela",
+            "curp": "BAFY510527MTCKMZ02",
+            "edad": 20,
+            "genero": "Femenino",
+            "sangre": "O+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Ninguna",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-04",
+            "presion_arterial": "112/72",
+            "frecuencia_cardiaca": "78 lpm",
+            "temperatura": "37.0 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "84 mg/dL",
+            "colesterol": "209 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 55,
+        "nip_acceso": "8692",
+        "identificacion": {
+            "nombre": "Lic. Marco Antonio Murillo",
+            "curp": "TUXJ160822MCSZKU09",
+            "edad": 68,
+            "genero": "Femenino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Ninguna",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-08",
+            "presion_arterial": "123/82",
+            "frecuencia_cardiaca": "62 lpm",
+            "temperatura": "37.0 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "97 mg/dL",
+            "colesterol": "192 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 56,
+        "nip_acceso": "2366",
+        "identificacion": {
+            "nombre": "Luisa Quesada",
+            "curp": "IIQR860730MGTXFE01",
+            "edad": 19,
+            "genero": "Masculino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Ninguna",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-06",
+            "presion_arterial": "119/77",
+            "frecuencia_cardiaca": "60 lpm",
+            "temperatura": "36.8 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "109 mg/dL",
+            "colesterol": "155 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 57,
+        "nip_acceso": "3882",
+        "identificacion": {
+            "nombre": "Dulce María Varela",
+            "curp": "FOYX090731HSLQGUA5",
+            "edad": 44,
+            "genero": "Femenino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Ninguna",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-09",
+            "presion_arterial": "116/75",
+            "frecuencia_cardiaca": "96 lpm",
+            "temperatura": "36.8 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "72 mg/dL",
+            "colesterol": "163 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 58,
+        "nip_acceso": "2856",
+        "identificacion": {
+            "nombre": "Gustavo Eugenia Prieto Lucero",
+            "curp": "QEED220217MTLNFCA5",
+            "edad": 25,
+            "genero": "Masculino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Ninguna",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-10",
+            "presion_arterial": "122/85",
+            "frecuencia_cardiaca": "97 lpm",
+            "temperatura": "36.8 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "94 mg/dL",
+            "colesterol": "206 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 59,
+        "nip_acceso": "5899",
+        "identificacion": {
+            "nombre": "Porfirio Alfredo Lugo Altamirano",
+            "curp": "RUIT570814HTCSVW06",
+            "edad": 74,
+            "genero": "Femenino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Lactosa",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-03-10",
+            "presion_arterial": "129/82",
+            "frecuencia_cardiaca": "94 lpm",
+            "temperatura": "37.0 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "110 mg/dL",
+            "colesterol": "171 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 60,
+        "nip_acceso": "7582",
+        "identificacion": {
+            "nombre": "Rufino Teresa Gonzales",
+            "curp": "BOGU060511HOCYTVA0",
+            "edad": 48,
+            "genero": "Femenino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Lactosa",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-07",
+            "presion_arterial": "129/76",
+            "frecuencia_cardiaca": "91 lpm",
+            "temperatura": "37.0 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "79 mg/dL",
+            "colesterol": "205 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 61,
+        "nip_acceso": "2316",
+        "identificacion": {
+            "nombre": "María Eugenia Cervántez Uribe",
+            "curp": "WUER540121HDGDZD02",
+            "edad": 69,
+            "genero": "Masculino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Lactosa",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-11",
+            "presion_arterial": "110/77",
+            "frecuencia_cardiaca": "70 lpm",
+            "temperatura": "36.5 °C",
+            "diagnostico_actual": "Check-up anual"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "106 mg/dL",
+            "colesterol": "181 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 62,
+        "nip_acceso": "2990",
+        "identificacion": {
+            "nombre": "Estela Gonzales",
+            "curp": "GIZH921020MMSGVC03",
+            "edad": 38,
+            "genero": "Femenino",
+            "sangre": "O+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Lactosa",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-16",
+            "presion_arterial": "112/72",
+            "frecuencia_cardiaca": "80 lpm",
+            "temperatura": "36.2 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "76 mg/dL",
+            "colesterol": "214 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 63,
+        "nip_acceso": "6657",
+        "identificacion": {
+            "nombre": "Celia Macías Mota",
+            "curp": "DUTF460714MCLHQC02",
+            "edad": 55,
+            "genero": "Femenino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Ninguna",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-11",
+            "presion_arterial": "117/85",
+            "frecuencia_cardiaca": "100 lpm",
+            "temperatura": "36.3 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "91 mg/dL",
+            "colesterol": "197 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 64,
+        "nip_acceso": "6790",
+        "identificacion": {
+            "nombre": "Felix Gil",
+            "curp": "YUSZ790817MQOGNP08",
+            "edad": 52,
+            "genero": "Femenino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Penicilina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-12",
+            "presion_arterial": "119/83",
+            "frecuencia_cardiaca": "84 lpm",
+            "temperatura": "37.1 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "92 mg/dL",
+            "colesterol": "183 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 65,
+        "nip_acceso": "3642",
+        "identificacion": {
+            "nombre": "Gloria Bermúdez Zavala",
+            "curp": "RAXA991220HBCLVQ06",
+            "edad": 34,
+            "genero": "Masculino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Ninguna",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-03-01",
+            "presion_arterial": "126/77",
+            "frecuencia_cardiaca": "90 lpm",
+            "temperatura": "36.3 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "107 mg/dL",
+            "colesterol": "179 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 66,
+        "nip_acceso": "5333",
+        "identificacion": {
+            "nombre": "Elisa Abigail Caraballo",
+            "curp": "KAMZ270606HHGSKW04",
+            "edad": 70,
+            "genero": "Masculino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Lactosa",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-02",
+            "presion_arterial": "116/83",
+            "frecuencia_cardiaca": "67 lpm",
+            "temperatura": "36.8 °C",
+            "diagnostico_actual": "Check-up anual"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "100 mg/dL",
+            "colesterol": "206 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 67,
+        "nip_acceso": "9590",
+        "identificacion": {
+            "nombre": "José Emilio Juana Cervántez",
+            "curp": "CISI231221HMNBFLA8",
+            "edad": 35,
+            "genero": "Femenino",
+            "sangre": "O+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Lactosa",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-27",
+            "presion_arterial": "127/76",
+            "frecuencia_cardiaca": "64 lpm",
+            "temperatura": "36.7 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "78 mg/dL",
+            "colesterol": "193 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 68,
+        "nip_acceso": "4073",
+        "identificacion": {
+            "nombre": "Héctor Amelia Piña",
+            "curp": "BIJR100128MSLCBMA0",
+            "edad": 60,
+            "genero": "Masculino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Lactosa",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-15",
+            "presion_arterial": "113/84",
+            "frecuencia_cardiaca": "87 lpm",
+            "temperatura": "36.4 °C",
+            "diagnostico_actual": "Check-up anual"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "74 mg/dL",
+            "colesterol": "205 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 69,
+        "nip_acceso": "9644",
+        "identificacion": {
+            "nombre": "Isabel Dávila",
+            "curp": "TIXK351026MBSVCO07",
+            "edad": 53,
+            "genero": "Masculino",
+            "sangre": "O+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Mariscos",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-15",
+            "presion_arterial": "128/77",
+            "frecuencia_cardiaca": "83 lpm",
+            "temperatura": "36.2 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "104 mg/dL",
+            "colesterol": "152 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 70,
+        "nip_acceso": "3340",
+        "identificacion": {
+            "nombre": "Samuel Alonzo Cruz",
+            "curp": "CITJ371012HDGDYC06",
+            "edad": 82,
+            "genero": "Femenino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Aspirina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-03-12",
+            "presion_arterial": "116/73",
+            "frecuencia_cardiaca": "95 lpm",
+            "temperatura": "36.3 °C",
+            "diagnostico_actual": "Check-up anual"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "91 mg/dL",
+            "colesterol": "156 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 71,
+        "nip_acceso": "8325",
+        "identificacion": {
+            "nombre": "Miriam Javier Calvillo Fajardo",
+            "curp": "UAXM220607MPLQFR02",
+            "edad": 65,
+            "genero": "Femenino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Aspirina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-05",
+            "presion_arterial": "118/82",
+            "frecuencia_cardiaca": "94 lpm",
+            "temperatura": "36.9 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "102 mg/dL",
+            "colesterol": "158 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 72,
+        "nip_acceso": "1324",
+        "identificacion": {
+            "nombre": "Ing. Flavio Correa",
+            "curp": "YEHH370401HGRDMT00",
+            "edad": 31,
+            "genero": "Femenino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Aspirina",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-31",
+            "presion_arterial": "117/79",
+            "frecuencia_cardiaca": "65 lpm",
+            "temperatura": "36.4 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "105 mg/dL",
+            "colesterol": "203 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 73,
+        "nip_acceso": "5725",
+        "identificacion": {
+            "nombre": "Alicia Víctor Valladares",
+            "curp": "OISL261201MMSJKK07",
+            "edad": 65,
+            "genero": "Femenino",
+            "sangre": "O+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Aspirina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-25",
+            "presion_arterial": "116/77",
+            "frecuencia_cardiaca": "98 lpm",
+            "temperatura": "36.8 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "92 mg/dL",
+            "colesterol": "162 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 74,
+        "nip_acceso": "7982",
+        "identificacion": {
+            "nombre": "Irene Santillán Leiva",
+            "curp": "VIIE030703HNTNYJA8",
+            "edad": 46,
+            "genero": "Femenino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Penicilina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-03-01",
+            "presion_arterial": "114/80",
+            "frecuencia_cardiaca": "87 lpm",
+            "temperatura": "36.5 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "108 mg/dL",
+            "colesterol": "207 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 75,
+        "nip_acceso": "2868",
+        "identificacion": {
+            "nombre": "Nayeli Ybarra Santillán",
+            "curp": "LECZ700706MJCHZY08",
+            "edad": 39,
+            "genero": "Masculino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Lactosa",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-14",
+            "presion_arterial": "117/70",
+            "frecuencia_cardiaca": "69 lpm",
+            "temperatura": "36.9 °C",
+            "diagnostico_actual": "Check-up anual"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "82 mg/dL",
+            "colesterol": "188 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 76,
+        "nip_acceso": "5346",
+        "identificacion": {
+            "nombre": "Barbara Aurelio Roque",
+            "curp": "XUQT600518MTSLBA09",
+            "edad": 62,
+            "genero": "Femenino",
+            "sangre": "O+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Mariscos",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-24",
+            "presion_arterial": "121/70",
+            "frecuencia_cardiaca": "76 lpm",
+            "temperatura": "37.1 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "90 mg/dL",
+            "colesterol": "153 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 77,
+        "nip_acceso": "2825",
+        "identificacion": {
+            "nombre": "Bruno Portillo Escobar",
+            "curp": "TAQX440109MGTHQH06",
+            "edad": 29,
+            "genero": "Masculino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Penicilina",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-17",
+            "presion_arterial": "111/73",
+            "frecuencia_cardiaca": "96 lpm",
+            "temperatura": "36.8 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "80 mg/dL",
+            "colesterol": "198 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 78,
+        "nip_acceso": "6652",
+        "identificacion": {
+            "nombre": "Alejandra Roldán Varela",
+            "curp": "ZAJV760420MMSBSD04",
+            "edad": 43,
+            "genero": "Femenino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Mariscos",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-16",
+            "presion_arterial": "119/70",
+            "frecuencia_cardiaca": "94 lpm",
+            "temperatura": "36.3 °C",
+            "diagnostico_actual": "Check-up anual"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "100 mg/dL",
+            "colesterol": "163 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 79,
+        "nip_acceso": "2458",
+        "identificacion": {
+            "nombre": "María Luisa Jos Valverde Torres",
+            "curp": "OEYW180804HSLSJV03",
+            "edad": 77,
+            "genero": "Masculino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Mariscos",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-03-06",
+            "presion_arterial": "128/71",
+            "frecuencia_cardiaca": "81 lpm",
+            "temperatura": "36.3 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "101 mg/dL",
+            "colesterol": "162 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 80,
+        "nip_acceso": "2273",
+        "identificacion": {
+            "nombre": "Guillermo Alcala Gil",
+            "curp": "LEGD460205HNEFPA02",
+            "edad": 64,
+            "genero": "Masculino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Penicilina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-31",
+            "presion_arterial": "118/78",
+            "frecuencia_cardiaca": "97 lpm",
+            "temperatura": "36.3 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "110 mg/dL",
+            "colesterol": "176 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 81,
+        "nip_acceso": "2643",
+        "identificacion": {
+            "nombre": "Dr. Víctor Bustamante",
+            "curp": "IUYA100915MQRMZV08",
+            "edad": 38,
+            "genero": "Femenino",
+            "sangre": "O+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Ninguna",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-10",
+            "presion_arterial": "111/78",
+            "frecuencia_cardiaca": "97 lpm",
+            "temperatura": "36.9 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "107 mg/dL",
+            "colesterol": "216 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 82,
+        "nip_acceso": "9671",
+        "identificacion": {
+            "nombre": "Ángel Ricardo Negrete",
+            "curp": "GAHQ941129MTLQHF03",
+            "edad": 36,
+            "genero": "Femenino",
+            "sangre": "O+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Lactosa",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-04",
+            "presion_arterial": "111/72",
+            "frecuencia_cardiaca": "78 lpm",
+            "temperatura": "36.7 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "97 mg/dL",
+            "colesterol": "162 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 83,
+        "nip_acceso": "9337",
+        "identificacion": {
+            "nombre": "Sandra Cadena",
+            "curp": "JUTE160724HVZHKM09",
+            "edad": 59,
+            "genero": "Femenino",
+            "sangre": "O+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Ninguna",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-17",
+            "presion_arterial": "110/79",
+            "frecuencia_cardiaca": "63 lpm",
+            "temperatura": "36.3 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "91 mg/dL",
+            "colesterol": "162 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 84,
+        "nip_acceso": "1734",
+        "identificacion": {
+            "nombre": "Diego Beatriz Meraz",
+            "curp": "VIPX930908MMSHVS02",
+            "edad": 31,
+            "genero": "Masculino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Ninguna",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-11",
+            "presion_arterial": "122/84",
+            "frecuencia_cardiaca": "66 lpm",
+            "temperatura": "36.3 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "79 mg/dL",
+            "colesterol": "163 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 85,
+        "nip_acceso": "3369",
+        "identificacion": {
+            "nombre": "Soledad Cristina Laureano",
+            "curp": "XOCE640103HHGXLA02",
+            "edad": 44,
+            "genero": "Femenino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Aspirina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-11",
+            "presion_arterial": "130/79",
+            "frecuencia_cardiaca": "65 lpm",
+            "temperatura": "36.3 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "81 mg/dL",
+            "colesterol": "220 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 86,
+        "nip_acceso": "4439",
+        "identificacion": {
+            "nombre": "Jesús Mario Cervántez",
+            "curp": "IUCP491121MSPQKT02",
+            "edad": 72,
+            "genero": "Femenino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Mariscos",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-03-08",
+            "presion_arterial": "124/83",
+            "frecuencia_cardiaca": "68 lpm",
+            "temperatura": "36.8 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "102 mg/dL",
+            "colesterol": "167 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 87,
+        "nip_acceso": "8459",
+        "identificacion": {
+            "nombre": "Benjamín Barajas",
+            "curp": "IOMU910502HQRQCF01",
+            "edad": 18,
+            "genero": "Femenino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Penicilina",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-14",
+            "presion_arterial": "127/70",
+            "frecuencia_cardiaca": "93 lpm",
+            "temperatura": "36.7 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "72 mg/dL",
+            "colesterol": "163 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 88,
+        "nip_acceso": "9202",
+        "identificacion": {
+            "nombre": "Natalia Fidel Munguía",
+            "curp": "KUAE250804HQOZND00",
+            "edad": 53,
+            "genero": "Masculino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Ninguna",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-07",
+            "presion_arterial": "125/70",
+            "frecuencia_cardiaca": "99 lpm",
+            "temperatura": "36.4 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "108 mg/dL",
+            "colesterol": "187 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 89,
+        "nip_acceso": "6440",
+        "identificacion": {
+            "nombre": "Miguel Adame Barrera",
+            "curp": "ROKW380927MCSKQO01",
+            "edad": 20,
+            "genero": "Femenino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Aspirina",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-19",
+            "presion_arterial": "111/71",
+            "frecuencia_cardiaca": "98 lpm",
+            "temperatura": "36.8 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "79 mg/dL",
+            "colesterol": "180 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 90,
+        "nip_acceso": "2211",
+        "identificacion": {
+            "nombre": "Asunción López",
+            "curp": "JUHU671024HVZGHZ09",
+            "edad": 37,
+            "genero": "Femenino",
+            "sangre": "O+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Penicilina",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-06",
+            "presion_arterial": "128/70",
+            "frecuencia_cardiaca": "71 lpm",
+            "temperatura": "37.0 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "72 mg/dL",
+            "colesterol": "190 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 91,
+        "nip_acceso": "8587",
+        "identificacion": {
+            "nombre": "Ing. Vanesa Báez",
+            "curp": "MISQ820128MYNSXL05",
+            "edad": 71,
+            "genero": "Femenino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Penicilina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-12",
+            "presion_arterial": "114/78",
+            "frecuencia_cardiaca": "93 lpm",
+            "temperatura": "36.9 °C",
+            "diagnostico_actual": "Check-up anual"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "88 mg/dL",
+            "colesterol": "173 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 92,
+        "nip_acceso": "6843",
+        "identificacion": {
+            "nombre": "Jorge Luis Baca Meza",
+            "curp": "LEAZ650406HNTDMO02",
+            "edad": 75,
+            "genero": "Femenino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Aspirina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-13",
+            "presion_arterial": "116/84",
+            "frecuencia_cardiaca": "86 lpm",
+            "temperatura": "36.7 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "109 mg/dL",
+            "colesterol": "195 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 93,
+        "nip_acceso": "1664",
+        "identificacion": {
+            "nombre": "Eric Colón",
+            "curp": "EOCI210106HNEHVLA8",
+            "edad": 30,
+            "genero": "Masculino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Mariscos",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-19",
+            "presion_arterial": "122/82",
+            "frecuencia_cardiaca": "92 lpm",
+            "temperatura": "36.3 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "84 mg/dL",
+            "colesterol": "177 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 94,
+        "nip_acceso": "9996",
+        "identificacion": {
+            "nombre": "Diego Cornelio Gálvez Caldera",
+            "curp": "VOBH190615HBCRHF08",
+            "edad": 85,
+            "genero": "Femenino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Ninguna",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-14",
+            "presion_arterial": "114/77",
+            "frecuencia_cardiaca": "93 lpm",
+            "temperatura": "36.3 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "105 mg/dL",
+            "colesterol": "175 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 95,
+        "nip_acceso": "9553",
+        "identificacion": {
+            "nombre": "Verónica Leal Lozada",
+            "curp": "JUKD090616HOCYZBA4",
+            "edad": 65,
+            "genero": "Masculino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Ninguna",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-03-09",
+            "presion_arterial": "110/77",
+            "frecuencia_cardiaca": "91 lpm",
+            "temperatura": "37.0 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "87 mg/dL",
+            "colesterol": "198 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 96,
+        "nip_acceso": "2013",
+        "identificacion": {
+            "nombre": "Oswaldo Isabela Aguilera",
+            "curp": "NEXE980227MMCGGA03",
+            "edad": 50,
+            "genero": "Masculino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Hipertensión",
+            "alergias": "Aspirina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-01",
+            "presion_arterial": "118/77",
+            "frecuencia_cardiaca": "67 lpm",
+            "temperatura": "36.3 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "105 mg/dL",
+            "colesterol": "161 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 97,
+        "nip_acceso": "2257",
+        "identificacion": {
+            "nombre": "Juana Daniela Armenta Becerra",
+            "curp": "MUEI730609MMNCRF04",
+            "edad": 69,
+            "genero": "Masculino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Lactosa",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-21",
+            "presion_arterial": "116/70",
+            "frecuencia_cardiaca": "82 lpm",
+            "temperatura": "36.3 °C",
+            "diagnostico_actual": "Check-up anual"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "109 mg/dL",
+            "colesterol": "205 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 98,
+        "nip_acceso": "4231",
+        "identificacion": {
+            "nombre": "Lic. Eugenia Valladares",
+            "curp": "LUGW821002MMSTKL09",
+            "edad": 20,
+            "genero": "Femenino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Aspirina",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-31",
+            "presion_arterial": "114/85",
+            "frecuencia_cardiaca": "64 lpm",
+            "temperatura": "36.5 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "72 mg/dL",
+            "colesterol": "181 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 99,
+        "nip_acceso": "8561",
+        "identificacion": {
+            "nombre": "Camila Asunción Abrego",
+            "curp": "KUEF350326HCMLJM01",
+            "edad": 58,
+            "genero": "Femenino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Penicilina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-08",
+            "presion_arterial": "125/79",
+            "frecuencia_cardiaca": "70 lpm",
+            "temperatura": "36.8 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "97 mg/dL",
+            "colesterol": "199 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 100,
+        "nip_acceso": "2193",
+        "identificacion": {
+            "nombre": "Nancy Santana Carreón",
+            "curp": "REYV171021HHGCBS00",
+            "edad": 19,
+            "genero": "Masculino",
+            "sangre": "O+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Ninguna",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-28",
+            "presion_arterial": "123/78",
+            "frecuencia_cardiaca": "70 lpm",
+            "temperatura": "36.6 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "109 mg/dL",
+            "colesterol": "202 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 101,
+        "nip_acceso": "4268",
+        "identificacion": {
+            "nombre": "Leticia Silvia Páez Estrada",
+            "curp": "GOKQ491120MPLDPC07",
+            "edad": 38,
+            "genero": "Masculino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Mariscos",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-03-10",
+            "presion_arterial": "129/71",
+            "frecuencia_cardiaca": "69 lpm",
+            "temperatura": "36.7 °C",
+            "diagnostico_actual": "Check-up anual"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "109 mg/dL",
+            "colesterol": "182 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 102,
+        "nip_acceso": "9488",
+        "identificacion": {
+            "nombre": "Mtro. Darío Ramón",
+            "curp": "XUHB480830MGRNWK03",
+            "edad": 45,
+            "genero": "Femenino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Lactosa",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-21",
+            "presion_arterial": "125/74",
+            "frecuencia_cardiaca": "80 lpm",
+            "temperatura": "36.5 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "89 mg/dL",
+            "colesterol": "156 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 103,
+        "nip_acceso": "5963",
+        "identificacion": {
+            "nombre": "Dr. Zacarías Henríquez",
+            "curp": "KARS810513MCHKTN09",
+            "edad": 54,
+            "genero": "Masculino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Aspirina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-12",
+            "presion_arterial": "123/77",
+            "frecuencia_cardiaca": "85 lpm",
+            "temperatura": "36.6 °C",
+            "diagnostico_actual": "Check-up anual"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "101 mg/dL",
+            "colesterol": "204 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 104,
+        "nip_acceso": "5087",
+        "identificacion": {
+            "nombre": "Mtro. Karla Aguayo",
+            "curp": "TEFT460723MNTJQR00",
+            "edad": 69,
+            "genero": "Femenino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Aspirina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-11",
+            "presion_arterial": "127/79",
+            "frecuencia_cardiaca": "75 lpm",
+            "temperatura": "36.9 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "73 mg/dL",
+            "colesterol": "196 mg/dL",
+            "estudio_gabinete": "Ultrasonido Abdominal (Sin hallazgos)"
+        }
+    },
+    {
+        "paciente_id": 105,
+        "nip_acceso": "1571",
+        "identificacion": {
+            "nombre": "Camilo Estévez",
+            "curp": "ZULS770225MNTHCV02",
+            "edad": 38,
+            "genero": "Femenino",
+            "sangre": "A+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Ninguna",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-11",
+            "presion_arterial": "124/75",
+            "frecuencia_cardiaca": "66 lpm",
+            "temperatura": "37.0 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "79 mg/dL",
+            "colesterol": "178 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 106,
+        "nip_acceso": "4001",
+        "identificacion": {
+            "nombre": "Mtro. Samuel Corrales",
+            "curp": "FOSU230228MDGMFYA7",
+            "edad": 56,
+            "genero": "Femenino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Cáncer de colon",
+            "alergias": "Mariscos",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Apendicectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-15",
+            "presion_arterial": "123/84",
+            "frecuencia_cardiaca": "81 lpm",
+            "temperatura": "36.8 °C",
+            "diagnostico_actual": "Check-up anual"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "95 mg/dL",
+            "colesterol": "170 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 107,
+        "nip_acceso": "3532",
+        "identificacion": {
+            "nombre": "Benjamín Huerta",
+            "curp": "UOCT420429MCMMYO01",
+            "edad": 41,
+            "genero": "Masculino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Ninguna",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-02",
+            "presion_arterial": "120/83",
+            "frecuencia_cardiaca": "62 lpm",
+            "temperatura": "37.0 °C",
+            "diagnostico_actual": "Faringitis"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "106 mg/dL",
+            "colesterol": "193 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 108,
+        "nip_acceso": "9333",
+        "identificacion": {
+            "nombre": "Hernán Juana Ceballos",
+            "curp": "REKG880523MCMMCJ03",
+            "edad": 63,
+            "genero": "Femenino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Ninguna",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Colecistectomía"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-30",
+            "presion_arterial": "126/70",
+            "frecuencia_cardiaca": "85 lpm",
+            "temperatura": "36.8 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "99 mg/dL",
+            "colesterol": "150 mg/dL",
+            "estudio_gabinete": "Radiografía Tórax (Limpia)"
+        }
+    },
+    {
+        "paciente_id": 109,
+        "nip_acceso": "2471",
+        "identificacion": {
+            "nombre": "Juan Carlos Batista",
+            "curp": "EOTH380223MOCJCO02",
+            "edad": 82,
+            "genero": "Femenino",
+            "sangre": "AB+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Ninguno",
+            "alergias": "Aspirina",
+            "no_patologicos": "Sedentario, fumador ocasional",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-01-25",
+            "presion_arterial": "110/80",
+            "frecuencia_cardiaca": "91 lpm",
+            "temperatura": "37.1 °C",
+            "diagnostico_actual": "Control de Diabetes"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "90 mg/dL",
+            "colesterol": "191 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    },
+    {
+        "paciente_id": 110,
+        "nip_acceso": "6536",
+        "identificacion": {
+            "nombre": "Guadalupe Mario Madera",
+            "curp": "DEDM230209HMCGHR06",
+            "edad": 18,
+            "genero": "Femenino",
+            "sangre": "B+"
+        },
+        "antecedentes": {
+            "heredofamiliares": "Diabetes tipo 2",
+            "alergias": "Ninguna",
+            "no_patologicos": "Ejercicio regular, no fumador",
+            "cirugias_previas": "Ninguna"
+        },
+        "signos_vitales_y_consulta": {
+            "fecha_ultima_visita": "2026-02-26",
+            "presion_arterial": "129/85",
+            "frecuencia_cardiaca": "98 lpm",
+            "temperatura": "36.7 °C",
+            "diagnostico_actual": "Lumbalgia"
+        },
+        "laboratorio_y_gabinete": {
+            "glucosa": "104 mg/dL",
+            "colesterol": "177 mg/dL",
+            "estudio_gabinete": "Electrocardiograma (Normal)"
+        }
+    }
+]
